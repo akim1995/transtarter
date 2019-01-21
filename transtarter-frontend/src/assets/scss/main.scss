@@ -1,13 +1,13 @@
-// vendors
-@import "./normalize-css.scss";
-
 // modules
 @import "./variables.scss";
-
+// vendors
+@import "./normalize-css.scss";
+@import "./overwrite-vue-carousel.scss";
 body {
     background-color: $white;
     margin: 0;
     font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 .bold {
@@ -16,4 +16,53 @@ body {
 
 .text-center {
     text-align: center;
+}
+
+.btn {
+    height: 48px;
+    border-radius: 4px;    
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.41;
+    color: $black;
+    border-width: 0;
+}
+
+.btn-orange {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19), 0 1px 0 0 #e29401;
+    background-image: linear-gradient(to bottom, #ffd600, #ffc600);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.form-group {
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    .label {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+    .form-control {
+        border-radius: 2px;
+        padding: 0.675rem .75rem;
+        border-width: 0;
+        border: 1px solid $light-grey;
+        background-color: $white;
+    }
+    .two-selectors {
+        display: flex;
+        .first-selector {
+            margin-right: 8px;
+            width: 30%;
+        }
+        .second-selector {
+            width: 70%;
+        }
+    }
 }
