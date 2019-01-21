@@ -7,17 +7,30 @@
     <!-- mobile version -->
     <div class="mobile-version-block">
 
-      <div class="mobile-version-block-header">
-        <div class="reg-in-our-shop bold text-center">
-          Зарегистрируйтесь <br>
-          в нашем магазине, чтобы
-        </div>
-        <div class="rows-and-gear-icon"></div>
-        <div class="order-management">
-          Управлять своими заказами в личном кабинете: следить за статусом оплаты
-          и доставки, хранить историю заказов
-        </div>
-      </div>
+      <carousel class="mobile-version-block-header">
+        <slide>
+          <div class="reg-in-our-shop bold text-center">
+            Зарегистрируйтесь <br>
+            в нашем магазине, чтобы
+          </div>
+          <div class="rows-and-gear-icon"></div>
+          <div class="order-management">
+            Управлять своими заказами в личном кабинете: следить за статусом оплаты
+            и доставки, хранить историю заказов
+          </div>
+        </slide>
+        <slide>
+          <div class="reg-in-our-shop bold text-center">
+            Зарегистрируйтесь <br>
+            в нашем магазине, чтобы
+          </div>
+          <div class="rows-and-gear-icon"></div>
+          <div class="order-management">
+            Управлять своими заказами в личном кабинете: следить за статусом оплаты
+            и доставки, хранить историю заказов
+          </div>
+        </slide>
+      </carousel>
 
     </div>
   </div>
@@ -26,8 +39,14 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Carousel, Slide } from 'vue-carousel'
 
-@Component
+@Component({
+  components: {
+    Carousel,
+    Slide
+  }
+})
 export default class HelloWorld extends Vue {}
 </script>
 
