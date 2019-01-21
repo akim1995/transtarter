@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import Registration from '@/components/Registration.vue' // @ is an alias to /src
+import Registration from '@/components/registration/Registration.vue' // @ is an alias to /src
 
 @Component({
   components: {
@@ -16,3 +16,11 @@ import Registration from '@/components/Registration.vue' // @ is an alias to /sr
 export default class Home extends Vue {}
 
 </script>
+
+<style scoped lang="scss">
+
+.home {
+  width: 100vw;
+  height: 100vh;
+}
+</style>

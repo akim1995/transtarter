@@ -1,5 +1,19 @@
+// vendors
+@import "./normalize-css.scss";
+
+// modules
 @import "./variables.scss";
 
 body {
     background-color: $white;
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
 }
