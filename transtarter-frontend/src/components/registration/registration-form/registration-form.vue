@@ -1,9 +1,10 @@
 <template>
 
   <div>
-    <div class="registration-text text-center">
+    <div class="registration-text">
       Регистрация
     </div>
+
     <form class="registration-form">
       <div class="form-group">
         <label class="label">Введите имя и фамилию контактного лица</label>
@@ -13,6 +14,7 @@
           class="form-control"
         >
       </div>
+
       <div class="form-group">
         <label class="label">Введите телефон</label>
         <input
@@ -21,6 +23,7 @@
           class="form-control"
         >
       </div>
+
       <div class="form-group">
         <label class="label">Введите email</label>
         <input
@@ -29,6 +32,7 @@
           class="form-control"
         >
       </div>
+
       <div class="form-group">
         <label class="label">Какую организацию вы представляете?</label>
         <select
@@ -44,6 +48,7 @@
           <option>Автосервис</option>
         </select>
       </div>
+
       <div class="form-group">
         <label class="label">Введите наименование организации</label>
         <div class="two-selectors">
@@ -68,29 +73,29 @@
 
       <button
         type="submit"
-        class="btn btn-orange btn-block"
+        class="btn btn-orange btn-reg"
       >
         Зарегистрироваться
       </button>
 
-      <div class="accept-checkbox text-center">
+      <div class="accept-checkbox">
         Нажимая на кнопку, вы даете согласие
-        на обработку своих персональных данных
-        и соглашаетесь с <a
+        на обработку<br> своих персональных данных
+        и соглашаетесь<br> с <a
           href="#"
           class="policy-link"
-        >Политикой</a> конфиденциальности
+        >Политикой конфиденциальности</a>
       </div>
-
     </form>
 
     <div class="already-have-account text-center">
       <p>Уже зарегистрированы?</p>
-      <a
+      <span
         href="#"
         class="go-log-in"
-      >Войти</a>
+      >Войти</span>
     </div>
+
   </div>
 
 </template>
