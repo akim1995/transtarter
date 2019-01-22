@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import Registration from '@/components/authorization/registration/registration.vue' // @ is an alias to /src
 import LogIn from '@/components/authorization/log-in/log-in.vue' // @ is an alias to /src
+import Registration from '@/components/authorization/registration/registration.vue' // @ is an alias to /src
 import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue' // @ is an alias to /src
 
 @Component({
