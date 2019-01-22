@@ -41,17 +41,34 @@
           </a>
         </div>
 
-        <div class="foreign-pc">
-          <div class="form-check">
+        <div class="foreign-pc custom-checkbox">
+
+          <span
+            class="custom-checkbox-input fill-checkbox"
+            @click="toggleForeignPc"
+          >
             <input
-              type="checkbox"
-              class="custom-control-input form-check-input"
+              type="radio"
+              class="fill-control-input"
+              :checked='foreignPc'
             >
-            <label class="custom-control-label form-check-label">Чужой компьютер</label>
-          </div>
+            <span class="fill-control-indicator"></span>
+          </span>
+          <label class="custom-checkbox-label">Чужой компьютер</label>
         </div>
+
+        <button
+          type="submit"
+          class="btn btn-orange btn-log-in"
+        >
+          Войти
+        </button>
       </form>
 
+      <div class="want-to-reg">
+        Впервые на сайте?
+        <span class="go-to-reg">Зарегистрироваться</span>
+      </div>
     </div>
     <!-- end of desktop  and mobile  version -->
 
@@ -59,7 +76,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class LogIn extends Vue {
@@ -67,6 +84,12 @@ export default class LogIn extends Vue {
     email: '',
     password: ''
   };
+
+  foreignPc = false;
+
+  toggleForeignPc () {
+    this.foreignPc = !this.foreignPc
+  }
 }
 </script>
 
