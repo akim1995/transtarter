@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <!-- <Registration /> -->
-    <LogIn />
-    <!-- <PasswordRestore /> -->
+    <!-- <LogIn /> -->
+    <PasswordRestore />
   </div>
 </template>
 
