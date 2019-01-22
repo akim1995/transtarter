@@ -1,0 +1,158 @@
+.desktop-version-modal {
+    margin: 20px 0 20px 0;
+    display: flex;
+    width: 80%;
+    background: white;
+    &-left-side {
+        width: 60%;
+        margin-left: 24px;
+        .registration-text {
+            font-size: 24px;
+            line-height: 1.33;
+            margin-bottom: 16px;
+            margin-top: 24px;
+        }
+        .accept-checkbox {
+            color: $medium-grey;
+            line-height: 1.43;
+            margin-bottom: 16px;
+            font-size: 14px;
+            .policy-link {
+                text-decoration: underline;
+                color: inherit;
+                cursor: pointer;
+            }
+        }
+        .already-have-account {
+            display: flex;
+            font-size: 16px;
+            .go-log-in {
+                text-decoration: underline;
+                color: $green;
+            }
+            margin-bottom: 24px;
+        }
+    }
+    &-right-side {
+        width: 40%;
+        background-color: $light-yellow;
+        .our-advantages {
+            margin-top: 72px;
+            margin-left: 24px;
+            .title {
+                font-size: 20px;
+                line-height: 1.4;
+                margin-bottom: 16px;
+                padding-right: 24px;
+            }
+        }
+        .advantages-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            .advantage-item {
+                display: flex;
+                align-items: top;
+                margin-bottom: 30px;
+                position: relative;
+                font-size: 16px;
+                justify-content: start;
+                .icon {
+                    max-width: 30%;
+                    position: relative;
+                    .sales {
+                        background: url('../../assets/icons/svg/percent-icon.svg');
+                    }
+                    .management {
+                        background: url('../../assets/icons/svg/rows-and-gear-2x.svg');
+                    }
+                    .access {
+                        background: url('../../assets/icons/svg/ruble-label.svg');
+                    }
+                    .advantage-item-icon {
+                        position: relative;
+                        width: 72px;
+                        height: 72px;
+                        top: -5px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                &-text {
+                    padding-left: 8px;
+                    padding-right: 24px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+.mobile-version-modal {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-version-modal {
+        margin: 20px 0 20px 0;
+        display: block;
+        width: 90%;
+        font-size: 14px;
+        color: $black;
+        background: white;
+        &-header {
+            background-color: $light-yellow;
+            width: 100%;
+            height: 192px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .reg-in-our-shop {
+                margin: 24px 0 8px 0;
+            }
+            .rows-and-gear-icon {
+                background: url('../../assets/icons/svg/rows-and-gear.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 48px;
+                height: 48px;
+            }
+            .order-management {
+                line-height: 1.14;
+                margin: 4px 8vw 5vw;
+            }
+        }
+        &-main {
+            background-color: $white;
+            padding-bottom: 24px;
+            padding: 16px;
+            .registration-text {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.4;
+                padding: 16px 0;
+            }
+            .accept-checkbox {
+                color: $medium-grey;
+                line-height: 1.43;
+                margin: 8px 16px 17px;
+                .policy-link {
+                    text-decoration: underline;
+                    color: inherit;
+                    cursor: pointer;
+                }
+            }
+            .already-have-account {
+                font-size: 16px;
+                .go-log-in {
+                    text-decoration: none;
+                    color: $green;
+                }
+            }
+        }
+    }
+    .desktop-version-modal {
+        display: none;
+    }
+}

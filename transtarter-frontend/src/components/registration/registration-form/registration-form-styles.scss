@@ -1,0 +1,78 @@
+.registration-text {
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    font-weight: bold;
+}
+
+.registration-form {
+    padding-right: 20%;
+}
+
+.accept-checkbox {
+    color: $medium-grey;
+    line-height: 1.43;
+    margin-bottom: 16px;
+    font-size: 14px;
+    .policy-link {
+        display: inline;
+        border-bottom: 1px solid $medium-grey;
+        color: inherit;
+        cursor: pointer;
+    }
+}
+
+.btn-reg {
+    width: 201px;
+    margin: 8px 0 8px 0;
+}
+
+.already-have-account {
+    display: flex;
+    font-size: 16px;
+    .go-log-in {
+        border-bottom: 1px dashed $green;
+        color: $green;
+        margin-left: 5px;
+        display: inline;
+    }
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .registration-text {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        text-align: center;
+        margin-top: 0;
+    }
+    .registration-form {
+        padding-right: 0;
+    }
+    .accept-checkbox {
+        color: $medium-grey;
+        line-height: 1.43;
+        margin: 8px 16px 17px;
+        text-align: center;
+        .policy-link {
+            color: inherit;
+            cursor: pointer;
+        }
+    }
+    .btn-reg {
+        width: 100%;
+        margin: 8px 0 8px 0;
+    }
+    .already-have-account {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        align-items: center;
+        .go-log-in {
+            margin-top: 5px;
+            width: 40px;
+        }
+    }
+}
