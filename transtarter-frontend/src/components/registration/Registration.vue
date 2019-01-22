@@ -13,7 +13,7 @@
           <div class="form-group">
             <label class="label">Введите имя и фамилию контактного лица</label>
             <input
-              v-model="fullName"
+              v-model="regForm.fullName"
               placeholder="Имя и фамилия"
               class="form-control"
             >
@@ -21,7 +21,7 @@
           <div class="form-group">
             <label class="label">Введите телефон</label>
             <input
-              v-model="phone"
+              v-model="regForm.phone"
               placeholder="Телефон"
               class="form-control"
             >
@@ -29,14 +29,15 @@
           <div class="form-group">
             <label class="label">Введите email</label>
             <input
-              v-model="email"
+              v-model="regForm.email"
               placeholder="Почта"
               class="form-control"
             >
           </div>
           <div class="form-group">
             <label class="label">Какую организацию вы представляете?</label>
-            <select class="form-control">
+            <select class="form-control" v-model="regForm.organizationVariants">
+              <option disabled value="">Выберите один из вариантов</option>
               <option>Автосервис</option>
               <option>Автосервис</option>
               <option>Автосервис</option>
@@ -45,14 +46,13 @@
           <div class="form-group">
             <label class="label">Введите наименование организации</label>
             <div class="two-selectors">
-
-              <select class="form-control first-selector">
-                <option>ООО</option>
+              <select class="form-control first-selector"  v-model="regForm.organizationType">
+                <option disabled value="">Выберите один из вариантов</option>
                 <option>ООО</option>
                 <option>ООО</option>
               </select>
               <input
-                v-model="orgName"
+                v-model="regForm.organizationName"
                 placeholder="Название огранизации"
                 class="form-control second-selector"
               >
@@ -124,7 +124,7 @@
     <div class="mobile-version-block">
 
       <carousel
-        perPage='1'
+        :perPage='1'
         class="mobile-version-block-carousel"
       >
         <slide class="mobile-version-block-header">
@@ -160,7 +160,7 @@
           <div class="form-group">
             <label class="label">Введите имя и фамилию контактного лица</label>
             <input
-              v-model="fullName"
+              v-model="regForm.fullName"
               placeholder="Имя и фамилия"
               class="form-control"
             >
@@ -168,7 +168,7 @@
           <div class="form-group">
             <label class="label">Введите телефон</label>
             <input
-              v-model="phone"
+              v-model="regForm.phone"
               placeholder="Телефон"
               class="form-control"
             >
@@ -176,14 +176,15 @@
           <div class="form-group">
             <label class="label">Введите email</label>
             <input
-              v-model="email"
+              v-model="regForm.email"
               placeholder="Почта"
               class="form-control"
             >
           </div>
-          <div class="form-group">
+           <div class="form-group">
             <label class="label">Какую организацию вы представляете?</label>
-            <select class="form-control">
+            <select class="form-control" v-model="regForm.organizationVariants">
+              <option disabled value="">Выберите один из вариантов</option>
               <option>Автосервис</option>
               <option>Автосервис</option>
               <option>Автосервис</option>
@@ -192,14 +193,13 @@
           <div class="form-group">
             <label class="label">Введите наименование организации</label>
             <div class="two-selectors">
-
-              <select class="form-control first-selector">
-                <option>ООО</option>
+              <select class="form-control first-selector"  v-model="regForm.organizationType">
+                <option disabled value="">Выберите один из вариантов</option>
                 <option>ООО</option>
                 <option>ООО</option>
               </select>
               <input
-                v-model="orgName"
+                v-model="regForm.organizationName"
                 placeholder="Название огранизации"
                 class="form-control second-selector"
               >
@@ -248,7 +248,16 @@ import { Carousel, Slide } from 'vue-carousel'
     Slide
   }
 })
-export default class HelloWorld extends Vue {}
+export default class Registration extends Vue {
+  regForm = {
+    fullName: '',
+    phone: '',
+    email: '',
+    organizationVariants: '',
+    organizationType: '',
+    organizationName: ''
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
