@@ -1,5 +1,5 @@
 <template>
-  <div class="log-in">
+  <div class="log-in wrapper">
 
     <!-- desktop and mobile version -->
     <div class="log-in-modal modal-popup">
@@ -76,7 +76,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class LogIn extends Vue {

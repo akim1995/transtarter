@@ -1,5 +1,5 @@
 <template>
-  <div class="registration">
+  <div class="wrapper registration">
 
     <!-- desktop version -->
     <div class="desktop-version-modal modal-popup">
