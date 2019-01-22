@@ -3,7 +3,7 @@
     <!-- desktop version -->
     <div class="desktop-version-block">
       <div class="desktop-version-block-left-side">
-        <div class="registration-text bold">
+        <!-- <div class="registration-text bold">
           Регистрация
         </div>
         <form
@@ -36,8 +36,14 @@
           </div>
           <div class="form-group">
             <label class="label">Какую организацию вы представляете?</label>
-            <select class="form-control" v-model="regForm.organizationVariants">
-              <option disabled value="">Выберите один из вариантов</option>
+            <select
+              class="form-control"
+              v-model="regForm.organizationVariants"
+            >
+              <option
+                disabled
+                value=""
+              >Выберите один из вариантов</option>
               <option>Автосервис</option>
               <option>Автосервис</option>
               <option>Автосервис</option>
@@ -46,8 +52,14 @@
           <div class="form-group">
             <label class="label">Введите наименование организации</label>
             <div class="two-selectors">
-              <select class="form-control first-selector"  v-model="regForm.organizationType">
-                <option disabled value="">Выберите один из вариантов</option>
+              <select
+                class="form-control first-selector"
+                v-model="regForm.organizationType"
+              >
+                <option
+                  disabled
+                  value=""
+                >Выберите один из вариантов</option>
                 <option>ООО</option>
                 <option>ООО</option>
               </select>
@@ -85,41 +97,47 @@
             class="go-log-in"
           >Войти</a>
         </div>
-      </div>
-      <div class="desktop-version-block-right-side">
-        <div class="our-advantages">
-          <div class="title bold">
-            Зарегистрируйтесь
-            в нашем магазине, чтобы
+      </div> -->
+
+        <RegistrationForm />
+
+        <div class="desktop-version-block-right-side">
+          <div class="our-advantages">
+            <div class="title bold">
+              Зарегистрируйтесь
+              в нашем магазине, чтобы
+            </div>
+            <ul class="advantages-list">
+              <li class="advantage-item">
+                <div class="icon">
+                  <div class="advantage-item-icon sales"></div>
+                </div>
+                <span class="advantage-item-text">Получить сообщения
+                  о закрытых распродажах только для наших партнеров</span>
+              </li>
+              <li class="advantage-item ">
+                <div class="icon">
+                  <div class="advantage-item-icon management"></div>
+                </div>
+                <span class="advantage-item-text">Управлять своими заказами в личном кабинете: следить
+                  за статусом оплаты
+                  и доставки, хранить историю заказов</span>
+              </li>
+              <li class="advantage-item ">
+                <div class="icon">
+                  <div class="advantage-item-icon access"></div>
+                </div>
+                <span class="advantage-item-text"> Получить доступ
+                  к индивидуальным
+                  оптовым ценам</span>
+              </li>
+            </ul>
           </div>
-          <ul class="advantages-list">
-            <li class="advantage-item">
-              <div class="icon">
-                <div class="advantage-item-icon sales"></div>
-              </div>
-              <span class="advantage-item-text">Получить сообщения
-                о закрытых распродажах только для наших партнеров</span>
-            </li>
-            <li class="advantage-item ">
-              <div class="icon">
-                <div class="advantage-item-icon management"></div>
-              </div>
-              <span class="advantage-item-text">Управлять своими заказами в личном кабинете: следить
-                за статусом оплаты
-                и доставки, хранить историю заказов</span>
-            </li>
-            <li class="advantage-item ">
-              <div class="icon">
-                <div class="advantage-item-icon access"></div>
-              </div>
-              <span class="advantage-item-text"> Получить доступ
-                к индивидуальным
-                оптовым ценам</span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
+    <!-- end of desktop version -->
+
     <!-- mobile version -->
     <div class="mobile-version-block">
 
@@ -156,7 +174,10 @@
         <div class="registration-text text-center">
           Регистрация
         </div>
-        <form class="registration-form">
+
+        <RegistrationForm />
+
+        <!-- <form class="registration-form">
           <div class="form-group">
             <label class="label">Введите имя и фамилию контактного лица</label>
             <input
@@ -222,30 +243,33 @@
             >Политикой</a> конфиденциальности
           </div>
 
-        </form>
+        </form> -->
 
-        <div class="already-have-account text-center">
-          <p>Уже зарегистрированы?</p>
-          <a
-            href="#"
-            class="go-log-in"
-          >Войти</a>
-        </div>
+        <!-- <div class="already-have-account text-center">
+            <p>Уже зарегистрированы?</p>
+            <a
+              href="#"
+              class="go-log-in"
+            >Войти</a>
+          </div>
+        </div> -->
+
       </div>
-
+      <!-- end of mobile version -->
     </div>
   </div>
-
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { Carousel, Slide } from 'vue-carousel'
+import RegistrationForm from '@/components/registration/registration-form/registration-form.vue'
 
 @Component({
   components: {
     Carousel,
-    Slide
+    Slide,
+    RegistrationForm
   }
 })
 export default class Registration extends Vue {
@@ -256,12 +280,12 @@ export default class Registration extends Vue {
     organizationVariants: '',
     organizationType: '',
     organizationName: ''
-  }
+  };
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../../assets/scss/variables.scss";
-@import "styles.scss";
+@import "registration-styles.scss";
 </style>
