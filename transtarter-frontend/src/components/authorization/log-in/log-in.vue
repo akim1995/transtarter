@@ -95,6 +95,6 @@ export default class LogIn extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import "../../assets/scss/variables.scss";
+@import "../../../assets/scss/variables.scss";
 @import "log-in-styles.scss";
 </style>
