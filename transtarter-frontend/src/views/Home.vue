@@ -2,7 +2,7 @@
   <div class="home">
     <!-- <Registration /> -->
     <!-- <LogIn /> -->
-    <PasswordRestore />
+    <!-- <PasswordRestore /> -->
   </div>
 </template>
 

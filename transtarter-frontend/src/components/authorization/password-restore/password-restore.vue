@@ -15,18 +15,22 @@
       </div>
 
       <div class="reset-block">
-        <input
-          v-model="email"
-          placeholder="Почта"
-          class="form-control reset-input"
-        >
-        <button
-          type="submit"
-          class="btn btn-orange reset-btn"
-          @click='restorePassword()'
-        >
-          Восстановить пароль
-        </button>
+        <form @submit="restorePassword()">
+          <input
+            v-model="email"
+            placeholder="Почта"
+            class="form-control reset-input"
+            type='email'
+            required
+          >
+          <button
+            type="submit"
+            class="btn btn-orange reset-btn"
+          >
+            Восстановить пароль
+          </button>
+        </form>
+
       </div>
     </div>
     <!-- end of desktop and mobile version -->
@@ -42,7 +46,10 @@
         на email
       </div>
 
-      <div class="tip" style="margin-bottom: 0;">
+      <div
+        class="tip"
+        style="margin-bottom: 0;"
+      >
         Перейдите по ней и следуйте инструкциям на сайте.
       </div>
 
@@ -59,10 +66,11 @@ export default class PasswordRestore extends Vue {
   email = '';
   restore = {
     beforeRestore: true,
-    successRestore: null
+    successRestore: false
   };
 
   restorePassword () {
+    debugger
     // here will be http response
     this.restore.beforeRestore = false
     this.restore.successRestore = true
