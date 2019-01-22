@@ -1,55 +1,55 @@
-.title {
-    font-size: 24px;
-    margin: 40px 0 16px 0;
-    text-align: left;
-}
-
-.log-in-form {
-    padding-right: 18%;
-    .remember-password {
-        display: flex;
-        justify-content: flex-end;
-        &-text {
-            font-size: 16px;
-            color: $green;
-            border-bottom: 1px dashed $green;
-        }
-        margin-bottom: 16px;
-    }
-    .btn-log-in {
-        margin: 24px 0 16px 0;
-        width: 240px;
-    }
-}
-
-.want-to-reg {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 24px;
-    .go-to-reg {
-        margin-left: 5px;
-        color: $green;
-        border-bottom: 1px dashed $green;
-    }
-}
-
-@media (max-width: 768px) {
+.log-in-modal {
+    padding: 0 24px 0 24px;
     .title {
-        font-size: 20px;
-        margin: 40px auto 16px auto;
+        font-size: 24px;
+        margin: 40px 0 16px 0;
+        text-align: left;
     }
     .log-in-form {
-        padding-right: 0;
+        padding-right: 18%;
+        .remember-password {
+            display: flex;
+            justify-content: flex-end;
+            &-text {
+                font-size: 16px;
+                color: $green;
+                border-bottom: 1px dashed $green;
+            }
+            margin-bottom: 16px;
+        }
         .btn-log-in {
-            width: 100%;
+            margin: 24px 0 16px 0;
+            width: 240px;
         }
     }
     .want-to-reg {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 24px;
         .go-to-reg {
-            margin-top: 5px;
-            margin-left: 0px;
+            margin-left: 5px;
+            color: $green;
+            border-bottom: 1px dashed $green;
+        }
+    }
+    @media (max-width: 768px) {
+        .title {
+            font-size: 20px;
+            margin: 40px auto 16px auto;
+        }
+        .log-in-form {
+            padding-right: 0;
+            .btn-log-in {
+                width: 100%;
+            }
+        }
+        .want-to-reg {
+            flex-direction: column;
+            .go-to-reg {
+                margin-top: 5px;
+                margin-left: 0px;
+            }
         }
     }
 }
