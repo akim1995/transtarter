@@ -38,6 +38,8 @@
             <span class="icon-shopping-cart header__icon-cart">
               <i>9</i>
             </span>
+
+            <font-awesome-icon icon="shopping-cart" />
           </li>
           <li class="header__login-item">
             <a
@@ -121,5 +123,6 @@ export default class Header extends Vue {}
 
 <style scoped lang="scss">
 @import "@/assets/scss/variables.scss";
-@import "header-styles.scss";
+@import "./header-styles.scss";
+@import "./search-form-styles.scss";
 </style>
