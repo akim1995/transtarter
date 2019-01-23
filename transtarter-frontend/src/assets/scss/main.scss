@@ -2,7 +2,7 @@
 @import "./variables.scss";
 @import "./my-reset.scss";
 // vendors
-@import "./normalize-css.scss";
+@import "./reset.scss";
 @import "./overwrite-vue-carousel.scss";
 html,
 body {
@@ -39,7 +39,7 @@ body {
 
 .btn-orange {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19), 0 1px 0 0 #e29401;
-    background-image: linear-gradient(to bottom, #ffd600, #ffc600);
+    background-image: linear-gradient(to bottom, $yellow, $yellow-dark);
 }
 
 .btn-block {
