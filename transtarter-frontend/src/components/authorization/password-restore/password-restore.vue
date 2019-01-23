@@ -15,7 +15,7 @@
       </div>
 
       <div class="reset-block">
-        <form class="reset-form" @submit="restorePassword()">
+        <form class="reset-form" @submit="restorePassword">
           <input
             v-model="email"
             placeholder="Почта"
@@ -70,26 +70,25 @@ export default class PasswordRestore extends Vue {
     loaded: 'loaded',
     failed: 'failed'
   };
-
   restore = {
     dataState: this.restoreStates.notAsked,
     errorText: '',
-    data: [],
-    get isLoading (): boolean {
-      return this.dataState === this.restoreStates.loading
-    },
-
-    get isLoaded (): boolean {
-      return this.dataState === this.restoreStates.loaded
-    },
-
-    get isError (): boolean {
-      return this.dataState === this.restoreStates.failed
-    }
+    data: []
   };
+  get isLoading (): boolean {
+    return this.restore.dataState === this.restoreStates.loading
+  }
 
-  restorePassword () {
-    const s = this.restore.isLoading
+  get isLoaded (): boolean {
+    return this.restore.dataState === this.restoreStates.loaded
+  }
+
+  get isError (): boolean {
+    return this.restore.dataState === this.restoreStates.failed
+  }
+
+  restorePassword (e) {
+    e.preventDefault()
     this.restore.dataState = this.restoreStates.loading
 
     setTimeout(() => {
