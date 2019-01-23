@@ -1,4 +1,4 @@
-import { UserManager, WebStorageStateStore, User } from 'oidc-client'
+import { UserManager, WebStorageStateStore, User, UserManagerSettings } from 'oidc-client'
 
 export default class AuthService {
   private userManager: UserManager;
@@ -7,15 +7,16 @@ export default class AuthService {
     const AUTH0_DOMAIN: string = 'http://144.76.133.147:5000'
     // const AUTH0_DOMAIN: string = 'http://192.168.2.12:5000'
 
-    const settings: any = {
+    const settings: UserManagerSettings = {
       userStore: new WebStorageStateStore({ store: window.localStorage }),
       authority: AUTH0_DOMAIN,
       client_id: 'skoruba_identity_admin',
       redirect_uri: 'http://localhost:8080/callback.html',
-      response_type: 'id_token token',
-      scope: 'openid profile',
       post_logout_redirect_uri: 'http://localhost:8080/',
+      response_type: 'id_token token',
+      scope: 'openid profile roles',
       filterProtocolClaims: true,
+      loadUserInfo: true,
       metadata: {
         issuer: 'identity',
         authorization_endpoint: AUTH0_DOMAIN + '/connect/authorize',
