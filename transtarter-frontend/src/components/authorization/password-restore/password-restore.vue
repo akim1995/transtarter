@@ -3,7 +3,7 @@
     <!-- desktop and mobile version -->
     <div
       class="log-in-modal modal-popup"
-      v-if="restore.beforeRestore"
+      v-if="restore.dataState === 'notAsked'"
     >
       <div class="close">✖</div>
       <div class="title bold">
@@ -15,7 +15,7 @@
       </div>
 
       <div class="reset-block">
-        <form @submit="restorePassword()">
+        <form class="reset-form" @submit="restorePassword()">
           <input
             v-model="email"
             placeholder="Почта"
@@ -38,7 +38,7 @@
     <!-- success restore -->
     <div
       class="log-in-modal modal-popup"
-      v-if="restore.successRestore"
+      v-if="restore.dataState === 'loaded'"
     >
       <div class="close">✖</div>
       <div class="title bold">
@@ -64,21 +64,42 @@ import { Component, Vue } from 'vue-property-decorator'
 @Component
 export default class PasswordRestore extends Vue {
   email = '';
+  restoreStates = {
+    notAsked: 'notAsked',
+    loading: 'loading',
+    loaded: 'loaded',
+    failed: 'failed'
+  };
+
   restore = {
-    beforeRestore: true,
-    successRestore: false
+    dataState: this.restoreStates.notAsked,
+    errorText: '',
+    data: [],
+    get isLoading (): boolean {
+      return this.dataState === this.restoreStates.loading
+    },
+
+    get isLoaded (): boolean {
+      return this.dataState === this.restoreStates.loaded
+    },
+
+    get isError (): boolean {
+      return this.dataState === this.restoreStates.failed
+    }
   };
 
   restorePassword () {
-    debugger
-    // here will be http response
-    this.restore.beforeRestore = false
-    this.restore.successRestore = true
+    const s = this.restore.isLoading
+    this.restore.dataState = this.restoreStates.loading
+
+    setTimeout(() => {
+      this.restore.dataState = this.restoreStates.loaded
+    }, 1000)
   }
 }
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/scss/variables.scss";
+@import "../../../assets/scss/variables.scss";
 @import "password-restore-styles.scss";
 </style>
