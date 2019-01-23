@@ -10,6 +10,7 @@
     <script src="js/oidc-client.min.js"></script>
     
     <script>
+        debugger;
         var mgr = new Oidc.UserManager({ userStore: new Oidc.WebStorageStateStore() });
 
         mgr.signinRedirectCallback().then(function (user) {

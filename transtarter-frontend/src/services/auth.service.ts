@@ -5,7 +5,6 @@ export default class AuthService {
 
   constructor () {
     const AUTH0_DOMAIN: string = 'http://144.76.133.147:5000'
-    // const AUTH0_DOMAIN: string = 'http://192.168.2.12:5000'
 
     const settings: UserManagerSettings = {
       userStore: new WebStorageStateStore({ store: window.localStorage }),
