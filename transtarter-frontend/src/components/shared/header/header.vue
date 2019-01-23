@@ -74,15 +74,11 @@
         </select>
 
         <div class="search__input search-input">
-          <i class="icon-search search-input__icon-lins"></i>
+          <font-awesome-icon icon="search" class="search__icon-lins" />
           <input
-            type="search"
-            name="search"
+            type="text"
           >
-          <button
-            type="button"
-            class="search-input__btn-clear icon-close"
-          ></button>
+          <font-awesome-icon icon="times" class="search__clear" />
         </div>
         <button
           type="submit"
@@ -96,11 +92,11 @@
 
         <ul class="search__street-list">
           <li class="search__street">
-            <i class="icon-map-marker search__icon-marker"></i>
+            <font-awesome-icon icon="map-marker-alt" class="search__icon-marker" />
             <p>Каширское шоссе, 41</p>
           </li>
           <li class="search__street">
-            <i class="icon-map-marker search__icon-marker"></i>
+            <font-awesome-icon icon="map-marker-alt" class="search__icon-marker" />
             <p>г. Дзержинский, ул. Энергетиков, 18А</p>
           </li>
         </ul>
