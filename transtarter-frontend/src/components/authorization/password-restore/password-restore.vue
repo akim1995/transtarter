@@ -99,6 +99,6 @@ export default class PasswordRestore extends Vue {
 </script>
 
 <style scoped lang="scss">
-@import "../../../assets/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 @import "password-restore-styles.scss";
 </style>
