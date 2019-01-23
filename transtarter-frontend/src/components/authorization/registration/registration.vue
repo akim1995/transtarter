@@ -93,7 +93,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { Carousel, Slide } from 'vue-carousel'
-import RegistrationForm from '@/components/registration/registration-form/registration-form.vue'
+import RegistrationForm from '@/components/authorization/registration/registration-form/registration-form.vue'
 
 @Component({
   components: {
@@ -107,6 +107,6 @@ export default class Registration extends Vue {}
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import "../../assets/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 @import "registration-styles.scss";
 </style>
