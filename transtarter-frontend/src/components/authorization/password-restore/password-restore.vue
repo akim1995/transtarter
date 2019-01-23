@@ -87,7 +87,7 @@ export default class PasswordRestore extends Vue {
     return this.restore.dataState === this.restoreStates.failed
   }
 
-  restorePassword (e) {
+  restorePassword (e: Event) {
     e.preventDefault()
     this.restore.dataState = this.restoreStates.loading
 
