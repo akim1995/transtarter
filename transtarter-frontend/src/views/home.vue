@@ -1,10 +1,14 @@
 <template>
   <div class="home">
-    <!-- <Registration /> -->
+    <Registration />
     <!-- <LogIn /> -->
     <!-- <PasswordRestore /> -->
 
-    <button @click="login">Login</button>
+    <!-- <div class="login">
+      <button @click="login">Login</button>
+      <button @click="logout">Logout</button>
+    </div> -->
+
   </div>
 </template>
 
