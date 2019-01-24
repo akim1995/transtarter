@@ -1,5 +1,5 @@
 .header {
-    font: 600 16px PTSans;
+    font: 600 16px 'PT Sans';
     &__menu {
         color: $white;
         display: flex;
@@ -30,13 +30,7 @@
             margin-right: 30px;
             position: relative;
             width: 40px;
-        }
-        a {
-            &.border {
-                padding-bottom: 2px;
-                border-bottom: 1px dashed $dark-medium-grey;
-            }
-        }
+        }        
     }
     &__icon-cart {
         position: relative;
@@ -70,7 +64,7 @@
     }
     &__logo {
         text-transform: uppercase;
-        font: 900 16px Exo2;
+        font: 900 16px 'Exo 2';
         margin-right: 20px;
         white-space: nowrap;
     }

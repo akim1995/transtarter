@@ -1,17 +1,22 @@
 // modules
 @import "./variables.scss";
+@import "./grid.scss";
 @import "./my-reset.scss";
+
 // vendors
 @import "./reset.scss";
 @import "./overwrite-vue-carousel.scss";
+
 html,
 body {
     background-color: $white;
     margin: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
 }
 
-* {
+* {    
     box-sizing: border-box;
 }
 
@@ -19,14 +24,18 @@ body {
     height: 100%;
 }
 
-.container {
-    max-width: 1520px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .bold {
     font-weight: bold;
+}
+
+.border {
+    padding-bottom: 2px;
+    border-bottom: 1px dashed $dark-medium-grey;
+}
+
+.border-white {
+    padding-bottom: 2px;
+    border-bottom: 1px dashed rgba(255, 255, 255, .4);
 }
 
 .text-center {
