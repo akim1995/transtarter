@@ -3,7 +3,7 @@
 
     <!-- desktop version -->
     <div class="desktop-version-modal modal-popup">
-      <div class="close">✖</div>
+      <div class="close" @click="toggleRegistrationPopup()">✖</div>
 
       <div class="desktop-version-modal-left-side">
 
@@ -49,7 +49,7 @@
 
     <!-- mobile version -->
     <div class="mobile-version-modal modal-popup">
-      <div class="close">✖</div>
+      <div class="close" @click="toggleRegistrationPopup()">✖</div>
 
       <carousel
         :perPage='1'
@@ -102,7 +102,11 @@ import RegistrationForm from '@/components/authorization/registration/registrati
     RegistrationForm
   }
 })
-export default class Registration extends Vue {}
+export default class Registration extends Vue {
+  toggleRegistrationPopup () {
+    this.$emit('toggle-registration-popup')
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

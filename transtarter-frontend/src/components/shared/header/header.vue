@@ -47,7 +47,10 @@
               href="#"
             >Вход</a>
           </li>
-          <li class="header__login-item" @click='toggleRegistrationPopup()'>
+          <li
+            class="header__login-item"
+            @click='toggleRegistrationPopup()'
+          >
             <a
               class="border"
               href="#"
@@ -133,35 +136,16 @@
       </div>
     </div>
 
-    <Registration v-if="show.registration"/>
-    <LogIn v-if="show.logIn"/>
-    <PasswordRestore v-if="show.restorePassword"/>
-
   </header>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Registration from '@/components/authorization/registration/registration.vue'
-import LogIn from '@/components/authorization/log-in/log-in.vue'
-import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue'
+import { Component, Vue } from 'vue-property-decorator';
 
-@Component({
-  components: {
-    Registration,
-    LogIn,
-    PasswordRestore
-  }
-})
+@Component
 export default class Header extends Vue {
-  show: {
-    registration:  false as boolean,
-    logIn: boolean,
-    restorePassword: boolean
-  }
-
   toggleRegistrationPopup () {
-    this.show.registration = !this.show.registration
+    this.$emit('toggle-registration-popup')
   }
 }
 </script>

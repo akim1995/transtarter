@@ -214,6 +214,10 @@ body {
     width: 100vw;
     background-color: rgba(50, 50, 48, 0.8);
     height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
     .modal-popup {
         position: relative;
         margin: 20px 0 20px 0;
@@ -221,6 +225,7 @@ body {
         width: 80%;
         background: white;
         .close {
+            cursor: pointer;
             position: absolute;
             top: 12px;
             right: 12px;

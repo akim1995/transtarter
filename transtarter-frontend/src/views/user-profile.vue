@@ -1,6 +1,6 @@
 <template>
   <div class="user-profile">
-    <Header />
+    <Header v-on:toggle-registration-popup="toggleShowRegistration()" />
 
     <main class="content">
       <div class="content-wrapper container">
@@ -16,16 +16,26 @@
     </main>
 
     <Footer />
+
+    <!-- popups -->
+    <Registration
+      v-if="show.registration"
+      v-on:toggle-registration-popup="toggleShowRegistration()"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Header from '@/components/shared/header/header.vue'
-import Footer from '@/components/shared/footer/footer.vue'
-import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
-import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
-import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
+import { Component, Vue } from 'vue-property-decorator';
+import Header from '@/components/shared/header/header.vue';
+import Footer from '@/components/shared/footer/footer.vue';
+import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue';
+import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue';
+import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue';
+
+import Registration from '@/components/authorization/registration/registration.vue';
+import LogIn from '@/components/authorization/log-in/log-in.vue';
+import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue';
 
 @Component({
   components: {
@@ -33,11 +43,23 @@ import ProfileSettings from '@/components/user-profile/profile-settings/profile-
     Footer,
     UserSidebar,
     PersonalManager,
-    ProfileSettings
+    ProfileSettings,
+    // popups
+    Registration,
+    LogIn,
+    PasswordRestore
   }
 })
 export default class UserProfile extends Vue {
+  show = {
+    registration: false,
+    logIn: false,
+    restorePassword: false
+  };
 
+  toggleShowRegistration () {
+    this.show.registration = !this.show.registration
+  }
 }
 </script>
 
