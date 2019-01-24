@@ -67,6 +67,7 @@ $sidebar-grey: #686868;
                 padding-bottom: 10px;
                 display: flex;
                 justify-content: space-between;
+                cursor: pointer;
                 &-active {
                     font-weight: bold;
                 }

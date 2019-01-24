@@ -5,7 +5,8 @@
     <main class="content">
       <div class="content-wrapper container">
         <aside class="aside-content">
-          <UserSidebar />
+          <UserSidebar style="margin-bottom: 24px;"/>
+          <PersonalManager />
         </aside>
 
         <section class="main-content">
@@ -23,12 +24,14 @@ import { Component, Vue } from 'vue-property-decorator'
 import Header from '@/components/shared/header/header.vue'
 import Footer from '@/components/shared/footer/footer.vue'
 import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
+import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
 
 @Component({
   components: {
     Header,
     Footer,
-    UserSidebar
+    UserSidebar,
+    PersonalManager
   }
 })
 export default class UserProfile extends Vue {}
@@ -47,10 +50,13 @@ export default class UserProfile extends Vue {}
     .content-wrapper {
       display: flex;
       align-items: flex-start;
-      padding-top: 24px;
+      padding: 24px 0;
       .aside-content {
         width: calc(100% - 74.3% - 26px);
         margin-right: 26px;
+        display: flex;
+        flex-direction: column;
+
       }
       .main-content {
         width: 74.3%;
