@@ -5,12 +5,12 @@
     <main class="content">
       <div class="content-wrapper container">
         <aside class="aside-content">
-          <UserSidebar style="margin-bottom: 24px;"/>
+          <UserSidebar style="margin-bottom: 24px;" />
           <PersonalManager />
         </aside>
 
         <section class="main-content">
-asdsad
+          <ProfileSettings />
         </section>
       </div>
     </main>
@@ -25,13 +25,15 @@ import Header from '@/components/shared/header/header.vue'
 import Footer from '@/components/shared/footer/footer.vue'
 import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
 import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
+import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
 
 @Component({
   components: {
     Header,
     Footer,
     UserSidebar,
-    PersonalManager
+    PersonalManager,
+    ProfileSettings
   }
 })
 export default class UserProfile extends Vue {}
@@ -56,7 +58,6 @@ export default class UserProfile extends Vue {}
         margin-right: 26px;
         display: flex;
         flex-direction: column;
-
       }
       .main-content {
         width: 74.3%;
