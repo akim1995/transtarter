@@ -143,12 +143,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
 
 @Component
 export default class Header extends Vue {
   toggleRegistrationPopup () {
-    this.$emit('toggle-registration-popup')
+    eventBus.$emit('toggle-registration-popup')
   }
 
   toggleLogInPopup () {

@@ -1,9 +1,8 @@
 <template>
   <div class="user-profile">
-    <Header
-      v-on:toggle-registration-popup="toggleShowRegistration()"
-      v-on:toggle-log-in-popup="toggleShowLogIn()"
-    />
+    <Header/>
+      <!-- v-on:toggle-registration-popup="toggleShowRegistration()"
+      v-on:toggle-log-in-popup="toggleShowLogIn()" -->
 
     <main class="content">
       <div class="content-wrapper container">
@@ -21,15 +20,12 @@
     <Footer />
 
     <!-- popups -->
-    <Registration
-      v-if="show.registration"
-      v-on:toggle-registration-popup="toggleShowRegistration()"
-    />
+    <Registration v-if="show.registration" />
 
-    <LogIn
-      v-if="show.logIn"
-      v-on:toggle-log-in-popup="toggleShowLogIn()"
-    />
+    <LogIn  v-if="show.logIn"/>
+<!--
+
+      v-on:toggle-log-in-popup="toggleShowLogIn()" -->
   </div>
 </template>
 
@@ -44,6 +40,8 @@ import ProfileSettings from '@/components/user-profile/profile-settings/profile-
 import Registration from '@/components/authorization/registration/registration.vue'
 import LogIn from '@/components/authorization/log-in/log-in.vue'
 import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue'
+
+import { eventBus } from '../main'
 
 @Component({
   components: {
@@ -71,13 +69,19 @@ export default class UserProfile extends Vue {
     this.show.restorePassword = false
   }
 
-  toggleShowRegistration () {
-    this.show.registration = !this.show.registration
-    this.closeAllPopups()
-  }
+  // toggleShowRegistration () {
+
+  // }
 
   toggleShowLogIn () {
     this.show.logIn = !this.show.logIn
+  }
+
+  created () {
+    eventBus.$on('toggle-registration-popup', () => {
+      debugger
+      this.show.registration = !this.show.registration
+    })
   }
 }
 </script>

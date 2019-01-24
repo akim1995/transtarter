@@ -94,6 +94,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { Carousel, Slide } from 'vue-carousel'
 import RegistrationForm from '@/components/authorization/registration/registration-form/registration-form.vue'
+import { eventBus } from '../../../main'
 
 @Component({
   components: {
@@ -104,7 +105,8 @@ import RegistrationForm from '@/components/authorization/registration/registrati
 })
 export default class Registration extends Vue {
   toggleRegistrationPopup () {
-    this.$emit('toggle-registration-popup')
+    debugger
+    eventBus.$emit('toggle-registration-popup')
   }
 }
 </script>
