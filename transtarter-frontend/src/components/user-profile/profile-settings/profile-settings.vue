@@ -66,6 +66,40 @@
           >
         </div>
       </div>
+      <div
+        class="form-group row"
+        style="margin-top: 53px;"
+      >
+        <label class="col-sm-4 big-label">Пароль</label>
+        <label class="col-sm-6 green-link">Сменить пароль</label>
+      </div>
+      <div
+        class="form-group row"
+        style="margin-top: 53px;"
+      >
+        <label class="col-sm-4"></label>
+        <div class="col-sm-6">
+          <button
+            type="submit"
+            class="btn btn-orange"
+          >
+            Восстановить пароль
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-6 accept-checkbox">
+          Нажимая на кнопку, вы даете согласие
+          на обработку<br> своих персональных данных
+          и соглашаетесь<br> с <a
+            href="#"
+            class="policy-link"
+          >Политикой конфиденциальности</a>
+        </div>
+      </div>
+
     </form>
 
   </div>

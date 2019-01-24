@@ -53,6 +53,7 @@ body {
     line-height: 1.41;
     color: $black;
     border-width: 0;
+    padding: 14px 16px;
 }
 
 .btn-orange {
@@ -75,11 +76,20 @@ body {
         line-height: 1.5;
         margin-bottom: 8px;
     }
-    .big-label {       
+    .big-label {
         font-weight: bold;
         line-height: 24px;
         font-size: 16px;
         color: #323230;
+    }
+    .green-link {
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+        color: $green;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-decoration-color: rgba(12, 181, 32, .4);
     }
     .two-selectors {
         display: flex;
@@ -150,7 +160,7 @@ body {
         display: table;
     }
     .active {
-        background-color: #0CB520;
+        background-color: $green;
         color: white;
     }
 }

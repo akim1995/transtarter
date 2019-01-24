@@ -32,4 +32,15 @@
             margin-left: 24px;
         }
     }
+    .accept-checkbox {
+        color: $medium-grey;
+        line-height: 1.43;        
+        font-size: 14px;
+        .policy-link {
+            display: inline;
+            border-bottom: 1px solid $medium-grey;
+            color: inherit;
+            cursor: pointer;
+        }
+    }
 }
