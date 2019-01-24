@@ -14,6 +14,13 @@
       <button type="button">Реквизиты и юр. лица</button>
     </div>
 
+    <div class="change-avatar">
+        <div class="user-picture"></div>
+        <div class="change-user-picture">
+            Изменить
+        </div>
+    </div>
+
   </div>
 </template>
 
