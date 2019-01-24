@@ -1,5 +1,5 @@
 .header {
-    font: 600 16px PTSans;
+    font: 600 16px 'PT Sans';
     &__menu {
         color: $white;
         display: flex;
@@ -29,34 +29,42 @@
         &_icon-cart {
             margin-right: 30px;
             position: relative;
-        }
-        a {
-            &.border {
-                padding-bottom: 2px;
-                border-bottom: 1px dashed $dark-medium-grey;
-            }
-        }
+            width: 40px;
+        }        
     }
     &__icon-cart {
         position: relative;
         i {
             position: absolute;
             top: -10px;
-            right: -44px;
+            right: -50px;
             width: 20px;
             height: 20px;
-            background-color: $yellow;
+            background-color: $yellow-light;
             border-radius: 50%;
             color: $black;
             display: flex;
             font: 600 12px PTSans;
             justify-content: center;
             padding-top: 3px;
+            z-index: 2;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 21px;
+            border-top-right-radius: 34%;
+            -webkit-transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+            transform: rotate(-142deg) skewX(-15deg) scale(1, 0.466);
+            background: $yellow-light;
+            top: -10.4px;
+            left: 27.4px;
         }
     }
     &__logo {
         text-transform: uppercase;
-        font: 900 16px Exo2;
+        font: 900 16px 'Exo 2';
         margin-right: 20px;
         white-space: nowrap;
     }

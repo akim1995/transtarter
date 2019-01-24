@@ -104,7 +104,7 @@ html {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: sans-serif;
+    // font-family: sans-serif;
     /* 1 */
     -ms-text-size-adjust: 100%;
     /* 2 */
@@ -553,10 +553,10 @@ input[type="search"] {
   * padding (and `textfield` appearance).
   */
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
+// input[type="search"]::-webkit-search-cancel-button,
+// input[type="search"]::-webkit-search-decoration {
+//     -webkit-appearance: none;
+// }
 
 /**
   * Define consistent border, margin, and padding.

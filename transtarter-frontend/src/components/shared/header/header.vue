@@ -60,10 +60,14 @@
 
     <div class="header__search search">
       <form class="container search__form">
+        <span class="search__form__select-numbers">
+          123
+        </span>
         <select
           class="search__select"
           name=""
         >
+          <option disabled value="" selected>Номер детали</option>
           <option value="detail_1">Детали 1</option>
           <option value="detail_2">Детали 2</option>
           <option value="detail_3">Детали 3</option>
@@ -74,15 +78,15 @@
         </select>
 
         <div class="search__input search-input">
-          <i class="icon-search search-input__icon-lins"></i>
-          <input
-            type="search"
-            name="search"
-          >
-          <button
-            type="button"
-            class="search-input__btn-clear icon-close"
-          ></button>
+          <font-awesome-icon
+            icon="search"
+            class="search__icon-lins"
+          />
+          <input type="text">
+          <font-awesome-icon
+            icon="times"
+            class="search__clear"
+          />
         </div>
         <button
           type="submit"
@@ -90,24 +94,34 @@
         >Найти</button>
       </form>
       <div class="container search__location">
-        <div class="search__city border-bottom link">
-          Москва
+        <div class="search__location-left">
+          <div class="search__city border-white link">
+            Москва
+          </div>
+
+          <ul class="search__street-list">
+            <li class="search__street">
+              <font-awesome-icon
+                icon="map-marker-alt"
+                class="search__icon-marker"
+              />
+              <p>Каширское шоссе, 41</p>
+            </li>
+            <li class="search__street">
+              <font-awesome-icon
+                icon="map-marker-alt"
+                class="search__icon-marker"
+              />
+              <p>г. Дзержинский, ул. Энергетиков, 18А</p>
+            </li>
+          </ul>
         </div>
 
-        <ul class="search__street-list">
-          <li class="search__street">
-            <i class="icon-map-marker search__icon-marker"></i>
-            <p>Каширское шоссе, 41</p>
-          </li>
-          <li class="search__street">
-            <i class="icon-map-marker search__icon-marker"></i>
-            <p>г. Дзержинский, ул. Энергетиков, 18А</p>
-          </li>
-        </ul>
-
-        <span class="search__phone">
-          +7 (495) 748-97-74
-        </span>
+        <div class="search__location-right">
+          <a class="search__phone border-white" href="tel:+7-495-748-97-74">
+            +7 (495) 748-97-74
+          </a>
+        </div>
 
       </div>
     </div>

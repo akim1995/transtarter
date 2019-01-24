@@ -1,5 +1,6 @@
 // modules
 @import "./variables.scss";
+@import "./grid.scss";
 @import "./my-reset.scss";
 // vendors
 @import "./reset.scss";
@@ -8,7 +9,9 @@ html,
 body {
     background-color: $white;
     margin: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
 }
 
 * {
@@ -23,6 +26,21 @@ body {
     font-weight: bold;
 }
 
+.border {
+    padding-bottom: 2px;
+    border-bottom: 1px dashed $dark-medium-grey;
+}
+
+.border-white {
+    padding-bottom: 2px;
+    border-bottom: 1px dashed rgba(255, 255, 255, .4);
+}
+
+.border-green {
+    padding-bottom: 2px;
+    border-bottom: 1px dashed rgba(12, 181, 32, .4);
+}
+
 .text-center {
     text-align: center;
 }
@@ -35,6 +53,7 @@ body {
     line-height: 1.41;
     color: $black;
     border-width: 0;
+    padding: 14px 16px;
 }
 
 .btn-orange {
@@ -57,6 +76,21 @@ body {
         line-height: 1.5;
         margin-bottom: 8px;
     }
+    .big-label {
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+        color: #323230;
+    }
+    .green-link {
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+        color: $green;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-decoration-color: rgba(12, 181, 32, .4);
+    }
     .two-selectors {
         display: flex;
         .first-selector {
@@ -69,12 +103,66 @@ body {
     }
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
 .form-control {
     border-radius: 2px;
     padding: 0.675rem .75rem;
     border-width: 0;
     border: 1px solid $light-grey;
     background-color: $white;
+    width: 100%;
+}
+
+.form-control-lg {
+    @extend .form-control;
+    line-height: 24px;
+}
+
+.btn-group {
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 16px;
+    button {
+        background-color: $white;
+        /* Green background */
+        border: 1px solid $green;
+        ;
+        /* Green border */
+        color: #323230;
+        padding: 10px 24px;
+        /* Some padding */
+        cursor: pointer;
+        /* Pointer/hand icon */
+        float: left;
+        /* Float the buttons side by side */
+        &:not(:last-child) {
+            border-right: none;
+            /* Prevent double borders */
+        }
+        &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        &:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    }
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .active {
+        background-color: $green;
+        color: white;
+    }
 }
 
 .custom-checkbox {
