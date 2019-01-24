@@ -75,6 +75,12 @@ body {
         line-height: 1.5;
         margin-bottom: 8px;
     }
+    .big-label {       
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+        color: #323230;
+    }
     .two-selectors {
         display: flex;
         .first-selector {
@@ -87,12 +93,25 @@ body {
     }
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
 .form-control {
     border-radius: 2px;
     padding: 0.675rem .75rem;
     border-width: 0;
     border: 1px solid $light-grey;
     background-color: $white;
+    width: 100%;
+}
+
+.form-control-lg {
+    @extend .form-control;
+    line-height: 24px;
 }
 
 .btn-group {
