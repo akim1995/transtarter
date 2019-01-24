@@ -3,7 +3,7 @@
 
     <!-- desktop and mobile version -->
     <div class="log-in-modal modal-popup">
-      <div class="close">✖</div>
+      <div class="close" @click="toggleLogInPopup()">✖</div>
       <div class="title bold">
         Вход на сайт
       </div>
@@ -89,6 +89,10 @@ export default class LogIn extends Vue {
 
   toggleForeignPc () {
     this.foreignPc = !this.foreignPc
+  }
+
+  toggleLogInPopup () {
+    this.$emit('toggle-log-in-popup')
   }
 }
 </script>

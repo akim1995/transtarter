@@ -1,6 +1,9 @@
 <template>
   <div class="user-profile">
-    <Header v-on:toggle-registration-popup="toggleShowRegistration()" />
+    <Header
+      v-on:toggle-registration-popup="toggleShowRegistration()"
+      v-on:toggle-log-in-popup="toggleShowLogIn()"
+    />
 
     <main class="content">
       <div class="content-wrapper container">
@@ -22,20 +25,25 @@
       v-if="show.registration"
       v-on:toggle-registration-popup="toggleShowRegistration()"
     />
+
+    <LogIn
+      v-if="show.logIn"
+      v-on:toggle-log-in-popup="toggleShowLogIn()"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Header from '@/components/shared/header/header.vue';
-import Footer from '@/components/shared/footer/footer.vue';
-import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue';
-import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue';
-import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue';
+import { Component, Vue } from 'vue-property-decorator'
+import Header from '@/components/shared/header/header.vue'
+import Footer from '@/components/shared/footer/footer.vue'
+import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
+import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
+import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
 
-import Registration from '@/components/authorization/registration/registration.vue';
-import LogIn from '@/components/authorization/log-in/log-in.vue';
-import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue';
+import Registration from '@/components/authorization/registration/registration.vue'
+import LogIn from '@/components/authorization/log-in/log-in.vue'
+import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue'
 
 @Component({
   components: {
@@ -57,8 +65,19 @@ export default class UserProfile extends Vue {
     restorePassword: false
   };
 
+  closeAllPopups () {
+    this.show.registration = false
+    this.show.logIn = false
+    this.show.restorePassword = false
+  }
+
   toggleShowRegistration () {
     this.show.registration = !this.show.registration
+    this.closeAllPopups()
+  }
+
+  toggleShowLogIn () {
+    this.show.logIn = !this.show.logIn
   }
 }
 </script>

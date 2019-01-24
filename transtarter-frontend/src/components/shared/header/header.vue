@@ -41,7 +41,10 @@
 
             <font-awesome-icon icon="shopping-cart" />
           </li>
-          <li class="header__login-item">
+          <li
+            class="header__login-item"
+            @click="toggleLogInPopup()"
+          >
             <a
               class="border"
               href="#"
@@ -146,6 +149,10 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class Header extends Vue {
   toggleRegistrationPopup () {
     this.$emit('toggle-registration-popup')
+  }
+
+  toggleLogInPopup () {
+    this.$emit('toggle-log-in-popup')
   }
 }
 </script>
