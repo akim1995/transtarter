@@ -1,0 +1,82 @@
+$sidebar-grey: #686868;
+.user-sidebar {
+    background-color: $white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    &-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        .user-picture {
+            background-image: url('../../../assets/icons/png/user-example.png');
+            background-position: center;
+            background-size: cover;
+            width: 72px;
+            height: 72px;
+            margin-bottom: 17px;
+        }
+        .user-fullname {
+            font-weight: bold;
+            line-height: 28px;
+            font-size: 20px;
+        }
+        .agreement,
+        .price-info {
+            color: $sidebar-grey;
+            line-height: 24px;
+            font-size: 16px;
+        }
+        .wallet {
+            margin-top: 11px;
+            &-with-icon {
+                background: #F3F3F3;
+                border-radius: 4px;
+                padding: 6px 8px;
+                display: flex;
+                align-items: center;
+                .icon {
+                    background-image: url('../../../assets/icons/svg/wallet.svg');
+                    width: 16px;
+                    height: 16px;
+                    background-size: contain;
+                    background-position: center;
+                    margin-right: 8px;
+                }
+                .wallet-balance {
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: #323230;
+                    font-weight: bold;
+                }
+            }
+        }
+        box-shadow: inset 0px -1px 0px #E8E8E8;
+    }
+    &-bottom {
+        .lk-links {
+            line-height: 24px;
+            font-size: 16px;
+            color: #323230;
+            padding-left: 15px;
+            padding-top: 15px;
+            padding-right: 16px;
+            ;
+            .lk-link {
+                padding-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+                &-active {
+                    font-weight: bold;
+                }
+                .lk-link-notify {
+                    background: rgba(0, 0, 0, 0.05);
+                    border-radius: 2px;
+                    padding: 0px 10px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

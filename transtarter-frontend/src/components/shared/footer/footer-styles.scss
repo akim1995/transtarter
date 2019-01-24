@@ -1,5 +1,64 @@
 .footer {
+    color: $color-footer;
     font-family: 'PT Sans';
-    font-size: 16px;
-    
+    .footer__content {
+        padding: 82px 0;
+        background-color: $bkground-footer;
+        color: $color-footer;
+        .cards_group {
+            display: flex;
+            width: 100%;
+            margin-bottom: 22px;
+            .card {
+                width: 100%;
+                &_header_logo {
+                    margin-bottom: 10px;
+                }
+                &_header {
+                    font-family: 'Exo 2';
+                    font-size: 16px;
+                    font-weight: 900;
+                    line-height: 1.5;
+                    display: block;
+                }
+                &_body ul li {
+                    padding-bottom: 8px;
+                }
+                &_body button {
+                    border: 1px solid;
+                    border-radius: 4px;
+                    padding: 0 16px;
+                    text-align: center;
+                    line-height: 32px;
+                }
+                &_soc {
+                    width: 200px;
+                }
+                &_soc-icon {
+                    font-size: 1.5rem;
+                }
+                &_soc-list {
+                    margin-top: 15px;
+                    margin-left: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85%;
+                }
+                &_link {
+                    color: $color-footer;
+                    transition: color 200ms ease;
+                    &:hover {
+                        color: rgba(255, 255, 255, .8);
+                        transition: color 200ms ease;
+                    }
+                }
+            }
+        }
+        .bottom-link {
+            line-height: 20px;
+            font-size: 14px;
+            color: $bottom-link-footer;
+            border-bottom: 1px solid $bottom-link-footer;
+        }
+    }
 }
