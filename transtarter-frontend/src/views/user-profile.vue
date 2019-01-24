@@ -36,7 +36,9 @@ import ProfileSettings from '@/components/user-profile/profile-settings/profile-
     ProfileSettings
   }
 })
-export default class UserProfile extends Vue {}
+export default class UserProfile extends Vue {
+
+}
 </script>
 
 <style scoped lang="scss">

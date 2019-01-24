@@ -47,7 +47,7 @@
               href="#"
             >Вход</a>
           </li>
-          <li class="header__login-item">
+          <li class="header__login-item" @click='toggleRegistrationPopup()'>
             <a
               class="border"
               href="#"
@@ -67,7 +67,11 @@
           class="search__select"
           name=""
         >
-          <option disabled value="" selected>Номер детали</option>
+          <option
+            disabled
+            value=""
+            selected
+          >Номер детали</option>
           <option value="detail_1">Детали 1</option>
           <option value="detail_2">Детали 2</option>
           <option value="detail_3">Детали 3</option>
@@ -118,21 +122,48 @@
         </div>
 
         <div class="search__location-right">
-          <a class="search__phone border-white" href="tel:+7-495-748-97-74">
+          <a
+            class="search__phone border-white"
+            href="tel:+7-495-748-97-74"
+          >
             +7 (495) 748-97-74
           </a>
         </div>
 
       </div>
     </div>
+
+    <Registration v-if="show.registration"/>
+    <LogIn v-if="show.logIn"/>
+    <PasswordRestore v-if="show.restorePassword"/>
+
   </header>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import Registration from '@/components/authorization/registration/registration.vue'
+import LogIn from '@/components/authorization/log-in/log-in.vue'
+import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue'
 
-@Component
-export default class Header extends Vue {}
+@Component({
+  components: {
+    Registration,
+    LogIn,
+    PasswordRestore
+  }
+})
+export default class Header extends Vue {
+  show: {
+    registration:  false as boolean,
+    logIn: boolean,
+    restorePassword: boolean
+  }
+
+  toggleRegistrationPopup () {
+    this.show.registration = !this.show.registration
+  }
+}
 </script>
 
 <style scoped lang="scss">
