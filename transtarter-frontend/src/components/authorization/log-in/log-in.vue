@@ -36,6 +36,7 @@
           <a
             href="#"
             class="remember-password-text"
+            @click="closeLogInAndOpenRestorePassword()"
           >
             Напомнить пароль?
           </a>
@@ -67,7 +68,7 @@
 
       <div class="want-to-reg">
         Впервые на сайте?
-        <span class="go-to-reg" @click="closeLogInOpenRestration()">Зарегистрироваться</span>
+        <a class="go-to-reg" @click="closeLogInAndOpenRestration()">Зарегистрироваться</a>
       </div>
     </div>
     <!-- end of desktop  and mobile  version -->
@@ -96,8 +97,12 @@ export default class LogIn extends Vue {
     eventBus.$emit('toggle-log-in-popup')
   }
 
-  closeLogInOpenRestration () {
+  closeLogInAndOpenRestration () {
+    eventBus.$emit('close-log-in-and-open-registration')
+  }
 
+  closeLogInAndOpenRestorePassword () {
+    eventBus.$emit('close-log-in-and-open-restore-password')
   }
 }
 </script>

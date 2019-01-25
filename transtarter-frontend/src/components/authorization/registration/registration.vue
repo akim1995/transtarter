@@ -105,7 +105,6 @@ import { eventBus } from '../../../main'
 })
 export default class Registration extends Vue {
   toggleRegistrationPopup () {
-    debugger
     eventBus.$emit('toggle-registration-popup')
   }
 }

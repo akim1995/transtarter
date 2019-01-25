@@ -1,8 +1,6 @@
 <template>
   <div class="user-profile">
     <Header/>
-      <!-- v-on:toggle-registration-popup="toggleShowRegistration()"
-      v-on:toggle-log-in-popup="toggleShowLogIn()" -->
 
     <main class="content">
       <div class="content-wrapper container">
@@ -21,11 +19,9 @@
 
     <!-- popups -->
     <Registration v-if="show.registration" />
-
     <LogIn  v-if="show.logIn"/>
-<!--
+    <PasswordRestore v-if="show.restorePassword"/>
 
-      v-on:toggle-log-in-popup="toggleShowLogIn()" -->
   </div>
 </template>
 
@@ -78,12 +74,27 @@ export default class UserProfile extends Vue {
   }
 
   created () {
-    eventBus.$on('toggle-registration-popup', (newState?: boolean) => {
+    eventBus.$on('toggle-registration-popup', () => {
       this.show.registration = !this.show.registration
     })
 
-    eventBus.$on('toggle-log-in-popup', (newState?: boolean) => {
+    eventBus.$on('toggle-log-in-popup', () => {
       this.show.logIn = !this.show.logIn
+    })
+
+    eventBus.$on('close-log-in-and-open-registration', () => {
+      this.show.logIn = false
+      this.show.registration = true
+    })
+
+    eventBus.$on('close-log-in-and-open-restore-password', () => {
+      this.show.logIn = false
+      this.show.restorePassword = true
+    })
+
+    eventBus.$on('close-registration-and-open-log-in', () => {
+      this.show.registration = false
+      this.show.logIn = true
     })
   }
 }

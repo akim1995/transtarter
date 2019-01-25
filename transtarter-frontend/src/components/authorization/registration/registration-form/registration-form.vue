@@ -93,6 +93,7 @@
       <span
         href="#"
         class="go-log-in"
+        @click="closeRegistrationAndOpenLogIn()"
       >Войти</span>
     </div>
 
@@ -101,7 +102,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import { eventBus } from '../../../../main';
 
 @Component
 export default class RegistrationForm extends Vue {
@@ -113,6 +115,10 @@ export default class RegistrationForm extends Vue {
     organizationType: '',
     organizationName: ''
   };
+
+  closeRegistrationAndOpenLogIn () {
+    eventBus.$emit('close-registration-and-open-log-in')
+  }
 }
 </script>
 
