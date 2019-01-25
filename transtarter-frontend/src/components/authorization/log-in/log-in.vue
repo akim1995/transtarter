@@ -3,17 +3,23 @@
 
     <!-- desktop and mobile version -->
     <div class="log-in-modal modal-popup">
-      <div class="close">✖</div>
+      <div
+        class="close"
+        @click="toggleLogInPopup()"
+      >✖</div>
       <div class="title bold">
         Вход на сайт
       </div>
 
-      <form class="log-in-form">
+      <form
+        class="log-in-form"
+        @submit='login'
+      >
         <div class="form-group">
           <label class="label">Email, указанный при регистрации</label>
           <input
             v-model="logInForm.email"
-            placeholder="Имя и фамилия"
+            placeholder="Почта"
             class="form-control"
             type="email"
           >
@@ -29,6 +35,7 @@
             placeholder="Телефон"
             class="form-control"
             type="password"
+            val='123'
           >
         </div>
 
@@ -36,6 +43,7 @@
           <a
             href="#"
             class="remember-password-text"
+            @click="closeLogInAndOpenRestorePassword()"
           >
             Напомнить пароль?
           </a>
@@ -67,7 +75,10 @@
 
       <div class="want-to-reg">
         Впервые на сайте?
-        <span class="go-to-reg">Зарегистрироваться</span>
+        <a
+          class="go-to-reg"
+          @click="closeLogInAndOpenRestration()"
+        >Зарегистрироваться</a>
       </div>
     </div>
     <!-- end of desktop  and mobile  version -->
@@ -77,18 +88,40 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
 
 @Component
 export default class LogIn extends Vue {
   logInForm = {
-    email: '',
-    password: ''
+    email: '2@mail.ru',
+    password: '123'
   };
 
   foreignPc = false;
 
   toggleForeignPc () {
     this.foreignPc = !this.foreignPc
+  }
+
+  toggleLogInPopup () {
+    eventBus.$emit('toggle-log-in-popup')
+  }
+
+  closeLogInAndOpenRestration () {
+    eventBus.$emit('close-log-in-and-open-registration')
+  }
+
+  closeLogInAndOpenRestorePassword () {
+    eventBus.$emit('close-log-in-and-open-restore-password')
+  }
+
+  login (e: Event) {
+    const { email, password } = this.logInForm
+    const { dispatch } = this.$store
+    if (email && password) {
+      // module inject in header
+      dispatch('auth/login', { email, password })
+    }
   }
 }
 </script>

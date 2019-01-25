@@ -38,21 +38,36 @@
             <span class="icon-shopping-cart header__icon-cart">
               <i>9</i>
             </span>
-
             <font-awesome-icon icon="shopping-cart" />
           </li>
-          <li class="header__login-item">
+          <!-- block for guests -->
+          <li
+            class="header__login-item"
+            @click="toggleLogInPopup()"
+            v-if="!loggedIn"
+          >
             <a
               class="border"
               href="#"
             >Вход</a>
           </li>
-          <li class="header__login-item">
+          <li
+            class="header__login-item"
+            @click='toggleRegistrationPopup()'
+            v-if="!loggedIn"
+          >
             <a
               class="border"
               href="#"
             >Регистрация</a>
           </li>
+          <!-- end for guests -->
+          <!-- block for users -->
+          <div class="user-info" v-if="loggedIn" @click="logout">
+            <div class="user-avatar"></div>
+            <div class="user-name" >Егор Воронов</div>
+          </div>
+          <!-- end block for users -->
         </ul>
       </div>
 
@@ -67,7 +82,11 @@
           class="search__select"
           name=""
         >
-          <option disabled value="" selected>Номер детали</option>
+          <option
+            disabled
+            value=""
+            selected
+          >Номер детали</option>
           <option value="detail_1">Детали 1</option>
           <option value="detail_2">Детали 2</option>
           <option value="detail_3">Детали 3</option>
@@ -118,21 +137,45 @@
         </div>
 
         <div class="search__location-right">
-          <a class="search__phone border-white" href="tel:+7-495-748-97-74">
+          <a
+            class="search__phone border-white"
+            href="tel:+7-495-748-97-74"
+          >
             +7 (495) 748-97-74
           </a>
         </div>
 
       </div>
     </div>
+
   </header>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
+import { AuthModule } from '../../../store/modules/authentication.module'
 
 @Component
-export default class Header extends Vue {}
+export default class Header extends Vue {
+  toggleRegistrationPopup () {
+    eventBus.$emit('toggle-registration-popup')
+  }
+
+  toggleLogInPopup () {
+    eventBus.$emit('toggle-log-in-popup')
+  }
+
+  get loggedIn () {
+    console.log('AuthModule.status.loggedIn:', AuthModule.loggedIn)
+    debugger
+    return AuthModule.loggedIn
+  }
+
+  logout () {
+    this.$store.dispatch('auth/logout')
+  }
+}
 </script>
 
 <style scoped lang="scss">

@@ -3,7 +3,11 @@
     <Header />
 
     <main class="content">
-      <div class="content-wrapper container">
+      <div
+        class="content-wrapper container"
+        v-if="loggedIn"
+      >
+
         <aside class="aside-content">
           <UserSidebar style="margin-bottom: 24px;" />
           <PersonalManager />
@@ -11,33 +15,26 @@
 
         <section class="main-content">
           <ProfileSettings />
+
         </section>
+      </div>
+      <div class="mock" v-if="!loggedIn">
+        <div >CONTENT</div>
       </div>
     </main>
 
     <Footer />
+
+    <!-- popups -->
+    <Registration v-if="show.registration" />
+    <LogIn v-if="show.logIn" />
+    <PasswordRestore v-if="show.restorePassword" />
+    <PasswordSuccessRestore v-if="show.successRestore" />
+
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Header from '@/components/shared/header/header.vue'
-import Footer from '@/components/shared/footer/footer.vue'
-import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
-import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
-import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
-
-@Component({
-  components: {
-    Header,
-    Footer,
-    UserSidebar,
-    PersonalManager,
-    ProfileSettings
-  }
-})
-export default class UserProfile extends Vue {}
-</script>
+<script lang="ts" src="./user-profile.ts"></script>
 
 <style scoped lang="scss">
 @import "@/assets/scss/variables.scss";
@@ -62,6 +59,16 @@ export default class UserProfile extends Vue {}
       .main-content {
         width: 74.3%;
       }
+    }
+    .mock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(15, 205, 90, 0.5);
+      font-weight: bold;
+      color: white;
+      font-size: 50px;
+      height: 100vh;
     }
   }
 }
