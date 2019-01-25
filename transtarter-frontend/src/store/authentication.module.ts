@@ -6,13 +6,13 @@ export const authentication = {
   namespaced: true,
   state: {},
   actions: {
-    // login ({ dispatch, commit }, { email, password }) {
-    //   commit('loginRequest', { login })
-    // },
-    // logout ({ commit }) {
-    //   userService.logout()
-    //   commit('logout')
-    // }
+    login ({ dispatch, commit }, { email, password }) {
+      commit('loginRequest', { login })
+    },
+    logout ({ commit }) {
+      userService.logout()
+      commit('logout')
+    }
   },
   mutations: {
     // loginRequest (state, user) {

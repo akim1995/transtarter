@@ -14,9 +14,7 @@ import UserProfile from '@/views/user-profile.vue'
     UserProfile
   }
 })
-export default class App extends Vue {
-
-}
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">
