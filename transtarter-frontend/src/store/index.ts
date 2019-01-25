@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import { authentication } from './authentication.module'
+import authentication from '../store/authentication.module'
 
 Vue.use(Vuex)
 
