@@ -89,7 +89,6 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
-import Authentication from '../../../store/modules/authentication.module'
 
 @Component
 export default class LogIn extends Vue {
@@ -120,14 +119,10 @@ export default class LogIn extends Vue {
     const { email, password } = this.logInForm
     const { dispatch } = this.$store
     if (email && password) {
+      // module inject in header
       dispatch('auth/login', { email, password })
-      // dispatch('login')
     }
   }
-
-  // created () {
-  //   console.log('Authentication:', Authentication)
-  // }
 }
 </script>
 

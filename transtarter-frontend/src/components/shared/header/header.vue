@@ -43,6 +43,7 @@
           <li
             class="header__login-item"
             @click="toggleLogInPopup()"
+            v-if="!loggedIn"
           >
             <a
               class="border"
@@ -52,6 +53,7 @@
           <li
             class="header__login-item"
             @click='toggleRegistrationPopup()'
+            v-if="!loggedIn"
           >
             <a
               class="border"
@@ -144,6 +146,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import { AuthModule } from '../../../store/modules/authentication.module'
 
 @Component
 export default class Header extends Vue {
@@ -153,6 +156,11 @@ export default class Header extends Vue {
 
   toggleLogInPopup () {
     eventBus.$emit('toggle-log-in-popup')
+  }
+
+  get loggedIn () {
+    console.log('AuthModule.status.loggedIn:', AuthModule.status.loggedIn)
+    return AuthModule.status.loggedIn
   }
 }
 </script>

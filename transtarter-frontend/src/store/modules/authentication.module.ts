@@ -2,8 +2,7 @@ import { Module, VuexModule, Mutation, Action, getModule } from 'vuex-module-dec
 import { store } from '../index'
 
 import AuthService from '@/services/auth.service'
-
-const auth = new AuthService()
+import { User } from 'oidc-client'
 
 export interface IAuthState {
   name: string;
@@ -18,19 +17,27 @@ export interface IAuthState {
   }
 }
 
+const userInfoString = localStorage.getItem('user')
+let user: User
+if (userInfoString) {
+  user = JSON.parse(userInfoString)
+}
+
 @Module({ dynamic: true, store, name: 'auth', namespaced: true })
 export class Authentication extends VuexModule implements IAuthState {
-  public name = '';
+  public name = ((user || '').profile || '').name || '';
   public email = '';
   public password = '';
-  public token = '';
+  public token = (user || '').access_token || ''
   public roles = [];
   public status =
     {
       loggingIn: false,
-      loggedIn: false
+      loggedIn: user !== undefined && !(user || false).expired
     };
   public avatar = '';
+
+  public auth = new AuthService()
 
   accessTokenExpired: boolean | undefined;
 
@@ -45,20 +52,34 @@ export class Authentication extends VuexModule implements IAuthState {
     this.status.loggingIn = false
   }
 
-  @Action({ commit: 'LOGIN_REQUEST' })
+  @Mutation
+  SUCCESS_LOGIN (user: User) {
+    this.name = user.profile.name
+    this.token = user.access_token
+    this.accessTokenExpired = user.expired
+    this.status.loggedIn = user !== null && !user.expired
+    this.status.loggingIn = false
+  }
+
+  @Mutation
+  ERROR_LOGIN (user: User) {
+    this.name = ''
+    this.accessTokenExpired = false
+    this.status.loggedIn = false
+    this.status.loggingIn = false
+  }
+
+  @Action
   public async login (userInfo: { email: string, password: string }): Promise<any> {
-    auth.login()
-
-    const user = await auth.getUser()
+    this.auth.login()
+    const user = await this.auth.getUser()
     debugger
-    // if (user) {
-    //   this.name = user.profile.name
-    //   this.accessTokenExpired = user.expired
-
-    //   this.status.loggedIn = user !== null && !user.expired
-    // }
-
-    return 1
+    if (user) {
+      this.auth.saveUserInfo(user)
+      this.context.commit('SUCCESS_LOGIN', user)
+    } else {
+      this.context.commit('ERROR_LOGIN')
+    }
   }
 
   @Action({ commit: 'LOGOUT' })
@@ -68,7 +89,7 @@ export class Authentication extends VuexModule implements IAuthState {
   }
 }
 
-export default getModule(Authentication)
+export const AuthModule = getModule(Authentication, store)
 
 // export const authentication = {
 //   namespaced: true,

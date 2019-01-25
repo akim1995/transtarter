@@ -39,4 +39,8 @@ export default class AuthService {
   public logout (): Promise<void> {
     return this.userManager.signinRedirect()
   }
+
+  public saveUserInfo (user: User): void {
+    localStorage.setItem('user', JSON.stringify(user))
+  }
 }
