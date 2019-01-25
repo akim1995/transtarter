@@ -40,6 +40,7 @@
             </span>
             <font-awesome-icon icon="shopping-cart" />
           </li>
+          <!-- block for guests -->
           <li
             class="header__login-item"
             @click="toggleLogInPopup()"
@@ -60,6 +61,13 @@
               href="#"
             >Регистрация</a>
           </li>
+          <!-- end for guests -->
+          <!-- block for users -->
+          <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="user-name">Егор Воронов</div>
+          </div>
+          <!-- end block for users -->
         </ul>
       </div>
 

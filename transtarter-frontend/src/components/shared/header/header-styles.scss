@@ -62,6 +62,26 @@
             left: 27.4px;
         }
     }
+    .user-info {
+        display: flex;
+        align-items: center;
+        width: auto;
+        border-left: 1px solid $dark-grey;
+        .user-avatar {
+            background-image: url('../../../assets/icons/png/user-example.png');
+            background-position: center;
+            background-size: cover;
+            width: 32px;
+            height: 32px;
+            margin-left: 8px;
+        }
+        .user-name {
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: $white;
+            margin-left: 8px;
+        }
+    }
     &__logo {
         text-transform: uppercase;
         font: 900 16px 'Exo 2';
