@@ -12,7 +12,8 @@ import LogIn from '@/components/authorization/log-in/log-in.vue'
 import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue'
 import PasswordSuccessRestore from '@/components/authorization/password-success-restore/password-success-restore.vue'
 // store modules
-// import { AuthModule } from '../store/modules/authentication.module'
+import { AuthModule } from '../store/modules/authentication.module'
+import AuthService from '../services/auth.service'
 
 @Component({
   components: {
@@ -40,8 +41,13 @@ export default class UserProfile extends Vue {
       this.show.logIn = !this.show.logIn
     }
 
-    // get loggedIn () {
-    //   return AuthModule.status.loggedIn
+    get loggedIn () {
+      return AuthModule.status.loggedIn
+    }
+
+    // login () {
+    //   const s = new AuthService()
+    //   s.login()
     // }
 
     created () {

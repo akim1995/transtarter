@@ -5,9 +5,9 @@
     <main class="content">
       <div
         class="content-wrapper container"
-
+        v-if="loggedIn"
       >
-      <!-- v-if="loggedIn" -->
+
         <aside class="aside-content">
           <UserSidebar style="margin-bottom: 24px;" />
           <PersonalManager />
@@ -18,12 +18,8 @@
 
         </section>
       </div>
-      <div
-        class="mock"
-
-      >
-      <!-- v-if="!loggedIn" -->
-        <div>CONTENT</div>
+      <div class="mock" v-if="!loggedIn">
+        <div >CONTENT</div>
       </div>
     </main>
 

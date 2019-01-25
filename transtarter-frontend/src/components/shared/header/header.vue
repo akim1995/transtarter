@@ -63,9 +63,9 @@
           </li>
           <!-- end for guests -->
           <!-- block for users -->
-          <div class="user-info" v-if="loggedIn">
+          <div class="user-info" v-if="loggedIn" @click="logout">
             <div class="user-avatar"></div>
-            <div class="user-name">Егор Воронов</div>
+            <div class="user-name" >Егор Воронов</div>
           </div>
           <!-- end block for users -->
         </ul>
@@ -170,6 +170,10 @@ export default class Header extends Vue {
     console.log('AuthModule.status.loggedIn:', AuthModule.loggedIn)
     debugger
     return AuthModule.loggedIn
+  }
+
+  logout () {
+    this.$store.dispatch('auth/logout')
   }
 }
 </script>

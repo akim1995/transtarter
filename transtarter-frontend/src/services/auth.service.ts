@@ -43,4 +43,8 @@ export default class AuthService {
   public saveUserInfo (user: User): void {
     localStorage.setItem('user', JSON.stringify(user))
   }
+
+  public removeFromLocalStorageByKey (key: string): void {
+    localStorage.removeItem(key)
+  }
 }

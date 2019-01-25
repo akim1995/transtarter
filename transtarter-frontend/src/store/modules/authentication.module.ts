@@ -17,6 +17,8 @@ export interface IAuthState {
   }
 }
 
+const auth = new AuthService()
+
 const userInfoString = localStorage.getItem('user')
 let user: User
 if (userInfoString) {
@@ -36,8 +38,6 @@ export class Authentication extends VuexModule implements IAuthState {
       loggedIn: user !== undefined && !(user || false).expired // we should get user info and expired have to be false
     };
   public avatar = '';
-
-  public auth = new AuthService()
 
   accessTokenExpired: boolean | undefined;
 
@@ -77,11 +77,12 @@ export class Authentication extends VuexModule implements IAuthState {
   @Action
   public async login (userInfo: { email: string, password: string }): Promise<any> {
     debugger
-    this.auth.login()
-    const user = await this.auth.getUser()
+    // auth.logout()
+    auth.login()
+    const user = await auth.getUser()
 
     if (user) {
-      this.auth.saveUserInfo(user)
+      auth.saveUserInfo(user)
       this.context.commit('SUCCESS_LOGIN', user)
     } else {
       this.context.commit('ERROR_LOGIN')
@@ -90,49 +91,10 @@ export class Authentication extends VuexModule implements IAuthState {
 
   @Action({ commit: 'LOGOUT' })
   logout () {
-    this.auth.logout()
-    console.log('logout')
+    debugger
+    auth.logout()
+    auth.removeFromLocalStorageByKey('user')
   }
 }
 
 export const AuthModule = getModule(Authentication, store)
-
-// export const authentication = {
-//   namespaced: true,
-//   state: {},
-//   actions: {
-//     login ({ dispatch, commit }, { email, password }) {
-//       commit('loginRequest', { login })
-//     },
-//     logout ({ commit }) {
-//       userService.logout()
-//       commit('logout')
-//     }
-//   },
-//   mutations: {
-//     loginRequest (state, user) {
-//       state.status = { loggingIn: true }
-//       state.user = user
-//     },
-//     loginSuccess (state, user) {
-//       state.status = { loggedIn: true }
-//       state.user = user
-//     },
-//     loginFailure (state) {
-//       state.status = {}
-//       state.user = null
-//     },
-//     logout (state) {
-//       state.status = {}
-//       state.user = null
-//     }
-//   },
-//   getters: {
-//     // loggingIn: state => {
-//     //   return state.status.loggingIn
-//     // },
-//     // loggedIn: state => {
-//     //   return state.status.loggedIn
-//     // }
-//   }
-// }
