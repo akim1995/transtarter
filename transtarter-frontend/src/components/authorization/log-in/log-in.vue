@@ -3,12 +3,18 @@
 
     <!-- desktop and mobile version -->
     <div class="log-in-modal modal-popup">
-      <div class="close" @click="toggleLogInPopup()">✖</div>
+      <div
+        class="close"
+        @click="toggleLogInPopup()"
+      >✖</div>
       <div class="title bold">
         Вход на сайт
       </div>
 
-      <form class="log-in-form">
+      <form
+        class="log-in-form"
+        @submit='login'
+      >
         <div class="form-group">
           <label class="label">Email, указанный при регистрации</label>
           <input
@@ -61,7 +67,6 @@
         <button
           type="submit"
           class="btn btn-orange btn-log-in"
-          @click="login"
         >
           Войти
         </button>
@@ -69,7 +74,10 @@
 
       <div class="want-to-reg">
         Впервые на сайте?
-        <a class="go-to-reg" @click="closeLogInAndOpenRestration()">Зарегистрироваться</a>
+        <a
+          class="go-to-reg"
+          @click="closeLogInAndOpenRestration()"
+        >Зарегистрироваться</a>
       </div>
     </div>
     <!-- end of desktop  and mobile  version -->
@@ -106,9 +114,15 @@ export default class LogIn extends Vue {
     eventBus.$emit('close-log-in-and-open-restore-password')
   }
 
-  login () {
+  login (e: Event) {
     debugger
-    this.$emit('login')
+    // this.$emit('login')
+
+    const { email, password } = this.logInForm
+    const { dispatch } = this.$store
+    if (email && password) {
+      dispatch('authentication/login', { email, password })
+    }
   }
 }
 </script>

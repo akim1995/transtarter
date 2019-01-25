@@ -38,7 +38,6 @@
             <span class="icon-shopping-cart header__icon-cart">
               <i>9</i>
             </span>
-
             <font-awesome-icon icon="shopping-cart" />
           </li>
           <li
