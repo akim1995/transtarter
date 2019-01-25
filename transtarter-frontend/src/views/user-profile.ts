@@ -50,15 +50,15 @@ export default class UserProfile extends Vue {
       auth.logout()
     }
 
-    public mounted () {
-      debugger
-      auth.getUser().then(user => {
-        this.currentUser = user.profile.name
-        this.accessTokenExpired = user.expired
+    // public mounted () {
+    //   debugger
+    //   auth.getUser().then(user => {
+    //     this.currentUser = user.profile.name
+    //     this.accessTokenExpired = user.expired
 
-        this.isLoggedIn = user !== null && !user.expired
-      })
-    }
+    //     this.isLoggedIn = user !== null && !user.expired
+    //   })
+    // }
 
     // main
 

@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import authentication from '../store/authentication.module'
+import { IAuthState } from './modules/authentication.module'
 
 Vue.use(Vuex)
 
-export const store = new Vuex.Store({
-  modules: {
-    authentication
-  }
-})
+export interface IRootState {
+  auth: IAuthState;
+}
+
+export const store = new Vuex.Store<IRootState>({})

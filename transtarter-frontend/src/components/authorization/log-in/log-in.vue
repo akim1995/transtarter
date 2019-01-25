@@ -19,7 +19,7 @@
           <label class="label">Email, указанный при регистрации</label>
           <input
             v-model="logInForm.email"
-            placeholder="Имя и фамилия"
+            placeholder="Почта"
             class="form-control"
             type="email"
           >
@@ -35,6 +35,7 @@
             placeholder="Телефон"
             class="form-control"
             type="password"
+            val='123'
           >
         </div>
 
@@ -88,12 +89,13 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import Authentication from '../../../store/modules/authentication.module'
 
 @Component
 export default class LogIn extends Vue {
   logInForm = {
-    email: '',
-    password: ''
+    email: '2@mail.ru',
+    password: '123'
   };
 
   foreignPc = false;
@@ -115,15 +117,17 @@ export default class LogIn extends Vue {
   }
 
   login (e: Event) {
-    debugger
-    // this.$emit('login')
-
     const { email, password } = this.logInForm
     const { dispatch } = this.$store
     if (email && password) {
-      dispatch('authentication/login', { email, password })
+      dispatch('auth/login', { email, password })
+      // dispatch('login')
     }
   }
+
+  // created () {
+  //   console.log('Authentication:', Authentication)
+  // }
 }
 </script>
 
