@@ -78,9 +78,12 @@ export default class UserProfile extends Vue {
   }
 
   created () {
-    eventBus.$on('toggle-registration-popup', () => {
-      debugger
+    eventBus.$on('toggle-registration-popup', (newState?: boolean) => {
       this.show.registration = !this.show.registration
+    })
+
+    eventBus.$on('toggle-log-in-popup', (newState?: boolean) => {
+      this.show.logIn = !this.show.logIn
     })
   }
 }

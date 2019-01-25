@@ -67,7 +67,7 @@
 
       <div class="want-to-reg">
         Впервые на сайте?
-        <span class="go-to-reg">Зарегистрироваться</span>
+        <span class="go-to-reg" @click="closeLogInOpenRestration()">Зарегистрироваться</span>
       </div>
     </div>
     <!-- end of desktop  and mobile  version -->
@@ -77,6 +77,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
 
 @Component
 export default class LogIn extends Vue {
@@ -92,7 +93,11 @@ export default class LogIn extends Vue {
   }
 
   toggleLogInPopup () {
-    this.$emit('toggle-log-in-popup')
+    eventBus.$emit('toggle-log-in-popup')
+  }
+
+  closeLogInOpenRestration () {
+
   }
 }
 </script>

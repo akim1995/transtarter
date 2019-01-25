@@ -153,7 +153,7 @@ export default class Header extends Vue {
   }
 
   toggleLogInPopup () {
-    this.$emit('toggle-log-in-popup')
+    eventBus.$emit('toggle-log-in-popup')
   }
 }
 </script>
