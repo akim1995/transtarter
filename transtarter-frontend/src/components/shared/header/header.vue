@@ -63,7 +63,7 @@
           </li>
           <!-- end for guests -->
           <!-- block for users -->
-          <div class="user-info">
+          <div class="user-info" v-if="loggedIn">
             <div class="user-avatar"></div>
             <div class="user-name">Егор Воронов</div>
           </div>
@@ -167,8 +167,9 @@ export default class Header extends Vue {
   }
 
   get loggedIn () {
-    console.log('AuthModule.status.loggedIn:', AuthModule.status.loggedIn)
-    return AuthModule.status.loggedIn
+    console.log('AuthModule.status.loggedIn:', AuthModule.loggedIn)
+    debugger
+    return AuthModule.loggedIn
   }
 }
 </script>

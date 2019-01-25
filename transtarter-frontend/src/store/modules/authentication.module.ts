@@ -41,6 +41,10 @@ export class Authentication extends VuexModule implements IAuthState {
 
   accessTokenExpired: boolean | undefined;
 
+  get loggedIn () {
+    return this.status.loggedIn
+  }
+
   @Mutation
   LOGIN_REQUEST () {
     this.status.loggingIn = true
@@ -57,7 +61,8 @@ export class Authentication extends VuexModule implements IAuthState {
     this.name = user.profile.name
     this.token = user.access_token
     this.accessTokenExpired = user.expired
-    this.status.loggedIn = user !== null && !user.expired
+    this.status.loggedIn = user !== null // && !user.expired
+    debugger
     this.status.loggingIn = false
   }
 
@@ -71,9 +76,10 @@ export class Authentication extends VuexModule implements IAuthState {
 
   @Action
   public async login (userInfo: { email: string, password: string }): Promise<any> {
+    debugger
     this.auth.login()
     const user = await this.auth.getUser()
-    debugger
+
     if (user) {
       this.auth.saveUserInfo(user)
       this.context.commit('SUCCESS_LOGIN', user)
@@ -84,7 +90,7 @@ export class Authentication extends VuexModule implements IAuthState {
 
   @Action({ commit: 'LOGOUT' })
   logout () {
-    // auth.logout()
+    this.auth.logout()
     console.log('logout')
   }
 }
