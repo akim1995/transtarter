@@ -2,10 +2,9 @@
   <div class="password-restore wrapper">
     <!-- desktop and mobile version -->
     <div
-      class="log-in-modal modal-popup"
-      v-if="restore.dataState === 'notAsked'"
+      class="restore-modal modal-popup"
     >
-      <div class="close">✖</div>
+      <div class="close" @click="toggleRestorePopup()">✖</div>
       <div class="title bold">
         Восстановление пароля
       </div>
@@ -35,65 +34,24 @@
     </div>
     <!-- end of desktop and mobile version -->
 
-    <!-- success restore -->
-    <div
-      class="log-in-modal modal-popup"
-      v-if="restore.dataState === 'loaded'"
-    >
-      <div class="close">✖</div>
-      <div class="title bold">
-        Мы отправили ссылку для восстановления
-        на email
-      </div>
-
-      <div
-        class="tip"
-        style="margin-bottom: 0;"
-      >
-        Перейдите по ней и следуйте инструкциям на сайте.
-      </div>
-
-    </div>
-    <!-- end success restore -->
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
 
 @Component
 export default class PasswordRestore extends Vue {
   email = '';
-  restoreStates = {
-    notAsked: 'notAsked',
-    loading: 'loading',
-    loaded: 'loaded',
-    failed: 'failed'
-  };
-  restore = {
-    dataState: this.restoreStates.notAsked,
-    errorText: '',
-    data: []
-  };
-  get isLoading (): boolean {
-    return this.restore.dataState === this.restoreStates.loading
-  }
-
-  get isLoaded (): boolean {
-    return this.restore.dataState === this.restoreStates.loaded
-  }
-
-  get isError (): boolean {
-    return this.restore.dataState === this.restoreStates.failed
-  }
 
   restorePassword (e: Event) {
     e.preventDefault()
-    this.restore.dataState = this.restoreStates.loading
+    eventBus.$emit('close-restore-and-open-success-restore')
+  }
 
-    setTimeout(() => {
-      this.restore.dataState = this.restoreStates.loaded
-    }, 1000)
+  toggleRestorePopup () {
+    eventBus.$emit('toggle-restore-popup')
   }
 }
 </script>

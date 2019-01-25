@@ -102,8 +102,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import { eventBus } from '../../../../main';
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../../main'
 
 @Component
 export default class RegistrationForm extends Vue {

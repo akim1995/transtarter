@@ -61,6 +61,7 @@
         <button
           type="submit"
           class="btn btn-orange btn-log-in"
+          @click="login"
         >
           Войти
         </button>
@@ -103,6 +104,11 @@ export default class LogIn extends Vue {
 
   closeLogInAndOpenRestorePassword () {
     eventBus.$emit('close-log-in-and-open-restore-password')
+  }
+
+  login () {
+    debugger
+    this.$emit('login')
   }
 }
 </script>

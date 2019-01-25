@@ -1,9 +1,12 @@
 <template>
-  <div class="password-restored-succesfuly wrapper">
+  <div class="success-restore wrapper">
 
     <!-- success restore -->
-    <div  class="log-in-modal modal-popup">
-      <div class="close">✖</div>
+    <div class="success-restore-modal modal-popup">
+      <div
+        class="close"
+        @click="toggleSuccessRestorePopup()"
+      >✖</div>
       <div class="title bold">
         Мы отправили ссылку для восстановления
         на email
@@ -23,14 +26,17 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
 
 @Component
-export default class PasswordIsRestored extends Vue {
-
+export default class PasswordSuccessRestore extends Vue {
+  toggleSuccessRestorePopup () {
+    eventBus.$emit('toggle-success-restore-popup')
+  }
 }
 </script>
 
 <style scoped lang="scss">
 @import "@/assets/scss/variables.scss";
-@import "password-restore-styles.scss";
+@import "password-success-restore";
 </style>
