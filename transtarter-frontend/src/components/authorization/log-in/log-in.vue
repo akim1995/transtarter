@@ -116,6 +116,7 @@ export default class LogIn extends Vue {
   }
 
   login (e: Event) {
+    e.preventDefault()
     const { email, password } = this.logInForm
     const { dispatch } = this.$store
     if (email && password) {

@@ -90,7 +90,7 @@
 }
 
 .mobile-version-modal {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 768px) {
@@ -153,6 +153,6 @@
         }
     }
     .desktop-version-modal {
-        display: none;
+        display: none !important;
     }
 }

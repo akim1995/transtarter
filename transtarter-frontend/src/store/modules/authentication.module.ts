@@ -20,8 +20,8 @@ export interface IAuthState {
 @Module({ dynamic: true, store, name: 'auth', namespaced: true })
 export class Authentication extends VuexModule implements IAuthState {
   private localStorageKey = 'user'
-  userInfoString = localStorage.getItem(this.localStorageKey)
-  user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
+  private userInfoString = localStorage.getItem(this.localStorageKey)
+  private user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
 
   public name = ((this.user || '').profile || '').name || '';
   public email = '';
@@ -31,7 +31,7 @@ export class Authentication extends VuexModule implements IAuthState {
   public status =
     {
       loggingIn: false,
-      loggedIn: this.user !== undefined && !(this.user || false).expired // we should get user info and expired have to be false
+      loggedIn: this.user !== null && !(this.user || false).expired // we should get user info and expired have to be false
     };
   public avatar = '';
 

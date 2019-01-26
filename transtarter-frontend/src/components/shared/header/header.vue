@@ -167,8 +167,6 @@ export default class Header extends Vue {
   }
 
   get loggedIn () {
-    console.log('AuthModule.status.loggedIn:', AuthModule.loggedIn)
-    debugger
     return AuthModule.loggedIn
   }
 
