@@ -1,0 +1,104 @@
+@media (max-width: 1200px) {
+    .mobile-header__search {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        font: 400 14px 'PT Sans';
+        .search__form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;            
+            margin-bottom: 10px;
+            position: relative;
+            padding: 8px;
+            background-color:  $green;
+            height: auto;
+            .form-row {
+                height: 40px;
+                margin-bottom: 4px;
+                display: flex;
+                align-items: center;
+            }
+            .search__select-numbers {
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                font-family: 'Exo 2';
+                font-size: 12px;
+                font-weight: 900;
+                line-height: 1.33;
+                background-color: $green;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+                font-weight: bold;
+                margin-left: 8px;
+                cursor: default;
+            }
+        }
+        .search__input-mobile {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            input {
+                height: 100%;
+                border: 0;
+                border-left: 1px solid #e8e8e8;
+                color: $black;
+                padding: 0 8px;
+                width: 100%;
+                font-family: 'Exo 2';
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.33;
+            }
+            &:focus {
+                border: 1px solid $yellow;
+            }
+        }
+        .search__select {
+            border: 0;
+            width: 100%;
+            height: 40px;
+            color: $black;
+            padding-left: 50px;
+            font: 400 1.0625rem 'PT Sans';
+        }
+        .search__btn-clear {
+            color: $light-grey;
+            position: absolute;
+            right: 8px;
+            top: calc( 50% - 8px);
+            cursor: pointer;
+        }
+        .search__icon-lins {
+            color: $grey;
+            position: absolute;
+            left: 8px;
+            top: calc( 50% - 10px);
+            font-size: 20px;
+            color: $black;
+            width: 24px;
+        }
+        .search__clear {
+            color: rgba(50, 50, 48, 0.2);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+        }
+        .search__btn-search {
+            background-color: $yellow;
+            color: $black;
+            height: 100%;
+            font-weight: 600;
+            padding: 0 16px;
+            font: 600 1em 'PT Sans';
+            position: relative;
+            width: 40px;
+        }        
+    }
+}

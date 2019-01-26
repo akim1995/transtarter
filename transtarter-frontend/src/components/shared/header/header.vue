@@ -203,32 +203,119 @@
         </div>
 
       </div>
-      <ul
-        class="mobile-header__menu-list"
-        v-if="blocks.showMenu"
-      >
-        <li class="mobile-header__menu-item">
-          <a href="#">Акции и новинки</a>
-        </li>
-        <li class="mobile-header__menu-item">
-          <a href="#">Доставка и оплата</a>
-        </li>
-        <li class="mobile-header__menu-item">
-          <a
-            href="#"
-            class="active"
-          >О компании</a>
-        </li>
-        <li class="mobile-header__menu-item">
-          <a href="#">Найти точку ремонта</a>
-        </li>
-        <li class="mobile-header__menu-item">
-          <a href="#">Контакты</a>
-        </li>
-        <li class="mobile-header__menu-item">
-          <a href="#">Блог</a>
-        </li>
-      </ul>
+
+      <!-- <div class="menu-popup">
+        <ul
+          class="mobile-header__menu-list"
+          v-if="blocks.showMenu"
+        >
+          <li class="mobile-header__menu-item">
+            <a href="#">Акции и новинки</a>
+          </li>
+          <li class="mobile-header__menu-item">
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li class="mobile-header__menu-item">
+            <a
+              href="#"
+              class="active"
+            >О компании</a>
+          </li>
+          <li class="mobile-header__menu-item">
+            <a href="#">Найти точку ремонта</a>
+          </li>
+          <li class="mobile-header__menu-item">
+            <a href="#">Контакты</a>
+          </li>
+          <li class="mobile-header__menu-item">
+            <a href="#">Блог</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-popup">
+        <div class="container search__location">
+          <div class="search__location-left">
+            <div class="search__city border-white link">
+              Москва
+            </div>
+
+            <ul class="search__street-list">
+              <li class="search__street">
+                <font-awesome-icon
+                  icon="map-marker-alt"
+                  class="search__icon-marker"
+                />
+                <p>Каширское шоссе, 41</p>
+              </li>
+              <li class="search__street">
+                <font-awesome-icon
+                  icon="map-marker-alt"
+                  class="search__icon-marker"
+                />
+                <p>г. Дзержинский, ул. Энергетиков, 18А</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="search__location-right">
+            <a
+              class="search__phone border-white"
+              href="tel:+7-495-748-97-74"
+            >
+              +7 (495) 748-97-74
+            </a>
+          </div>
+
+        </div>
+      </div> -->
+
+      <div class="mobile-header__search">
+        <form class="search__form">
+          <div class="form-row">
+            <span class="search__select-numbers ">
+              123
+            </span>
+            <select
+              class="search__select"
+              name=""
+            >
+              <option
+                disabled
+                value=""
+                selected
+              >Номер детали</option>
+              <option value="detail_1">Детали 1</option>
+              <option value="detail_2">Детали 2</option>
+              <option value="detail_3">Детали 3</option>
+              <option value="detail_4">Детали 4</option>
+              <option value="detail_5">Детали 5</option>
+              <option value="detail_6">Детали 6</option>
+              <option value="detail_7">Детали 7</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="search__input-mobile search-input">
+              <input type="text">
+              <font-awesome-icon
+                icon="times"
+                class="search__clear"
+              />
+            </div>
+            <button
+              type="submit"
+              class="search__btn-search"
+            >
+              <font-awesome-icon
+                icon="search"
+                class="search__icon-lins"
+              />
+            </button>
+          </div>
+
+        </form>
+
+      </div>
     </div>
     <!-- end mobile makrup -->
 
@@ -236,9 +323,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '../../../main'
-import { AuthModule } from '../../../store/modules/authentication.module'
+import { Component, Vue } from 'vue-property-decorator';
+import { eventBus } from '../../../main';
+import { AuthModule } from '../../../store/modules/authentication.module';
 
 @Component
 export default class Header extends Vue {
@@ -273,4 +360,5 @@ export default class Header extends Vue {
 @import "./header-styles.scss";
 @import "./header-mobile-styles.scss";
 @import "./search-form-styles.scss";
+@import "./search-form-mobile-styles.scss";
 </style>
