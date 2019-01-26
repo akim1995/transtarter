@@ -19,25 +19,29 @@
                 display: flex;
                 align-items: center;
                 margin-left: 12px;
-                
                 .burger-icon {
-                    
                     margin-right: 20px;
                 }
                 .logo {
-                    font-family: 'Exo 2';                    
+                    font-family: 'Exo 2';
                     font-weight: 900;
                     line-height: 14px;
                     font-size: 12px;
                     text-transform: uppercase;
                 }
             }
-            &-right {
+            &__right {
                 display: flex;
                 align-items: center;
                 .menu-item {
                     width: 40px;
                     height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover {
+                        background: #646464;
+                    }
                 }
             }
         }

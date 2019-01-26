@@ -175,7 +175,6 @@
           <div class="menu-item">
             <font-awesome-icon
               icon="map-marker-alt"
-              class="search__icon-marker"
             />
           </div>
 
@@ -187,34 +186,14 @@
           </div>
 
           <div class="menu-item">
-            <span class="icon-shopping-cart mobile-header__icon-cart">
-              <i>9</i>
-            </span>
-            <font-awesome-icon icon="shopping-cart" />
-          </div>
-          <ul class="mobile-header__login">
-
             <!-- block for guests -->
-            <li
+            <div
               class="mobile-header__login-item"
               @click="toggleLogInPopup()"
               v-if="!loggedIn"
             >
-              <a
-                class="border"
-                href="#"
-              >Вход</a>
-            </li>
-            <li
-              class="mobile-header__login-item"
-              @click='toggleRegistrationPopup()'
-              v-if="!loggedIn"
-            >
-              <a
-                class="border"
-                href="#"
-              >Регистрация</a>
-            </li>
+              <font-awesome-icon icon="user" />
+            </div>
             <!-- end for guests -->
             <!-- block for users -->
             <div
@@ -223,10 +202,9 @@
               @click="logout"
             >
               <div class="user-avatar"></div>
-              <div class="user-name">Егор Воронов</div>
             </div>
-            <!-- end block for users -->
-          </ul>
+          </div>
+
         </div>
 
       </div>
