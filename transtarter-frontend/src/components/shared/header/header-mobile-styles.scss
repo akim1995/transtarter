@@ -34,6 +34,7 @@
                 display: flex;
                 align-items: center;
                 .menu-item {
+                    position: relative;
                     width: 40px;
                     height: 100%;
                     display: flex;
@@ -41,6 +42,29 @@
                     justify-content: center;
                     &:hover {
                         background: #646464;
+                    }
+                    .notify-counter {
+                        position: absolute;
+                        width: 17px;
+                        height: 17px;
+                        background: $yellow-light;
+                        border-radius: 100px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: bold;
+                        line-height: 16px;
+                        font-size: 10px;
+                        font-family: 'PT Sans';
+                        top: 5px;
+                        right: -2px;
+                    }
+                    .user-avatar {
+                        background-image: url('../../../assets/icons/png/user-example.png');
+                        background-position: center;
+                        background-size: cover;
+                        width: 24px;
+                        height: 24px;
                     }
                 }
             }

@@ -173,16 +173,12 @@
 
         <div class="mobile-header__menu__right">
           <div class="menu-item">
-            <font-awesome-icon
-              icon="map-marker-alt"
-            />
+            <font-awesome-icon icon="map-marker-alt" />
           </div>
 
           <div class="menu-item">
-            <span class="icon-shopping-cart mobile-header__icon-cart">
-              <i>9</i>
-            </span>
             <font-awesome-icon icon="shopping-cart" />
+            <span class="notify-counter">9</span>
           </div>
 
           <div class="menu-item">
@@ -197,11 +193,10 @@
             <!-- end for guests -->
             <!-- block for users -->
             <div
-              class="user-info"
+              class="user-avatar"
               v-if="loggedIn"
               @click="logout"
             >
-              <div class="user-avatar"></div>
             </div>
           </div>
 
