@@ -13,7 +13,6 @@ import PasswordRestore from '@/components/authorization/password-restore/passwor
 import PasswordSuccessRestore from '@/components/authorization/password-success-restore/password-success-restore.vue'
 // store modules
 import { AuthModule } from '../store/modules/authentication.module'
-import AuthService from '../services/auth.service'
 
 @Component({
   components: {
@@ -44,11 +43,6 @@ export default class UserProfile extends Vue {
     get loggedIn () {
       return AuthModule.status.loggedIn
     }
-
-    // login () {
-    //   const s = new AuthService()
-    //   s.login()
-    // }
 
     created () {
       eventBus.$on('toggle-registration-popup', () => {

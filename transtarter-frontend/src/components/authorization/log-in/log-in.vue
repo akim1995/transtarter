@@ -119,8 +119,9 @@ export default class LogIn extends Vue {
     const { email, password } = this.logInForm
     const { dispatch } = this.$store
     if (email && password) {
-      // module inject in header
+      // module is injected in header
       dispatch('auth/login', { email, password })
+      eventBus.$emit('toggle-log-in-popup')
     }
   }
 }

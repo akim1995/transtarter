@@ -17,27 +17,25 @@ export interface IAuthState {
   }
 }
 
-const auth = new AuthService()
-
-const userInfoString = localStorage.getItem('user')
-let user: User
-if (userInfoString) {
-  user = JSON.parse(userInfoString)
-}
-
 @Module({ dynamic: true, store, name: 'auth', namespaced: true })
 export class Authentication extends VuexModule implements IAuthState {
-  public name = ((user || '').profile || '').name || '';
+  private localStorageKey = 'user'
+  userInfoString = localStorage.getItem(this.localStorageKey)
+  user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
+
+  public name = ((this.user || '').profile || '').name || '';
   public email = '';
   public password = '';
-  public token = (user || '').access_token || ''
+  public token = (this.user || '').access_token || ''
   public roles = [];
   public status =
     {
       loggingIn: false,
-      loggedIn: user !== undefined && !(user || false).expired // we should get user info and expired have to be false
+      loggedIn: this.user !== undefined && !(this.user || false).expired // we should get user info and expired have to be false
     };
   public avatar = '';
+
+  auth = new AuthService()
 
   accessTokenExpired: boolean | undefined;
 
@@ -77,12 +75,11 @@ export class Authentication extends VuexModule implements IAuthState {
   @Action
   public async login (userInfo: { email: string, password: string }): Promise<any> {
     debugger
-    // auth.logout()
-    auth.login()
-    const user = await auth.getUser()
+    this.auth.login()
+    const user = await this.auth.getUser()
 
     if (user) {
-      auth.saveUserInfo(user)
+      this.auth.saveUserInfo(this.localStorageKey, user)
       this.context.commit('SUCCESS_LOGIN', user)
     } else {
       this.context.commit('ERROR_LOGIN')
@@ -91,9 +88,8 @@ export class Authentication extends VuexModule implements IAuthState {
 
   @Action({ commit: 'LOGOUT' })
   logout () {
-    debugger
-    auth.logout()
-    auth.removeFromLocalStorageByKey('user')
+    this.auth.logout()
+    this.auth.removeFromLocalStorageByKey(this.localStorageKey)
   }
 }
 
