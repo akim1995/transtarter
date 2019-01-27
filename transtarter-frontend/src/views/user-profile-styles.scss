@@ -37,7 +37,8 @@
         .content {
             .content-wrapper {
                 flex-direction: column;
-                .aside-content {
+                .aside-content,
+                .main-content {
                     width: 100%;
                     padding: 0 8px;                   
                 }

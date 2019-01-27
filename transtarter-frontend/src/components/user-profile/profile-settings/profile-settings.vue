@@ -5,7 +5,7 @@
     </div>
 
     <div
-      class="btn-group"
+      class="btn-group btn-group-column"
       role="group"
       aria-label="Basic example"
     >

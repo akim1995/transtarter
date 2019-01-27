@@ -134,7 +134,7 @@ body {
     button {
         background-color: $white;
         /* Green background */
-        border: 1px solid $green;
+        border: 1px solid $light-grey;
         ;
         /* Green border */
         color: #323230;
@@ -234,6 +234,19 @@ body {
             right: 12px;
             z-index: 1;
             color: $medium-grey;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .btn-group-column {
+        display: flex;
+        flex-direction: column;
+        button {
+            border-radius: 5px;
+            margin-bottom: 4px;
+            line-height: 20px;
+            font-size: 14px;
         }
     }
 }
