@@ -10,6 +10,9 @@
         color: #323230;
         margin-bottom: 24px;
     }
+    .row-with-big-space {
+        margin-top: 53px;
+    }
     .change-avatar {
         display: flex;
         align-items: center;
@@ -41,6 +44,38 @@
             border-bottom: 1px solid $medium-grey;
             color: inherit;
             cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    .profile-settings {
+        padding: 16px;
+        .title {
+            font-size: 17px;
+            margin-bottom: 14px;
+        }
+        .row-with-big-space {
+            margin-top: 37px;
+        }
+        .change-avatar {
+            display: flex;
+            align-items: center;
+            .user-picture {
+                background-image: url('../../../assets/icons/png/user-example.png');
+                background-position: center;
+                background-size: cover;
+                width: 76px;
+                height: 76px;
+                margin: 32px 0;
+            }             
+        }
+        .accept-checkbox {
+            text-align: center;
+        }
+        .btn-block-mobile {
+            width: 100%;
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="password-restore wrapper">
+  <div class="password-restore modal-wrapper">
     <!-- desktop and mobile version -->
     <div
       class="restore-modal modal-popup"

@@ -40,8 +40,8 @@ export default class AuthService {
     return this.userManager.signinRedirect()
   }
 
-  public saveUserInfo (user: User): void {
-    localStorage.setItem('user', JSON.stringify(user))
+  public saveUserInfo (key: string, user: User): void {
+    localStorage.setItem(key, JSON.stringify(user))
   }
 
   public removeFromLocalStorageByKey (key: string): void {

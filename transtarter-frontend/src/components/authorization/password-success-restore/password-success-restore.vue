@@ -1,5 +1,5 @@
 <template>
-  <div class="success-restore wrapper">
+  <div class="success-restore modal-wrapper">
 
     <!-- success restore -->
     <div class="success-restore-modal modal-popup">

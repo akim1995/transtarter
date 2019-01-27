@@ -9,6 +9,9 @@
             display: flex;
             width: 100%;
             margin-bottom: 22px;
+            .call-card {
+                text-align: right;
+            }
             .card {
                 width: 100%;
                 &_header_logo {
@@ -17,12 +20,17 @@
                 &_header {
                     font-family: 'Exo 2';
                     font-size: 16px;
-                    font-weight: 900;
+                    font-weight: bold;
                     line-height: 1.5;
                     display: block;
                 }
-                &_body ul li {
-                    padding-bottom: 8px;
+                &_body .links {
+                    .links-item {
+                        padding-bottom: 8px;
+                    }
+                    .mb-20 {
+                        margin-bottom: 20px;
+                    }
                 }
                 &_body button {
                     border: 1px solid;
@@ -54,11 +62,64 @@
                 }
             }
         }
-        .bottom-link {
-            line-height: 20px;
-            font-size: 14px;
-            color: $bottom-link-footer;
-            border-bottom: 1px solid $bottom-link-footer;
+        .additional-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .bottom-link {
+                line-height: 20px;
+                font-size: 14px;
+                color: $bottom-link-footer;
+                border-bottom: 1px solid $bottom-link-footer;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        .footer__content {
+            padding-top: 35px;
+            padding-bottom: 32px;
+            .cards_group {
+                display: flex;
+                flex-direction: column;
+                .specialization {
+                    margin-bottom: 36px;
+                }
+                .call-card {
+                    text-align: left;
+                    margin-top: 34px;
+                    font-family: 'Exo 2';
+                    font-style: normal;
+                    font-weight: bold;                    
+                    font-size: 16px;
+                }
+                .card {
+                    &_body .links {
+                        font-weight: bold;
+                        line-height: 32px;
+                        font-size: 16px;
+                        color: white;
+                        margin-bottom: 28px;
+                        .links-item {
+                            padding-bottom: 0;
+                            .card_link {
+                                color: #E9E9E9;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .additional-links {
+                display: flex;
+                flex-direction: column;
+                &-left {
+                    margin-bottom: 11px;
+                }
+            }
         }
     }
 }

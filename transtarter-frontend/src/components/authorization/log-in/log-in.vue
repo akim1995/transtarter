@@ -1,5 +1,5 @@
 <template>
-  <div class="log-in wrapper">
+  <div class="log-in modal-wrapper">
 
     <!-- desktop and mobile version -->
     <div class="log-in-modal modal-popup">
@@ -116,11 +116,13 @@ export default class LogIn extends Vue {
   }
 
   login (e: Event) {
+    e.preventDefault()
     const { email, password } = this.logInForm
     const { dispatch } = this.$store
     if (email && password) {
-      // module inject in header
+      // module is injected in header
       dispatch('auth/login', { email, password })
+      eventBus.$emit('toggle-log-in-popup')
     }
   }
 }
