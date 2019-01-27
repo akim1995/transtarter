@@ -48,6 +48,10 @@ body {
     text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
+
 .btn {
     height: 48px;
     border-radius: 4px;
@@ -84,6 +88,9 @@ body {
         line-height: 24px;
         font-size: 16px;
         color: #323230;
+    }
+    .mobile-top-label {
+        margin-bottom: 3px;
     }
     .green-link {
         font-weight: bold;

@@ -10,6 +10,9 @@
         color: #323230;
         margin-bottom: 24px;
     }
+    .row-with-big-space {
+        margin-top: 53px;
+    }
     .change-avatar {
         display: flex;
         align-items: center;
@@ -53,6 +56,9 @@
             font-size: 17px;
             margin-bottom: 14px;
         }
+        .row-with-big-space {
+            margin-top: 37px;
+        }
         .change-avatar {
             display: flex;
             align-items: center;
@@ -63,28 +69,13 @@
                 width: 75px;
                 height: 76px;
                 margin: 32px 0;
-            }
-            .change-user-picture {
-                font-weight: bold;
-                line-height: 24px;
-                font-size: 16px;
-                color: $green;
-                text-decoration: underline;
-                text-decoration-color: rgba(12, 181, 32, .4);
-                text-decoration-style: dashed;
-                margin-left: 24px;
-            }
+            }             
         }
         .accept-checkbox {
-            color: $medium-grey;
-            line-height: 1.43;        
-            font-size: 14px;
-            .policy-link {
-                display: inline;
-                border-bottom: 1px solid $medium-grey;
-                color: inherit;
-                cursor: pointer;
-            }
+            text-align: center;
+        }
+        .btn-block-mobile {
+            width: 100%;
         }
     }
 }

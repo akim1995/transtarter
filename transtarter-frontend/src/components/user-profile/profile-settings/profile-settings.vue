@@ -26,8 +26,8 @@
 
     <form>
       <div class="form-group row">
-        <label class="col-sm-4 big-label">Название компании</label>
-        <div class="col-sm-6">
+        <label class="col-xl-4 big-label mobile-top-label">Название компании</label>
+        <div class="col-xl-6 col-12">
           <input
             type="text"
             class="form-control-lg"
@@ -36,8 +36,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-sm-4 big-label">Контактное лицо</label>
-        <div class="col-sm-6">
+        <label class="col-xl-4 big-label mobile-top-label">Контактное лицо</label>
+        <div class="col-xl-6 col-12">
           <input
             type="text"
             class="form-control-lg"
@@ -46,8 +46,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-sm-4 big-label">Телефон</label>
-        <div class="col-sm-6">
+        <label class="col-xl-4 big-label mobile-top-label">Телефон</label>
+        <div class="col-xl-6 col-12">
           <input
             type="text"
             class="form-control-lg"
@@ -57,8 +57,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-sm-4 big-label">Email</label>
-        <div class="col-sm-6">
+        <label class="col-xl-4 big-label mobile-top-label">Email</label>
+        <div class="col-xl-6 col-12">
           <input
             type="text"
             class="form-control-lg"
@@ -67,30 +67,29 @@
         </div>
       </div>
       <div
-        class="form-group row"
-        style="margin-top: 53px;"
+        class="form-group row row-with-big-space"
+
       >
-        <label class="col-sm-4 big-label">Пароль</label>
-        <label class="col-sm-6 green-link">Сменить пароль</label>
+        <label class="col-xl-4 col-6 big-label">Пароль</label>
+        <label class="col-xl-6 col-6 green-link text-right">Сменить пароль</label>
       </div>
       <div
-        class="form-group row"
-        style="margin-top: 53px;"
+        class="form-group row row-with-big-space"
       >
-        <label class="col-sm-4"></label>
-        <div class="col-sm-6">
+        <label class="col-xl-4 col-0"></label>
+        <div class="col-xl-6 col-12">
           <button
             type="submit"
-            class="btn btn-orange"
+            class="btn btn-orange btn-block-mobile"
           >
-            Восстановить пароль
+            Сохранить данные
           </button>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-6 accept-checkbox">
+        <div class="col-xl-4 col-0"></div>
+        <div class="col-xl-6 accept-checkbox col-12">
           Нажимая на кнопку, вы даете согласие
           на обработку<br> своих персональных данных
           и соглашаетесь<br> с <a
