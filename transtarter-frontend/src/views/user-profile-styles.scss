@@ -13,7 +13,7 @@
                 width: calc(100% - 74.3% - 26px);
                 margin-right: 26px;
                 display: flex;
-                flex-direction: column;
+                flex-direction: column;                
             }
             .main-content {
                 width: 74.3%;
@@ -39,7 +39,7 @@
                 flex-direction: column;
                 .aside-content {
                     width: 100%;
-                    
+                    padding: 0 8px;                   
                 }
             }
         }

@@ -2,6 +2,7 @@ $sidebar-grey: #686868;
 .user-sidebar {
     background-color: $white;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 24px;
     &-top {
         display: flex;
         flex-direction: column;
@@ -62,7 +63,6 @@ $sidebar-grey: #686868;
             padding-left: 15px;
             padding-top: 15px;
             padding-right: 16px;
-            ;
             .lk-link {
                 padding-bottom: 10px;
                 display: flex;
@@ -76,6 +76,32 @@ $sidebar-grey: #686868;
                     border-radius: 2px;
                     padding: 0px 10px;
                     font-weight: bold;
+                }
+            }
+        }
+        .lk-links-alternative {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .user-sidebar {
+        margin-bottom: 8px;
+        &-bottom {
+            .lk-links {
+                display: none;
+            }
+            .lk-links-alternative {
+                padding: 12px 16px;
+                display: block;
+                background: #F9F9F9;
+                box-shadow: inset 0px 1px 0px #EFEFEF;
+                .form-control-border-radius {
+                    background: #FFFFFF;
+                    border: 1px solid #D2D2D2;
+                    box-sizing: border-box;
+                    border-radius: 4px;
                 }
             }
         }

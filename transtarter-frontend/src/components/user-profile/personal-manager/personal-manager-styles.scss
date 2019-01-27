@@ -71,3 +71,25 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .personal-manager {
+        margin-bottom: 8px;
+        
+        &-top {
+            justify-content: center;
+            min-height: 80px;
+            .question-sign {
+                background-position: right;
+            }
+            .have-questions {
+                display: flex;
+                align-items: center;
+            }
+        }
+        
+        &-bottom {
+            display: none;            
+        }
+    }
+}

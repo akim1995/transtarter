@@ -9,7 +9,7 @@
       >
 
         <aside class="aside-content">
-          <UserSidebar style="margin-bottom: 24px;" />
+          <UserSidebar />
           <PersonalManager />
         </aside>
 
