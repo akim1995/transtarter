@@ -204,10 +204,10 @@
 
       </div>
 
-      <!-- <div class="menu-popup">
+      <div class="menu-popup" v-if="blocksShow.menu">
         <ul
           class="mobile-header__menu-list"
-          v-if="blocks.showMenu"
+
         >
           <li class="mobile-header__menu-item">
             <a href="#">Акции и новинки</a>
@@ -232,7 +232,7 @@
           </li>
         </ul>
       </div>
-      <div class="menu-popup">
+      <div class="menu-popup" v-if="blocksShow.location">
         <div class="container search__location">
           <div class="search__location-left">
             <div class="search__city border-white link">
@@ -267,7 +267,7 @@
           </div>
 
         </div>
-      </div> -->
+      </div>
 
       <div class="mobile-header__search">
         <form class="search__form">
@@ -323,14 +323,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { eventBus } from '../../../main';
-import { AuthModule } from '../../../store/modules/authentication.module';
+import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
+import { AuthModule } from '../../../store/modules/authentication.module'
 
 @Component
 export default class Header extends Vue {
-  blocks = {
-    showMenu: false
+  blocksShow = {
+    menu: false,
+    location: false
   };
 
   toggleRegistrationPopup () {
@@ -350,7 +351,7 @@ export default class Header extends Vue {
   }
 
   toggleMenu () {
-    this.blocks.showMenu = !this.blocks.showMenu
+    this.blocksShow.menu = !this.blocksShow.menu
   }
 }
 </script>

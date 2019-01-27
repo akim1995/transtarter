@@ -7,11 +7,11 @@
         .search__form {
             display: flex;
             flex-direction: column;
-            width: 100%;            
+            width: 100%;
             margin-bottom: 10px;
             position: relative;
             padding: 8px;
-            background-color:  $green;
+            background-color: $green;
             height: auto;
             .form-row {
                 height: 40px;
@@ -65,31 +65,11 @@
             color: $black;
             padding-left: 50px;
             font: 400 1.0625rem 'PT Sans';
-        }
-        .search__btn-clear {
-            color: $light-grey;
-            position: absolute;
-            right: 8px;
-            top: calc( 50% - 8px);
-            cursor: pointer;
-        }
+            background-color: $white;
+        }       
         .search__icon-lins {
-            color: $grey;
-            position: absolute;
-            left: 8px;
-            top: calc( 50% - 10px);
-            font-size: 20px;
             color: $black;
-            width: 24px;
-        }
-        .search__clear {
-            color: rgba(50, 50, 48, 0.2);
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translate(0, -50%);
-            cursor: pointer;
-        }
+        }  
         .search__btn-search {
             background-color: $yellow;
             color: $black;
@@ -99,6 +79,6 @@
             font: 600 1em 'PT Sans';
             position: relative;
             width: 40px;
-        }        
+        }
     }
 }
