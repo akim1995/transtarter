@@ -81,6 +81,7 @@
     .footer {
         .footer__content {
             padding-top: 35px;
+            padding-bottom: 32px;
             .cards_group {
                 display: flex;
                 flex-direction: column;
@@ -104,7 +105,7 @@
                         margin-bottom: 28px;
                         .links-item {
                             padding-bottom: 0;
-                            .card-link {
+                            .card_link {
                                 color: #E9E9E9;
                             }
                         }
