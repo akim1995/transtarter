@@ -1,5 +1,5 @@
 <template>
-  <div class="log-in wrapper">
+  <div class="log-in modal-wrapper">
 
     <!-- desktop and mobile version -->
     <div class="log-in-modal modal-popup">
