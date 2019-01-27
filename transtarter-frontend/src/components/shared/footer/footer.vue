@@ -9,38 +9,40 @@
           <div class="card">
             <div class="card_header card_header_logo">ТРАНС СТАРТЕР</div>
             <div
-              class="card_body"
+              class="card_body specialization"
               style="line-height: 24px; padding-right: 10px;"
             >Продажа стартеров, генераторов и запчастей с 1995г.</div>
           </div>
           <div class="card">
             <div class="card_body">
-              <ul>
-                <li><a
+              <ul class="links">
+                <li class="links-item"><a
                     class="card_link"
                     href="#"
                   >Акции и новинки</a></li>
-                <li style="margin-bottom: 20px;"><a
-                    class="card_link"
+                <li class="mb-20 links-item"><a
+                    class="card_link "
                     href="#"
                   >Доставка и оплата</a></li>
 
-                <li><a
+                <li class="links-item"><a
                     class="card_link"
                     href="#"
                   >О компании</a></li>
-                <li><a
+                <li class="links-item"><a
                     class="card_link"
                     href="#"
                   >Найти точку ремонта</a></li>
-                <li style="margin-bottom: 20px;"><a
-                    class="card_link"
+                <li class="mb-20 links-item"><a
+                    class="card_link  "
                     href="#"
                   >Контакты</a></li>
-                <li style="padding-bottom: 0;"><a
-                    class="card_link"
+                <li
+                  class="link-item"
+                  style="padding-bottom: 0;"
+                ><a
+                    class="card_link "
                     href="#"
-
                   >Блог</a></li>
               </ul>
             </div>
@@ -86,10 +88,7 @@
               </ul>
             </div>
           </div>
-          <div
-            class="card"
-            style="text-align: right;"
-          >
+          <div class="card call-card">
             <a
               class="card_header"
               style="margin-bottom: 8px;"
@@ -104,15 +103,19 @@
           </div>
         </div>
 
-        <div>
-          <a
-            class="card_link bottom-link"
-            href="#"
-            target='_blank'
-            rel='noopener noreferrer'
-          >Политика конфеденциальности</a>
-          <span style="float:right">
-            <span class="card_link bottom-link" style="border: 0;">Разработано в <a
+        <div class="additional-links">
+          <span class="additional-links-left"><a
+              class="card_link bottom-link"
+              href="#"
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Политика конфеденциальности</a></span>
+          <span>
+            <span
+              class="card_link bottom-link"
+              style="border: 0;"
+            >Разработано в <a
                 class="bottom-link"
                 target='_blank'
                 rel='noopener noreferrer'
