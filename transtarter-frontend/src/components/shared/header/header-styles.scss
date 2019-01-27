@@ -131,7 +131,7 @@
     margin: 0 8px;
     box-sizing: border-box;
     padding: 0 16px 0;
-    .menu-popup_list {
+    .menu-popup_list {        
         font-weight: bold;
         line-height: 24px;
         font-size: 16px;
@@ -141,6 +141,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin: 0 -17px;
+            padding: 0 17px;
+            &:hover {
+                background: #E0FFE3;
+            }
             &-active {
                 font-weight: bold;
             }
@@ -168,8 +173,9 @@
         margin-bottom: 2px;
     }
     .wallet {
-        margin-top: 2px;
+        margin-top: 5px;
         margin-bottom: 13px;
+        display: inline-block;
         &-with-icon {
             background: #F3F3F3;
             border-radius: 4px;
