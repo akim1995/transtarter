@@ -2,7 +2,7 @@
   <div class="wrapper registration">
 
     <!-- desktop version -->
-    <div class="desktop-version-modal modal-popup">
+    <div class="modal-popup desktop-version-modal">
       <div class="close" @click="toggleRegistrationPopup()">✖</div>
 
       <div class="desktop-version-modal-left-side">
@@ -48,7 +48,7 @@
     <!-- end of desktop version -->
 
     <!-- mobile version -->
-    <div class="mobile-version-modal modal-popup">
+    <div class="modal-popup mobile-version-modal">
       <div class="close" @click="toggleRegistrationPopup()">✖</div>
 
       <carousel

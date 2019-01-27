@@ -96,7 +96,7 @@
 @media (max-width: 768px) {
     .mobile-version-modal {
         margin: 20px 0 20px 0;
-        display: block;
+        display: block !important;
         width: 90%;
         font-size: 14px;
         color: $black;

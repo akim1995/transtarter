@@ -8,7 +8,7 @@
             justify-content: space-between;
             height: 40px;
             background-color: $bkground-header;
-            padding: 0 16px;
+            padding-left: 16px;
         }
         &__left,
         &__right {
@@ -69,6 +69,7 @@
             align-items: center;
             width: auto;
             border-left: 1px solid $dark-grey;
+            padding-right: 16px;
             cursor: pointer;
             .user-avatar {
                 background-image: url('../../../assets/icons/png/user-example.png');
@@ -118,5 +119,85 @@
     }
     .mobile-header {
         display: none;
+    }
+}
+
+.menu-popup {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.30214);
+    width: calc(100% - 16px);
+    margin: 0 8px;
+    box-sizing: border-box;
+    padding: 0 16px 0;
+    .menu-popup_list {
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+        color: #323230;
+        &-item {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &-active {
+                font-weight: bold;
+            }
+            &-notify {
+                background: rgba(0, 0, 0, 0.05);
+                border-radius: 2px;
+                padding: 0px 10px;
+                font-weight: bold;
+            }
+        }
+    }
+    .user-fullname {
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+        margin-top: 21px;
+        margin-bottom: 4px;
+    }
+    .agreement,
+    .price-info {
+        font-weight: normal;
+        color: #686868;
+    }
+    .agreement {
+        margin-bottom: 2px;
+    }
+    .wallet {
+        margin-top: 2px;
+        margin-bottom: 13px;
+        &-with-icon {
+            background: #F3F3F3;
+            border-radius: 4px;
+            padding: 6px 8px;
+            display: flex;
+            align-items: center;
+            .icon {
+                background-image: url('../../../assets/icons/svg/wallet.svg');
+                width: 16px;
+                height: 16px;
+                background-size: contain;
+                background-position: center;
+                margin-right: 8px;
+            }
+            .wallet-balance {
+                line-height: 24px;
+                font-size: 14px;
+                color: #323230;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-popup {
+        width: 240px;
+        right: 0;
+        margin: 0;
     }
 }

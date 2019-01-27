@@ -68,7 +68,7 @@
             <div
               class="user-info"
               v-if="loggedIn"
-              @click="logout"
+              @click="toggleUserMenu()"
             >
               <div class="user-avatar"></div>
               <div class="user-name">Егор Воронов</div>
@@ -76,6 +76,49 @@
             <!-- end block for users -->
           </ul>
         </div>
+
+      </div>
+
+      <div
+        class="menu-popup"
+        v-if="blocksShow.user && loggedIn"
+      >
+        <div class="user-fullname">
+          ИП Воронов Е.В.
+        </div>
+        <div class="agreement" style="">
+          Договор № 123765
+        </div>
+        <div class="price-info">
+          Оптовые цены (активны)
+        </div>
+        <div class="wallet">
+          <div class="wallet-with-icon">
+            <span class="icon"></span>
+            <div class="wallet-balance">
+              15 000 ₽
+            </div>
+          </div>
+        </div>
+
+        <ul class="menu-popup_list">
+          <li class="menu-popup_list-item">
+            Личный кабинет
+          </li>
+          <li class="menu-popup_list-item">
+            Профиль и настройки
+          </li>
+          <li class="menu-popup_list-item menu-popup_list-item-active">
+            Корзина
+            <span class="menu-popup_list-item-notify">3</span>
+          </li>
+          <li class="menu-popup_list-item">
+            Заказы и оплаты
+          </li>
+          <li class="menu-popup_list-item" @click="logout">
+            Выйти
+          </li>
+        </ul>
 
       </div>
 
@@ -160,12 +203,14 @@
     <div class="mobile-header">
       <div class="mobile-header__menu">
         <div class="mobile-header__menu__left">
-          <a
-            class="burger-icon"
-            @click="toggleMenu()"
-          >
-            <font-awesome-icon icon='bars' />
-          </a>
+          <div class="burger-wrapper">
+            <a
+              class="burger-icon"
+              @click="toggleMainMenu()"
+            >
+              <font-awesome-icon icon='bars' />
+            </a>
+          </div>
           <div class="logo">
             Транс<br> Стартер
           </div>
@@ -185,7 +230,7 @@
             <!-- block for guests -->
             <div
               class="mobile-header__login-item"
-              @click="toggleLogInPopup()"
+              @click="toggleUserMenu()"
               v-if="!loggedIn"
             >
               <font-awesome-icon icon="user" />
@@ -195,7 +240,7 @@
             <div
               class="user-avatar"
               v-if="loggedIn"
-              @click="logout"
+              @click="toggleUserMenu()"
             >
             </div>
           </div>
@@ -204,35 +249,38 @@
 
       </div>
 
-      <div class="menu-popup" v-if="blocksShow.menu">
-        <ul
-          class="mobile-header__menu-list"
-
-        >
-          <li class="mobile-header__menu-item">
+      <div
+        class="menu-popup"
+        v-if="blocksShow.menu"
+      >
+        <ul class="menu-popup_list">
+          <li class="menu-popup_list-item">
             <a href="#">Акции и новинки</a>
           </li>
-          <li class="mobile-header__menu-item">
+          <li class="menu-popup_list-item">
             <a href="#">Доставка и оплата</a>
           </li>
-          <li class="mobile-header__menu-item">
+          <li class="menu-popup_list-item">
             <a
               href="#"
               class="active"
             >О компании</a>
           </li>
-          <li class="mobile-header__menu-item">
+          <li class="menu-popup_list-item">
             <a href="#">Найти точку ремонта</a>
           </li>
-          <li class="mobile-header__menu-item">
+          <li class="menu-popup_list-item">
             <a href="#">Контакты</a>
           </li>
-          <li class="mobile-header__menu-item">
+          <li class="menu-popup_list-item">
             <a href="#">Блог</a>
           </li>
         </ul>
       </div>
-      <div class="menu-popup" v-if="blocksShow.location">
+      <div
+        class="menu-popup"
+        v-if="blocksShow.location"
+      >
         <div class="container search__location">
           <div class="search__location-left">
             <div class="search__city border-white link">
@@ -267,6 +315,67 @@
           </div>
 
         </div>
+      </div>
+      <div
+        class="menu-popup"
+        v-if="blocksShow.user && !loggedIn"
+      >
+        <ul class="menu-popup_list">
+          <li
+            class="menu-popup_list-item"
+            @click="toggleLogInPopup()"
+          >
+            <a href="#">Вход</a>
+          </li>
+          <li
+            class="menu-popup_list-item"
+            @click="toggleRegistrationPopup()"
+          >
+            <a href="#">Регистрация</a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="menu-popup"
+        v-if="blocksShow.user && loggedIn"
+      >
+        <div class="user-fullname">
+          ИП Воронов Е.В.
+        </div>
+        <div class="agreement" style="">
+          Договор № 123765
+        </div>
+        <div class="price-info">
+          Оптовые цены (активны)
+        </div>
+        <div class="wallet">
+          <div class="wallet-with-icon">
+            <span class="icon"></span>
+            <div class="wallet-balance">
+              15 000 ₽
+            </div>
+          </div>
+        </div>
+
+        <ul class="menu-popup_list">
+          <li class="menu-popup_list-item">
+            Личный кабинет
+          </li>
+          <li class="menu-popup_list-item">
+            Профиль и настройки
+          </li>
+          <li class="menu-popup_list-item menu-popup_list-item-active">
+            Корзина
+            <span class="menu-popup_list-item-notify">3</span>
+          </li>
+          <li class="menu-popup_list-item">
+            Заказы и оплаты
+          </li>
+          <li class="menu-popup_list-item" @click="logout">
+            Выйти
+          </li>
+        </ul>
+
       </div>
 
       <div class="mobile-header__search">
@@ -331,7 +440,8 @@ import { AuthModule } from '../../../store/modules/authentication.module'
 export default class Header extends Vue {
   blocksShow = {
     menu: false,
-    location: false
+    location: false,
+    user: false
   };
 
   toggleRegistrationPopup () {
@@ -350,8 +460,12 @@ export default class Header extends Vue {
     this.$store.dispatch('auth/logout')
   }
 
-  toggleMenu () {
+  toggleMainMenu () {
     this.blocksShow.menu = !this.blocksShow.menu
+  }
+
+  toggleUserMenu () {
+    this.blocksShow.user = !this.blocksShow.user
   }
 }
 </script>
