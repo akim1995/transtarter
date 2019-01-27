@@ -38,38 +38,6 @@
 
 <style scoped lang="scss">
 @import "@/assets/scss/variables.scss";
+@import "./user-profile-styles.scss";
 
-.user-profile {
-  width: 100%;
-  background: #000;
-  .content {
-    width: 100%;
-    min-height: 500px;
-    background-color: $bkground-main;
-    .content-wrapper {
-      display: flex;
-      align-items: flex-start;
-      padding: 24px 0;
-      .aside-content {
-        width: calc(100% - 74.3% - 26px);
-        margin-right: 26px;
-        display: flex;
-        flex-direction: column;
-      }
-      .main-content {
-        width: 74.3%;
-      }
-    }
-    .mock {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(15, 205, 90, 0.5);
-      font-weight: bold;
-      color: white;
-      font-size: 50px;
-      height: 100vh;
-    }
-  }
-}
 </style>
