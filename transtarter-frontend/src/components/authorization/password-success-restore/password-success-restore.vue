@@ -35,6 +35,20 @@ export default class PasswordSuccessRestore extends Vue {
   toggleSuccessRestorePopup () {
     eventBus.$emit('toggle-success-restore-popup')
   }
+
+  listenEscKeyup (e: KeyboardEvent) {
+    if (e.keyCode === 27) {
+      eventBus.$emit('toggle-success-restore-popup')
+    }
+  }
+
+  mounted () {
+    window.addEventListener('keyup', this.listenEscKeyup)
+  }
+
+  beforeDestroy () {
+    window.removeEventListener('keyup', this.listenEscKeyup)
+  }
 }
 </script>
 

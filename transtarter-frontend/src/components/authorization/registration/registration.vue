@@ -117,6 +117,20 @@ export default class Registration extends Vue {
   toggleRegistrationPopup () {
     eventBus.$emit('toggle-registration-popup')
   }
+
+  listenEscKeyup (e: KeyboardEvent) {
+    if (e.keyCode === 27) {
+      eventBus.$emit('toggle-registration-popup')
+    }
+  }
+
+  mounted () {
+    window.addEventListener('keyup', this.listenEscKeyup)
+  }
+
+  beforeDestroy () {
+    window.removeEventListener('keyup', this.listenEscKeyup)
+  }
 }
 </script>
 

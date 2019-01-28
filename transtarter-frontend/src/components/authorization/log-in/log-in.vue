@@ -1,5 +1,8 @@
 <template>
-  <div class="log-in modal-wrapper">
+  <div
+    class="log-in modal-wrapper"
+    @keydown="toggleLogInPopup()"
+  >
 
     <!-- desktop and mobile version -->
     <div class="modal-popup">
@@ -126,6 +129,20 @@ export default class LogIn extends Vue {
     // module is injected in header
     dispatch('auth/login')
     eventBus.$emit('toggle-log-in-popup')
+  }
+
+  listenEscKeyup (e: KeyboardEvent) {
+    if (e.keyCode === 27) {
+      eventBus.$emit('toggle-log-in-popup')
+    }
+  }
+
+  mounted () {
+    window.addEventListener('keyup', this.listenEscKeyup)
+  }
+
+  beforeDestroy () {
+    window.removeEventListener('keyup', this.listenEscKeyup)
   }
 }
 </script>
