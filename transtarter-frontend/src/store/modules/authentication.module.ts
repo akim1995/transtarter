@@ -19,8 +19,6 @@ export interface IAuthState {
 
 @Module({ dynamic: true, store, name: 'auth', namespaced: true })
 export class Authentication extends VuexModule implements IAuthState {
-  auth = new AuthService()
-
   private localStorageKey = 'user'
   private userInfoString = localStorage.getItem(this.localStorageKey)
   private user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
@@ -38,6 +36,8 @@ export class Authentication extends VuexModule implements IAuthState {
   public avatar = '';
 
   accessTokenExpired: boolean | undefined;
+
+  auth = new AuthService()
 
   get loggedIn () {
     return this.status.loggedIn
@@ -81,8 +81,8 @@ export class Authentication extends VuexModule implements IAuthState {
   public async actualizeUser () {
     const user = await this.auth.getUser()
     if (user) {
+      this.auth.saveUserInfo(this.localStorageKey, user)
       this.context.commit('SUCCESS_LOGIN', user)
-      // this.auth.saveUserInfo(this.localStorageKey, user)
     } else {
       this.context.commit('ERROR_LOGIN')
     }
@@ -91,7 +91,7 @@ export class Authentication extends VuexModule implements IAuthState {
   @Action
   logout () {
     this.context.commit('LOGOUT')
-    // this.auth.removeFromLocalStorageByKey(this.localStorageKey)
+    this.auth.removeFromLocalStorageByKey(this.localStorageKey)
     this.auth.logout()
   }
 }
