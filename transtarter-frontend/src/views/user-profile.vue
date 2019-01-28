@@ -15,7 +15,6 @@
 
         <section class="main-content">
           <ProfileSettings />
-
         </section>
       </div>
       <div class="mock" v-if="!loggedIn">
@@ -30,7 +29,7 @@
     <LogIn v-if="show.logIn" />
     <PasswordRestore v-if="show.restorePassword" />
     <PasswordSuccessRestore v-if="show.successRestore" />
-
+    <SelectCity v-if="show.SelectCity"/>
   </div>
 </template>
 
