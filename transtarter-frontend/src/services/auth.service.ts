@@ -36,7 +36,7 @@ export default class AuthService {
     return this.userManager.signinRedirect()
   }
 
-  public async logout (): Promise<void> {
+  public logout (): Promise<void> {
     return this.userManager.signinRedirect()
   }
 

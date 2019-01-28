@@ -21,9 +21,9 @@ export interface IAuthState {
 export class Authentication extends VuexModule implements IAuthState {
   auth = new AuthService()
 
-  // private localStorageKey = 'user'
-  // private userInfoString = localStorage.getItem(this.localStorageKey)
-  private user = this.auth.getUser().then(res => this.user = res);
+  private localStorageKey = 'user'
+  private userInfoString = localStorage.getItem(this.localStorageKey)
+  private user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
 
   public name = ((this.user || '').profile || '').name || '';
   public email = '';

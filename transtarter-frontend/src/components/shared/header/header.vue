@@ -435,6 +435,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
 import { AuthModule } from '../../../store/modules/authentication.module'
+import AuthService from '@/services/auth.service'
 
 @Component
 export default class Header extends Vue {
@@ -443,6 +444,8 @@ export default class Header extends Vue {
     location: false,
     user: false
   };
+
+  auth = new AuthService()
 
   toggleRegistrationPopup () {
     eventBus.$emit('toggle-registration-popup')
@@ -457,7 +460,9 @@ export default class Header extends Vue {
   }
 
   logout () {
-    this.$store.dispatch('auth/logout')
+    // e.preventDefault()
+    this.auth.logout()
+    // this.$store.dispatch('auth/logout')
   }
 
   toggleMainMenu () {
