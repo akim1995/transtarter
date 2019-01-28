@@ -19,14 +19,16 @@ export interface IAuthState {
 
 @Module({ dynamic: true, store, name: 'auth', namespaced: true })
 export class Authentication extends VuexModule implements IAuthState {
-  private localStorageKey = 'user'
-  private userInfoString = localStorage.getItem(this.localStorageKey)
-  private user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
+  auth = new AuthService()
+
+  // private localStorageKey = 'user'
+  // private userInfoString = localStorage.getItem(this.localStorageKey)
+  private user = this.auth.getUser().then(res => this.user = res);
 
   public name = ((this.user || '').profile || '').name || '';
   public email = '';
   public password = '';
-  public token = (this.user || '').access_token || ''
+  public token = (this.user || '').id_token || ''
   public roles = [];
   public status =
     {
@@ -34,8 +36,6 @@ export class Authentication extends VuexModule implements IAuthState {
       loggedIn: this.user !== null && !(this.user || false).expired // we should get user info and expired have to be false
     };
   public avatar = '';
-
-  auth = new AuthService()
 
   accessTokenExpired: boolean | undefined;
 
@@ -57,10 +57,9 @@ export class Authentication extends VuexModule implements IAuthState {
   @Mutation
   SUCCESS_LOGIN (user: User) {
     this.name = user.profile.name
-    this.token = user.access_token
+    this.token = user.id_token
     this.accessTokenExpired = user.expired
-    this.status.loggedIn = user !== null // && !user.expired
-    debugger
+    this.status.loggedIn = user !== null && !user.expired
     this.status.loggingIn = false
   }
 
@@ -73,23 +72,27 @@ export class Authentication extends VuexModule implements IAuthState {
   }
 
   @Action
-  public async login (userInfo: { email: string, password: string }): Promise<any> {
-    debugger
+  public login (): void {
     this.auth.login()
-    const user = await this.auth.getUser()
+    debugger
+  }
 
+  @Action
+  public async actualizeUser () {
+    const user = await this.auth.getUser()
     if (user) {
-      this.auth.saveUserInfo(this.localStorageKey, user)
       this.context.commit('SUCCESS_LOGIN', user)
+      // this.auth.saveUserInfo(this.localStorageKey, user)
     } else {
       this.context.commit('ERROR_LOGIN')
     }
   }
 
-  @Action({ commit: 'LOGOUT' })
+  @Action
   logout () {
+    this.context.commit('LOGOUT')
+    // this.auth.removeFromLocalStorageByKey(this.localStorageKey)
     this.auth.logout()
-    this.auth.removeFromLocalStorageByKey(this.localStorageKey)
   }
 }
 

@@ -33,70 +33,75 @@ import { AuthModule } from '../store/modules/authentication.module'
   }
 })
 export default class UserProfile extends Vue {
-    showPopup = {
-      registration: false,
-      logIn: false,
-      restorePassword: false,
-      successRestore: false
-    };
+  showPopup = {
+    registration: false,
+    logIn: false,
+    restorePassword: false,
+    successRestore: false
+  };
 
-    showBlock = {
-      selectCity: true // add logic if city isn't in localstorage
-    }
+  showBlock = {
+    selectCity: true // add logic if city isn't in localstorage
+  }
 
-    toggleShowLogIn () {
+  toggleShowLogIn () {
+    this.showPopup.logIn = !this.showPopup.logIn
+  }
+
+  get loggedIn () {
+    return AuthModule.status.loggedIn
+  }
+
+  // @Watch('showPopup')
+  // onShowChanged (newVal: any, oldVal: any) {
+  //   for (var key in newVal) {
+  //     if (newVal[key] === true) {
+  //       document.body.s
+  //       // do stuff
+  //     }
+  //   }
+  // }
+
+  mounted () {
+    const { dispatch } = this.$store
+    dispatch('auth/actualizeUser')
+  }
+
+  created () {
+    eventBus.$on('toggle-registration-popup', () => {
+      this.showPopup.registration = !this.showPopup.registration
+    })
+
+    eventBus.$on('toggle-log-in-popup', () => {
       this.showPopup.logIn = !this.showPopup.logIn
-    }
+    })
 
-    get loggedIn () {
-      return AuthModule.status.loggedIn
-    }
+    eventBus.$on('toggle-restore-popup', () => {
+      this.showPopup.restorePassword = !this.showPopup.restorePassword
+    })
 
-    @Watch('showPopup')
-    onShowChanged (newVal: any, oldVal: any) {
-      for (var key in newVal) {
-        if (newVal[key] === true) {
-          document.body.s
-          // do stuff
-        }
-      }
-    }
+    eventBus.$on('toggle-success-restore-popup', () => {
+      this.showPopup.successRestore = !this.showPopup.successRestore
+    })
 
-    created () {
-      eventBus.$on('toggle-registration-popup', () => {
-        this.showPopup.registration = !this.showPopup.registration
-      })
+    eventBus.$on('close-log-in-and-open-registration', () => {
+      this.showPopup.logIn = false
+      this.showPopup.registration = true
+    })
 
-      eventBus.$on('toggle-log-in-popup', () => {
-        this.showPopup.logIn = !this.showPopup.logIn
-      })
+    eventBus.$on('close-log-in-and-open-restore-password', () => {
+      this.showPopup.logIn = false
+      this.showPopup.restorePassword = true
+    })
 
-      eventBus.$on('toggle-restore-popup', () => {
-        this.showPopup.restorePassword = !this.showPopup.restorePassword
-      })
+    eventBus.$on('close-registration-and-open-log-in', () => {
+      this.showPopup.registration = false
+      this.showPopup.logIn = true
+    })
 
-      eventBus.$on('toggle-success-restore-popup', () => {
-        this.showPopup.successRestore = !this.showPopup.successRestore
-      })
-
-      eventBus.$on('close-log-in-and-open-registration', () => {
-        this.showPopup.logIn = false
-        this.showPopup.registration = true
-      })
-
-      eventBus.$on('close-log-in-and-open-restore-password', () => {
-        this.showPopup.logIn = false
-        this.showPopup.restorePassword = true
-      })
-
-      eventBus.$on('close-registration-and-open-log-in', () => {
-        this.showPopup.registration = false
-        this.showPopup.logIn = true
-      })
-
-      eventBus.$on('close-restore-and-open-success-restore', () => {
-        this.showPopup.restorePassword = false
-        this.showPopup.successRestore = true
-      })
-    }
+    eventBus.$on('close-restore-and-open-success-restore', () => {
+      this.showPopup.restorePassword = false
+      this.showPopup.successRestore = true
+    })
+  }
 }
