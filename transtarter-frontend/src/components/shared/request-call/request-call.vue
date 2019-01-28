@@ -1,11 +1,13 @@
 
 <template>
   <div class="request-call modal-wrapper">
-    <div class="request-call-modal modal-popup">
-       <div
-        class="close"
-        @click="toggleLogInPopup()"
-      >✖</div>
+    <div class=" modal-popup">
+      <div class="modal-content request-call-content">
+        <div
+          class="close"
+          @click="toggleLogInPopup()"
+        >✖</div>
+      </div>
     </div>
   </div>
 </template>
@@ -14,9 +16,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
-export default class RequestCall extends Vue {
-
-}
+export default class RequestCall extends Vue {}
 </script>
 
 <style scoped lang="scss">

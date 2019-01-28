@@ -52,15 +52,16 @@ export default class UserProfile extends Vue {
     return AuthModule.status.loggedIn
   }
 
-  // @Watch('showPopup')
-  // onShowChanged (newVal: any, oldVal: any) {
-  //   for (var key in newVal) {
-  //     if (newVal[key] === true) {
-  //       document.body.s
-  //       // do stuff
-  //     }
-  //   }
-  // }
+  @Watch('showPopup', { deep: true })
+  onShowChanged (newVal: any, oldVal: any) {
+    const className = 'modal-open'
+    const keys = Object.values(newVal)
+    if (keys.some(x => x === true)) {
+      document.body.classList.add(className)
+    } else {
+      document.body.classList.remove(className)
+    }
+  }
 
   mounted () {
     const { dispatch } = this.$store

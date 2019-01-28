@@ -2,23 +2,25 @@
   <div class="success-restore modal-wrapper">
 
     <!-- success restore -->
-    <div class="success-restore-modal modal-popup">
-      <div
-        class="close"
-        @click="toggleSuccessRestorePopup()"
-      >✖</div>
-      <div class="title bold">
-        Мы отправили ссылку для восстановления
-        на email
-      </div>
+    <div class=" modal-popup">
+      <div class="modal-content success-restore-content">
+        <div
+          class="close"
+          @click="toggleSuccessRestorePopup()"
+        >✖</div>
+        <div class="title bold">
+          Мы отправили ссылку для восстановления
+          на email
+        </div>
 
-      <div
-        class="tip"
-        style="margin-bottom: 0;"
-      >
-        Перейдите по ней и следуйте инструкциям на сайте.
-      </div>
+        <div
+          class="tip"
+          style="margin-bottom: 0;"
+        >
+          Перейдите по ней и следуйте инструкциям на сайте.
+        </div>
 
+      </div>
     </div>
     <!-- end success restore -->
   </div>

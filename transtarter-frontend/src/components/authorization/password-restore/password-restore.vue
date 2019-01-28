@@ -1,35 +1,41 @@
 <template>
   <div class="password-restore modal-wrapper">
     <!-- desktop and mobile version -->
-    <div
-      class="restore-modal modal-popup"
-    >
-      <div class="close" @click="toggleRestorePopup()">✖</div>
-      <div class="title bold">
-        Восстановление пароля
-      </div>
+    <div class=" modal-popup">
+      <div class="modal-content restore-content">
+        <div
+          class="close"
+          @click="toggleRestorePopup()"
+        >✖</div>
+        <div class="title bold">
+          Восстановление пароля
+        </div>
 
-      <div class="tip">
-        Введите email, указанный при регистрации, мы вышлем ссылку для восстановления пароля
-      </div>
+        <div class="tip">
+          Введите email, указанный при регистрации, мы вышлем ссылку для восстановления пароля
+        </div>
 
-      <div class="reset-block">
-        <form class="reset-form" @submit="restorePassword">
-          <input
-            v-model="email"
-            placeholder="Почта"
-            class="form-control reset-input"
-            type='email'
-            required
+        <div class="reset-block">
+          <form
+            class="reset-form"
+            @submit="restorePassword"
           >
-          <button
-            type="submit"
-            class="btn btn-orange reset-btn"
-          >
-            Восстановить пароль
-          </button>
-        </form>
+            <input
+              v-model="email"
+              placeholder="Почта"
+              class="form-control reset-input"
+              type='email'
+              required
+            >
+            <button
+              type="submit"
+              class="btn btn-orange reset-btn"
+            >
+              Восстановить пароль
+            </button>
+          </form>
 
+        </div>
       </div>
     </div>
     <!-- end of desktop and mobile version -->
