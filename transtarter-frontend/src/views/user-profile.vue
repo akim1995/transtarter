@@ -25,11 +25,11 @@
     <Footer />
 
     <!-- popups -->
-    <Registration v-if="show.registration" />
-    <LogIn v-if="show.logIn" />
-    <PasswordRestore v-if="show.restorePassword" />
-    <PasswordSuccessRestore v-if="show.successRestore" />
-    <SelectCity v-if="show.SelectCity"/>
+    <Registration v-if="showPopup.registration" />
+    <LogIn v-if="showPopup.logIn" />
+    <PasswordRestore v-if="showPopup.restorePassword" />
+    <PasswordSuccessRestore v-if="showPopup.successRestore" />
+    <SelectCity v-if="showPopup.SelectCity"/>
   </div>
 </template>
 
