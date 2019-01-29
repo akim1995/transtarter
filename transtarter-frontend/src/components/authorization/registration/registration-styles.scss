@@ -13,17 +13,17 @@
                 margin-bottom: 16px;
                 margin-top: 24px;
             }
-            .accept-checkbox {
-                color: $medium-grey;
-                line-height: 1.43;
-                margin-bottom: 16px;
-                font-size: 14px;
-                .policy-link {
-                    text-decoration: underline;
-                    color: inherit;
-                    cursor: pointer;
-                }
-            }
+            // .accept-checkbox {
+            //     color: $medium-grey;
+            //     line-height: 1.43;
+            //     margin-bottom: 16px;
+            //     font-size: 14px;
+            //     .policy-link {
+            //         text-decoration: underline;
+            //         color: inherit;
+            //         cursor: pointer;
+            //     }
+            // }
             .already-have-account {
                 display: flex;
                 font-size: 16px;
@@ -137,16 +137,16 @@
                     line-height: 1.4;
                     padding: 16px 0;
                 }
-                .accept-checkbox {
-                    color: $medium-grey;
-                    line-height: 1.43;
-                    margin: 8px 16px 17px;
-                    .policy-link {
-                        text-decoration: underline;
-                        color: inherit;
-                        cursor: pointer;
-                    }
-                }
+                // .accept-checkbox {
+                //     color: $medium-grey;
+                //     line-height: 1.43;
+                //     margin: 8px 16px 17px;
+                //     .policy-link {
+                //         text-decoration: underline;
+                //         color: inherit;
+                //         cursor: pointer;
+                //     }
+                // }
                 .already-have-account {
                     font-size: 16px;
                     .go-log-in {

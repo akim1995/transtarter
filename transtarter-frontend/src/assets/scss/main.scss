@@ -56,6 +56,19 @@ body {
     text-align: right;
 }
 
+.accept-checkbox {
+    color: $medium-grey;
+    line-height: 1.43;
+    margin-bottom: 16px;
+    font-size: 14px;
+    .policy-link {
+        display: inline;
+        border-bottom: 1px solid $medium-grey;
+        color: inherit;
+        cursor: pointer;
+    }
+}
+
 .btn {
     height: 48px;
     border-radius: 4px;
@@ -64,7 +77,18 @@ body {
     line-height: 1.41;
     color: $black;
     border-width: 0;
-    padding: 14px 16px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;    
+    font-family: 'Exo 2';
+ 
+}
+
+.btn-outline {
+    border: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .btn-orange {

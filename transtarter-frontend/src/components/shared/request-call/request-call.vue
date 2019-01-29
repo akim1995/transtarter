@@ -41,19 +41,24 @@
               <input
                 type="text"
                 class="form-control-lg"
-                placeholder="Егор Воронов"
+                placeholder="89114004244"
               >
             </div>
           </div>
           <div class="form-group row">
             <label class="big-label mobile-top-label">Когда вам позвонить?</label>
             <div class="col-12">
-              <input
-                type="text"
-                class="form-control-lg"
-                placeholder="+7 (900) 111-11-11
-"
+              <select
+                class="form-control"
               >
+                <option
+                  disabled
+                  value=""
+                >Выберите один из вариантов</option>
+                <option>Сейчас</option>
+                <option>11.00</option>
+                <option>12.00</option>
+              </select>
             </div>
           </div>
           <div class="form-group row row-with-big-space">
