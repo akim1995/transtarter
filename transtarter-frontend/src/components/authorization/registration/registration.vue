@@ -3,45 +3,50 @@
 
     <!-- desktop version -->
     <div class="modal-popup desktop-version-modal">
-      <div class="close" @click="toggleRegistrationPopup()">✖</div>
+      <div class="modal-content desktop-version-content">
+        <div
+          class="close"
+          @click="toggleRegistrationPopup()"
+        >✖</div>
 
-      <div class="desktop-version-modal-left-side">
+        <div class="desktop-version-content-left-side">
 
-        <RegistrationForm />
+          <RegistrationForm />
 
-      </div>
+        </div>
 
-      <div class="desktop-version-modal-right-side">
-        <div class="our-advantages">
-          <div class="title bold">
-            Зарегистрируйтесь
-            в нашем магазине, чтобы
+        <div class="desktop-version-content-right-side">
+          <div class="our-advantages">
+            <div class="title bold">
+              Зарегистрируйтесь
+              в нашем магазине, чтобы
+            </div>
+            <ul class="advantages-list">
+              <li class="advantage-item">
+                <div class="icon">
+                  <div class="advantage-item-icon sales"></div>
+                </div>
+                <span class="advantage-item-text">Получить сообщения
+                  о закрытых распродажах только для наших партнеров</span>
+              </li>
+              <li class="advantage-item ">
+                <div class="icon">
+                  <div class="advantage-item-icon management"></div>
+                </div>
+                <span class="advantage-item-text">Управлять своими заказами в личном кабинете: следить
+                  за статусом оплаты
+                  и доставки, хранить историю заказов</span>
+              </li>
+              <li class="advantage-item ">
+                <div class="icon">
+                  <div class="advantage-item-icon access"></div>
+                </div>
+                <span class="advantage-item-text"> Получить доступ
+                  к индивидуальным
+                  оптовым ценам</span>
+              </li>
+            </ul>
           </div>
-          <ul class="advantages-list">
-            <li class="advantage-item">
-              <div class="icon">
-                <div class="advantage-item-icon sales"></div>
-              </div>
-              <span class="advantage-item-text">Получить сообщения
-                о закрытых распродажах только для наших партнеров</span>
-            </li>
-            <li class="advantage-item ">
-              <div class="icon">
-                <div class="advantage-item-icon management"></div>
-              </div>
-              <span class="advantage-item-text">Управлять своими заказами в личном кабинете: следить
-                за статусом оплаты
-                и доставки, хранить историю заказов</span>
-            </li>
-            <li class="advantage-item ">
-              <div class="icon">
-                <div class="advantage-item-icon access"></div>
-              </div>
-              <span class="advantage-item-text"> Получить доступ
-                к индивидуальным
-                оптовым ценам</span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -49,41 +54,46 @@
 
     <!-- mobile version -->
     <div class="modal-popup mobile-version-modal">
-      <div class="close" @click="toggleRegistrationPopup()">✖</div>
+      <div class="modal-content mobile-version-content">
+        <div
+          class="close"
+          @click="toggleRegistrationPopup()"
+        >✖</div>
 
-      <carousel
-        :perPage='1'
-        class="mobile-version-modal-carousel"
-      >
-        <slide class="mobile-version-modal-header">
-          <div class="reg-in-our-shop bold text-center">
-            Зарегистрируйтесь <br>
-            в нашем магазине, чтобы
-          </div>
-          <div class="rows-and-gear-icon"></div>
-          <div class="order-management text-center">
-            Управлять своими заказами в личном кабинете: следить за статусом оплаты
-            и доставки, хранить историю заказов
-          </div>
-        </slide>
-        <slide class="mobile-version-modal-header">
-          <div class="reg-in-our-shop bold text-center">
-            Зарегистрируйтесь <br>
-            в нашем магазине, чтобы
-          </div>
-          <div class="rows-and-gear-icon"></div>
-          <div class="order-management text-center">
-            Управлять своими заказами в личном кабинете: следить за статусом оплаты
-            и доставки, хранить историю заказов
-          </div>
-        </slide>
+        <carousel
+          :perPage='1'
+          class="mobile-version-content-carousel"
+        >
+          <slide class="mobile-version-content-header">
+            <div class="reg-in-our-shop bold text-center">
+              Зарегистрируйтесь <br>
+              в нашем магазине, чтобы
+            </div>
+            <div class="rows-and-gear-icon"></div>
+            <div class="order-management text-center">
+              Управлять своими заказами в личном кабинете: следить за статусом оплаты
+              и доставки, хранить историю заказов
+            </div>
+          </slide>
+          <slide class="mobile-version-content-header">
+            <div class="reg-in-our-shop bold text-center">
+              Зарегистрируйтесь <br>
+              в нашем магазине, чтобы
+            </div>
+            <div class="rows-and-gear-icon"></div>
+            <div class="order-management text-center">
+              Управлять своими заказами в личном кабинете: следить за статусом оплаты
+              и доставки, хранить историю заказов
+            </div>
+          </slide>
 
-      </carousel>
+        </carousel>
 
-      <div class="mobile-version-modal-main">
+        <div class="mobile-version-content-main">
 
-        <RegistrationForm />
+          <RegistrationForm />
 
+        </div>
       </div>
     </div>
     <!-- end of mobile version -->
@@ -106,6 +116,20 @@ import { eventBus } from '../../../main'
 export default class Registration extends Vue {
   toggleRegistrationPopup () {
     eventBus.$emit('toggle-registration-popup')
+  }
+
+  listenEscKeyup (e: KeyboardEvent) {
+    if (e.keyCode === 27) {
+      eventBus.$emit('toggle-registration-popup')
+    }
+  }
+
+  mounted () {
+    window.addEventListener('keyup', this.listenEscKeyup)
+  }
+
+  beforeDestroy () {
+    window.removeEventListener('keyup', this.listenEscKeyup)
   }
 }
 </script>

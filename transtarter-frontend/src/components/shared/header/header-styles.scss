@@ -143,6 +143,7 @@
             justify-content: space-between;
             margin: 0 -17px;
             padding: 0 17px;
+            cursor: pointer;
             &:hover {
                 background: #E0FFE3;
             }
@@ -203,7 +204,7 @@
 @media (min-width: 1200px) {
     .menu-popup {
         width: 240px;
-        right: 0;
+        right: 1px;
         margin: 0;
     }
 }

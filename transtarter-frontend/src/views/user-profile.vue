@@ -15,7 +15,6 @@
 
         <section class="main-content">
           <ProfileSettings />
-
         </section>
       </div>
       <div class="mock" v-if="!loggedIn">
@@ -26,11 +25,13 @@
     <Footer />
 
     <!-- popups -->
-    <Registration v-if="show.registration" />
-    <LogIn v-if="show.logIn" />
-    <PasswordRestore v-if="show.restorePassword" />
-    <PasswordSuccessRestore v-if="show.successRestore" />
-
+    <Registration v-if="showPopup.registration" />
+    <LogIn v-if="showPopup.logIn" />
+    <PasswordRestore v-if="showPopup.restorePassword" />
+    <PasswordSuccessRestore v-if="showPopup.successRestore" />
+    <YourCity v-if="showBlock.yourCity"/>
+    <SelectCity v-if="showBlock.selectCity"/>
+    <RequestCall v-if="showPopup.requestCall"/>
   </div>
 </template>
 

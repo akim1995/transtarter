@@ -1,0 +1,54 @@
+.registration-data-tab {
+    .change-avatar {
+        display: flex;
+        align-items: center;
+        margin: 0 0 48px;
+        .user-picture {
+            background-image: url('../../../../assets/icons/png/user-example.png');
+            background-position: center;
+            background-size: cover;
+            width: 75px;
+            height: 75px;
+        }
+        .change-user-picture {
+            font-weight: bold;
+            line-height: 24px;
+            font-size: 16px;
+            color: $green;
+            text-decoration: underline;
+            text-decoration-color: rgba(12, 181, 32, .4);
+            text-decoration-style: dashed;
+            margin-left: 24px;
+        }
+    } 
+    .row-with-big-space {
+        margin-top: 53px;
+    }    
+}
+
+@media (max-width: 1200px) {
+    .registration-data-tab {
+        .change-avatar {
+            display: flex;
+            align-items: center;
+            margin: 0 0 32px;
+            .user-picture {
+                background-image: url('../../../../assets/icons/png/user-example.png');
+                background-position: center;
+                background-size: cover;
+                width: 76px;
+                height: 76px;
+                
+            }
+        }
+        
+        
+        .row-with-big-space {
+            margin-top: 0 !important;
+        }
+    }
+    .text-right-mobile {
+        text-align: right !important;
+        margin-bottom: 0;
+    }
+}

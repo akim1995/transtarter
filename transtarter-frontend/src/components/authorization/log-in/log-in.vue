@@ -1,85 +1,91 @@
 <template>
-  <div class="log-in modal-wrapper">
+  <div
+    class="log-in modal-wrapper"
+    @keydown="toggleLogInPopup()"
+  >
 
     <!-- desktop and mobile version -->
-    <div class="log-in-modal modal-popup">
-      <div
-        class="close"
-        @click="toggleLogInPopup()"
-      >✖</div>
-      <div class="title bold">
-        Вход на сайт
-      </div>
-
-      <form
-        class="log-in-form"
-        @submit='login'
-      >
-        <div class="form-group">
-          <label class="label">Email, указанный при регистрации</label>
-          <input
-            v-model="logInForm.email"
-            placeholder="Почта"
-            class="form-control"
-            type="email"
-          >
-        </div>
-
+    <div class="modal-popup">
+      <div class="modal-content log-in-content ">
         <div
-          class="form-group"
-          style="margin-bottom: 8px;"
+          class="close"
+          @click="toggleLogInPopup()"
+        >✖</div>
+        <div class="title bold">
+          Вход на сайт
+        </div>
+
+        <form
+          class="log-in-form"
+          @submit='login'
         >
-          <label class="label">Пароль</label>
-          <input
-            v-model="logInForm.password"
-            placeholder="Телефон"
-            class="form-control"
-            type="password"
-            val='123'
-          >
-        </div>
-
-        <div class="remember-password">
-          <a
-            href="#"
-            class="remember-password-text"
-            @click="closeLogInAndOpenRestorePassword()"
-          >
-            Напомнить пароль?
-          </a>
-        </div>
-
-        <div class="foreign-pc custom-checkbox">
-
-          <span
-            class="custom-checkbox-input fill-checkbox"
-            @click="toggleForeignPc"
-          >
+          <div class="form-group">
+            <label class="label">Email, указанный при регистрации</label>
             <input
-              type="radio"
-              class="fill-control-input"
-              :checked='foreignPc'
+              v-model="logInForm.email"
+              placeholder="Почта"
+              class="form-control"
+              type="email"
             >
-            <span class="fill-control-indicator"></span>
-          </span>
-          <label class="custom-checkbox-label">Чужой компьютер</label>
+          </div>
+
+          <div
+            class="form-group"
+            style="margin-bottom: 8px;"
+          >
+            <label class="label">Пароль</label>
+            <input
+              v-model="logInForm.password"
+              placeholder="Телефон"
+              class="form-control"
+              type="password"
+              val='123'
+            >
+          </div>
+
+          <div class="remember-password">
+            <a
+              href="#"
+              class="remember-password-text"
+              @click="closeLogInAndOpenRestorePassword()"
+            >
+              Напомнить пароль?
+            </a>
+          </div>
+
+          <div class="foreign-pc custom-checkbox">
+
+            <span
+              class="custom-checkbox-input fill-checkbox"
+              @click="toggleForeignPc"
+            >
+              <input
+                type="radio"
+                class="fill-control-input"
+                :checked='foreignPc'
+              >
+              <span class="fill-control-indicator"></span>
+            </span>
+            <label class="custom-checkbox-label">Чужой компьютер</label>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-orange btn-log-in"
+          >
+            Войти
+          </button>
+        </form>
+
+        <div class="want-to-reg">
+          Впервые на сайте?
+          <a
+            class="go-to-reg"
+            @click="closeLogInAndOpenRestration()"
+          >Зарегистрироваться</a>
         </div>
-
-        <button
-          type="submit"
-          class="btn btn-orange btn-log-in"
-        >
-          Войти
-        </button>
-      </form>
-
-      <div class="want-to-reg">
-        Впервые на сайте?
-        <a
-          class="go-to-reg"
-          @click="closeLogInAndOpenRestration()"
-        >Зарегистрироваться</a>
       </div>
+
     </div>
     <!-- end of desktop  and mobile  version -->
 
@@ -117,13 +123,26 @@ export default class LogIn extends Vue {
 
   login (e: Event) {
     e.preventDefault()
-    const { email, password } = this.logInForm
+    // const { email, password } = this.logInForm
     const { dispatch } = this.$store
-    if (email && password) {
-      // module is injected in header
-      dispatch('auth/login', { email, password })
+
+    // module is injected in header
+    dispatch('auth/login')
+    eventBus.$emit('toggle-log-in-popup')
+  }
+
+  listenEscKeyup (e: KeyboardEvent) {
+    if (e.keyCode === 27) {
       eventBus.$emit('toggle-log-in-popup')
     }
+  }
+
+  mounted () {
+    window.addEventListener('keyup', this.listenEscKeyup)
+  }
+
+  beforeDestroy () {
+    window.removeEventListener('keyup', this.listenEscKeyup)
   }
 }
 </script>

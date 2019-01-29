@@ -2,7 +2,7 @@
   <div class="personal-manager">
     <div class="personal-manager-top">
       <div class="question-sign"></div>
-      <div class="have-questions">
+      <div class="have-questions" @click="toggleRequestCallPopup()">
         По любым вопросам обращайтесь к вашему личному менеджеру
       </div>
 
@@ -18,7 +18,7 @@
       <a class="manager-email" href="mailto:i.petrov@tstarter.ru">
           i.petrov@tstarter.ru
       </a>
-      <button class="ask-question">
+      <button class="ask-question" @click="toggleRequestCallPopup()">
           Задать вопрос
       </button>
     </div>
@@ -27,9 +27,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
 
 @Component
-export default class PersonalManager extends Vue {}
+export default class PersonalManager extends Vue {
+  toggleRequestCallPopup () {
+    eventBus.$emit('toggle-request-call-popup-modal')
+  }
+}
 </script>
 
 <style scoped lang="scss">

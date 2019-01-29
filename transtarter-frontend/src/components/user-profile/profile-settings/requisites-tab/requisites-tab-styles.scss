@@ -1,0 +1,89 @@
+.requisites-tab {
+    .organization-name,
+    .additional-organization-names {
+        font-family: 'Exo 2';
+        font-weight: 600;
+        line-height: 28px;
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+    .additional-organization-names {
+        margin-top: 74px;
+    }
+    .exist-organizations {
+        margin-bottom: 24px;
+        .exist-organization {
+            line-height: 24px;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #EFEFEF;
+            height: 64px;
+            .edit-block {
+                display: flex;
+            }
+            &:hover {
+                background: #F9F9F9;
+            }
+            .icon {
+                padding: 5px 7px 5px 8px;
+                ;
+                width: 32px;
+                height: 32px;
+                position: relative;
+                border: 1px solid #D2D2D2;
+                box-sizing: border-box;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            .save {
+                content: url("../../../../assets/icons/svg/check-white.svg");
+                background-color: $green;
+            }
+            .edit {
+                content: url("../../../../assets/icons/svg/pensil.svg");
+                background-color: $white;
+                margin-left: 8px;
+            }
+        }
+    }
+    .add-new-organization {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .requisites-tab {
+        .organization-name,
+        .additional-organization-names {
+            margin: 0 -16px;
+            padding: 0 16px;
+            background: #F9F9F9;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .organization-name {
+            margin-bottom: 21px;
+        }
+        .exist-organizations {
+            .exist-organization {
+                flex-direction: column;
+                margin: 0 -16px;
+                padding: 13px 8px 13px 16px;
+                height: auto;
+                .text {
+                    margin-bottom: 23px;
+                    width: 100%;
+                    text-align: left;
+                }
+                .edit-block {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}

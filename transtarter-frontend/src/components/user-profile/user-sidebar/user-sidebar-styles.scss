@@ -61,13 +61,19 @@ $sidebar-grey: #686868;
             font-size: 16px;
             color: #323230;
             padding-left: 15px;
-            padding-top: 15px;
+            // padding-top: 15px;
             padding-right: 16px;
             .lk-link {
-                padding-bottom: 10px;
+                height: 40px;
+                align-items: center;
                 display: flex;
                 justify-content: space-between;
+                margin: 0 -16px;
+                padding: 0 16px;
                 cursor: pointer;
+                &:hover {
+                    background: #E0FFE3;
+                }
                 &-active {
                     font-weight: bold;
                 }
