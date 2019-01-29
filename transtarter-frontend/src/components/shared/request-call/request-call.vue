@@ -101,6 +101,20 @@ export default class RequestCall extends Vue {
   toggleRequestPopup () {
     eventBus.$emit('toggle-request-call-popup-modal')
   }
+
+  listenEscKeyup (e: KeyboardEvent) {
+    if (e.keyCode === 27) {
+      eventBus.$emit('toggle-request-call-popup-modal')
+    }
+  }
+
+  mounted () {
+    window.addEventListener('keyup', this.listenEscKeyup)
+  }
+
+  beforeDestroy () {
+    window.removeEventListener('keyup', this.listenEscKeyup)
+  }
 }
 </script>
 
