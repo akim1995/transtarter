@@ -47,8 +47,8 @@
           style="align-items: flex-start;"
         >
           <label class="col-xl-4 col-6 big-label">Точка выдачи</label>
-          <div class="col-xl-6 col-6 green-link text-left">
-            <div class="city">
+          <div class="col-xl-6 col-6  text-left">
+            <div class="city green-link">
               Москва
             </div>
             <ul class="addresses">
@@ -59,7 +59,7 @@
                   id="radio1"
                   name="deliver-address"
                 />
-                <label for="radio1">г. Дзержинский, ул. Энергетиков 18А </label>
+                <label for="radio1" class="radio-label">г. Дзержинский, ул. Энергетиков 18А </label>
               </li>
               <li class="address">
                 <input
@@ -68,7 +68,7 @@
                   id="radio2"
                   name="deliver-address"
                 />
-                <label for="radio2">г. Москва, Каширское шоссе, 41</label>
+                <label for="radio2" class="radio-label">г. Москва, Каширское шоссе, 41</label>
               </li>
             </ul>
           </div>

@@ -49,6 +49,14 @@
     .new-address {
         margin-top: 50px;
     }
+    .city {
+        margin-bottom: 11px;
+    }
+    .addresses {
+        .address {
+            margin-top: 5px;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
