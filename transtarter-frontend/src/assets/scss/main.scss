@@ -238,13 +238,11 @@ body {
         align-items: center;
         justify-content: center;
         width: 80%;
-        padding: 20px 0;
-        // height: 100vh;
+        padding: 20px 0;        
         min-height: calc(100% - (1.75rem * 2));
         margin: 0 auto;        
         .modal-content {
-            margin: 0 auto;
-            // padding: 0 20px;
+            margin: 0 auto;            
             position: relative;
             width: 100%;
             background: white;
