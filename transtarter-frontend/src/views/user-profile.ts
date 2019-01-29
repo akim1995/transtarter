@@ -4,6 +4,7 @@ import { eventBus } from '../main'
 import Header from '@/components/shared/header/header.vue'
 import Footer from '@/components/shared/footer/footer.vue'
 import SelectCity from '@/components/shared/select-city/select-city.vue'
+import YourCity from '@/components/shared/your-city/your-city.vue'
 import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
 import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
 import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
@@ -23,6 +24,7 @@ import { AuthModule } from '../store/modules/authentication.module'
     UserSidebar,
     PersonalManager,
     ProfileSettings,
+    YourCity,
     SelectCity,
     // popups
     Registration,
@@ -41,7 +43,8 @@ export default class UserProfile extends Vue {
   };
 
   showBlock = {
-    selectCity: true // add logic if city isn't in localstorage
+    selectCity: false, // add logic if city isn't in localstorage
+    yourCity: true // add logic if city isn't in localstorage
   }
 
   toggleShowLogIn () {
@@ -103,6 +106,20 @@ export default class UserProfile extends Vue {
     eventBus.$on('close-restore-and-open-success-restore', () => {
       this.showPopup.restorePassword = false
       this.showPopup.successRestore = true
+    })
+
+    eventBus.$on('close-your-city', () => {
+      this.showBlock.yourCity = false
+    })
+
+    eventBus.$on('close-your-city-and-open-select-city', () => {
+      this.showBlock.yourCity = false
+      this.showBlock.selectCity = true
+    })
+
+    eventBus.$on('select-city', (selectedCity: string) => {
+      this.showBlock.selectCity = false
+      // TODO process selectedCity in the future
     })
   }
 }

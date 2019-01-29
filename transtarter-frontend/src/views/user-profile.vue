@@ -29,7 +29,8 @@
     <LogIn v-if="showPopup.logIn" />
     <PasswordRestore v-if="showPopup.restorePassword" />
     <PasswordSuccessRestore v-if="showPopup.successRestore" />
-    <SelectCity v-if="showPopup.SelectCity"/>
+    <YourCity v-if="showBlock.yourCity"/>
+    <SelectCity v-if="showBlock.selectCity"/>
   </div>
 </template>
 
