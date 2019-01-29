@@ -2,13 +2,13 @@
     .change-avatar {
         display: flex;
         align-items: center;
+        margin: 0 0 48px;
         .user-picture {
             background-image: url('../../../../assets/icons/png/user-example.png');
             background-position: center;
             background-size: cover;
             width: 75px;
             height: 75px;
-            margin: 0 0 48px;
         }
         .change-user-picture {
             font-weight: bold;
@@ -20,21 +20,10 @@
             text-decoration-style: dashed;
             margin-left: 24px;
         }
-    }
-    // .accept-checkbox {
-    //     color: $medium-grey;
-    //     line-height: 1.43;
-    //     font-size: 14px;
-    //     .policy-link {
-    //         display: inline;
-    //         border-bottom: 1px solid $medium-grey;
-    //         color: inherit;
-    //         cursor: pointer;
-    //     }
-    // }
+    } 
     .row-with-big-space {
         margin-top: 53px;
-    }
+    }    
 }
 
 @media (max-width: 1200px) {
@@ -57,5 +46,12 @@
         .btn-block-mobile {
             width: 100%;
         }
+        .row-with-big-space {
+            margin-top: 0 !important;
+        }
+    }
+    .text-right-mobile {
+        text-align: right !important;
+        margin-bottom: 0;
     }
 }

@@ -13,6 +13,9 @@
     .btn-group-column {
         margin-bottom: 48px;
     }
+    .row-with-big-space {
+        margin-top: 37px;
+    }
     
 }
 
@@ -24,7 +27,7 @@
             margin-bottom: 14px;
         }
         .row-with-big-space {
-            margin-top: 37px;
+            margin-top: 0 !important;
         }
         .btn-group-column {
             margin-bottom: 32px;

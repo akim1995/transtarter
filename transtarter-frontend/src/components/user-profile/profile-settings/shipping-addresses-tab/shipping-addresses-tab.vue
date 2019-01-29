@@ -42,11 +42,27 @@
             </select>
           </div>
         </div>
-        <div class="form-group row row-with-big-space" style="align-items: flex-start;">
+        <div
+          class="form-group row row-with-big-space"
+          style="align-items: flex-start;"
+        >
           <label class="col-xl-4 col-6 big-label">Точка выдачи</label>
-          <label class="col-xl-6 col-6 green-link text-left">Москва</label>
+          <label class="col-xl-6 col-6 green-link text-left">Москва
+            <label class="radio">
+              <input type="radio" />
+              <div class="radio__text">А я переключаю радиокнопку</div>
+            </label>
+            <label class="radio">
+              <input type="radio" />
+              <div class="radio__text">А я переключаю радиокнопку</div>
+            </label>
+            </label>
+
         </div>
-        <div class="form-group row" style="align-items: flex-start;">
+        <div
+          class="form-group row"
+          style="align-items: flex-start;"
+        >
           <label class="col-xl-4 big-label mobile-top-label">Адрес доставки</label>
           <div class="col-xl-6 col-12">
             <textarea
@@ -55,7 +71,7 @@
               placeholder="г. Москва, ул. Ткаченко, 23-5"
               rows="8"
             />
-          </div>
+            </div>
         </div>
 
         <div class="form-group row row-with-big-space">
@@ -86,7 +102,6 @@
     </div>
     </div>
 
-  </div>
 </template>
 
 <script lang="ts">

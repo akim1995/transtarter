@@ -18,7 +18,7 @@
           >
         </div>
       </div>
-      <div class="form-group row">
+      <div class="form-group row ">
         <label class="col-xl-4 big-label mobile-top-label">Контактное лицо</label>
         <div class="col-xl-6 col-12">
           <input
@@ -28,7 +28,7 @@
           >
         </div>
       </div>
-      <div class="form-group row">
+      <div class="form-group row row-with-big-space">
         <label class="col-xl-4 big-label mobile-top-label">Телефон</label>
         <div class="col-xl-6 col-12">
           <input
@@ -51,9 +51,9 @@
       </div>
       <div class="form-group row row-with-big-space">
         <label class="col-xl-4 col-6 big-label">Пароль</label>
-        <label class="col-xl-6 col-6 green-link text-right">Сменить пароль</label>
+        <label class="col-xl-6 col-6 green-link text-left text-right-mobile">Сменить пароль</label>
       </div>
-      <div class="form-group row row-with-big-space">
+      <div class="form-group row">
         <label class="col-xl-4 col-0"></label>
         <div class="col-xl-6 col-12">
           <button
