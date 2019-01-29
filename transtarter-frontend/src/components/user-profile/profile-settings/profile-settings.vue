@@ -16,6 +16,7 @@
 
     <RegistrationDataTab v-if="regDataIsActive"/>
     <ShippingAddressesTab v-if="shippingAddressesIsActive"/>
+    <RequisitesTab v-if="requisitesIsActive"/>
 
   </div>
 </template>
@@ -24,11 +25,13 @@
 import { Component, Vue } from 'vue-property-decorator'
 import RegistrationDataTab from './registration-data-tab/registration-data-tab.vue'
 import ShippingAddressesTab from './shipping-addresses-tab/shipping-addresses-tab.vue'
+import RequisitesTab from './requisites-tab/requisites-tab.vue'
 
 @Component({
   components: {
     RegistrationDataTab,
-    ShippingAddressesTab
+    ShippingAddressesTab,
+    RequisitesTab
   }
 })
 export default class ProfileSettings extends Vue {
