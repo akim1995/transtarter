@@ -2,7 +2,7 @@
   <div class="personal-manager">
     <div class="personal-manager-top">
       <div class="question-sign"></div>
-      <div class="have-questions" @click="toggleRequestCallPopup()">
+      <div class="have-questions">
         По любым вопросам обращайтесь к вашему личному менеджеру
       </div>
 

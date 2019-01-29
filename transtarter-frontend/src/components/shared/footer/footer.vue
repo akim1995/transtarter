@@ -98,6 +98,7 @@
               <button
                 class="card_link"
                 style="font-weight: bold;"
+                @click="toggleRequestCallPopup()"
               >Заказать звонок</button>
             </div>
           </div>
@@ -131,9 +132,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
 
 @Component
-export default class Footer extends Vue {}
+export default class Footer extends Vue {
+  toggleRequestCallPopup () {
+    eventBus.$emit('toggle-request-call-popup-modal')
+  }
+}
 </script>
 
 <style scoped lang="scss">
