@@ -71,6 +71,73 @@
       </li>
     </ul>
     <button class="btn btn-outline btn-block-mobile">Добавить юр. лицо</button>
+    <form class="add-new-organization">
+      <div class="form-group row">
+        <label class="col-xl-4 big-label mobile-top-label">Название компании</label>
+        <div class="col-xl-6 col-12">
+          <input
+            type="text"
+            class="form-control-lg"
+            placeholder="ИП «Компания»"
+          >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-xl-4 big-label mobile-top-label">ИНН</label>
+        <div class="col-xl-6 col-12">
+          <input
+            type="text"
+            class="form-control-lg"
+            placeholder=""
+          >
+        </div>
+      </div>
+      <div class="form-group row ">
+        <label class="col-xl-4 big-label mobile-top-label">ОГРН</label>
+        <div class="col-xl-6 col-12">
+          <input
+            type="text"
+            class="form-control-lg"
+            placeholder=""
+          >
+        </div>
+      </div>
+      <div class="form-group row row-with-big-space " style="    align-items: flex-start;">
+        <label class="col-xl-4 big-label mobile-top-label">Фактический адрес</label>
+        <div class="col-xl-6 col-12">
+          <textarea
+            type="text"
+            class="form-control-lg"
+            placeholder="г. Москва, ул. Ткаченко, 23-5"
+            rows="8"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-xl-4 col-0"></label>
+        <div class="col-xl-6 col-12">
+          <button
+            type="submit"
+            class="btn btn-orange btn-block-mobile"
+          >
+            Добавить
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-4 col-0"></div>
+        <div class="col-xl-6 accept-checkbox col-12">
+          Нажимая на кнопку, вы даете согласие
+          на обработку<br> своих персональных данных
+          и соглашаетесь<br> с <a
+            href="#"
+            class="policy-link"
+          >Политикой конфиденциальности</a>
+        </div>
+      </div>
+
+    </form>
   </div>
 </template>
 
