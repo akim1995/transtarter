@@ -11,7 +11,7 @@
     .we-will-call-you {
         padding-bottom: 11px;
         line-height: 24px;
-font-size: 16px;
+        font-size: 16px;
     }
     .available-managers {
         display: flex;
@@ -59,7 +59,7 @@ font-size: 16px;
         padding: 0 76px 22px;
         .accept-checkbox {
             color: $medium-grey;
-            line-height: 1.43;        
+            line-height: 1.43;
             font-size: 14px;
             .policy-link {
                 display: inline;
@@ -67,6 +67,19 @@ font-size: 16px;
                 color: inherit;
                 cursor: pointer;
             }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .request-call-content {
+        width: 100% !important;
+        margin: 0 auto;
+        .title {            
+            padding: 42px 16px 19px;
+        }
+        .narrow-form {
+            padding: 0 16px 22px;            
         }
     }
 }

@@ -89,7 +89,7 @@ export default class UserProfile extends Vue {
       this.showPopup.successRestore = !this.showPopup.successRestore
     })
 
-    eventBus.$on('toggle-request-popup-modal', () => {
+    eventBus.$on('toggle-request-call-popup-modal', () => {
       this.showPopup.requestCall = !this.showPopup.requestCall
     })
 

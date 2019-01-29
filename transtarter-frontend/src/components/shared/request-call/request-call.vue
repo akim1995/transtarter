@@ -94,7 +94,7 @@ import { eventBus } from '../../../main'
 @Component
 export default class RequestCall extends Vue {
   toggleRequestPopup () {
-    eventBus.$emit('toggle-request-popup-modal')
+    eventBus.$emit('toggle-request-call-popup-modal')
   }
 }
 </script>

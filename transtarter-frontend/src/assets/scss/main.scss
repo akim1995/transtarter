@@ -262,6 +262,12 @@ body {
 }
 
 @media (max-width: 1200px) {
+
+    .modal-popup {        
+        width: calc(100% - 16px) !important;              
+        margin: 0 auto;
+    }
+
     .btn-group-column {
         display: flex;
         flex-direction: column;
