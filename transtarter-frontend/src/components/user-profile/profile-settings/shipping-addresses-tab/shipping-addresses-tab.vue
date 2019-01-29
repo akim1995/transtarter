@@ -47,16 +47,31 @@
           style="align-items: flex-start;"
         >
           <label class="col-xl-4 col-6 big-label">Точка выдачи</label>
-          <label class="col-xl-6 col-6 green-link text-left">Москва
-            <label class="radio">
-              <input type="radio" />
-              <div class="radio__text">А я переключаю радиокнопку</div>
-            </label>
-            <label class="radio">
-              <input type="radio" />
-              <div class="radio__text">А я переключаю радиокнопку</div>
-            </label>
-            </label>
+          <div class="col-xl-6 col-6 green-link text-left">
+            <div class="city">
+              Москва
+            </div>
+            <ul class="addresses">
+              <li class="address">
+                <input
+                  type="radio"
+                  class="radio"
+                  id="radio1"
+                  name="deliver-address"
+                />
+                <label for="radio1">г. Дзержинский, ул. Энергетиков 18А </label>
+              </li>
+              <li class="address">
+                <input
+                  type="radio"
+                  class="radio"
+                  id="radio2"
+                  name="deliver-address"
+                />
+                <label for="radio2">г. Москва, Каширское шоссе, 41</label>
+              </li>
+            </ul>
+          </div>
 
         </div>
         <div
