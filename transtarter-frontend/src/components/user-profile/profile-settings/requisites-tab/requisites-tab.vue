@@ -59,7 +59,7 @@
 
     </form>
 
-    <div class="additional-organization-names">ИП Воронов Е.В.</div>
+    <div class="additional-organization-names">Дополнительные юр.лица</div>
     <ul class="exist-organizations">
       <li class="exist-organization">
         <div class="text">
