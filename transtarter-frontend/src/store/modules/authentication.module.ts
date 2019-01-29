@@ -74,7 +74,6 @@ export class Authentication extends VuexModule implements IAuthState {
   @Action
   public login (): void {
     this.auth.login()
-    debugger
   }
 
   @Action
