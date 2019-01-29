@@ -24,7 +24,7 @@
 
       </li>
     </ul>
-    <button class="btn btn-outline">Добавить ещё адрес</button>
+    <button class="btn btn-outline btn-block-mobile">Добавить ещё адрес</button>
 
     <div class="new-address">
       <div class="title">Новый адрес</div>
@@ -46,8 +46,8 @@
           class="form-group row row-with-big-space"
           style="align-items: flex-start;"
         >
-          <label class="col-xl-4 col-6 big-label">Точка выдачи</label>
-          <div class="col-xl-6 col-6  text-left">
+          <label class="col-xl-4 col-12 big-label">Точка выдачи</label>
+          <div class="col-xl-6 col-12  text-left">
             <div class="city green-link">
               Москва
             </div>

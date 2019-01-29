@@ -48,17 +48,58 @@
     }
     .new-address {
         margin-top: 50px;
-    }
-    .city {
-        margin-bottom: 11px;
-    }
-    .addresses {
-        .address {
-            margin-top: 5px;
+        .city {
+            margin-bottom: 11px;
+        }
+        .addresses {
+            .address {
+                margin-top: 10px;
+            }
         }
     }
 }
 
 @media (max-width: 1200px) {
-    .shipping-addresses-tab {}
+    .shipping-addresses-tab {
+        .address-names {
+            margin: 0 -16px;
+            padding: 0 16px;
+            background: #F9F9F9;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .exist-addresses {
+            .exist-address {
+                flex-direction: column;
+                margin: 0 -16px;
+                padding: 13px 8px 13px 16px;
+                height: auto;
+                .text {
+                    margin-bottom: 23px;
+                    width: 100%;
+                    text-align: left;
+                }
+                .edit-block {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+        .new-address {
+            .title {
+                height: 40px;
+                background: #F9F9F9;
+                display: flex;
+                align-items: center;
+                margin: 0 -16px;
+                padding: 0 16px;
+                margin-bottom: 13px;
+            }
+            .city {
+                margin-top: 5px;
+            }
+        }
+    }
 }
