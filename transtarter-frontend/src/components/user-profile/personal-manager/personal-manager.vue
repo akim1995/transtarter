@@ -18,7 +18,7 @@
       <a class="manager-email" href="mailto:i.petrov@tstarter.ru">
           i.petrov@tstarter.ru
       </a>
-      <button class="ask-question">
+      <button class="ask-question" @click="toggleRequestPopup()">
           Задать вопрос
       </button>
     </div>
@@ -27,9 +27,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
 
 @Component
-export default class PersonalManager extends Vue {}
+export default class PersonalManager extends Vue {
+  toggleRequestPopup () {
+    eventBus.$emit('toggle-request-popup-modal')
+  }
+}
 </script>
 
 <style scoped lang="scss">

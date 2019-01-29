@@ -31,6 +31,7 @@
     <PasswordSuccessRestore v-if="showPopup.successRestore" />
     <YourCity v-if="showBlock.yourCity"/>
     <SelectCity v-if="showBlock.selectCity"/>
+    <RequestCall v-if="showPopup.requestCall"/>
   </div>
 </template>
 

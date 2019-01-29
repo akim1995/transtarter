@@ -39,7 +39,8 @@ export default class UserProfile extends Vue {
     registration: false,
     logIn: false,
     restorePassword: false,
-    successRestore: false
+    successRestore: false,
+    requestCall: false
   };
 
   showBlock = {
@@ -86,6 +87,10 @@ export default class UserProfile extends Vue {
 
     eventBus.$on('toggle-success-restore-popup', () => {
       this.showPopup.successRestore = !this.showPopup.successRestore
+    })
+
+    eventBus.$on('toggle-request-popup-modal', () => {
+      this.showPopup.requestCall = !this.showPopup.requestCall
     })
 
     eventBus.$on('close-log-in-and-open-registration', () => {
