@@ -36,6 +36,8 @@
                 box-sizing: border-box;
                 border-radius: 2px;
                 cursor: pointer;
+                background-repeat: no-repeat;
+                background-position: center;
             }
             .save {
                 background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41356 3.93717L0 5.35203L5.79663 11.1433L15.4482 1.4081L14.0279 0L5.78986 8.30945L1.41356 3.93717Z' fill='%23fff'/%3E%3C/svg%3E%0A");
