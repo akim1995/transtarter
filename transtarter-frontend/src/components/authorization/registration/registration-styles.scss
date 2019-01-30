@@ -50,16 +50,7 @@
                     justify-content: start;
                     .icon {
                         max-width: 30%;
-                        position: relative;
-                        .sales {
-                            background: url('../../../assets/icons/svg/percent-icon.svg');
-                        }
-                        .management {
-                            background: url('../../../assets/icons/svg/rows-and-gear-2x.svg');
-                        }
-                        .access {
-                            background: url('../../../assets/icons/svg/ruble-label.svg');
-                        }
+                        position: relative;                        
                         .advantage-item-icon {
                             position: relative;
                             width: 72px;
@@ -106,9 +97,9 @@
                     margin: 24px 0 8px 0;
                 }
                 .rows-and-gear-icon {
-                    background: url('../../../assets/icons/svg/rows-and-gear.svg');
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    // background: url('../../../assets/icons/svg/rows-and-gear.svg');
+                    // background-repeat: no-repeat;
+                    // background-position: center;
                     width: 48px;
                     height: 48px;
                 }

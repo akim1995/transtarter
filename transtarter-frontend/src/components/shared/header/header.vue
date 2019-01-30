@@ -86,7 +86,10 @@
         <div class="user-fullname">
           ИП Воронов Е.В.
         </div>
-        <div class="agreement" style="">
+        <div
+          class="agreement"
+          style=""
+        >
           Договор № 123765
         </div>
         <div class="price-info">
@@ -94,7 +97,23 @@
         </div>
         <div class="wallet">
           <div class="wallet-with-icon">
-            <span class="icon"></span>
+
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14.6057 14.5753H1.39432V4.86988H14.5881V14.5753H14.6057ZM3.39866 1.6466L9.98699 3.44523H3.39866V1.6466ZM15.4771 3.46304L2.89339 0.0260551C2.52721 -0.080794 2.14394 0.150712 2.03919 0.542493C2.02194 0.595917 2.02194 0.66715 2.02194 0.720574V3.44523H0.69716C0.313896 3.44523 0 3.76577 0 4.15755V15.2877C0 15.6795 0.313896 16 0.69716 16H15.2852C15.6688 16 15.9824 15.6795 15.9824 15.2877V4.15755C16 3.83701 15.7909 3.55208 15.4771 3.46304Z"
+                fill="#323230"
+              />
+            </svg>
+
             <div class="wallet-balance">
               15 000 ₽
             </div>
@@ -115,7 +134,10 @@
           <li class="menu-popup_list-item">
             Заказы и оплаты
           </li>
-          <li class="menu-popup_list-item" @click="logout">
+          <li
+            class="menu-popup_list-item"
+            @click="logout"
+          >
             Выйти
           </li>
         </ul>
@@ -342,7 +364,10 @@
         <div class="user-fullname">
           ИП Воронов Е.В.
         </div>
-        <div class="agreement" style="">
+        <div
+          class="agreement"
+          style=""
+        >
           Договор № 123765
         </div>
         <div class="price-info">
@@ -371,7 +396,10 @@
           <li class="menu-popup_list-item">
             Заказы и оплаты
           </li>
-          <li class="menu-popup_list-item" @click="logout">
+          <li
+            class="menu-popup_list-item"
+            @click="logout"
+          >
             Выйти
           </li>
         </ul>
@@ -445,7 +473,7 @@ export default class Header extends Vue {
     user: false
   };
 
-  auth = new AuthService()
+  auth = new AuthService();
 
   toggleRegistrationPopup () {
     eventBus.$emit('toggle-registration-popup')
