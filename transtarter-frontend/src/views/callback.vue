@@ -21,7 +21,8 @@ export default class Callback extends Vue {
         window.location.href = '../'
       })
       .catch(function (err) {
-        console.log(err)
+        // eslint-disable-next-line
+        console.error(err)
       })
   }
 }
