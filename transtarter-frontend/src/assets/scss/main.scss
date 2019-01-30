@@ -35,6 +35,7 @@ body {
 }
 
 .border {
+    border: 0 !important;
     text-decoration: underline;
     text-decoration-style: dashed;
     text-decoration-color: #9b9b9b;
@@ -337,6 +338,7 @@ body {
             position: relative;
             width: 100%;
             background: white;
+            flex-direction: row !important;
             .close {
                 cursor: pointer;
                 position: absolute;

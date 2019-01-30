@@ -5,8 +5,7 @@ export default class AuthService {
 
   constructor () {
     const AUTH0_DOMAIN: string = 'http://144.76.133.147:5000'
-    const MY_HOST: string = 'http://localhost:8080'
-    console.log(MY_HOST)
+    const MY_HOST: any = process.env.VUE_APP_HOST
 
     const settings: UserManagerSettings = {
       userStore: new WebStorageStateStore({ store: window.localStorage }),
