@@ -4,6 +4,7 @@
         display: flex;
         width: 80%;
         background: white;
+        flex-direction: row !important;
         &-left-side {
             width: 60%;
             margin-left: 24px;
@@ -13,7 +14,6 @@
                 margin-bottom: 16px;
                 margin-top: 24px;
             }
-            
             .already-have-account {
                 display: flex;
                 font-size: 16px;
@@ -50,7 +50,7 @@
                     justify-content: start;
                     .icon {
                         max-width: 30%;
-                        position: relative;                        
+                        position: relative;
                         .advantage-item-icon {
                             position: relative;
                             width: 72px;
@@ -81,7 +81,6 @@
         display: block !important;
         .mobile-version-content {
             margin: 20px 0 20px 0;
-            
             width: 90%;
             font-size: 14px;
             color: $black;
@@ -96,7 +95,7 @@
                 .reg-in-our-shop {
                     margin: 24px 0 8px 0;
                 }
-                .rows-and-gear-icon {                    
+                .rows-and-gear-icon {
                     width: 48px;
                     height: 48px;
                 }
@@ -115,7 +114,6 @@
                     line-height: 1.4;
                     padding: 16px 0;
                 }
-                
                 .already-have-account {
                     font-size: 16px;
                     .go-log-in {
