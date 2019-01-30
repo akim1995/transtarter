@@ -50,7 +50,6 @@
             >
               <a
                 class="border"
-                href="#"
               >Вход</a>
             </li>
             <li
@@ -60,7 +59,6 @@
             >
               <a
                 class="border"
-                href="#"
               >Регистрация</a>
             </li>
             <!-- end for guests -->
@@ -347,13 +345,13 @@
             class="menu-popup_list-item"
             @click="toggleLogInPopup()"
           >
-            <a href="#">Вход</a>
+            <a >Вход</a>
           </li>
           <li
             class="menu-popup_list-item"
             @click="toggleRegistrationPopup()"
           >
-            <a href="#">Регистрация</a>
+            <a >Регистрация</a>
           </li>
         </ul>
       </div>
