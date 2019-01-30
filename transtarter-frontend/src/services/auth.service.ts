@@ -5,13 +5,14 @@ export default class AuthService {
 
   constructor () {
     const AUTH0_DOMAIN: string = 'http://144.76.133.147:5000'
+    const MY_HOST: string = process.env.VUE_APP_HOST
 
     const settings: UserManagerSettings = {
       userStore: new WebStorageStateStore({ store: window.localStorage }),
       authority: AUTH0_DOMAIN,
       client_id: 'skoruba_identity_admin',
-      redirect_uri: 'http://localhost:8080/callback.html',
-      post_logout_redirect_uri: 'http://localhost:8080/',
+      redirect_uri: `${MY_HOST}/callback.html`,
+      post_logout_redirect_uri: `${MY_HOST}/`,
       response_type: 'id_token token',
       scope: 'openid profile roles',
       filterProtocolClaims: true,
