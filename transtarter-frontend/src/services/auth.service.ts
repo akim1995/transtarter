@@ -11,7 +11,7 @@ export default class AuthService {
       userStore: new WebStorageStateStore({ store: window.localStorage }),
       authority: AUTH0_DOMAIN,
       client_id: 'skoruba_identity_admin',
-      redirect_uri: `${MY_HOST}/callback`,
+      redirect_uri: `${MY_HOST}/callback.html/`,
       post_logout_redirect_uri: `${MY_HOST}/`,
       response_type: 'id_token token',
       scope: 'openid profile roles',
