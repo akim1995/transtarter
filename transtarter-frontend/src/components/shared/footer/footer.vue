@@ -6,60 +6,60 @@
       <div class="container">
 
         <div class="cards_group">
-          <div class="card">
-            <div class="card_header card_header_logo">ТРАНС СТАРТЕР</div>
+          <div class="cards_group__card">
+            <div class="cards_group__card_header card_header_logo">ТРАНС СТАРТЕР</div>
             <div
-              class="card_body specialization"
+              class="cards_group__card_body specialization"
               style="line-height: 24px; padding-right: 10px;"
             >Продажа стартеров, генераторов и запчастей с 1995г.</div>
           </div>
-          <div class="card">
-            <div class="card_body">
+          <div class="cards_group__card">
+            <div class="cards_group__card_body">
               <ul class="links">
                 <li class="links-item"><a
-                    class="card_link"
+                    class="cards_group__card_link"
                     href="#"
                   >Акции и новинки</a></li>
                 <li class="mb-20 links-item"><a
-                    class="card_link "
+                    class="cards_group__card_link "
                     href="#"
                   >Доставка и оплата</a></li>
 
                 <li class="links-item"><a
-                    class="card_link"
+                    class="cards_group__card_link"
                     href="#"
                   >О компании</a></li>
                 <li class="links-item"><a
-                    class="card_link"
+                    class="cards_group__card_link"
                     href="#"
                   >Найти точку ремонта</a></li>
                 <li class="mb-20 links-item"><a
-                    class="card_link  "
+                    class="cards_group__card_link  "
                     href="#"
                   >Контакты</a></li>
                 <li
                   class="link-item"
                   style="padding-bottom: 0;"
                 ><a
-                    class="card_link "
+                    class="cards_group__card_link "
                     href="#"
                   >Блог</a></li>
               </ul>
             </div>
           </div>
-          <div class="card">
+          <div class="cards_group__card">
             <div
-              class="card_body card_soc"
+              class="cards_group__card_body cards_group__card_soc"
               style="line-height: 24px;"
             >
               Задавайте свои вопросы прямо сейчас
 
-              <ul class="card_soc-list">
+              <ul class="cards_group__card_soc-list">
                 <li>
                   <a href="#!">
                     <font-awesome-icon
                       :icon="[ 'fab', 'viber' ]"
-                      class="card_soc-icon card_link"
+                      class="cards_group__card_soc-icon cards_group__card_link"
                     />
 
                   </a>
@@ -68,35 +68,35 @@
                 <li>
                   <font-awesome-icon
                     :icon="[ 'fab', 'telegram' ]"
-                    class="card_soc-icon card_link"
+                    class="cards_group__card_soc-icon cards_group__card_link"
                   />
                 </li>
                 <li>
                   <a href="#!">
                     <font-awesome-icon
                       :icon="[ 'fab', 'vk' ]"
-                      class="card_soc-icon card_link"
+                      class="cards_group__card_soc-icon cards_group__card_link"
                     />
                   </a>
                 </li>
                 <li>
                   <font-awesome-icon
                     :icon="[ 'fab', 'whatsapp' ]"
-                    class="card_soc-icon card_link"
+                    class="cards_group__card_soc-icon cards_group__card_link"
                   />
                 </li>
               </ul>
             </div>
           </div>
-          <div class="card call-card">
+          <div class="cards_group__card call-card">
             <a
-              class="card_header"
+              class="cards_group__card_header"
               style="margin-bottom: 8px;"
               href="tel:+7-495-748-97-74"
             >+7 (495) 748-97-74</a>
-            <div class="card_body">
+            <div class="cards_group__card_body">
               <button
-                class="card_link"
+                class="cards_group__card_link"
                 style="font-weight: bold;"
                 @click="toggleRequestCallPopup()"
               >Заказать звонок</button>
@@ -106,7 +106,7 @@
 
         <div class="additional-links">
           <span class="additional-links-left"><a
-              class="card_link bottom-link"
+              class="cards_group__card_link bottom-link"
               href="#"
               target='_blank'
               rel='noopener noreferrer'
@@ -114,7 +114,7 @@
               Политика конфеденциальности</a></span>
           <span>
             <span
-              class="card_link bottom-link"
+              class="cards_group__card_link bottom-link"
               style="border: 0;"
             >Разработано в <a
                 class="bottom-link"

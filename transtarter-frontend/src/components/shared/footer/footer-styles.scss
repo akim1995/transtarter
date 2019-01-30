@@ -12,7 +12,7 @@
             .call-card {
                 text-align: right;
             }
-            .card {
+            &__card {
                 width: 100%;
                 &_header_logo {
                     margin-bottom: 10px;
@@ -96,7 +96,7 @@
                     font-weight: bold;                    
                     font-size: 16px;
                 }
-                .card {
+                &__card {
                     &_body .links {
                         font-weight: bold;
                         line-height: 32px;
