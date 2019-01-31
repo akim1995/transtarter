@@ -1,6 +1,13 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `@import "@/assets/scss/main.scss";`
+      }
+    }
+  },
   configureWebpack: {
     plugins: [
       new CopyWebpackPlugin([

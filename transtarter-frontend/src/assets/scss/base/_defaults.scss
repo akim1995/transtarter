@@ -1,0 +1,16 @@
+html,
+body {
+    background-color: $white;
+    margin: 0;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:focus {    
+    outline-color: $green;    
+}

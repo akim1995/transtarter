@@ -97,7 +97,6 @@
           <div class="wallet-with-icon">
               <div class="icon"></div>
 
-
             <div class="wallet-balance">
               15 000 ₽
             </div>
@@ -488,7 +487,6 @@ export default class Header extends Vue {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/variables.scss";
 @import "./header-styles.scss";
 @import "./header-mobile-styles.scss";
 @import "./search-form-styles.scss";

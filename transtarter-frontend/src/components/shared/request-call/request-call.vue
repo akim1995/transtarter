@@ -119,6 +119,5 @@ export default class RequestCall extends Vue {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/variables.scss";
 @import "./request-call-styles.scss";
 </style>

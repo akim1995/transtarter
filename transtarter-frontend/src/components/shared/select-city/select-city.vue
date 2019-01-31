@@ -37,6 +37,5 @@ export default class SelectCity extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/variables.scss";
 @import "select-city-styles.scss";
 </style>

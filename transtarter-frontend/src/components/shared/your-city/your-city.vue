@@ -33,6 +33,5 @@ export default class YourCity extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/variables.scss";
 @import "your-city-styles.scss";
 </style>

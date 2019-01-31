@@ -1,28 +1,13 @@
-// modules
-@import "./variables.scss";
-@import "./grid.scss";
-// vendors
-@import "./reset.scss";
-@import "./overwrite-vue-carousel.scss";
-html,
-body {
-    background-color: $white;
-    margin: 0;
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-}
+// Read it before you start work with styles ->>> https://smacss.com/
+
+@import 'vendors/index';        // Reset stylesheet
+
+@import 'base/index';         // Load base files
+@import 'layout/index';     // Defaults elements
+@import 'modules/index';      // Buttons
 
 .modal-open {
     overflow: hidden;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-:focus {    
-    outline-color: $green;    
 }
 
 #app {
@@ -73,202 +58,18 @@ body {
     }
 }
 
-.btn {
-    height: 48px;
-    border-radius: 4px;
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 1.41;
-    color: $black;
-    border-width: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 24px;
-    font-family: 'Exo 2';
-}
-
-.btn-outline {
-    border: 1px solid $light-grey;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-.btn-orange {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19), 0 1px 0 0 $btn-orange-gradient;
-    background-image: linear-gradient(to bottom, $yellow, $yellow-dark);
-}
-
-.btn-block {
-    width: 100%;
-}
-
-.form-group {
-    color: $black;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-    .label {
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 1.5;
-        margin-bottom: 8px;
-    }
-    .big-label {
-        font-weight: bold;
-        line-height: 24px;
-        font-size: 16px;
-        color: $black;
-    }
-    .mobile-top-label {
-        margin-bottom: 3px;
-    }
-    .green-link {
-        font-weight: bold;
-        line-height: 24px;
-        font-size: 16px;
-        color: $green;
-        text-decoration: underline;
-        text-decoration-style: dashed;
-        text-decoration-color: rgba(12, 181, 32, .4);
-    }
-    .two-selectors {
-        display: flex;
-        .first-selector {
-            margin-right: 8px;
-            width: 30%;
-        }
-        .second-selector {
-            width: 70%;
-        }
-    }
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-}
-
-.form-control {
-    border-radius: 2px;
-    padding: 0.675rem .75rem;
-    border-width: 0;
-    border: 1px solid $light-grey;
-    background-color: $white;
-    width: 100%;
-    height: auto !important; // bitrix style overwrite
-    &:focus {
-        border-color: $green; // bitrix style overwrite
-    }
-}
-
-.form-control-lg {
-    @extend .form-control;
-    line-height: 24px;
-}
-
-
-.radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-    margin: 10px 0 0 7px;
-}
-
-.radio+label {
-    position: relative;
-    padding: 0 0 0 35px;
-    cursor: pointer;
-}
-
-.radio+label:before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: $white;
-    border: 1px solid $light-grey;
-    box-shadow: 0px 1px 2px rgba(12, 181, 32, 0.3);
-}
-
-.radio+label:after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: white;
-    opacity: 0;
-    transition: .2s;
-}
-
-.radio:checked+label:after {
-    opacity: 1;
-    background-color: white;
-   
-}
-
-.radio:focus+label:before {
-    border: 0;
-    background: $green;
-}
 
 
 
 
-.radio-label {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 20px;
-    font-size: 16px;
-    color: $black;
-    text-decoration-style: none;
-}
 
-.btn-group {
-    font-weight: bold;
-    line-height: 20px;
-    font-size: 16px;
-    button {
-        background-color: $white;        
-        border: 1px solid $light-grey;
-        color: $black;
-        padding: 10px 24px;        
-        cursor: pointer;        
-        float: left;        
-        &:not(:last-child) {
-            border-right: none;            
-        }
-        &:last-child {
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-        &:first-child {
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-        &:active {
-            background-color: $active-btn;
-        }
-    }
-    &:after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    .active {
-        background-color: $green;
-        color: white;
-    }
-}
+
+
+
+
+
+
+
 
 .custom-checkbox {
     position: relative;
@@ -350,25 +151,3 @@ body {
     }
 }
 
-@media (max-width: 1200px) {
-    .modal-popup {
-        width: calc(100% - 16px) !important;
-        margin: 0 auto;
-    }
-    .btn-group-column {
-        display: flex;
-        flex-direction: column;
-        button {
-            border-radius: 5px;
-            margin-bottom: 4px;
-            line-height: 20px;
-            font-size: 14px;
-        }
-    }
-    .btn-block-mobile {
-        width: 100%;
-    }
-    .accept-checkbox {
-        text-align: center;
-    }
-}
