@@ -14,14 +14,14 @@
 }
 
 .btn-outline {
-    border: 1px solid $light-grey;
+    border: 1px solid $alto-approx;
     box-sizing: border-box;
     border-radius: 4px;
 }
 
 .btn-orange {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19), 0 1px 0 0 $btn-orange-gradient;
-    background-image: linear-gradient(to bottom, $yellow, $yellow-dark);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19), 0 1px 0 0 $tangerine-approx;
+    background-image: linear-gradient(to bottom, $gold-approx, $supernova-approx);
 }
 
 .btn-block {
@@ -34,7 +34,7 @@
     font-size: 16px;
     button {
         background-color: $white;        
-        border: 1px solid $light-grey;
+        border: 1px solid $alto-approx;
         color: $black;
         padding: 10px 24px;        
         cursor: pointer;        
@@ -51,7 +51,7 @@
             border-bottom-left-radius: 5px;
         }
         &:active {
-            background-color: $active-btn;
+            background-color: $gallery-approx;
         }
     }
     &:after {
@@ -60,7 +60,7 @@
         display: table;
     }
     .active {
-        background-color: $green;
+        background-color: $malachite;
         color: white;
     }
 }

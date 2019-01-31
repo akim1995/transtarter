@@ -1,40 +1,38 @@
-$white: #ffffff;
+/**
+**
+** resource that will help you with variables naming -->> http://chir.ag/projects/name-that-color
+**
+**/
 
-$gallery-solid: #efefef;
-
-
-// yellow - orange
+// yellow - orange #region
 $buttermilk: #fff1b9;
-$yellow:  #ffd600;
-$yellow-dark: #ffc600;
-$yellow-light: #ffc300;
-$hovered-yellow: #ffea00;
-$btn-orange-gradient: #e29401;
+$gold-approx: #ffd600;
+$supernova-approx: #ffc600;
+$amber-approx: #ffc300;
+$turbo-approx: #ffea00;
+$tangerine-approx: #e29401;
 
-// green
+// green #region
 $hint-of-green: #e0ffe3;
-$green: #0cb520;
+$malachite: #0cb520;
 
-// grey 
-$active-btn: #eeeeee;
-$border-grey: #e8e8e8;
-$active-grey: #e4e4e4;
-$lightest-grey: #e9e9e9;
-$light-grey: #d2d2d2;
-$medium-grey: #a3a3a2;
-$dark-medium-grey: #9b9b9b;
-$dark-grey: #727272;
-$bold-grey: #6e6e6e;
-$bold-dark-grey: #686868;
-$hovered-header: #646464;
+// white - black #region
+$white: #ffffff;
+$gallery-solid: #efefef;
+$gallery-approx: #eeeeee;
+$mercury-approx: #e8e8e8;
+$concrete-solid: #f2f2f2;
+$concrete-approx: #f3f3f3;
+$alabaster-approx: #f9f9f9;
+$alto-approx: #d2d2d2;
+$star-dust: #a3a3a2;
+$silver-chalice: #a6a6a6;
+$dusty-gray: #9b9b9b;
+$dove-gray: #727272;
+$bold-dove-gray: #686868;
+$boulder: #767676;
+$light-dove-gray: #646464;
+$scorpion-approx: #595959;
 $grey: rgba(50, 50, 48, .2);
+$mine-shaft: #383838;
 $black: #323230;
-
-$bg-main: #f2f2f2;
-$bg-second-main: #f3f3f3;
-$bg-third-main: #f9f9f9;
-
-$bg-header: #595959;
-$bg-footer: #383838;
-$color-footer: #a6a6a6;
-$bottom-link-footer: #767676;

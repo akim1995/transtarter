@@ -4,15 +4,15 @@
     justify-content: flex-start;
     align-items: center;
     &-input {
-        color: $green;
+        color: $malachite;
         margin-bottom: 0;
         min-height: 1rem;
         cursor: pointer;
         .fill-control-input {
             display: none;
             &:checked~.fill-control-indicator {
-                background-color: $green;
-                border-color: $green;
+                background-color: $malachite;
+                border-color: $malachite;
                 background-size: 60%;
             }
         }
@@ -25,7 +25,7 @@
             width: 16px;
             height: 16px;
             transition: 0.3s;
-            background: $green;
+            background: $malachite;
             background-size: 0%;
             background-position: center;
             background-repeat: no-repeat;

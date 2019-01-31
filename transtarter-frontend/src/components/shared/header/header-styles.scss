@@ -7,7 +7,7 @@
             display: flex;
             justify-content: space-between;
             height: 40px;
-            background-color: $bg-header;
+            background-color: $scorpion-approx;
             padding-left: 16px;
         }
         &__left,
@@ -23,7 +23,7 @@
         }
         &__login-item {
             height: 100%;
-            border-left: 1px solid $dark-grey;
+            border-left: 1px solid $dove-gray;
             margin-right: 10px;
             padding-left: 10px;
             display: flex;
@@ -42,7 +42,7 @@
                 right: -50px;
                 width: 20px;
                 height: 20px;
-                background-color: $yellow-light;
+                background-color: $amber-approx;
                 border-radius: 50%;
                 color: $black;
                 display: flex;
@@ -59,7 +59,7 @@
                 border-top-right-radius: 34%;
                 -webkit-transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
                 transform: rotate(-142deg) skewX(-15deg) scale(1, 0.466);
-                background: $yellow-light;
+                background: $amber-approx;
                 top: -10.4px;
                 left: 27.4px;
             }
@@ -68,7 +68,7 @@
             display: flex;
             align-items: center;
             width: auto;
-            border-left: 1px solid $dark-grey;
+            border-left: 1px solid $dove-gray;
             padding-right: 16px;
             cursor: pointer;
             .user-avatar {
@@ -105,16 +105,16 @@
                 padding: 0 16px;
                 white-space: nowrap;
                 &.active {
-                    background-color: $bold-grey;
+                    background-color: $dove-gray;
                 }
             }
             a:hover {
-                background-color: $bold-grey;
+                background-color: $dove-gray;
             }
         }
         &__search {
             padding: 16px;
-            background-color: $green;
+            background-color: $malachite;
         }
     }
     .mobile-header {
@@ -168,7 +168,7 @@
     .agreement,
     .price-info {
         font-weight: normal;
-        color: $bold-dark-grey;
+        color: $bold-dove-gray;
     }
     .agreement {
         margin-bottom: 2px;
@@ -178,7 +178,7 @@
         margin-bottom: 13px;
         display: inline-block;
         &-with-icon {
-            background: $bg-second-main;
+            background: $concrete-approx;
             border-radius: 4px;
             padding: 6px 8px;
             display: flex;

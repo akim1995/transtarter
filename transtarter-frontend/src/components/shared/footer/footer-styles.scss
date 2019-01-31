@@ -1,10 +1,10 @@
 .footer {
-    color: $color-footer;
+    color: $silver-chalice;
     font-family: 'PT Sans';
     .footer__content {
         padding: 82px 0;
-        background-color: $bg-footer;
-        color: $color-footer;
+        background-color: $mine-shaft;
+        color: $silver-chalice;
         .cards_group {
             display: flex;
             width: 100%;
@@ -53,7 +53,7 @@
                     width: 85%;
                 }
                 &_link {
-                    color: $color-footer;
+                    color: $silver-chalice;
                     transition: color 200ms ease;
                     &:hover {
                         color: rgba(255, 255, 255, .8);
@@ -69,8 +69,8 @@
             .bottom-link {
                 line-height: 20px;
                 font-size: 14px;
-                color: $bottom-link-footer;
-                border-bottom: 1px solid $bottom-link-footer;
+                color: $boulder;
+                border-bottom: 1px solid $boulder;
             }
         }
         
@@ -106,7 +106,7 @@
                         .links-item {
                             padding-bottom: 0;
                             .card_link {
-                                color: $lightest-grey;
+                                color: $mercury-approx;
                             }
                         }
                         
