@@ -46,9 +46,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import { mixins } from 'vue-class-component'
+import ClosablePopup from '../../mixins/closable-popup'
 
 @Component
-export default class PasswordRestore extends Vue {
+export default class PasswordRestore extends mixins(ClosablePopup) {
   email = '';
 
   restorePassword (e: Event) {
@@ -64,14 +66,6 @@ export default class PasswordRestore extends Vue {
     if (e.keyCode === 27) {
       eventBus.$emit('toggle-restore-popup')
     }
-  }
-
-  mounted () {
-    window.addEventListener('keyup', this.listenEscKeyup)
-  }
-
-  beforeDestroy () {
-    window.removeEventListener('keyup', this.listenEscKeyup)
   }
 }
 </script>

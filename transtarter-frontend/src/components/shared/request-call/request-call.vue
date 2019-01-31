@@ -95,9 +95,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import { mixins } from 'vue-class-component'
+import ClosablePopup from '../../mixins/closable-popup'
 
 @Component
-export default class RequestCall extends Vue {
+export default class RequestCall extends mixins(ClosablePopup) {
   toggleRequestPopup () {
     eventBus.$emit('toggle-request-call-popup-modal')
   }
@@ -106,14 +108,6 @@ export default class RequestCall extends Vue {
     if (e.keyCode === 27) {
       eventBus.$emit('toggle-request-call-popup-modal')
     }
-  }
-
-  mounted () {
-    window.addEventListener('keyup', this.listenEscKeyup)
-  }
-
-  beforeDestroy () {
-    window.removeEventListener('keyup', this.listenEscKeyup)
   }
 }
 </script>

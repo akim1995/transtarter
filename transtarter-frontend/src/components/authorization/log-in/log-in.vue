@@ -94,10 +94,12 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import { mixins } from 'vue-class-component'
+import ClosablePopup from '../../mixins/closable-popup'
 import { eventBus } from '../../../main'
 
 @Component
-export default class LogIn extends Vue {
+export default class LogIn extends mixins(ClosablePopup) {
   logInForm = {
     email: '2@mail.ru',
     password: '123'
@@ -136,14 +138,6 @@ export default class LogIn extends Vue {
     if (e.keyCode === 27) {
       eventBus.$emit('toggle-log-in-popup')
     }
-  }
-
-  mounted () {
-    window.addEventListener('keyup', this.listenEscKeyup)
-  }
-
-  beforeDestroy () {
-    window.removeEventListener('keyup', this.listenEscKeyup)
   }
 }
 </script>
