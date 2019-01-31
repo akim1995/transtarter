@@ -71,7 +71,7 @@ $sidebar-grey: $bold-dark-grey;
                 padding: 0 16px;
                 cursor: pointer;
                 &:hover {
-                    background: $medium-white;
+                    background: $hint-of-green;
                 }
                 &-active {
                     font-weight: bold;
@@ -101,7 +101,7 @@ $sidebar-grey: $bold-dark-grey;
                 padding: 12px 16px;
                 display: block;
                 background: $bg-third-main;
-                box-shadow: inset 0px 1px 0px $box-shadow;
+                box-shadow: inset 0px 1px 0px $gallery-solid;
                 .form-control-border-radius {
                     background: $white;
                     border: 1px solid $light-grey;

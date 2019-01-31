@@ -11,6 +11,14 @@ body {
     box-sizing: border-box;
 }
 
+.modal-open {
+    overflow: hidden;
+}
+
+#app {
+    height: 100%;
+}
+
 :focus {    
     outline-color: $green;    
 }

@@ -23,7 +23,7 @@
             align-items: center;
             cursor: pointer;
             &:hover {
-                background-color: $medium-white;
+                background-color: $hint-of-green;
                 &::before {
                     content: '';
                     position: absolute;
