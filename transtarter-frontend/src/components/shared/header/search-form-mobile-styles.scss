@@ -18,6 +18,7 @@
                 margin-bottom: 4px;
                 display: flex;
                 align-items: center;
+                flex-wrap: nowrap !important; // overwrite bitrix styles
             }
             .search__select-numbers {
                 position: absolute;
