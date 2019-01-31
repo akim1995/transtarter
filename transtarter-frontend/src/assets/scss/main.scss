@@ -1,7 +1,6 @@
 // modules
 @import "./variables.scss";
 @import "./grid.scss";
-@import "./my-reset.scss";
 // vendors
 @import "./reset.scss";
 @import "./overwrite-vue-carousel.scss";
@@ -38,7 +37,7 @@ body {
     border: 0 !important;
     text-decoration: underline;
     text-decoration-style: dashed;
-    text-decoration-color: #9b9b9b;
+    text-decoration-color: $dark-medium-grey;
 }
 
 .border-white {
@@ -90,7 +89,7 @@ body {
 }
 
 .btn-outline {
-    border: 1px solid #D2D2D2;
+    border: 1px solid $light-grey;
     box-sizing: border-box;
     border-radius: 4px;
 }
@@ -119,7 +118,7 @@ body {
         font-weight: bold;
         line-height: 24px;
         font-size: 16px;
-        color: #323230;
+        color: $black;
     }
     .mobile-top-label {
         margin-bottom: 3px;
@@ -230,7 +229,7 @@ body {
     font-weight: normal;
     line-height: 20px;
     font-size: 16px;
-    color: #323230;
+    color: $black;
     text-decoration-style: none;
 }
 
@@ -241,7 +240,7 @@ body {
     button {
         background-color: $white;        
         border: 1px solid $light-grey;
-        color: #323230;
+        color: $black;
         padding: 10px 24px;        
         cursor: pointer;        
         float: left;        

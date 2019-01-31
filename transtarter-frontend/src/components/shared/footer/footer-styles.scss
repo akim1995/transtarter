@@ -3,7 +3,7 @@
     font-family: 'PT Sans';
     .footer__content {
         padding: 82px 0;
-        background-color: $bkground-footer;
+        background-color: $bg-footer;
         color: $color-footer;
         .cards_group {
             display: flex;
@@ -101,12 +101,12 @@
                         font-weight: bold;
                         line-height: 32px;
                         font-size: 16px;
-                        color: white;
+                        color: $white;
                         margin-bottom: 28px;
                         .links-item {
                             padding-bottom: 0;
                             .card_link {
-                                color: #E9E9E9;
+                                color: $lightest-grey;
                             }
                         }
                         

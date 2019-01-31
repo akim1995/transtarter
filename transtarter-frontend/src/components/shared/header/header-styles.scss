@@ -7,7 +7,7 @@
             display: flex;
             justify-content: space-between;
             height: 40px;
-            background-color: $bkground-header;
+            background-color: $bg-header;
             padding-left: 16px;
         }
         &__left,
@@ -135,7 +135,7 @@
         font-weight: bold;
         line-height: 24px;
         font-size: 16px;
-        color: #323230;
+        color: $black;
         &-item {
             height: 40px;
             display: flex;
@@ -168,7 +168,7 @@
     .agreement,
     .price-info {
         font-weight: normal;
-        color: #686868;
+        color: $bold-dark-grey;
     }
     .agreement {
         margin-bottom: 2px;
@@ -178,7 +178,7 @@
         margin-bottom: 13px;
         display: inline-block;
         &-with-icon {
-            background: #F3F3F3;
+            background: $bg-second-main;
             border-radius: 4px;
             padding: 6px 8px;
             display: flex;
@@ -193,7 +193,7 @@
             .wallet-balance {
                 line-height: 24px;
                 font-size: 14px;
-                color: #323230;
+                color: $black;
                 font-weight: bold;
             }
         }

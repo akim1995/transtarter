@@ -5,7 +5,7 @@
         font-weight: bold;
         line-height: 32px;
         font-size: 24px;
-        color: #323230;
+        color: $black;
         padding: 26px 66px 19px;
     }
     .we-will-call-you {
@@ -52,7 +52,7 @@
         .company {
             line-height: 14px;
             font-size: 12px;
-            color: #686868;
+            color: $bold-dark-grey;
         }
     }
     .narrow-form {

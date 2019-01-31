@@ -5,7 +5,7 @@
         padding: 19px 16px 13px;
         display: flex;        
         justify-content: space-between;
-        background-color: #FFF1B9;
+        background-color: $light-yellow;
         ;
         .question-sign {            
             width: 21%;
@@ -47,15 +47,15 @@
         .manager-phone {
             line-height: 18px;
             font-size: 16px;
-            color: #323230;
+            color: $black;
             margin-bottom: 8px;
         }
         .manager-email {
             line-height: 18px;
             font-size: 16px;
-            color: #0CB520;
+            color: $green;
             text-decoration: underline;
-            text-decoration-color: #0CB520;
+            text-decoration-color: $green;
             margin-bottom: 16px;
         }
         .ask-question {
@@ -63,8 +63,8 @@
             line-height: 24px;
             font-size: 16px;
             font-family: 'Exo 2';
-            background: #FFFFFF;
-            border: 1px solid #D2D2D2;
+            background: $white;
+            border: 1px solid $light-grey;
             box-sizing: border-box;
             border-radius: 4px;
             padding: 10px 16px 10px;
