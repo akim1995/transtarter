@@ -446,7 +446,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
 import { AuthModule } from '../../../store/modules/authentication.module'
-import AuthService from '@/services/auth.service'
+import { AuthService } from '@/services/auth.service'
 
 @Component
 export default class Header extends Vue {
@@ -472,8 +472,9 @@ export default class Header extends Vue {
 
   logout () {
     // e.preventDefault()
-    this.auth.logout()
+    // this.auth.logout()
     // this.$store.dispatch('auth/logout')
+    this.$store.dispatch('auth/mockLogout')
   }
 
   toggleMainMenu () {

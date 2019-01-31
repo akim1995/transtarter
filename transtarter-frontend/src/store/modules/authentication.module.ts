@@ -1,7 +1,7 @@
 import { Module, VuexModule, Mutation, Action, getModule } from 'vuex-module-decorators'
 import { store } from '../index'
 
-import AuthService from '@/services/auth.service'
+import { AuthService } from '@/services/auth.service'
 import { User } from 'oidc-client'
 
 export interface IAuthState {
@@ -71,6 +71,16 @@ export class Authentication extends VuexModule implements IAuthState {
     this.status.loggingIn = false
   }
 
+  @Mutation
+  MOCK_LOGIN () {
+    this.status.loggedIn = true
+  }
+
+  @Mutation
+  MOCK_LOGOUT () {
+    this.status.loggedIn = false
+  }
+
   @Action
   public login (): void {
     this.auth.login()
@@ -92,6 +102,16 @@ export class Authentication extends VuexModule implements IAuthState {
     this.context.commit('LOGOUT')
     this.auth.removeFromLocalStorageByKey(this.localStorageKey)
     this.auth.logout()
+  }
+
+  @Action
+  mockLogin () {
+    this.context.commit('MOCK_LOGIN')
+  }
+
+  @Action
+  mockLogout () {
+    this.context.commit('MOCK_LOGOUT')
   }
 }
 

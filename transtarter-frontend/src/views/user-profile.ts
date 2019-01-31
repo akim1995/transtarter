@@ -57,7 +57,7 @@ export default class UserProfile extends Vue {
   }
 
   @Watch('showPopup', { deep: true })
-  onShowChanged (newVal: any, oldVal: any) {
+  onShowChanged (newVal: any) {
     const className = 'modal-open'
     const keys = Object.values(newVal)
     if (keys.some(x => x === true)) {

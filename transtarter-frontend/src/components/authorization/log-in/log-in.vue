@@ -127,7 +127,8 @@ export default class LogIn extends Vue {
     const { dispatch } = this.$store
 
     // module is injected in header
-    dispatch('auth/login')
+    // dispatch('auth/login')
+    dispatch('auth/mockLogin')
     eventBus.$emit('toggle-log-in-popup')
   }
 
