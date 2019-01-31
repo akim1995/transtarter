@@ -56,11 +56,11 @@
         font: 400 1.0625rem 'PT Sans';
         background-color: white;
         &:hover {
-            background-color: #F9F9F9;
+            background-color: $bg-third-main;
         }
 
         &:active {
-            background-color: #E4E4E4;
+            background-color: $active-grey;
         }
     }
     &__btn-clear {
@@ -98,7 +98,7 @@
         padding: 0 16px;
         font: 600 1em 'PT Sans';
         &:hover {
-            background: #FFEA00;
+            background: $hovered-yellow;
         }
     }
     &__location {

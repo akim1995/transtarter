@@ -28,7 +28,7 @@
                     width: 40px;
                     margin-right: 8px;
                     &:hover {
-                        background: #646464;
+                        background: $hovered-header;
                     }
                     .burger-icon {
                         margin-right: 20px;
@@ -53,7 +53,7 @@
                     align-items: center;
                     justify-content: center;
                     &:hover {
-                        background: #646464;
+                        background: $hovered-header;
                     }
                     .notify-counter {
                         position: absolute;
