@@ -107,6 +107,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import { Carousel, Slide } from 'vue-carousel'
 import RegistrationForm from '@/components/authorization/registration/registration-form/registration-form.vue'
 import { eventBus } from '../../../main'
+import { mixins } from 'vue-class-component'
+import ClosablePopup from '../../mixins/closable-popup'
 
 @Component({
   components: {
@@ -115,7 +117,7 @@ import { eventBus } from '../../../main'
     RegistrationForm
   }
 })
-export default class Registration extends Vue {
+export default class Registration extends mixins(ClosablePopup) {
   toggleRegistrationPopup () {
     eventBus.$emit('toggle-registration-popup')
   }
@@ -124,14 +126,6 @@ export default class Registration extends Vue {
     if (e.keyCode === 27) {
       eventBus.$emit('toggle-registration-popup')
     }
-  }
-
-  mounted () {
-    window.addEventListener('keyup', this.listenEscKeyup)
-  }
-
-  beforeDestroy () {
-    window.removeEventListener('keyup', this.listenEscKeyup)
   }
 }
 </script>
