@@ -8,12 +8,10 @@ export default class ClosablePopup extends Vue {
   listenEscKeyup (e: KeyboardEvent) { }
 
   mounted () {
-    debugger
     window.addEventListener('keyup', this.listenEscKeyup)
   }
 
   beforeDestroy () {
-    debugger
     window.removeEventListener('keyup', this.listenEscKeyup)
   }
 }
