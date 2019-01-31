@@ -1,11 +1,11 @@
 .user-profile {
     width: 100%;
-    background: #000;
+    background: $black;
     position: relative;
     .content {
         width: 100%;
         min-height: 300px;
-        background-color: $bkground-main;
+        background-color: $concrete-solid;
         .content-wrapper {
             display: flex;
             align-items: flex-start;

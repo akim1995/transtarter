@@ -78,7 +78,7 @@
         Зарегистрироваться
       </button>
 
-      <div class="accept-checkbox">
+      <div class="accept-policy">
         Нажимая на кнопку, вы даете согласие
         на обработку<br> своих персональных данных
         и соглашаетесь<br> с <a
@@ -124,6 +124,5 @@ export default class RegistrationForm extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import "../../../../assets/scss/variables.scss";
 @import "registration-form-styles.scss";
 </style>

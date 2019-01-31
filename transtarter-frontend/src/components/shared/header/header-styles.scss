@@ -7,7 +7,7 @@
             display: flex;
             justify-content: space-between;
             height: 40px;
-            background-color: $bkground-header;
+            background-color: $scorpion-approx;
             padding-left: 16px;
         }
         &__left,
@@ -22,8 +22,9 @@
             ;
         }
         &__login-item {
+            cursor: pointer;
             height: 100%;
-            border-left: 1px solid $dark-grey;
+            border-left: 1px solid $dove-gray;
             margin-right: 10px;
             padding-left: 10px;
             display: flex;
@@ -42,7 +43,7 @@
                 right: -50px;
                 width: 20px;
                 height: 20px;
-                background-color: $yellow-light;
+                background-color: $amber-approx;
                 border-radius: 50%;
                 color: $black;
                 display: flex;
@@ -59,7 +60,7 @@
                 border-top-right-radius: 34%;
                 -webkit-transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
                 transform: rotate(-142deg) skewX(-15deg) scale(1, 0.466);
-                background: $yellow-light;
+                background: $amber-approx;
                 top: -10.4px;
                 left: 27.4px;
             }
@@ -68,7 +69,7 @@
             display: flex;
             align-items: center;
             width: auto;
-            border-left: 1px solid $dark-grey;
+            border-left: 1px solid $dove-gray;
             padding-right: 16px;
             cursor: pointer;
             .user-avatar {
@@ -105,16 +106,16 @@
                 padding: 0 16px;
                 white-space: nowrap;
                 &.active {
-                    background-color: $bold-grey;
+                    background-color: $dove-gray;
                 }
             }
             a:hover {
-                background-color: $bold-grey;
+                background-color: $dove-gray;
             }
         }
         &__search {
             padding: 16px;
-            background-color: $green;
+            background-color: $malachite;
         }
     }
     .mobile-header {
@@ -135,7 +136,7 @@
         font-weight: bold;
         line-height: 24px;
         font-size: 16px;
-        color: #323230;
+        color: $black;
         &-item {
             height: 40px;
             display: flex;
@@ -145,7 +146,7 @@
             padding: 0 17px;
             cursor: pointer;
             &:hover {
-                background: #E0FFE3;
+                background: $hint-of-green;
             }
             &-active {
                 font-weight: bold;
@@ -168,7 +169,7 @@
     .agreement,
     .price-info {
         font-weight: normal;
-        color: #686868;
+        color: $bold-dove-gray;
     }
     .agreement {
         margin-bottom: 2px;
@@ -178,7 +179,7 @@
         margin-bottom: 13px;
         display: inline-block;
         &-with-icon {
-            background: #F3F3F3;
+            background: $concrete-approx;
             border-radius: 4px;
             padding: 6px 8px;
             display: flex;
@@ -189,11 +190,11 @@
                 background-size: contain;
                 background-position: center;
                 margin-right: 8px;
-            }
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.6057 14.5753H1.39432V4.86988H14.5881V14.5753H14.6057ZM3.39866 1.6466L9.98699 3.44523H3.39866V1.6466ZM15.4771 3.46304L2.89339 0.0260551C2.52721 -0.080794 2.14394 0.150712 2.03919 0.542493C2.02194 0.595917 2.02194 0.66715 2.02194 0.720574V3.44523H0.69716C0.313896 3.44523 0 3.76577 0 4.15755V15.2877C0 15.6795 0.313896 16 0.69716 16H15.2852C15.6688 16 15.9824 15.6795 15.9824 15.2877V4.15755C16 3.83701 15.7909 3.55208 15.4771 3.46304Z' fill='%23323230'/%3E%3C/svg%3E%0A"); }
             .wallet-balance {
                 line-height: 24px;
                 font-size: 14px;
-                color: #323230;
+                color: $black;
                 font-weight: bold;
             }
         }

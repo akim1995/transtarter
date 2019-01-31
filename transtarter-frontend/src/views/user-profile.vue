@@ -38,7 +38,6 @@
 <script lang="ts" src="./user-profile.ts"></script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/variables.scss";
 @import "./user-profile-styles.scss";
 
 </style>

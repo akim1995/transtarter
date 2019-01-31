@@ -75,7 +75,7 @@
 
           <div class="row">
             <div class="col-0"></div>
-            <div class="accept-checkbox col-12 text-center">
+            <div class="accept-policy col-12 text-center">
               Нажимая на кнопку, вы даете согласие
               на обработку<br> своих персональных данных
               и соглашаетесь<br> с <a
@@ -119,6 +119,5 @@ export default class RequestCall extends Vue {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/variables.scss";
 @import "./request-call-styles.scss";
 </style>

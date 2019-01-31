@@ -6,6 +6,13 @@
     margin-left: auto;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    align-items: center;
+}
+
 @media (min-width: 0px) {
     .container {
         max-width: 540px;

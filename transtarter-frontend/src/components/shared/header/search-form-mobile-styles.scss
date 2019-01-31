@@ -11,13 +11,14 @@
             margin-bottom: 0;
             position: relative;
             padding: 8px;
-            background-color: $green;
+            background-color: $malachite;
             height: auto;
             .form-row {
                 height: 40px;
                 margin-bottom: 4px;
                 display: flex;
                 align-items: center;
+                flex-wrap: nowrap !important; // overwrite bitrix styles
             }
             .search__select-numbers {
                 position: absolute;
@@ -27,7 +28,7 @@
                 font-size: 12px;
                 font-weight: 900;
                 line-height: 1.33;
-                background-color: $green;
+                background-color: $malachite;
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
@@ -45,7 +46,7 @@
             input {
                 height: 100%;
                 border: 0;
-                border-left: 1px solid #e8e8e8;
+                border-left: 1px solid $mercury-approx;
                 color: $black;
                 padding: 0 8px;
                 width: 100%;
@@ -55,7 +56,7 @@
                 line-height: 1.33;
             }
             &:focus {
-                border: 1px solid $yellow;
+                border: 1px solid $gold-approx;
             }
         }
         .search__select {
@@ -66,12 +67,12 @@
             padding-left: 50px;
             font: 400 1.0625rem 'PT Sans';
             background-color: $white;
-        }       
+        }
         .search__icon-lins {
             color: $black;
-        }  
+        }
         .search__btn-search {
-            background-color: $yellow;
+            background-color: $gold-approx;
             color: $black;
             height: 100%;
             font-weight: 600;
