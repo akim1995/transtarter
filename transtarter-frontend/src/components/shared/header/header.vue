@@ -40,7 +40,7 @@
               <span class="icon-shopping-cart desktop-header__icon-cart">
                 <i>9</i>
               </span>
-              <font-awesome-icon icon="shopping-cart" />
+              <div class="shopping-cart"></div>
             </li>
             <!-- block for guests -->
             <li
@@ -151,15 +151,10 @@
           </select>
 
           <div class="search__input search-input">
-            <font-awesome-icon
-              icon="search"
-              class="search__icon-lins"
-            />
+
+            <div class="search__icon-lins"></div>
             <input type="text">
-            <font-awesome-icon
-              icon="times"
-              class="search__clear"
-            />
+            <div class="search__clear"></div>
           </div>
           <button
             type="submit"
@@ -174,17 +169,11 @@
 
             <ul class="search__street-list">
               <li class="search__street">
-                <font-awesome-icon
-                  icon="map-marker-alt"
-                  class="search__icon-marker"
-                />
+                <div class="search__icon-marker"></div>
                 <p>Каширское шоссе, 41</p>
               </li>
               <li class="search__street">
-                <font-awesome-icon
-                  icon="map-marker-alt"
-                  class="search__icon-marker"
-                />
+                <div class="search__icon-marker"></div>
                 <p>г. Дзержинский, ул. Энергетиков, 18А</p>
               </li>
             </ul>
@@ -227,7 +216,7 @@
           </div>
 
           <div class="menu-item">
-            <font-awesome-icon icon="shopping-cart" />
+             <div class="shopping-cart"></div>
             <span class="notify-counter">9</span>
           </div>
 
@@ -294,17 +283,11 @@
 
             <ul class="search__street-list">
               <li class="search__street">
-                <font-awesome-icon
-                  icon="map-marker-alt"
-                  class="search__icon-marker"
-                />
+                <div class="search__icon-marker"></div>
                 <p>Каширское шоссе, 41</p>
               </li>
               <li class="search__street">
-                <font-awesome-icon
-                  icon="map-marker-alt"
-                  class="search__icon-marker"
-                />
+                <div class="search__icon-marker"></div>
                 <p>г. Дзержинский, ул. Энергетиков, 18А</p>
               </li>
             </ul>
@@ -417,19 +400,13 @@
           <div class="form-row">
             <div class="search__input-mobile search-input">
               <input type="text">
-              <font-awesome-icon
-                icon="times"
-                class="search__clear"
-              />
+              <div class="search__clear"></div>
             </div>
             <button
               type="submit"
               class="search__btn-search"
             >
-              <font-awesome-icon
-                icon="search"
-                class="search__icon-lins"
-              />
+              <div class="search__icon-lins"></div>
             </button>
           </div>
 
