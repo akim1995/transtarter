@@ -415,12 +415,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { eventBus } from '../../../main';
-import { AuthModule } from '../../../store/modules/authentication.module';
-import { AuthService } from '@/services/auth.service';
+import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '../../../main'
+import { AuthModule } from '../../../store/modules/authentication.module'
+import { AuthService } from '@/services/auth.service'
 // for wrapper
-import wrap from '@vue/web-component-wrapper';
+import wrap from '@vue/web-component-wrapper'
 
 @Component
 export default class Header extends Vue {
