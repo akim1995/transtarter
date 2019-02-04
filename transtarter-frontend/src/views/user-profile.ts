@@ -16,6 +16,7 @@ import PasswordSuccessRestore from '@/components/authorization/password-success-
 import RequestCall from '@/components/shared/request-call/request-call.vue'
 // store modules
 import { AuthModule } from '../store/modules/authentication.module'
+import { DisplayModule } from '../store/modules/display.module'
 
 @Component({
   components: {
@@ -54,6 +55,10 @@ export default class UserProfile extends Vue {
 
   get loggedIn () {
     return AuthModule.status.loggedIn
+  }
+
+  get showBlockYourCity () {
+    return DisplayModule.showBlockYourCity
   }
 
   @Watch('showPopup', { deep: true })

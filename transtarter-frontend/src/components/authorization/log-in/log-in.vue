@@ -97,6 +97,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import { mixins } from 'vue-class-component'
 import ClosablePopup from '../../mixins/closable-popup'
 import { eventBus } from '../../../main'
+import wrap from '@vue/web-component-wrapper'
 
 @Component
 export default class LogIn extends mixins(ClosablePopup) {
@@ -140,6 +141,10 @@ export default class LogIn extends mixins(ClosablePopup) {
     }
   }
 }
+
+const CustomLogIn = wrap(Vue, LogIn)
+
+window.customElements.define('custom-login', CustomLogIn)
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

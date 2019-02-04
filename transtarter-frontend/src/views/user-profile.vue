@@ -29,7 +29,7 @@
     <LogIn v-if="showPopup.logIn" />
     <PasswordRestore v-if="showPopup.restorePassword" />
     <PasswordSuccessRestore v-if="showPopup.successRestore" />
-    <YourCity v-if="showBlock.yourCity"/>
+    <YourCity v-if="showBlockYourCity"/>
     <SelectCity v-if="showBlock.selectCity"/>
     <RequestCall v-if="showPopup.requestCall"/>
   </div>

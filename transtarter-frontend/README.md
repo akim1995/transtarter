@@ -29,3 +29,9 @@ npm run test:unit
 ```
 npm run test:e2e
 ```
+
+
+### Build Web Multiply Components
+```
+.\node_modules\.bin\vue-cli-service build --target wc-async --name foo 'src/components/**/*.wc.vue'
+```
