@@ -48,18 +48,14 @@
               @click="toggleLogInPopup()"
               v-if="!loggedIn"
             >
-              <a
-                class="border"
-              >Вход</a>
+              <a class="border">Вход</a>
             </li>
             <li
               class="desktop-header__login-item"
               @click='toggleRegistrationPopup()'
               v-if="!loggedIn"
             >
-              <a
-                class="border"
-              >Регистрация</a>
+              <a class="border">Регистрация</a>
             </li>
             <!-- end for guests -->
             <!-- block for users -->
@@ -95,7 +91,7 @@
         </div>
         <div class="wallet">
           <div class="wallet-with-icon">
-              <div class="icon"></div>
+            <div class="icon"></div>
 
             <div class="wallet-balance">
               15 000 ₽
@@ -198,12 +194,11 @@
       <div class="mobile-header__menu">
         <div class="mobile-header__menu__left">
           <div class="burger-wrapper">
-            <a
+            <span
               class="burger-icon"
               @click="toggleMainMenu()"
             >
-              <font-awesome-icon icon='bars' />
-            </a>
+            </span>
           </div>
           <div class="logo">
             Транс<br> Стартер
@@ -212,23 +207,23 @@
 
         <div class="mobile-header__menu__right">
           <div class="menu-item">
-            <font-awesome-icon icon="map-marker-alt" />
+            <div class="map-alt"></div>
           </div>
 
           <div class="menu-item">
-             <div class="shopping-cart"></div>
+            <div class="shopping-cart"></div>
             <span class="notify-counter">9</span>
           </div>
 
           <div class="menu-item">
             <!-- block for guests -->
+
             <div
-              class="mobile-header__login-item"
+              class="new-user"
               @click="toggleUserMenu()"
               v-if="!loggedIn"
-            >
-              <font-awesome-icon icon="user" />
-            </div>
+            ></div>
+
             <!-- end for guests -->
             <!-- block for users -->
             <div
@@ -313,13 +308,13 @@
             class="menu-popup_list-item"
             @click="toggleLogInPopup()"
           >
-            <a >Вход</a>
+            <a>Вход</a>
           </li>
           <li
             class="menu-popup_list-item"
             @click="toggleRegistrationPopup()"
           >
-            <a >Регистрация</a>
+            <a>Регистрация</a>
           </li>
         </ul>
       </div>
@@ -420,12 +415,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '../../../main'
-import { AuthModule } from '../../../store/modules/authentication.module'
-import { AuthService } from '@/services/auth.service'
+import { Component, Vue } from 'vue-property-decorator';
+import { eventBus } from '../../../main';
+import { AuthModule } from '../../../store/modules/authentication.module';
+import { AuthService } from '@/services/auth.service';
 // for wrapper
-import wrap from '@vue/web-component-wrapper'
+import wrap from '@vue/web-component-wrapper';
 
 @Component
 export default class Header extends Vue {
