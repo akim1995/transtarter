@@ -447,6 +447,8 @@ import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
 import { AuthModule } from '../../../store/modules/authentication.module'
 import { AuthService } from '@/services/auth.service'
+// for wrapper
+import wrap from '@vue/web-component-wrapper'
 
 @Component
 export default class Header extends Vue {
@@ -485,6 +487,10 @@ export default class Header extends Vue {
     this.blocksShow.user = !this.blocksShow.user
   }
 }
+
+const CustomHeader = wrap(Vue, Header)
+
+window.customElements.define('custom-header', CustomHeader)
 </script>
 
 <style scoped lang="scss">
