@@ -63,7 +63,6 @@ export class Display extends VuexModule implements IDisplayState {
 
     @Mutation
     TOGGLE_SELECT_CITY_AND_SELECT_CITY (cityName: string) {
-      debugger
       this.showBlock.selectCity = false
       // TO DO SAVE CITY
     }
