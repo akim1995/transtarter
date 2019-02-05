@@ -91,7 +91,6 @@ export class Display extends VuexModule implements IDisplayState {
 
   @Mutation
   TOGGLE_REQUEST_CALL () {
-    debugger
     this.showPopup.requestCall = !this.showPopup.requestCall
   }
 

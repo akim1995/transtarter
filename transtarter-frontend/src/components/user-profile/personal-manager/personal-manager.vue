@@ -38,11 +38,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component
 export default class PersonalManager extends Vue {
   toggleRequestCallPopup () {
-    eventBus.$emit('toggle-request-call-popup-modal')
+    store.dispatch('display/toggleRequest')
   }
 }
 </script>

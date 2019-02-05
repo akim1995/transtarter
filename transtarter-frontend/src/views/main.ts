@@ -3,11 +3,12 @@ import { eventBus } from '../main'
 // components
 import Header from '@/components/shared/header/header.vue'
 import Footer from '@/components/shared/footer/footer.vue'
+import UserProfileWrapper from '@/components/user-profile/user-profile-wrapper/user-profile-wrapper.vue'
 import SelectCity from '@/components/shared/select-city/select-city.vue'
 import YourCity from '@/components/shared/your-city/your-city.vue'
-import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
-import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
-import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
+// import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
+// import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
+// import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
 // popups
 import Registration from '@/components/authorization/registration/registration.vue'
 import LogIn from '@/components/authorization/log-in/log-in.vue'
@@ -22,9 +23,10 @@ import { DisplayModule } from '../store/modules/display.module'
   components: {
     Header,
     Footer,
-    UserSidebar,
-    PersonalManager,
-    ProfileSettings,
+    UserProfileWrapper,
+    // UserSidebar,
+    // PersonalManager,
+    // ProfileSettings,
     YourCity,
     SelectCity,
     // popups
@@ -36,14 +38,6 @@ import { DisplayModule } from '../store/modules/display.module'
   }
 })
 export default class UserProfile extends Vue {
-  get loggedIn () {
-    return AuthModule.status.loggedIn
-  }
-
-  get showBlockYourCity () {
-    return DisplayModule.showBlock.yourCity
-  }
-
   mounted () {
     const { dispatch } = this.$store
     dispatch('auth/actualizeUser')

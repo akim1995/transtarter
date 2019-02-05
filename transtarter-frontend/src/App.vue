@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <!-- <router-view /> -->
-    <UserProfile />
+    <Main />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import UserProfile from '@/views/user-profile.vue'
+import Main from '@/views/main.vue'
 
 @Component({
   components: {
-    UserProfile
+    Main
   }
 })
 export default class App extends Vue {}

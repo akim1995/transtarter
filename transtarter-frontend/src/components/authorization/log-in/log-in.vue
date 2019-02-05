@@ -133,11 +133,11 @@ export default class LogIn extends mixins(ClosablePopup) {
   login (e: Event) {
     e.preventDefault()
     // const { email, password } = this.logInForm
-    const { dispatch } = this.$store
+    // const { dispatch } = this.$store
 
     // module is injected in header
     // dispatch('auth/login')
-    dispatch('auth/mockLogin')
+    store.dispatch('auth/mockLogin')
     store.dispatch('display/toggleLogIn')
   }
 
