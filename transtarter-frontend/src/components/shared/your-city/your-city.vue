@@ -1,5 +1,5 @@
 <template>
-  <div class="your-city">
+  <div class="your-city" v-if="showYourCityBlock">
     <div class="question text-center">
       Ваш город Москва?
     </div>
@@ -13,17 +13,21 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import { DisplayModule } from '../../../store/modules/display.module'
 
 @Component
 export default class YourCity extends Vue {
   closeYourCity () {
-    eventBus.$emit('close-your-city')
+    this.$store.dispatch('display/toggleYourCity')
   }
 
   closeYourCityAndOpenSelectCity () {
-    eventBus.$emit('close-your-city-and-open-select-city')
+    this.$store.dispatch('display/toggleYourCityAndOpenSelectCity')
   }
 
+  get showYourCityBlock () {
+    return DisplayModule.showBlock.yourCity
+  }
   // created () {
   //   setTimeout(() => {
   //     eventBus.$emit('close-your-city')

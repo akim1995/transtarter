@@ -17,21 +17,26 @@
           <ProfileSettings />
         </section>
       </div>
-      <div class="mock" v-if="!loggedIn">
-        <div >CONTENT</div>
+      <div
+        class="mock"
+        v-if="!loggedIn"
+      >
+        <div>CONTENT</div>
       </div>
     </main>
 
     <Footer />
 
+    <LogIn />
+    <YourCity />
+    <SelectCity />
+    <!-- <RequestCall /> -->
     <!-- popups -->
-    <Registration v-if="showPopup.registration" />
-    <LogIn v-if="showPopup.logIn" />
+    <!-- <Registration v-if="showPopup.registration" />
+
     <PasswordRestore v-if="showPopup.restorePassword" />
-    <PasswordSuccessRestore v-if="showPopup.successRestore" />
-    <YourCity v-if="showBlockYourCity"/>
-    <SelectCity v-if="showBlock.selectCity"/>
-    <RequestCall v-if="showPopup.requestCall"/>
+    <PasswordSuccessRestore v-if="showPopup.successRestore" /> -->
+
   </div>
 </template>
 
@@ -39,5 +44,4 @@
 
 <style scoped lang="scss">
 @import "./user-profile-styles.scss";
-
 </style>

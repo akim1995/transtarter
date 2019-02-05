@@ -437,7 +437,7 @@ export default class Header extends Vue {
   }
 
   toggleLogInPopup () {
-    eventBus.$emit('toggle-log-in-popup')
+    this.$store.dispatch('display/toggleLogIn')
   }
 
   get loggedIn () {

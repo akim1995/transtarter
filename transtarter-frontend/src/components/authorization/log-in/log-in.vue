@@ -2,6 +2,7 @@
   <div
     class="log-in modal-wrapper"
     @keydown="toggleLogInPopup()"
+    v-if="showBlockYourCity"
   >
 
     <!-- desktop and mobile version -->
@@ -98,6 +99,7 @@ import { mixins } from 'vue-class-component'
 import ClosablePopup from '../../mixins/closable-popup'
 import { eventBus } from '../../../main'
 import wrap from '@vue/web-component-wrapper'
+import { DisplayModule } from '../../../store/modules/display.module'
 
 @Component
 export default class LogIn extends mixins(ClosablePopup) {
@@ -113,15 +115,19 @@ export default class LogIn extends mixins(ClosablePopup) {
   }
 
   toggleLogInPopup () {
-    eventBus.$emit('toggle-log-in-popup')
+    this.$store.dispatch('display/toggleLogIn')
   }
 
-  closeLogInAndOpenRestration () {
-    eventBus.$emit('close-log-in-and-open-registration')
-  }
+  // closeLogInAndOpenRestration () {
+  //   eventBus.$emit('close-log-in-and-open-registration')
+  // }
 
-  closeLogInAndOpenRestorePassword () {
-    eventBus.$emit('close-log-in-and-open-restore-password')
+  // closeLogInAndOpenRestorePassword () {
+  //   eventBus.$emit('close-log-in-and-open-restore-password')
+  // }
+
+  get showBlockYourCity () {
+    return DisplayModule.showPopup.logIn
   }
 
   login (e: Event) {
@@ -137,7 +143,7 @@ export default class LogIn extends mixins(ClosablePopup) {
 
   listenEscKeyup (e: KeyboardEvent) {
     if (e.keyCode === 27) {
-      eventBus.$emit('toggle-log-in-popup')
+      this.$store.dispatch('display/toggleLogIn')
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="select-city">
+  <div class="select-city" v-if="showSelectCity">
     <div class="tip">Выберите ваш город</div>
     <ul class="cities">
       <li
@@ -16,6 +16,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import { DisplayModule } from '../../../store/modules/display.module'
 
 @Component
 export default class SelectCity extends Vue {
@@ -31,7 +32,11 @@ export default class SelectCity extends Vue {
   ];
 
   selectCity (cityName: string) {
-    eventBus.$emit('select-city', cityName)
+    this.$store.dispatch('display/toggleSelectCity')
+  }
+
+  get showSelectCity () {
+    return DisplayModule.showBlock.selectCity
   }
 }
 </script>

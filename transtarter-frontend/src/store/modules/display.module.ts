@@ -30,8 +30,47 @@ export class Display extends VuexModule implements IDisplayState {
       yourCity: true
     };
 
-    get showBlockYourCity () {
-      return this.showBlock.yourCity
+    @Mutation
+    TOGGLE_YOUR_CITY () {
+      this.showBlock.yourCity = !this.showBlock.yourCity
+    }
+
+    @Action
+    public toggleYourCity (): void {
+      this.context.commit('TOGGLE_YOUR_CITY')
+    }
+
+    @Mutation
+    TOGGLE_LOG_IN () {
+      this.showPopup.logIn = !this.showPopup.logIn
+    }
+
+    @Action
+    public toggleLogIn (): void {
+      this.context.commit('TOGGLE_LOG_IN')
+    }
+
+    @Mutation
+    TOGGLE_YOUR_CITY_AND_OPEN_SELECT_CITY () {
+      this.showBlock.yourCity = false
+      this.showBlock.selectCity = true
+    }
+
+    @Action
+    public toggleYourCityAndOpenSelectCity (): void {
+      this.context.commit('TOGGLE_YOUR_CITY_AND_OPEN_SELECT_CITY')
+    }
+
+    @Mutation
+    TOGGLE_SELECT_CITY_AND_SELECT_CITY (cityName: string) {
+      debugger
+      this.showBlock.selectCity = false
+      // TO DO SAVE CITY
+    }
+
+    @Action
+    public toggleSelectCity (sityName: string): void {
+      this.context.commit('TOGGLE_SELECT_CITY_AND_SELECT_CITY')
     }
 }
 
