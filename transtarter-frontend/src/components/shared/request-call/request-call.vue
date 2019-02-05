@@ -1,6 +1,6 @@
 
 <template>
-  <div class="request-call modal-wrapper">
+  <div class="request-call modal-wrapper" v-if="showRequestCall">
     <div class=" modal-popup">
       <div class="modal-content request-call-content">
         <div
@@ -96,17 +96,23 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
 import { mixins } from 'vue-class-component'
-import ClosablePopup from '../../mixins/closable-popup'
+import { ClosablePopup } from '../../mixins/closable-popup'
+import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component
 export default class RequestCall extends mixins(ClosablePopup) {
   toggleRequestPopup () {
-    eventBus.$emit('toggle-request-call-popup-modal')
+    store.dispatch('display/toggleRequest')
+  }
+
+  get showRequestCall () {
+    return DisplayModule.showPopup.requestCall
   }
 
   listenEscKeyup (e: KeyboardEvent) {
     if (e.keyCode === 27) {
-      eventBus.$emit('toggle-request-call-popup-modal')
+      store.dispatch('display/toggleRequest')
     }
   }
 }

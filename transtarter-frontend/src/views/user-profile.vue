@@ -30,12 +30,10 @@
     <LogIn />
     <YourCity />
     <SelectCity />
-    <!-- <RequestCall /> -->
-    <!-- popups -->
-    <!-- <Registration v-if="showPopup.registration" />
-
-    <PasswordRestore v-if="showPopup.restorePassword" />
-    <PasswordSuccessRestore v-if="showPopup.successRestore" /> -->
+    <RequestCall />
+    <PasswordRestore />
+    <PasswordSuccessRestore  />
+    <Registration />
 
   </div>
 </template>

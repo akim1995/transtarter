@@ -36,23 +36,6 @@ import { DisplayModule } from '../store/modules/display.module'
   }
 })
 export default class UserProfile extends Vue {
-  // showPopup = {
-  //   registration: false,
-  //   logIn: false,
-  //   restorePassword: false,
-  //   successRestore: false,
-  //   requestCall: false
-  // };
-
-  // showBlock = {
-  //   selectCity: false, // add logic if city isn't in localstorage
-  //   yourCity: true // add logic if city isn't in localstorage
-  // }
-
-  // toggleShowLogIn () {
-  //   this.showPopup.logIn = !this.showPopup.logIn
-  // }
-
   get loggedIn () {
     return AuthModule.status.loggedIn
   }
@@ -61,75 +44,8 @@ export default class UserProfile extends Vue {
     return DisplayModule.showBlock.yourCity
   }
 
-  @Watch('showPopup', { deep: true })
-  onShowChanged (newVal: any) {
-    const className = 'modal-open'
-    const keys = Object.values(newVal)
-    if (keys.some(x => x === true)) {
-      document.body.classList.add(className)
-    } else {
-      document.body.classList.remove(className)
-    }
-  }
-
   mounted () {
     const { dispatch } = this.$store
     dispatch('auth/actualizeUser')
   }
-
-  // created () {
-  //   eventBus.$on('toggle-registration-popup', () => {
-  //     this.showPopup.registration = !this.showPopup.registration
-  //   })
-
-  //   eventBus.$on('toggle-log-in-popup', () => {
-  //     this.showPopup.logIn = !this.showPopup.logIn
-  //   })
-
-  //   eventBus.$on('toggle-restore-popup', () => {
-  //     this.showPopup.restorePassword = !this.showPopup.restorePassword
-  //   })
-
-  //   eventBus.$on('toggle-success-restore-popup', () => {
-  //     this.showPopup.successRestore = !this.showPopup.successRestore
-  //   })
-
-  //   eventBus.$on('toggle-request-call-popup-modal', () => {
-  //     this.showPopup.requestCall = !this.showPopup.requestCall
-  //   })
-
-  //   eventBus.$on('close-log-in-and-open-registration', () => {
-  //     this.showPopup.logIn = false
-  //     this.showPopup.registration = true
-  //   })
-
-  //   eventBus.$on('close-log-in-and-open-restore-password', () => {
-  //     this.showPopup.logIn = false
-  //     this.showPopup.restorePassword = true
-  //   })
-
-  //   eventBus.$on('close-registration-and-open-log-in', () => {
-  //     this.showPopup.registration = false
-  //     this.showPopup.logIn = true
-  //   })
-
-  //   eventBus.$on('close-restore-and-open-success-restore', () => {
-  //     this.showPopup.restorePassword = false
-  //     this.showPopup.successRestore = true
-  //   })
-
-  //   eventBus.$on('close-your-city', () => {
-  //     this.showBlock.yourCity = false
-  //   })
-
-  //   eventBus.$on('close-your-city-and-open-select-city', () => {
-  //     this.showBlock.yourCity = false
-  //     this.showBlock.selectCity = true
-  //   })
-
-  //   eventBus.$on('select-city', (selectedCity: string) => {
-  //     this.showBlock.selectCity = false
-  //     // TODO process selectedCity in the future
-  //   })
-  // }
 }

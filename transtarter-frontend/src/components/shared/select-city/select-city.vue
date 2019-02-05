@@ -17,6 +17,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
 import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component
 export default class SelectCity extends Vue {
@@ -32,7 +33,7 @@ export default class SelectCity extends Vue {
   ];
 
   selectCity (cityName: string) {
-    this.$store.dispatch('display/toggleSelectCity')
+    store.dispatch('display/toggleSelectCity')
   }
 
   get showSelectCity () {

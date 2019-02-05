@@ -1,5 +1,5 @@
 <template>
-  <div class="success-restore modal-wrapper">
+  <div class="success-restore modal-wrapper" v-if="showSuccessPasswordRestore">
 
     <!-- success restore -->
     <div class=" modal-popup">
@@ -30,17 +30,23 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
 import { mixins } from 'vue-class-component'
-import ClosablePopup from '../../mixins/closable-popup'
+import { ClosablePopup } from '../../mixins/closable-popup'
+import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component
 export default class PasswordSuccessRestore extends mixins(ClosablePopup) {
   toggleSuccessRestorePopup () {
-    eventBus.$emit('toggle-success-restore-popup')
+    store.dispatch('display/toggleSuccessRestore')
+  }
+
+  get showSuccessPasswordRestore () {
+    return DisplayModule.showPopup.successRestore
   }
 
   listenEscKeyup (e: KeyboardEvent) {
     if (e.keyCode === 27) {
-      eventBus.$emit('toggle-success-restore-popup')
+      store.dispatch('display/toggleSuccessRestore')
     }
   }
 }

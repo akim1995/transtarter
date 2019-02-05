@@ -124,11 +124,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import { store } from '../../../store/index'
 
 @Component
 export default class Footer extends Vue {
   toggleRequestCallPopup () {
-    eventBus.$emit('toggle-request-call-popup-modal')
+    store.dispatch('display/toggleRequest')
   }
 }
 </script>

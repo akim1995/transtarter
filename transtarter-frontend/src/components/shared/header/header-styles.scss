@@ -1,6 +1,7 @@
 .header {
     font: 600 16px 'PT Sans';
     .desktop-header {
+        font-weight: 600;
         display: block;
         &__menu {
             color: $white;
@@ -107,6 +108,7 @@
             display: flex;
         }
         &__menu-item {
+            
             height: 100%;
             a {
                 display: flex;

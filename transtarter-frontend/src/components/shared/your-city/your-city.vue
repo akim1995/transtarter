@@ -14,15 +14,16 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
 import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component
 export default class YourCity extends Vue {
   closeYourCity () {
-    this.$store.dispatch('display/toggleYourCity')
+    store.dispatch('display/toggleYourCity')
   }
 
   closeYourCityAndOpenSelectCity () {
-    this.$store.dispatch('display/toggleYourCityAndOpenSelectCity')
+    store.dispatch('display/toggleYourCityAndOpenSelectCity')
   }
 
   get showYourCityBlock () {
@@ -30,7 +31,7 @@ export default class YourCity extends Vue {
   }
   // created () {
   //   setTimeout(() => {
-  //     eventBus.$emit('close-your-city')
+  //     store.dispatch('display/toggleYourCity')
   //   }, 10000)
   // }
 }
