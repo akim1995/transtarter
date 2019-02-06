@@ -35,8 +35,3 @@ npm run test:e2e
 ```
 .\node_modules\.bin\vue-cli-service build --target wc --name ts-ui 'src/components/**/*.vue'
 ```
-
-## To get shared styles you still have to use
-```
-npm run build
-```
