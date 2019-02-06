@@ -1,7 +1,6 @@
 <template>
   <div
     class="log-in modal-wrapper"
-    @keydown="toggleLogInPopup()"
     v-if="showBlockYourCity"
   >
 
@@ -26,7 +25,7 @@
               v-model="logInForm.email"
               placeholder="Почта"
               class="form-control"
-              type="email"
+
             >
           </div>
 
@@ -136,8 +135,8 @@ export default class LogIn extends mixins(ClosablePopup) {
     // const { dispatch } = this.$store
 
     // module is injected in header
-    // dispatch('auth/login')
-    store.dispatch('auth/mockLogin')
+    store.dispatch('auth/login')
+    // store.dispatch('auth/mockLogin')
     store.dispatch('display/toggleLogIn')
   }
 

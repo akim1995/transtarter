@@ -5,7 +5,7 @@
       Регистрация
     </div>
 
-    <form class="registration-form">
+    <form v-on:submit.prevent="onSubmit" class="registration-form">
       <div class="form-group">
         <label class="label">Введите имя и фамилию контактного лица</label>
         <input
@@ -106,6 +106,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../../main'
 import { DisplayModule } from '../../../../store/modules/display.module'
 import { store } from '../../../../store/index'
+import { AuthService } from '../../../../services/auth.service'
 
 @Component
 export default class RegistrationForm extends Vue {
@@ -118,8 +119,20 @@ export default class RegistrationForm extends Vue {
     organizationName: ''
   };
 
+  auth = new AuthService()
+
   closeRegistrationAndOpenLogIn () {
     store.dispatch('display/closeRegistrationAndOpenLogIn')
+  }
+
+  onSubmit (e: Event) {
+    this.auth.registration({
+      login: this.regForm.fullName,
+      password: this.regForm.email
+    }).then(res => {
+      debugger
+      console.log(res)
+    })
   }
 }
 </script>

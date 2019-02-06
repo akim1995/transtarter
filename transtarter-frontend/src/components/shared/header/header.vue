@@ -447,8 +447,8 @@ export default class Header extends Vue {
   logout () {
     // e.preventDefault()
     // this.auth.logout()
-    // this.$store.dispatch('auth/logout')
-    store.dispatch('auth/mockLogout')
+    store.dispatch('auth/logout')
+    // store.dispatch('auth/mockLogout')
   }
 
   toggleMainMenu () {
