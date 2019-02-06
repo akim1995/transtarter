@@ -40,7 +40,7 @@
               <span class="icon-shopping-cart desktop-header__icon-cart">
                 <i>9</i>
               </span>
-              <font-awesome-icon icon="shopping-cart" />
+              <div class="shopping-cart"></div>
             </li>
             <!-- block for guests -->
             <li
@@ -48,18 +48,14 @@
               @click="toggleLogInPopup()"
               v-if="!loggedIn"
             >
-              <a
-                class="border"
-              >Вход</a>
+              <a class="border">Вход</a>
             </li>
             <li
               class="desktop-header__login-item"
               @click='toggleRegistrationPopup()'
               v-if="!loggedIn"
             >
-              <a
-                class="border"
-              >Регистрация</a>
+              <a class="border">Регистрация</a>
             </li>
             <!-- end for guests -->
             <!-- block for users -->
@@ -95,7 +91,7 @@
         </div>
         <div class="wallet">
           <div class="wallet-with-icon">
-              <div class="icon"></div>
+            <div class="icon"></div>
 
             <div class="wallet-balance">
               15 000 ₽
@@ -151,15 +147,10 @@
           </select>
 
           <div class="search__input search-input">
-            <font-awesome-icon
-              icon="search"
-              class="search__icon-lins"
-            />
+
+            <div class="search__icon-lins"></div>
             <input type="text">
-            <font-awesome-icon
-              icon="times"
-              class="search__clear"
-            />
+            <div class="search__clear"></div>
           </div>
           <button
             type="submit"
@@ -174,17 +165,11 @@
 
             <ul class="search__street-list">
               <li class="search__street">
-                <font-awesome-icon
-                  icon="map-marker-alt"
-                  class="search__icon-marker"
-                />
+                <div class="search__icon-marker"></div>
                 <p>Каширское шоссе, 41</p>
               </li>
               <li class="search__street">
-                <font-awesome-icon
-                  icon="map-marker-alt"
-                  class="search__icon-marker"
-                />
+                <div class="search__icon-marker"></div>
                 <p>г. Дзержинский, ул. Энергетиков, 18А</p>
               </li>
             </ul>
@@ -209,12 +194,11 @@
       <div class="mobile-header__menu">
         <div class="mobile-header__menu__left">
           <div class="burger-wrapper">
-            <a
+            <span
               class="burger-icon"
               @click="toggleMainMenu()"
             >
-              <font-awesome-icon icon='bars' />
-            </a>
+            </span>
           </div>
           <div class="logo">
             Транс<br> Стартер
@@ -223,23 +207,23 @@
 
         <div class="mobile-header__menu__right">
           <div class="menu-item">
-            <font-awesome-icon icon="map-marker-alt" />
+            <div class="map-alt"></div>
           </div>
 
           <div class="menu-item">
-            <font-awesome-icon icon="shopping-cart" />
+            <div class="shopping-cart"></div>
             <span class="notify-counter">9</span>
           </div>
 
           <div class="menu-item">
             <!-- block for guests -->
+
             <div
-              class="mobile-header__login-item"
+              class="new-user"
               @click="toggleUserMenu()"
               v-if="!loggedIn"
-            >
-              <font-awesome-icon icon="user" />
-            </div>
+            ></div>
+
             <!-- end for guests -->
             <!-- block for users -->
             <div
@@ -294,17 +278,11 @@
 
             <ul class="search__street-list">
               <li class="search__street">
-                <font-awesome-icon
-                  icon="map-marker-alt"
-                  class="search__icon-marker"
-                />
+                <div class="search__icon-marker"></div>
                 <p>Каширское шоссе, 41</p>
               </li>
               <li class="search__street">
-                <font-awesome-icon
-                  icon="map-marker-alt"
-                  class="search__icon-marker"
-                />
+                <div class="search__icon-marker"></div>
                 <p>г. Дзержинский, ул. Энергетиков, 18А</p>
               </li>
             </ul>
@@ -330,13 +308,13 @@
             class="menu-popup_list-item"
             @click="toggleLogInPopup()"
           >
-            <a >Вход</a>
+            <a>Вход</a>
           </li>
           <li
             class="menu-popup_list-item"
             @click="toggleRegistrationPopup()"
           >
-            <a >Регистрация</a>
+            <a>Регистрация</a>
           </li>
         </ul>
       </div>
@@ -417,19 +395,13 @@
           <div class="form-row">
             <div class="search__input-mobile search-input">
               <input type="text">
-              <font-awesome-icon
-                icon="times"
-                class="search__clear"
-              />
+              <div class="search__clear"></div>
             </div>
             <button
               type="submit"
               class="search__btn-search"
             >
-              <font-awesome-icon
-                icon="search"
-                class="search__icon-lins"
-              />
+              <div class="search__icon-lins"></div>
             </button>
           </div>
 
@@ -447,6 +419,8 @@ import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
 import { AuthModule } from '../../../store/modules/authentication.module'
 import { AuthService } from '@/services/auth.service'
+import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component
 export default class Header extends Vue {
@@ -459,11 +433,11 @@ export default class Header extends Vue {
   auth = new AuthService();
 
   toggleRegistrationPopup () {
-    eventBus.$emit('toggle-registration-popup')
+    store.dispatch('display/toggleRegistration')
   }
 
   toggleLogInPopup () {
-    eventBus.$emit('toggle-log-in-popup')
+    store.dispatch('display/toggleLogIn')
   }
 
   get loggedIn () {
@@ -474,7 +448,7 @@ export default class Header extends Vue {
     // e.preventDefault()
     // this.auth.logout()
     // this.$store.dispatch('auth/logout')
-    this.$store.dispatch('auth/mockLogout')
+    store.dispatch('auth/mockLogout')
   }
 
   toggleMainMenu () {
@@ -485,9 +459,10 @@ export default class Header extends Vue {
     this.blocksShow.user = !this.blocksShow.user
   }
 }
+
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "./header-styles.scss";
 @import "./header-mobile-styles.scss";
 @import "./search-form-styles.scss";

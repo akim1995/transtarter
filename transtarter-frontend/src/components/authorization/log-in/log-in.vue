@@ -2,6 +2,7 @@
   <div
     class="log-in modal-wrapper"
     @keydown="toggleLogInPopup()"
+    v-if="showBlockYourCity"
   >
 
     <!-- desktop and mobile version -->
@@ -95,8 +96,10 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { mixins } from 'vue-class-component'
-import ClosablePopup from '../../mixins/closable-popup'
+import { ClosablePopup } from '../../mixins/closable-popup'
 import { eventBus } from '../../../main'
+import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component
 export default class LogIn extends mixins(ClosablePopup) {
@@ -112,31 +115,35 @@ export default class LogIn extends mixins(ClosablePopup) {
   }
 
   toggleLogInPopup () {
-    eventBus.$emit('toggle-log-in-popup')
+    store.dispatch('display/toggleLogIn')
   }
 
   closeLogInAndOpenRestration () {
-    eventBus.$emit('close-log-in-and-open-registration')
+    store.dispatch('display/closeLogInAndOpenRegistration')
   }
 
   closeLogInAndOpenRestorePassword () {
-    eventBus.$emit('close-log-in-and-open-restore-password')
+    store.dispatch('display/closeLogInAndOpenRestore')
+  }
+
+  get showBlockYourCity () {
+    return DisplayModule.showPopup.logIn
   }
 
   login (e: Event) {
     e.preventDefault()
     // const { email, password } = this.logInForm
-    const { dispatch } = this.$store
+    // const { dispatch } = this.$store
 
     // module is injected in header
     // dispatch('auth/login')
-    dispatch('auth/mockLogin')
-    eventBus.$emit('toggle-log-in-popup')
+    store.dispatch('auth/mockLogin')
+    store.dispatch('display/toggleLogIn')
   }
 
   listenEscKeyup (e: KeyboardEvent) {
     if (e.keyCode === 27) {
-      eventBus.$emit('toggle-log-in-popup')
+      store.dispatch('display/toggleLogIn')
     }
   }
 }

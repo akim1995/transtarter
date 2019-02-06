@@ -3,7 +3,7 @@ import Component from 'vue-class-component'
 
 // You can declare a mixin as the same style as components.
 @Component
-export default class ClosablePopup extends Vue {
+export class ClosablePopup extends Vue {
   // this method fill be replaced
   listenEscKeyup (e: KeyboardEvent) { }
 

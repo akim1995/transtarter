@@ -14,9 +14,9 @@
       <button type="button" @click="activateTab(tabs.requisites)" :class="{ active: requisitesIsActive }">Реквизиты и юр. лица</button>
     </div>
 
-    <RegistrationDataTab v-if="regDataIsActive"/>
-    <ShippingAddressesTab v-if="shippingAddressesIsActive"/>
-    <RequisitesTab v-if="requisitesIsActive"/>
+    <ts-ui-registration-data-tab v-if="regDataIsActive"></ts-ui-registration-data-tab>
+    <ts-ui-shipping-addresses-tab v-if="shippingAddressesIsActive"></ts-ui-shipping-addresses-tab>
+    <ts-ui-requisites-tab v-if="requisitesIsActive"></ts-ui-requisites-tab>
 
   </div>
 </template>
@@ -29,9 +29,9 @@ import RequisitesTab from './requisites-tab/requisites-tab.vue'
 
 @Component({
   components: {
-    RegistrationDataTab,
-    ShippingAddressesTab,
-    RequisitesTab
+    'ts-ui-registration-data-tab': RegistrationDataTab,
+    'ts-ui-shipping-addresses-tab': ShippingAddressesTab,
+    'ts-ui-requisites-tab': RequisitesTab
   }
 })
 export default class ProfileSettings extends Vue {

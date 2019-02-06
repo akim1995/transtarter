@@ -1,5 +1,5 @@
 <template>
-  <div class="modal-wrapper registration">
+  <div class="modal-wrapper registration" v-if="showRegistration">
 
     <!-- desktop version -->
     <div class="modal-popup desktop-version-modal">
@@ -108,7 +108,9 @@ import { Carousel, Slide } from 'vue-carousel'
 import RegistrationForm from '@/components/authorization/registration/registration-form/registration-form.vue'
 import { eventBus } from '../../../main'
 import { mixins } from 'vue-class-component'
-import ClosablePopup from '../../mixins/closable-popup'
+import { ClosablePopup } from '../../mixins/closable-popup'
+import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component({
   components: {
@@ -119,12 +121,16 @@ import ClosablePopup from '../../mixins/closable-popup'
 })
 export default class Registration extends mixins(ClosablePopup) {
   toggleRegistrationPopup () {
-    eventBus.$emit('toggle-registration-popup')
+    store.dispatch('display/toggleRegistration')
+  }
+
+  get showRegistration () {
+    return DisplayModule.showPopup.registration
   }
 
   listenEscKeyup (e: KeyboardEvent) {
     if (e.keyCode === 27) {
-      eventBus.$emit('toggle-registration-popup')
+      store.dispatch('display/toggleRegistration')
     }
   }
 }

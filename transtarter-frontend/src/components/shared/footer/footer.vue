@@ -56,34 +56,25 @@
 
               <ul class="cards_group__card_soc-list">
                 <li>
-                  <a href="#!">
-                    <font-awesome-icon
-                      :icon="[ 'fab', 'viber' ]"
-                      class="cards_group__card_soc-icon cards_group__card_link"
-                    />
-
+                  <a href="#!" class="social-link">
+                    <span class="social-link-icon social-link-viber-icon"></span>
                   </a>
                 </li>
 
                 <li>
-                  <font-awesome-icon
-                    :icon="[ 'fab', 'telegram' ]"
-                    class="cards_group__card_soc-icon cards_group__card_link"
-                  />
-                </li>
-                <li>
-                  <a href="#!">
-                    <font-awesome-icon
-                      :icon="[ 'fab', 'vk' ]"
-                      class="cards_group__card_soc-icon cards_group__card_link"
-                    />
+                  <a href="#!" class="social-link ">
+                    <span class="social-link-icon social-link-telegram-icon"></span>
                   </a>
                 </li>
                 <li>
-                  <font-awesome-icon
-                    :icon="[ 'fab', 'whatsapp' ]"
-                    class="cards_group__card_soc-icon cards_group__card_link"
-                  />
+                  <a href="#!" class="social-link">
+                    <span class="social-link-icon social-link-vk-icon"></span>
+                  </a>
+                </li>
+                <li>
+                 <a href="#!" class="social-link">
+                   <span class="social-link-icon social-link-whats-up-icon"></span>
+                 </a>
                 </li>
               </ul>
             </div>
@@ -133,11 +124,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../main'
+import { store } from '../../../store/index'
 
 @Component
 export default class Footer extends Vue {
   toggleRequestCallPopup () {
-    eventBus.$emit('toggle-request-call-popup-modal')
+    store.dispatch('display/toggleRequest')
   }
 }
 </script>
