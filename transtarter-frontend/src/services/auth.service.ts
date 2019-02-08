@@ -46,7 +46,6 @@ export class AuthService {
   }
 
   public login (): Promise<void> {
-    debugger
     return this.userManager.signinRedirect()
   }
 
