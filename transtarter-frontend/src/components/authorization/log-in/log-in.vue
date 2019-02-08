@@ -19,7 +19,7 @@
           class="log-in-form"
           @submit='login'
         >
-          <div class="form-group">
+          <!--<div class="form-group">
             <label class="label">Email, указанный при регистрации</label>
             <input
               v-model="logInForm.email"
@@ -67,13 +67,14 @@
               <span class="fill-control-indicator"></span>
             </span>
             <label class="custom-checkbox-label">Чужой компьютер</label>
-          </div>
+          </div> -->
 
           <button
             type="submit"
             class="btn btn-orange btn-log-in"
           >
-            Войти
+            <!-- Войти -->
+            Войти через IdentityServer
           </button>
         </form>
 
@@ -93,12 +94,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
-import { mixins } from 'vue-class-component'
-import { ClosablePopup } from '../../mixins/closable-popup'
-import { eventBus } from '../../../main'
-import { DisplayModule } from '../../../store/modules/display.module'
-import { store } from '../../../store/index'
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import { mixins } from 'vue-class-component';
+import { ClosablePopup } from '../../mixins/closable-popup';
+import { eventBus } from '../../../main';
+import { DisplayModule } from '../../../store/modules/display.module';
+import { store } from '../../../store/index';
 
 @Component
 export default class LogIn extends mixins(ClosablePopup) {
