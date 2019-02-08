@@ -94,12 +94,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import { mixins } from 'vue-class-component';
-import { ClosablePopup } from '../../mixins/closable-popup';
-import { eventBus } from '../../../main';
-import { DisplayModule } from '../../../store/modules/display.module';
-import { store } from '../../../store/index';
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import { mixins } from 'vue-class-component'
+import { ClosablePopup } from '../../mixins/closable-popup'
+import { eventBus } from '../../../main'
+import { DisplayModule } from '../../../store/modules/display.module'
+import { store } from '../../../store/index'
 
 @Component
 export default class LogIn extends mixins(ClosablePopup) {
