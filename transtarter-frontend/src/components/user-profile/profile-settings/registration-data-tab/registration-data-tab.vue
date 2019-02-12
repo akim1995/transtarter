@@ -15,6 +15,7 @@
             type="text"
             class="form-control-lg"
             placeholder="ИП Воронов И.Е"
+            v-model='userProfile.companyName'
           >
         </div>
       </div>
@@ -25,6 +26,7 @@
             type="text"
             class="form-control-lg"
             placeholder="Егор Воронов"
+            v-model='userProfile.name'
           >
         </div>
       </div>
@@ -84,9 +86,23 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { ProfileService } from '@/services/profile.service.ts'
+import { Guid } from 'guid-typescript'
+import { UserProfile } from '@/models/UserProfile'
 
 @Component
-export default class RegistrationDataTab extends Vue {}
+export default class RegistrationDataTab extends Vue {
+  profileService = new ProfileService();
+  userProfile = new UserProfile()
+
+  mounted () {
+    this.profileService.getProfileInfoByUserId(Guid.parse('243d76be-f9ed-4d30-bbc8-ebe86bf7b1c9'))
+      .then(res => {
+        debugger
+        this.userProfile = res.data
+      })
+  }
+}
 </script>
 
 <style scoped lang="scss">
