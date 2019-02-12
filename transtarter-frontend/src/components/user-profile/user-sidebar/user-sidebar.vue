@@ -3,7 +3,7 @@
     <div class="user-sidebar-top">
       <div class="user-picture"></div>
       <div class="user-fullname">
-        ИП Воронов Е.В.
+        {{userName}}
       </div>
       <div class="agreement">
         Договор № 123765
@@ -60,9 +60,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { AuthModule } from '../../../store/modules/authentication.module'
 
 @Component
-export default class UserSidebar extends Vue {}
+export default class UserSidebar extends Vue {
+  get userName () {
+    return AuthModule.name
+  }
+}
 </script>
 
 <style scoped lang="scss">

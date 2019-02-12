@@ -65,7 +65,7 @@
               @click="toggleUserMenu()"
             >
               <div class="user-avatar"></div>
-              <div class="user-name">Егор Воронов</div>
+              <div class="user-name">{{userName}}</div>
             </div>
             <!-- end block for users -->
           </ul>
@@ -78,7 +78,7 @@
         v-if="blocksShow.user && loggedIn"
       >
         <div class="user-fullname">
-          ИП Воронов Е.В.
+          {{userName}}
         </div>
         <div
           class="agreement"
@@ -323,7 +323,7 @@
         v-if="blocksShow.user && loggedIn"
       >
         <div class="user-fullname">
-          ИП Воронов Е.В.
+          {{userName}}
         </div>
         <div
           class="agreement"
@@ -444,11 +444,15 @@ export default class Header extends Vue {
     return AuthModule.loggedIn
   }
 
+  get userName () {
+    return AuthModule.name
+  }
+
   logout () {
     // e.preventDefault()
     // this.auth.logout()
-    // this.$store.dispatch('auth/logout')
-    store.dispatch('auth/mockLogout')
+    store.dispatch('auth/logout')
+    // store.dispatch('auth/mockLogout')
   }
 
   toggleMainMenu () {

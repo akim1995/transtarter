@@ -5,13 +5,18 @@
       Регистрация
     </div>
 
-    <form class="registration-form">
+    <form
+      v-on:submit.prevent="onSubmit"
+      class="registration-form"
+    >
       <div class="form-group">
         <label class="label">Введите имя и фамилию контактного лица</label>
         <input
-          v-model="regForm.fullName"
+          v-model="regForm.login"
           placeholder="Имя и фамилия"
           class="form-control"
+          type="text"
+          required
         >
       </div>
 
@@ -21,6 +26,9 @@
           v-model="regForm.phone"
           placeholder="Телефон"
           class="form-control"
+          type="tel"
+          autocomplete='new-tel'
+          required
         >
       </div>
 
@@ -30,6 +38,20 @@
           v-model="regForm.email"
           placeholder="Почта"
           class="form-control"
+          type="email"
+          autocomplete='new-email'
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label class="label">Введите пароль</label>
+        <input
+          v-model="regForm.password"
+          placeholder="Пароль"
+          class="form-control"
+          type="password"
+          required
         >
       </div>
 
@@ -37,7 +59,8 @@
         <label class="label">Какую организацию вы представляете?</label>
         <select
           class="form-control"
-          v-model="regForm.organizationVariants"
+          v-model="regForm.organizationVariant"
+          required
         >
           <option
             disabled
@@ -55,6 +78,7 @@
           <select
             class="form-control first-selector"
             v-model="regForm.organizationType"
+            required
           >
             <option
               disabled
@@ -67,6 +91,8 @@
             v-model="regForm.organizationName"
             placeholder="Название огранизации"
             class="form-control second-selector"
+            type='text'
+            required
           >
         </div>
       </div>
@@ -106,20 +132,37 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import { eventBus } from '../../../../main'
 import { DisplayModule } from '../../../../store/modules/display.module'
 import { store } from '../../../../store/index'
+import { AuthService } from '../../../../services/auth.service'
 
 @Component
 export default class RegistrationForm extends Vue {
   regForm = {
-    fullName: '',
-    phone: '',
-    email: '',
-    organizationVariants: '',
-    organizationType: '',
-    organizationName: ''
+    login: 'test',
+    phone: '89114264099',
+    email: 'serov.m.888@gmail.com',
+    password: 'CavlawOw111%',
+    organizationVariant: 'Автосервис',
+    organizationType: 'ООО',
+    organizationName: 'kek'
   };
+
+  auth = new AuthService();
 
   closeRegistrationAndOpenLogIn () {
     store.dispatch('display/closeRegistrationAndOpenLogIn')
+  }
+
+  onSubmit (e: Event) {
+    debugger
+    this.auth
+      .registration(this.regForm)
+      .then(res => {
+        console.log('User is created:', res)
+        store.dispatch('display/closeRegistrationAndOpenLogIn')
+      })
+      .catch(err => {
+        console.error(err)
+      })
   }
 }
 </script>

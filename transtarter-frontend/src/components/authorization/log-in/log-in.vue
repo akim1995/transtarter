@@ -1,7 +1,6 @@
 <template>
   <div
     class="log-in modal-wrapper"
-    @keydown="toggleLogInPopup()"
     v-if="showBlockYourCity"
   >
 
@@ -20,13 +19,13 @@
           class="log-in-form"
           @submit='login'
         >
-          <div class="form-group">
+          <!--<div class="form-group">
             <label class="label">Email, указанный при регистрации</label>
             <input
               v-model="logInForm.email"
               placeholder="Почта"
               class="form-control"
-              type="email"
+
             >
           </div>
 
@@ -68,13 +67,14 @@
               <span class="fill-control-indicator"></span>
             </span>
             <label class="custom-checkbox-label">Чужой компьютер</label>
-          </div>
+          </div> -->
 
           <button
             type="submit"
             class="btn btn-orange btn-log-in"
           >
-            Войти
+            <!-- Войти -->
+            Войти через IdentityServer
           </button>
         </form>
 
@@ -136,8 +136,8 @@ export default class LogIn extends mixins(ClosablePopup) {
     // const { dispatch } = this.$store
 
     // module is injected in header
-    // dispatch('auth/login')
-    store.dispatch('auth/mockLogin')
+    store.dispatch('auth/login')
+    // store.dispatch('auth/mockLogin')
     store.dispatch('display/toggleLogIn')
   }
 

@@ -1,10 +1,18 @@
 import { UserManager, WebStorageStateStore, User, UserManagerSettings } from 'oidc-client'
 
+import axios from 'axios'
+
+type UserRegistration = {
+  login: string;
+  password: string;
+}
+
 export class AuthService {
   private userManager: UserManager;
+  private identityServer = process.env.VUE_APP_IDENTITY_SERVER;
 
   constructor () {
-    const AUTH0_DOMAIN: string = 'http://144.76.133.147:5000'
+    const AUTH0_DOMAIN: string = this.identityServer
     const MY_HOST: string = process.env.VUE_APP_HOST
 
     const settings: UserManagerSettings = {
@@ -27,6 +35,10 @@ export class AuthService {
     }
 
     this.userManager = new UserManager(settings)
+  }
+
+  public registration (user: UserRegistration): Promise<any> {
+    return axios.post(`${this.identityServer}/api/account/register`, user)
   }
 
   public getUser (): Promise<User> {

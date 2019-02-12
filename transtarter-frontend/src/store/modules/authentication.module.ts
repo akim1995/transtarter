@@ -99,9 +99,10 @@ export class Authentication extends VuexModule implements IAuthState {
 
   @Action
   logout () {
-    this.context.commit('LOGOUT')
-    this.auth.removeFromLocalStorageByKey(this.localStorageKey)
-    this.auth.logout()
+    this.auth.logout().then(() => {
+      this.context.commit('LOGOUT')
+      this.auth.removeFromLocalStorageByKey(this.localStorageKey)
+    })
   }
 
   @Action
