@@ -99,9 +99,11 @@ export default class RegistrationDataTab extends Vue {
   updateProfileInfo () {
     this.profileService.updateProfileInfo(this.userProfile)
       .then(res => {
+        // eslint-disable-next-line
         console.log(res)
       })
       .catch(error => {
+        // eslint-disable-next-line
         console.error(error)
       })
   }
@@ -112,6 +114,7 @@ export default class RegistrationDataTab extends Vue {
         this.userProfile = res.data
       })
       .catch(error => {
+        // eslint-disable-next-line
         console.error(error)
       })
   }

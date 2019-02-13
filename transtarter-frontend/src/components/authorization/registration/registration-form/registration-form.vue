@@ -152,15 +152,16 @@ export default class RegistrationForm extends Vue {
     store.dispatch('display/closeRegistrationAndOpenLogIn')
   }
 
-  onSubmit (e: Event) {
-    debugger
+  onSubmit (e: Event) {    
     this.auth
       .registration(this.regForm)
       .then(res => {
+        // eslint-disable-next-line
         console.log('User is created:', res)
         store.dispatch('display/closeRegistrationAndOpenLogIn')
       })
       .catch(err => {
+        // eslint-disable-next-line
         console.error(err)
       })
   }
