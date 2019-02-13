@@ -37,8 +37,8 @@ export class AuthService {
     this.userManager = new UserManager(settings)
   }
 
-  public registration (user: UserRegistration): Promise<any> {
-    return axios.post(`${this.identityServer}/api/account/register`, user)
+  public registration (user: UserRegistration) {
+    return axios.post<boolean>(`${this.identityServer}/api/account/register`, user)
   }
 
   public getUser (): Promise<User> {

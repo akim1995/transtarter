@@ -4,9 +4,6 @@ export class UserProfile {
     public contactPerson: string;
     public name: string;
 
-    /**
-     *
-     */
     constructor () {
       this.companyName = ''
       this.contactPerson = ''
