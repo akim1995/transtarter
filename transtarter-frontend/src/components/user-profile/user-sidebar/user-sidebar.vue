@@ -60,7 +60,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { AuthModule } from '../../../store/modules/authentication.module'
+import { AuthModule } from '@/store/modules/authentication.module'
 
 @Component
 export default class UserSidebar extends Vue {

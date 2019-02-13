@@ -26,10 +26,10 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '../../../main'
-import { store } from '../../../store/index'
-import { AuthModule } from '../../../store/modules/authentication.module'
-import { DisplayModule } from '../../../store/modules/display.module'
+import { eventBus } from '@/main'
+import { store } from '@/store/index'
+import { AuthModule } from '@/store/modules/authentication.module'
+import { DisplayModule } from '@/store/modules/display.module'
 import UserSidebar from '@/components/user-profile/user-sidebar/user-sidebar.vue'
 import PersonalManager from '@/components/user-profile/personal-manager/personal-manager.vue'
 import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'

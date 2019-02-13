@@ -56,3 +56,7 @@
     @extend .form-control;
     line-height: 24px;
 }
+
+::placeholder {
+    opacity: .5;
+}

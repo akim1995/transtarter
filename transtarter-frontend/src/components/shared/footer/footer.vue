@@ -103,7 +103,7 @@
               rel='noopener noreferrer'
             >
               Политика конфеденциальности</a></span>
-          <span>
+          <!-- <span>
             <span
               class="cards_group__card_link bottom-link"
               style="border: 0;"
@@ -113,7 +113,7 @@
                 rel='noopener noreferrer'
                 href="http://koniglabs.ru"
               >KonigLabs</a> </span>
-          </span>
+          </span> -->
         </div>
       </div>
 
@@ -123,8 +123,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '../../../main'
-import { store } from '../../../store/index'
+import { eventBus } from '@/main'
+import { store } from '@/store/index'
 
 @Component
 export default class Footer extends Vue {

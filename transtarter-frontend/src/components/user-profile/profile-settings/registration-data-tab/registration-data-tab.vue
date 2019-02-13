@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <form>
+    <form v-on:submit.prevent="updateProfileInfo">
       <div class="form-group row">
         <label class="col-xl-4 big-label mobile-top-label">Название компании</label>
         <div class="col-xl-6 col-12">
@@ -15,6 +15,7 @@
             type="text"
             class="form-control-lg"
             placeholder="ИП Воронов И.Е"
+            v-model='userProfile.companyName'
           >
         </div>
       </div>
@@ -25,6 +26,7 @@
             type="text"
             class="form-control-lg"
             placeholder="Егор Воронов"
+            v-model='userProfile.name'
           >
         </div>
       </div>
@@ -34,8 +36,8 @@
           <input
             type="text"
             class="form-control-lg"
-            placeholder="+7 (900) 111-11-11
-"
+            placeholder="+7 (900) 111-11-11"
+            v-model='userProfile.phoneNumber'
           >
         </div>
       </div>
@@ -46,6 +48,7 @@
             type="text"
             class="form-control-lg"
             placeholder="voronov@gmail.com"
+            v-model='userProfile.email'
           >
         </div>
       </div>
@@ -84,9 +87,35 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { ProfileService } from '@/services/profile.service'
+import { Guid } from 'guid-typescript'
+import { UserProfile } from '@/models/UserProfile'
 
 @Component
-export default class RegistrationDataTab extends Vue {}
+export default class RegistrationDataTab extends Vue {
+  profileService = new ProfileService();
+  userProfile = new UserProfile()
+
+  updateProfileInfo () {
+    this.profileService.updateProfileInfo(this.userProfile)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }
+
+  mounted () {
+    this.profileService.getProfileInfoByUserId(Guid.parse('243d76be-f9ed-4d30-bbc8-ebe86bf7b1c9'))
+      .then(res => {
+        this.userProfile = res.data
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }
+}
 </script>
 
 <style scoped lang="scss">

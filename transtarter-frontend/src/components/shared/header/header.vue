@@ -416,11 +416,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '../../../main'
-import { AuthModule } from '../../../store/modules/authentication.module'
+import { eventBus } from '@/main'
+import { AuthModule } from '@/store/modules/authentication.module'
 import { AuthService } from '@/services/auth.service'
-import { DisplayModule } from '../../../store/modules/display.module'
-import { store } from '../../../store/index'
+import { DisplayModule } from '@/store/modules/display.module'
+import { store } from '@/store/index'
 
 @Component
 export default class Header extends Vue {
