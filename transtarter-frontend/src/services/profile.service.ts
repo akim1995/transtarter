@@ -8,4 +8,8 @@ export class ProfileService {
     public getProfileInfoByUserId (userId : Guid): Promise<any> {
       return axios.get<UserProfile>(`${this.webAppHost}/api/profile/${userId}`)
     }
+
+    public updateProfileInfo (updatedUserProfile: UserProfile): Promise<any> {
+      return axios.put(`${this.webAppHost}/api/profile`, updatedUserProfile)
+    }
 }
