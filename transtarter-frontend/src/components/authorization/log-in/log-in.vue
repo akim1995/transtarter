@@ -17,7 +17,7 @@
 
         <form
           class="log-in-form"
-          @submit='login'
+          @submit.prevent='login'
         >
           <!--<div class="form-group">
             <label class="label">Email, указанный при регистрации</label>
@@ -104,8 +104,8 @@ import { store } from '@/store/index'
 @Component
 export default class LogIn extends mixins(ClosablePopup) {
   logInForm = {
-    email: '2@mail.ru',
-    password: '123'
+    email: '',
+    password: ''
   };
 
   foreignPc = false;
@@ -131,13 +131,8 @@ export default class LogIn extends mixins(ClosablePopup) {
   }
 
   login (e: Event) {
-    e.preventDefault()
-    // const { email, password } = this.logInForm
-    // const { dispatch } = this.$store
-
     // module is injected in header
     store.dispatch('auth/login')
-    // store.dispatch('auth/mockLogin')
     store.dispatch('display/toggleLogIn')
   }
 
