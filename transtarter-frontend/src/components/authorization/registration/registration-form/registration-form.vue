@@ -152,15 +152,23 @@ export default class RegistrationForm extends Vue {
     store.dispatch('display/closeRegistrationAndOpenLogIn')
   }
 
+  handleError (errorText: string) {
+    if (errorText === 'DuplicateUserName') {
+
+    }
+  }
+
   onSubmit (e: Event) {
     this.auth
       .registration(this.regForm)
       .then(res => {
+        debugger
         // eslint-disable-next-line
         console.log('User is created:', res)
         store.dispatch('display/closeRegistrationAndOpenLogIn')
       })
       .catch(err => {
+        this.handleError(err.response.data[0].code)
         // eslint-disable-next-line
         console.error(err)
       })

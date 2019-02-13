@@ -69,7 +69,7 @@ export default class PasswordRestore extends mixins(ClosablePopup) {
   }
 
   listenEscKeyup (e: KeyboardEvent) {
-    if (e.keyCode === 27) {
+    if (e.keyCode === 27 && this.showPasswordRestore) {
       store.dispatch('display/toggleRestore')
     }
   }
