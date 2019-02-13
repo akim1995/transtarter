@@ -37,6 +37,16 @@
             width: 70%;
         }
     }
+    .invalid-text {        
+        width: 100%;
+        padding-top: 5px;
+        font-size: 80%;
+        color: $punch-approx;
+        padding-left: 5px;
+    }
+    .invalid-input {
+        border-color: $punch-approx;
+    }
 }
 
 .form-control {

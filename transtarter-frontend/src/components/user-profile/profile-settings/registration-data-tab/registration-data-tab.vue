@@ -93,8 +93,8 @@ import { UserProfile } from '@/models/UserProfile'
 
 @Component
 export default class RegistrationDataTab extends Vue {
-  profileService = new ProfileService();
-  userProfile = new UserProfile()
+  profileService = new ProfileService()
+  userProfile = {} as UserProfile
 
   updateProfileInfo () {
     this.profileService.updateProfileInfo(this.userProfile)

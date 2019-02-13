@@ -17,7 +17,14 @@
           class="form-control"
           type="text"
           required
+          v-bind:class="{ 'ivalid-input': errors.DuplicateUserName === true }"
         >
+        <div
+          class="invalid-text"
+          v-show='errors.DuplicateUserName === true'
+        >
+          Пользователь с таким именем уже существует
+        </div>
       </div>
 
       <div class="form-group">
@@ -133,6 +140,7 @@ import { eventBus } from '@/main'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
 import { AuthService } from '@/services/auth.service'
+import { ErrorMessage } from '@/models/ErrorMessage.ts'
 
 @Component
 export default class RegistrationForm extends Vue {
@@ -146,15 +154,19 @@ export default class RegistrationForm extends Vue {
     organizationName: 'kek'
   };
 
+  errors: {
+    [k: string]: boolean;
+  } = {};
+
   auth = new AuthService();
 
   closeRegistrationAndOpenLogIn () {
     store.dispatch('display/closeRegistrationAndOpenLogIn')
   }
 
-  handleError (errorText: string) {
-    if (errorText === 'DuplicateUserName') {
-
+  handleError (errorMessages: Array<ErrorMessage>) {
+    for (const messageKey of errorMessages) {
+      this.errors[messageKey.code] = true
     }
   }
 
@@ -163,13 +175,15 @@ export default class RegistrationForm extends Vue {
       .registration(this.regForm)
       .then(res => {
         // eslint-disable-next-line
-        console.log('User is created:', res)
+        console.log("User is created:", res);
         store.dispatch('display/closeRegistrationAndOpenLogIn')
       })
       .catch(err => {
-        this.handleError(err.response.data[0].code)
+        debugger
+        const errorMessages = (((err || []).response || []).data || []) as Array<ErrorMessage>
+        this.handleError(errorMessages)
         // eslint-disable-next-line
-        console.error(err)
+        // console.error(err);
       })
   }
 }
