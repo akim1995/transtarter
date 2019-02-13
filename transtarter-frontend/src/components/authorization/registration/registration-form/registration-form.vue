@@ -152,7 +152,7 @@ export default class RegistrationForm extends Vue {
     store.dispatch('display/closeRegistrationAndOpenLogIn')
   }
 
-  onSubmit (e: Event) {    
+  onSubmit (e: Event) {
     this.auth
       .registration(this.regForm)
       .then(res => {
