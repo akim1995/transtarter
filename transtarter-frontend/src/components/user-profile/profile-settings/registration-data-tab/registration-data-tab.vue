@@ -96,7 +96,7 @@ export default class RegistrationDataTab extends Vue {
   profileService = new ProfileService();
   userProfile = new UserProfile()
 
-  updateProfileInfo (e) {
+  updateProfileInfo () {
     this.profileService.updateProfileInfo(this.userProfile)
       .then(res => {
         console.log(res)

@@ -37,9 +37,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '../../../main'
-import { DisplayModule } from '../../../store/modules/display.module'
-import { store } from '../../../store/index'
+import { eventBus } from '@/main'
+import { DisplayModule } from '@/store/modules/display.module'
+import { store } from '@/store/index'
 
 @Component
 export default class PersonalManager extends Vue {

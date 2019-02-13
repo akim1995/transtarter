@@ -96,10 +96,10 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { mixins } from 'vue-class-component'
-import { ClosablePopup } from '../../mixins/closable-popup'
-import { eventBus } from '../../../main'
-import { DisplayModule } from '../../../store/modules/display.module'
-import { store } from '../../../store/index'
+import { ClosablePopup } from '@/components/mixins/closable-popup'
+import { DisplayModule } from '@/store/modules/display.module'
+import { eventBus } from '@/main'
+import { store } from '@/store/index'
 
 @Component
 export default class LogIn extends mixins(ClosablePopup) {

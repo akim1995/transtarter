@@ -28,11 +28,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '../../../main'
+import { eventBus } from '@/main'
 import { mixins } from 'vue-class-component'
-import { ClosablePopup } from '../../mixins/closable-popup'
-import { DisplayModule } from '../../../store/modules/display.module'
-import { store } from '../../../store/index'
+import { ClosablePopup } from '@/components/mixins/closable-popup'
+import { DisplayModule } from '@/store/modules/display.module'
+import { store } from '@/store/index'
 
 @Component
 export default class PasswordSuccessRestore extends mixins(ClosablePopup) {
