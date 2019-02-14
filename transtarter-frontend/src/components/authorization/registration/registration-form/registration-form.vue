@@ -156,13 +156,13 @@ import { IErrorMessage, IObjectWithStrings } from '@/models/index.ts'
 @Component
 export default class RegistrationForm extends Vue {
   regForm = {
-    login: 'test',
-    phone: '89114264099',
-    email: 'serov.m.888@gmail.com',
-    password: 'CavlawOw111%',
-    organizationVariant: 'Автосервис',
+    login: '',
+    phone: '',
+    email: '',
+    password: '',
+    organizationVariant: '',
     organizationType: 'ООО',
-    organizationName: 'Организация'
+    organizationName: ''
   };
 
   errors: IObjectWithStrings = {};
