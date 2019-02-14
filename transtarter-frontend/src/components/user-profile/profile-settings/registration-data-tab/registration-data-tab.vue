@@ -89,12 +89,12 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { ProfileService } from '@/services/profile.service'
 import { Guid } from 'guid-typescript'
-import { UserProfile } from '@/models/UserProfile'
+import { IUserProfile } from '@/models/index'
 
 @Component
 export default class RegistrationDataTab extends Vue {
   profileService = new ProfileService()
-  userProfile = {} as UserProfile
+  userProfile = {} as IUserProfile
 
   updateProfileInfo () {
     this.profileService.updateProfileInfo(this.userProfile)

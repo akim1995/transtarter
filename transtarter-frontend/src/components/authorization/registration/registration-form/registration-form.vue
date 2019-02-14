@@ -17,11 +17,11 @@
           class="form-control"
           type="text"
           required
-          v-bind:class="{ 'ivalid-input': errors.DuplicateUserName === true }"
+          v-bind:class="{ 'invalid-input': errors.DuplicateUserName }"
         >
         <div
           class="invalid-text"
-          v-show='errors.DuplicateUserName === true'
+          v-if='errors.DuplicateUserName'
         >
           Пользователь с таким именем уже существует
         </div>
@@ -59,7 +59,18 @@
           class="form-control"
           type="password"
           required
+          v-bind:class="{ 'invalid-input': errors.passwordError }"
         >
+        <div
+          class="invalid-text"
+          v-if='errors.passwordError'
+        >
+          пароль
+          <span v-if="errors.PasswordTooShort">должен быть как минимум 6 символов.</span>
+          <span v-if="errors.PasswordRequiresNonAlphanumeric"> должен быть один спецсимвол.</span>
+          <span v-if="errors.PasswordRequiresUpper"> должны встречаться символы в верхнем регистре.</span>
+          <span v-if="errors.PasswordRequiresLower"> должны встречаться символы в нижнем регистре.</span>
+        </div>
       </div>
 
       <div class="form-group">
@@ -135,12 +146,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 import { eventBus } from '@/main'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
 import { AuthService } from '@/services/auth.service'
-import { ErrorMessage } from '@/models/ErrorMessage.ts'
+import { IErrorMessage, IObjectWithStrings } from '@/models/index.ts'
 
 @Component
 export default class RegistrationForm extends Vue {
@@ -151,12 +162,10 @@ export default class RegistrationForm extends Vue {
     password: 'CavlawOw111%',
     organizationVariant: 'Автосервис',
     organizationType: 'ООО',
-    organizationName: 'kek'
+    organizationName: 'Организация'
   };
 
-  errors: {
-    [k: string]: boolean;
-  } = {};
+  errors: IObjectWithStrings = {};
 
   auth = new AuthService();
 
@@ -164,10 +173,22 @@ export default class RegistrationForm extends Vue {
     store.dispatch('display/closeRegistrationAndOpenLogIn')
   }
 
-  handleError (errorMessages: Array<ErrorMessage>) {
+  handleError (errorMessages: Array<IErrorMessage>) {
+    this.errors = {}
+    this.errors.passwordError = false
     for (const messageKey of errorMessages) {
       this.errors[messageKey.code] = true
+
+      if (messageKey.code.toLowerCase().includes('pass')) {
+        this.errors.passwordError = true
+      }
     }
+
+    // Due to the limitations of modern JavaScript (and the abandonment of Object.observe),
+    // Vue cannot detect property addition or deletion.
+    // Since Vue performs the getter/setter conversion process during instance initialization,
+    // a property must be present in the data object in order for Vue to convert it and make it reactive.
+    this.$forceUpdate()
   }
 
   onSubmit (e: Event) {
@@ -179,11 +200,11 @@ export default class RegistrationForm extends Vue {
         store.dispatch('display/closeRegistrationAndOpenLogIn')
       })
       .catch(err => {
-        debugger
-        const errorMessages = (((err || []).response || []).data || []) as Array<ErrorMessage>
+        const errorMessages = (((err || []).response || []).data ||
+          []) as Array<IErrorMessage>
         this.handleError(errorMessages)
         // eslint-disable-next-line
-        // console.error(err);
+        console.error(err);
       })
   }
 }

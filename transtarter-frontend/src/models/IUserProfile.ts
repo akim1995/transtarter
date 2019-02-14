@@ -1,5 +1,5 @@
 
-export interface UserProfile {
+export interface IUserProfile {
     companyName: string;
     contactPerson: string;
     name: string;

@@ -37,16 +37,7 @@
             width: 70%;
         }
     }
-    .invalid-text {        
-        width: 100%;
-        padding-top: 5px;
-        font-size: 80%;
-        color: $punch-approx;
-        padding-left: 5px;
-    }
-    .invalid-input {
-        border-color: $punch-approx;
-    }
+    
 }
 
 .form-control {
@@ -59,6 +50,24 @@
     height: auto !important; // bitrix style overwrite
     &:focus {
         border-color: $malachite; // bitrix style overwrite
+    }
+}
+
+.invalid-text {        
+    width: 100%;
+    padding-top: 5px;
+    font-size: 80%;
+    color: $punch-approx;
+    padding-left: 5px;
+    line-height: 15px;
+    margin-bottom: -10px;
+}
+.invalid-input {
+    border: 1.5px solid;
+    border-color: $punch-approx;    
+    &:focus {
+        border-color: $punch-approx;    
+        outline: none;
     }
 }
 
