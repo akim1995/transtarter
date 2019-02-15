@@ -5817,7 +5817,7 @@ var registration_data_tabvue_type_template_id_256303b8_scoped_true_staticRenderF
 
 class profile_service_ProfileService {
   constructor() {
-    this.webAppHost = "http://localhost:64658";
+    this.webAppHost = "http://85.10.205.89:8070";
   }
 
   getProfileInfoByUserId(userId) {
