@@ -6333,7 +6333,7 @@ class auth_service_AuthService {
   constructor() {
     this.identityServer = "https://identity-test.tstarter.ru";
     var AUTH0_DOMAIN = this.identityServer;
-    var MY_HOST = "http://localhost:8080";
+    var MY_HOST = "https://b24-fpukiw.bitrix24.site";
     var settings = {
       userStore: new oidc_client_min["WebStorageStateStore"]({
         store: window.localStorage
@@ -7158,7 +7158,7 @@ function () {
   function ProfileService() {
     _classCallCheck(this, ProfileService);
 
-    this.webAppHost = "http://localhost:64658";
+    this.webAppHost = "http://85.10.205.89:8070";
   }
 
   _createClass(ProfileService, [{
