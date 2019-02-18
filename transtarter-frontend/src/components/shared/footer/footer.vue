@@ -10,7 +10,7 @@
             <div class="cards_group__card_header card_header_logo">ТРАНС СТАРТЕР</div>
             <div
               class="cards_group__card_body specialization"
-              style="line-height: 24px; padding-right: 10px;"
+              style="line-height: 24px; padding-right: 40px;"
             >Продажа стартеров, генераторов и запчастей с 1995г.</div>
           </div>
           <div class="cards_group__card">
