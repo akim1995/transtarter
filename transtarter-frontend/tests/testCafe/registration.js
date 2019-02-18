@@ -1,23 +1,50 @@
-import { Selector } from 'testcafe'
+import { Selector, RequestLogger } from 'testcafe'
+import faker from 'faker'
+
+const passPattern = '"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"'
+
+const logger = RequestLogger(
+  {
+    url: 'http://localhost:5000/api/account/register',
+    method: 'post'
+  },
+  {
+    logRequestHeaders: true,
+    logResponseHeaders: true,
+    logResponseBody: true,
+    stringifyResponseBody: true
+  })
 
 fixture`New Fixture`
   .page`http://localhost:8080/`
 
-test('New Test', async t => {
-  await t
-    .maximizeWindow()
-    .click(Selector('a').withText('Регистрация'))
-    .click(Selector('.form-group').find('.form-control'))
-    .typeText(Selector('.form-group').find('.form-control'), 'Serov')
-    .pressKey('tab')
-    .typeText(Selector('div').withText('Введите телефон').nth(7).find('.form-control'), '911')
-    .pressKey('tab')
-    .typeText(Selector('div').withText('Введите email').nth(7).find('.form-control'), 'serov@mail.ru')
-    .debug()
-    .pressKey('tab')
-    .typeText(Selector('div').withText('Введите пароль').nth(7).find('.form-control'), '123$Asd')
-    .click(Selector('div').withText('Какую организацию вы представляете').nth(7).find('.form-control'))
-    .click(Selector('.two-selectors').find('.form-control.first-selector'))
-    .typeText(Selector('.two-selectors').find('.form-control.second-selector'), 'Jhuf')
-    .click(Selector('.registration-form').find('button').withText('Зарегистрироваться'))
-})
+test
+  /*eslint-disable */
+  .requestHooks(logger)
+  ('Registration Process', async t => {
+    await t
+      /* eslint-enable */
+      .maximizeWindow()
+      .click(Selector('a').withText('Регистрация'))
+      .typeText(Selector('.form-group').find('.form-control'), faker.name.firstName())
+      .pressKey('tab')
+      .typeText(Selector('div').withText('Введите телефон').nth(7).find('.form-control'), faker.phone.phoneNumber())
+      .pressKey('tab')
+      .typeText(Selector('div').withText('Введите email').nth(7).find('.form-control'), faker.internet.email())
+      .pressKey('tab')
+      .typeText(Selector('div').withText('Введите пароль').nth(7).find('.form-control'), '123$Asd') // faker pattern throws overflow
+      .typeText(Selector('.two-selectors').find('.form-control.second-selector'), faker.company.companyName())
+      .click(Selector('.registration-form').find('button').withText('Зарегистрироваться'))
+
+    // const logRecord = logger.requests[0]
+
+    // console.log(logRecord.userAgent)
+    // console.log(logRecord.request.url)
+    // console.log(logRecord.request.method)
+    // console.log(logRecord.response.statusCode)
+
+    await t.expect(
+      logger.contains(record => record.response.statusCode === 200 ||
+        record.response.statusCode === 222))
+      .ok()
+  })

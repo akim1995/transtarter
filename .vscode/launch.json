@@ -9,7 +9,7 @@
             "protocol": "inspector",
             "request": "launch",
             "name": "Launch test files with TestCafe",
-            "program": "C:/Users/serov/AppData/Roaming/npm/node_modules/testcafe/bin/testcafe.js",
+            "program": "${workspaceRoot}/transtarter-frontend/node_modules/testcafe/bin/testcafe.js",
             "args": [
                 "chrome",
                 "./transtarter-frontend/tests/testCafe/registration.js"

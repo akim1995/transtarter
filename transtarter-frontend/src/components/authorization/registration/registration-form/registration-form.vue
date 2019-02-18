@@ -160,7 +160,7 @@ export default class RegistrationForm extends Vue {
     phone: '',
     email: '',
     password: '',
-    organizationVariant: '',
+    organizationVariant: 'Автосервис',
     organizationType: 'ООО',
     organizationName: ''
   };
