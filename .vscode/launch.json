@@ -12,7 +12,7 @@
             "program": "${workspaceRoot}/transtarter-frontend/node_modules/testcafe/bin/testcafe.js",
             "args": [
                 "chrome",
-                "./transtarter-frontend/tests/testCafe/registration.js"
+                "./transtarter-frontend/tests/testCafe/*"
             ],
             "console": "integratedTerminal",
             "cwd": "${workspaceRoot}"
