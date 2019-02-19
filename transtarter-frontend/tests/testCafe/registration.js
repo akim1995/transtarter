@@ -5,7 +5,7 @@ const passPattern = '"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@
 
 const logger = RequestLogger(
   {
-    url: 'http://localhost:5000/api/account/register',
+    url: `${testConfig.identityServer}/api/account/register`,
     method: 'post'
   },
   {
@@ -16,7 +16,7 @@ const logger = RequestLogger(
   })
 
 fixture`New Fixture`
-  .page`http://localhost:8080/`
+  .page`${testConfig.vueHost}/`
 
 test
   /*eslint-disable */

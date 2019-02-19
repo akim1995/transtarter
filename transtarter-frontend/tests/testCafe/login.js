@@ -1,7 +1,7 @@
 import { Selector, RequestLogger } from 'testcafe'
 
 fixture`New Fixture`
-  .page`http://localhost:8080/`
+  .page`${testConfig.vueHost}/`
 
 test('Login Process', async t => {
   await t
