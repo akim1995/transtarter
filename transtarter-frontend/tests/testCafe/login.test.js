@@ -1,7 +1,8 @@
-import { Selector, RequestLogger } from 'testcafe'
+import { Selector } from 'testcafe'
+import config from './config'
 
 fixture`New Fixture`
-  .page`${testConfig.vueHost}/`
+  .page`${config.testConfig.vueHost}/`
 
 test('Login Process', async t => {
   await t

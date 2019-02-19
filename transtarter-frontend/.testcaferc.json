@@ -1,8 +1,4 @@
 {
-    "debugOnFail": true,
-    "testConfig" : {
-        "identityServer": "http://localhost:5000",
-        "vueHost": "http://localhost:8080"
-    }
+    "debugOnFail": true   
     
 }

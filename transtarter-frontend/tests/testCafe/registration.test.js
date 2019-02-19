@@ -1,11 +1,10 @@
 import { Selector, RequestLogger } from 'testcafe'
+import config from './config'
 import faker from 'faker'
-
-const passPattern = '"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"'
 
 const logger = RequestLogger(
   {
-    url: `${testConfig.identityServer}/api/account/register`,
+    url: `${config.testConfig.identityServer}/api/account/register`,
     method: 'post'
   },
   {
@@ -16,7 +15,7 @@ const logger = RequestLogger(
   })
 
 fixture`New Fixture`
-  .page`${testConfig.vueHost}/`
+  .page`${config.testConfig.vueHost}/`
 
 test
   /*eslint-disable */
