@@ -174,6 +174,7 @@ export default class RegistrationForm extends Vue {
   }
 
   handleError (errorMessages: Array<IErrorMessage>) {
+    if (!errorMessages.length) { return }
     this.errors = {}
     this.errors.passwordError = false
     for (const messageKey of errorMessages) {
