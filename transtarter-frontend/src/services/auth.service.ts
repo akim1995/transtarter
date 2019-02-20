@@ -18,7 +18,7 @@ export class AuthService {
     const settings: UserManagerSettings = {
       userStore: new WebStorageStateStore({ store: window.localStorage }),
       authority: AUTH0_DOMAIN,
-      client_id: 'KL',
+      client_id: 'kl',
       redirect_uri: `${MY_HOST}/callback.html`,
       post_logout_redirect_uri: `${MY_HOST}/`,
       response_type: 'id_token token',
