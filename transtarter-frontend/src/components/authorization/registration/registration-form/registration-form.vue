@@ -14,7 +14,7 @@
         <input
           v-model="regForm.login"
           placeholder="Имя и фамилия"
-          class="form-control"
+          class="form-control name-input"
           type="text"
           required
           v-bind:class="{ 'invalid-input': errors.DuplicateUserName }"
@@ -32,7 +32,7 @@
         <input
           v-model="regForm.phone"
           placeholder="Телефон"
-          class="form-control"
+          class="form-control phone-input"
           type="tel"
           autocomplete='new-tel'
           required
@@ -44,7 +44,7 @@
         <input
           v-model="regForm.email"
           placeholder="Почта"
-          class="form-control"
+          class="form-control email-input"
           type="email"
           autocomplete='new-email'
           required
@@ -56,7 +56,7 @@
         <input
           v-model="regForm.password"
           placeholder="Пароль"
-          class="form-control"
+          class="form-control password-input"
           type="password"
           required
           v-bind:class="{ 'invalid-input': errors.passwordError }"
@@ -76,7 +76,7 @@
       <div class="form-group">
         <label class="label">Какую организацию вы представляете?</label>
         <select
-          class="form-control"
+          class="form-control org-input"
           v-model="regForm.organizationVariant"
           required
         >
@@ -94,7 +94,7 @@
         <label class="label">Введите наименование организации</label>
         <div class="two-selectors">
           <select
-            class="form-control first-selector"
+            class="form-control first-selector name-org-input"
             v-model="regForm.organizationType"
             required
           >
@@ -212,6 +212,6 @@ export default class RegistrationForm extends Vue {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 @import "registration-form-styles.scss";
 </style>

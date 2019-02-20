@@ -55,7 +55,7 @@
               @click='toggleRegistrationPopup()'
               v-if="!loggedIn"
             >
-              <a class="border">Регистрация</a>
+              <a class="border register">Регистрация</a>
             </li>
             <!-- end for guests -->
             <!-- block for users -->
@@ -314,7 +314,7 @@
             class="menu-popup_list-item"
             @click="toggleRegistrationPopup()"
           >
-            <a>Регистрация</a>
+            <a class="register">Регистрация</a>
           </li>
         </ul>
       </div>
