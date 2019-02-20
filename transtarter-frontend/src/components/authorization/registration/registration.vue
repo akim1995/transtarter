@@ -116,7 +116,7 @@ import { store } from '@/store/index'
   components: {
     Carousel,
     Slide,
-    RegistrationForm
+    'ts-ui-registration-form': RegistrationForm
   }
 })
 export default class Registration extends mixins(ClosablePopup) {
