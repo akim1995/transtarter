@@ -11,7 +11,7 @@
 
         <div class="desktop-version-content-left-side">
 
-          <RegistrationForm />
+          <ts-ui-registration-form />
 
         </div>
 
