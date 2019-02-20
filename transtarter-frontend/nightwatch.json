@@ -1,0 +1,11 @@
+{
+  "test_settings": {
+    
+    "integration": {
+      "launch_url": "http://staging.host",
+      "globals": {
+        "devServerUrl": "other value"
+      }
+    }
+  }
+}
