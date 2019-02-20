@@ -5571,9 +5571,9 @@ function () {
   function AuthService() {
     _classCallCheck(this, AuthService);
 
-    this.identityServer = Object({"NODE_ENV":"production","BASE_URL":"/"}).VUE_APP_IDENTITY_SERVER;
+    this.identityServer = "https://identity-test.tstarter.ru";
     var AUTH0_DOMAIN = this.identityServer;
-    var MY_HOST = Object({"NODE_ENV":"production","BASE_URL":"/"}).VUE_APP_HOST;
+    var MY_HOST = "http://localhost:8080";
     var settings = {
       userStore: new oidc_client_min["WebStorageStateStore"]({
         store: window.localStorage
@@ -6419,7 +6419,7 @@ function () {
   function ProfileService() {
     _classCallCheck(this, ProfileService);
 
-    this.webAppHost = Object({"NODE_ENV":"production","BASE_URL":"/"}).VUE_APP_WEB_APP;
+    this.webAppHost = "http://localhost:64658";
   }
 
   _createClass(ProfileService, [{
