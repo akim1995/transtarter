@@ -461,8 +461,7 @@ export default class Header extends Vue {
   }
 
   mounted () {
-    const { dispatch } = this.$store
-    dispatch('auth/actualizeUser')
+    store.dispatch('auth/actualizeUser')
   }
 }
 
