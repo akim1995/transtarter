@@ -1,0 +1,109 @@
+.crm-webform-iframe.flexible-middle-width .content-wrap {
+    max-width: unset !important;
+}
+
+.crm-webform-iframe .content-wrap .content {
+    min-height: unset;
+}
+
+.crm-webform-iframe .row > div,
+.crm-webform-iframe .crm-webform-body,
+.crm-webform-iframe .crm-webform-wrapper,
+.crm-webform-iframe .content-wrap {
+    padding: 0 !important;
+}
+
+.crm-webform-iframe .crm-webform-icon,
+.crm-webform-iframe .crm-webform-label-title-container,
+.crm-webform-iframe .crm-webform-input-phone-flag,
+.crm-webform-iframe .tooltip {
+    display: none;
+}
+
+.crm-webform-iframe form.crm-webform-form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.crm-webform-iframe .crm-webform-main-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.crm-webform-iframe .crm-webform-fieldset {
+    padding: 0 !important;
+    width: 48.5%;
+}
+
+.crm-webform-iframe .crm-webform-fieldset-footer {
+    padding: 0 !important;
+    width: 50%
+}
+
+.crm-webform-iframe .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.crm-webform-iframe .crm-webform-fieldset:first-child {
+    margin-right: 3px;
+}
+
+
+
+.crm-webform-iframe .crm-webform-default {
+    border: 0;
+}
+
+.crm-webform-iframe button.crm-webform-submit-button {
+    height: 64px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19), 0 1px 0 0 #e29401;
+    background-image: linear-gradient(to bottom, #ffd600, #ffc600);
+    font-size: 20px;
+    text-transform: none;
+    font-weight: 600;
+    line-height: 64px;
+    font-family: 'Exo 2', sans-serif;
+    color: #323230;
+}
+
+.crm-webform-iframe label.crm-webform-input-label {
+    background-color: white;
+    height: 64px;
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+
+.crm-webform-iframe input.crm-webform-input {
+    height: 100%;
+    width: 100%;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+
+.crm-webform-iframe input.crm-webform-input:hover {
+    border-color: unset;
+}
+
+.crm-webform-iframe input.crm-webform-input::placeholder {
+    font-size: 20px;
+    color:  #969696;
+}
+
+.crm-webform-iframe .crm-webform-group {
+    margin: 0;
+}
+
+
+
+.crm-webform-iframe .crm-webform-fieldset-footer {
+    padding-top: 0;
+}
+

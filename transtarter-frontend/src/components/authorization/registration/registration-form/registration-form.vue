@@ -160,7 +160,7 @@ export default class RegistrationForm extends Vue {
     phone: '',
     email: '',
     password: '',
-    organizationVariant: '',
+    organizationVariant: 'Автосервис',
     organizationType: 'ООО',
     organizationName: ''
   };
@@ -174,6 +174,7 @@ export default class RegistrationForm extends Vue {
   }
 
   handleError (errorMessages: Array<IErrorMessage>) {
+    if (!errorMessages.length) { return }
     this.errors = {}
     this.errors.passwordError = false
     for (const messageKey of errorMessages) {

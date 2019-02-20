@@ -1,0 +1,657 @@
+
+/*
+* Used https://raw.githack.com/ for hosting CSS files
+* url: https://glcdn.githack.com/Galeups/transstarter-themplate/raw/master/themplate-styles.css
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic');
+
+html, body {
+    line-height: 1.41;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    color: #323230;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.clear:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*
+* Fonts
+*/
+.g-font-exo {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.g-font-ptsans {
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+
+/*
+*  Font-size
+*/
+.g-font-size-115 {
+    font-size: 8.2143rem !important;
+}
+.g-font-size-120 {
+    font-size: 8.5714rem !important;
+}
+.g-font-size-48 {
+    font-size: 3.4286rem !important;
+}
+.g-font-size-32 {
+    font-size: 2.2857rem !important;
+}
+.g-font-size-24 {
+    font-size: 1.7143rem !important;
+}
+.g-font-size-20 {
+    font-size: 1.4286rem !important;
+}
+.g-font-size-17 {
+    font-size: 1.2143rem !important;
+}
+.g-font-size-16 {
+    font-size: 1.1429rem !important;
+}
+
+@media (max-width: 992px) {
+    .g-font-size-115 {
+        font-size: 5.1429rem !important;
+    }
+    .g-font-size-120 {
+        font-size: 8.5714rem !important;
+    }
+    .g-font-size-48 {
+        font-size: 3.4286rem !important;
+    }
+    .g-font-size-32 {
+        font-size: 1.4286rem !important;
+    }
+    .g-font-size-24 {
+        font-size: 1.7143rem !important;
+    }
+    .g-font-size-20 {
+        font-size: 1.1429rem !important;
+    }
+    .g-font-size-17 {
+        font-size: 1.2143rem !important;
+    }
+    .g-font-size-16 {
+        font-size: 1.1429rem !important;
+    }
+}
+
+
+
+
+/*
+*  font-weight
+*/
+.g-font-700 {
+    font-weight: 700 !important;
+}
+.g-font-600 {
+    font-weight: 600 !important;
+}
+
+.g-font-400 {
+    font-weight: 400 !important;
+}
+
+
+/*
+*  line-height
+*/
+.g-lh-1_5 {
+    line-height: 1.5 !important;
+}
+.g-lh-1_43 {
+    line-height: 1.43 !important;
+}
+.g-lh-1_4 {
+    line-height: 1.4 !important;
+}
+.g-lh-1_33 {
+    line-height: 1.33 !important;
+}
+.g-lh-1_3 {
+    line-height: 1.3 !important;
+}
+.g-lh-1_25 {
+    line-height: 1.25 !important;
+}
+.g-lh-1_2 {
+    line-height: 1.2 !important;
+}
+.g-lh-1_17 {
+    line-height: 1.17 !important;
+}
+.g-lh-1 {
+    line-height: 1 !important;
+}
+
+
+
+/*
+*  colors
+*/
+.g-green-bg {
+    background-color: #0cb520 !important;
+}
+.g-green {
+    color: #0db520 !important;
+}
+.g-white {
+    color: white !important;
+}
+.g-black {
+    color: black !important;
+}
+.g-l-gray {
+    color: #a3a3a2;
+}
+
+
+
+/*
+*  Width
+*/
+.g-max-w-570 {
+    max-width: 570px !important;
+}
+.g-max-w-360 {
+    max-width: 360px !important;
+}
+.g-min-w-600 {
+    width: 470px !important;
+}
+.g-full-w {
+    width: 100%;
+}
+
+
+
+/*
+*  Width
+*/
+.g-full-h {
+    height: 100%;;
+}
+
+
+
+/*
+*  margins-bottom
+*/
+.g-mb-280 {
+    margin-bottom: 20rem !important
+}
+.g-mb-80 {
+    margin-bottom: 5.7143rem !important;
+}
+.g-mb-40 {
+    margin-bottom: 2.8571rem !important;
+}
+.g-mb-24 {
+    margin-bottom: 1.7143rem !important;
+}
+.g-mb-16 {
+    margin-bottom: 1.1429rem !important;
+}
+
+
+
+/*
+*  margins-top
+*/
+.g-mt-80 {
+    margin-top: 5.7143rem !important;
+}
+.g-mt-40 {
+    margin-top: 2.8571rem !important;
+}
+.g-mt-10 {
+    margin-top: 10px !important;
+}
+.g-mt-8 {
+    margin-top: 0.5714rem !important;
+}
+
+
+
+/*
+*  padding-top
+*/
+.g-pt-56 {
+    padding-top: 4rem !important;
+}
+.g-pt-32 {
+    padding-top: 2.2857rem !important;
+}
+.g-pt-34 {
+    padding-top: 2.4286rem !important;
+}
+
+
+
+/*
+*  padding-bottom
+*/
+.g-pb-550 {
+    padding-bottom: 39.2857rem !important;
+}
+.g-pb-180 {
+    padding-bottom: 12.8571rem !important;
+}
+.g-pb-34 {
+    padding-bottom: 2.4286rem !important;
+}
+
+
+
+/*
+*  padding vertical
+*/
+.g-py-34 {
+    padding-top: 2.4286rem !important;
+    padding-bottom: 2.4286rem !important;
+}
+
+
+/*
+*  padding horizontal
+*/
+.g-px-90 {
+    padding-left: 6.4286rem !important;
+    padding-right: 6.4286rem !important;
+}
+
+
+/*
+*  flex
+*/
+.g-flex {
+    display: flex !important;
+}
+.g-flex-col {
+    flex-direction: column !important;
+}
+.g-flex-just-sb {
+    justify-content: space-between !important;
+}
+.g-flex-h-end {
+    display: flex;
+    justify-content: flex-end;
+}
+.g-flex-v-center {
+    display: flex;
+    align-items: center;
+}
+
+/*
+* Blocks
+*/
+.g-inline-block {
+    display: inline-block !important;
+}
+.g-block-center-h {
+    margin: 0 auto;
+}
+
+/*
+*  Borders
+*/
+.g-bb-dot-white {
+    padding-bottom: 3px;
+    border-bottom: 2px dotted rgba(255, 255, 255, .7);
+}
+
+
+
+/*
+* Links
+*/
+.g-link-decor {
+    text-decoration: underline;
+}
+.g-link-nodecor {
+    text-decoration: none;
+}
+.link,
+.link:hover {
+    text-decoration: none;
+}
+
+
+
+/*
+* Position
+*/
+.g-position-rel {
+    position: relative;
+}
+.g-position-h-left--65 {
+    position: relative;
+    left: -65px;
+}
+
+
+
+/*
+*  Size
+*/
+.g-img-w-120pr {
+    width: 120%;
+}
+
+
+
+.white-and-yellow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background-color: #ffd600;
+}
+
+.white-and-yellow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 200px;
+    left: -200px;
+    background: linear-gradient(to top left, #ffd600 50%, transparent 50%);
+}
+
+@media (max-width: 992px) {
+    .white-and-yellow {
+        left: 0;
+    }
+
+    .white-and-yellow::before {
+        content: none;
+    }
+}
+
+
+/*
+* Media queries
+*/
+
+@media (max-width: 1200px) {
+    .media-1200-pb-to-pt-400 {
+        padding-top: 400px !important;
+        padding-bottom: 0 !important;
+    }
+}
+@media (max-width: 992px) {
+    .hidden-md-down {
+        display: none !important;
+    }
+}
+@media (min-width: 993px) {
+    .visible-md {
+        display: none
+    }
+}
+
+@media (max-width: 992px) {
+    .visible-md {
+        display: block !important;
+    }
+}
+
+
+.crm-webform-default {
+    border: none !important;
+}
+
+
+.g-bg-top {
+    background-position: top;
+}
+.crm-webform-label {
+    display: none !important;
+}
+.btn-md {
+    display: none !important;
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 1rem;
+    color: #a6a6a6;
+}
+
+/*
+*  HEADER block16270
+*/
+header .navbar a {
+    font-size: 1.1429rem !important;
+    font-weight: 600;
+    letter-spacing: normal;
+    font-stretch: normal;
+}
+
+header .navbar a:hover {
+    color: lightgray !important;
+}
+
+header .g-mx-10--lg {
+    margin-left: 0 !important;
+    margin-right: 24px !important;
+}
+header .g-mx-10--lg:last-child {
+    margin-right: 0 !important;
+}
+header .ml-auto.navbar-nav {
+    margin-left: 0 !important;
+}
+
+header .g-mt-3 {
+    margin-top: 0 !important;
+}
+
+header .g-py-16 {
+    padding-top: 0.3125rem !important;
+    padding-bottom: 0.3125rem !important;
+}
+
+/*
+* Block Search block16272
+*/
+.search-block {
+    padding: 20px 0;
+    color: white;
+}
+
+.search-block span {
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 8px;
+    padding: 3px 5px 3px 25px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 4px;
+}
+
+.search-block span.city {
+    font-size: 1.1429rem;
+    font-weight: 600;
+    margin-right: 16px;
+    border: 0;
+}
+
+.search-block span:last-child {
+    margin-right: 0;
+}
+
+/*
+* Main Slider
+*/
+.slick-slider .g-height-100vh {
+    height: 100% !important;
+}
+
+.slick-slider .g-max-width-550 {
+    max-width: unset !important;
+}
+
+.slick-slider .landing-block-node-card-price {
+    padding: 0 !important;
+}
+
+.slick-slider .landing-block-node-card-title {
+    margin-bottom: 32px !important;
+}
+
+/*
+*   Media block
+*/
+.media .media-body p {
+    margin: 0;
+}
+
+.media .landing-block-node-card-icon-container {
+    font-size: 3.7143rem !important;
+}
+
+.unit-selection {
+    padding: 32px 0;
+}
+.unit-selection h4 {
+    margin: 0 0 16px 0;
+    text-align: center;
+    line-height: 1.33;
+    color: white;
+}
+
+
+/*
+* Banner
+*/
+.banner {
+    max-width: 50vw;
+    min-width: 800px;
+}
+@media (max-width: 1200px) {
+    .banner {
+        max-width: unset;
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+.trapeze-block {
+    position: relative;
+    background-color: #0cb520;
+    /* padding: 56px 100px 56px 200px; */
+}
+.trapeze-block.trapeze-block_right {
+    margin-right: 100px;
+    float: left;
+    padding: 56px 80px 56px 200px;
+}
+@media (max-width: 1200px) {
+    .trapeze-block.trapeze-block_right {
+        padding: 24px 20px;
+    }
+}
+.trapeze-block.trapeze-block_left {
+    margin-left: 100px;
+    float: right;
+    padding: 56px 200px 56px 80px;
+}
+.trapeze-block.trapeze-block_right::after,
+.trapeze-block.trapeze-block_left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 100px;
+}
+
+.trapeze-block.trapeze-block_right::after {
+    right: -100px;
+    background: linear-gradient(to top left, transparent 50%, #0cb520 50%);
+}
+
+.trapeze-block.trapeze-block_left::after {
+    left: -100px;
+    background: linear-gradient(to top left, #0cb520 50%, transparent 50%);
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    font: inherit;
+    line-height: normal;
+    background: 0 0;
+}
+
+/*
+* Button Play
+*/
+.btn-triangle {
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+.btn-triangle .btn-triangle__button {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 63px solid transparent;
+    border-left: 125px solid #0cb520;
+    border-bottom: 63px solid transparent;
+    margin:0 auto;
+    cursor: pointer;
+}
+.btn-triangle .btn-triangle__button::before{
+    content: '';
+    position: absolute;
+    border-top: 25px solid transparent;
+    border-left: 50px solid #0cb520;
+    border-bottom: 25px solid transparent;
+    top: -25px;
+    right: 50px;
+    z-index: 1;
+}
+.btn-triangle .btn-triangle__button::after{
+    content: '';
+    position: absolute;
+    border-top: 35px solid transparent;
+    border-left: 70px solid white;
+    border-bottom: 35px solid transparent;
+    top: -35px;
+    left: -107px;
+}
+.btn-triangle .btn-triangle__description {
+    margin-top: 23px;
+    text-align: center;
+}
+
