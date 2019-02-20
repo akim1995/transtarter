@@ -418,7 +418,6 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { eventBus } from '@/main'
 import { AuthModule } from '@/store/modules/authentication.module'
-import { AuthService } from '@/services/auth.service'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
 
@@ -429,8 +428,6 @@ export default class Header extends Vue {
     location: false,
     user: false
   };
-
-  auth = new AuthService();
 
   toggleRegistrationPopup () {
     store.dispatch('display/toggleRegistration')
@@ -461,6 +458,11 @@ export default class Header extends Vue {
 
   toggleUserMenu () {
     this.blocksShow.user = !this.blocksShow.user
+  }
+
+  mounted () {
+    const { dispatch } = this.$store
+    dispatch('auth/actualizeUser')
   }
 }
 

@@ -38,8 +38,5 @@ import { DisplayModule } from '../store/modules/display.module'
   }
 })
 export default class UserProfile extends Vue {
-  mounted () {
-    const { dispatch } = this.$store
-    dispatch('auth/actualizeUser')
-  }
+
 }
