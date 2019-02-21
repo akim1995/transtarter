@@ -93,7 +93,7 @@
 
         <div class="mobile-version-content-main">
 
-          <RegistrationForm />
+          <ts-ui-registration-form></ts-ui-registration-form>
 
         </div>
       </div>
