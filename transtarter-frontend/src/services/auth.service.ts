@@ -10,6 +10,7 @@ type UserRegistration = {
 export class AuthService {
   private userManager: UserManager;
   private identityServer = process.env.VUE_APP_IDENTITY_SERVER;
+  private identityServerApi = process.env.VUE_APP_IDENTITY_SERVER_API;
 
   constructor () {
     const AUTH0_DOMAIN: string = this.identityServer
@@ -38,7 +39,7 @@ export class AuthService {
   }
 
   public registration (user: UserRegistration) {
-    return axios.post<boolean>(`${this.identityServer}/api/account/register`, user)
+    return axios.post<boolean>(`${this.identityServerApi}/api/account/register`, user)
   }
 
   public getUser (): Promise<User> {
