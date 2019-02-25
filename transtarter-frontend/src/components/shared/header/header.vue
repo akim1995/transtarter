@@ -17,7 +17,7 @@
               <a href="/delivery">Доставка и оплата</a>
             </li>
             <li class="desktop-header__menu-item">
-              <a href="/about-company" class="active">О компании</a>
+              <a href="/about-company">О компании</a>
             </li>
             <li class="desktop-header__menu-item">
               <a href="/auto-workshops">Найти точку ремонта</a>

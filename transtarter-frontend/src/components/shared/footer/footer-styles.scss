@@ -6,6 +6,9 @@
         background-color: $mine-shaft;
         color: $silver-chalice;
         .cards_group {
+            .card_header_logo {
+                margin-bottom: 10px;
+            }
             display: flex;
             width: 100%;
             margin-bottom: 22px;
@@ -14,9 +17,7 @@
             }
             &__card {
                 width: 100%;
-                &_header_logo {
-                    margin-bottom: 10px;
-                }
+                
                 &_header {
                     font-family: 'Exo 2';
                     font-size: 16px;
@@ -26,11 +27,7 @@
                 }
                 &_body .links {
                     .links-item {
-                        padding-bottom: 6px;
-
-                        .cards_group__card_link {
-                            color: #E9E9E9;
-                        }
+                        padding-bottom: 6px;                        
                     }
                     .mb-20 {
                         margin-bottom: 20px;
@@ -50,7 +47,7 @@
                     font-size: 1.5rem;
                 }
                 &_soc-list {
-                    margin-top: 15px;
+                    margin-top: 3px;
                     margin-left: 5px;
                     display: flex;
                     justify-content: space-between;
@@ -144,7 +141,7 @@
                         color: $white;
                         margin-bottom: 28px;
                         .links-item {
-                            padding-bottom: 0;
+                            padding-bottom: 0;                            
                             .card_link {
                                 color: $mercury-approx;
                             }
