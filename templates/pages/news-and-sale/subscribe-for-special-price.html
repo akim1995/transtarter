@@ -18,18 +18,19 @@
                 <div class="landing-block-node-card-contact">
                     <div class="media align-items-center mb-4">
                         <div class="media-body">
-                            <div class="landing-block-node-contact-text mb-0 text-left g-white"
+                            <div class="landing-block-node-contact-text mb-0 text-left g-white flex-column-center"
                                 style="font-family: Exo 2;">
                                 <p style="font-size: 32px;">
                                     и первыми узнавайте о новых поступлениях товара
-                                </p>                                
+                                </p>
                                 <div style="line-height: 28px; font-size: 20px; margin: 41px 0 22px;">
                                     <p>Специальная цена доступна только для оптовых клиентов.</p>
-                                    <p style="font-weight: bold;">Зарегистрируйтесь, чтобы покупать запчасти со скидкой</p>
+                                    <p style="font-weight: bold;">Зарегистрируйтесь, чтобы покупать запчасти со скидкой
+                                    </p>
                                 </div>
-                                
-                                
-                                <button class="btn btn-orange landing-btn-reg">Зарегистрироваться</button>
+
+
+                                <ts-ui-reg-btn></ts-ui-reg-btn>
                             </div>
                         </div>
                     </div>
@@ -68,34 +69,31 @@
         margin-bottom: 36px;
     }
 
-    .btn {
-        height: 48px;
-        border-radius: 4px;
-        font-size: 17px;
-        font-weight: 600;
-        line-height: 1.41;
-        color: #323230;
-        border-width: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 24px;
-        font-family: 'Exo 2';
-    }
+    @media (max-width: 768px) {
+        .news-and-sales {
+            height: auto;
+            width: 100%;
+            min-height: auto;
+        }
 
-    .btn-orange {
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19), 0 1px 0 0 #e29401;
-        background-image: linear-gradient(to bottom, #ffd600, #ffc600);
+        .news-and-sales .bg-image {
+            width: 100%;
+            height: 100%;
+            min-height: auto;
+        }
+
+        .news-and-sales .bg-image .overflow-text{
+            padding: 50px;
+        }
+        .news-and-sales .bg-image .overflow-text * {
+            text-align: center !important;
+        }
+
+        .news-and-sales .flex-column-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 </style>
-
-<script>
-
-window.onload = function() {
-    document.querySelector('.landing-btn-reg').addEventListener('click', function() {
-        document.querySelector('a.border.register').click();
-    });
-}
-
-
-</script>

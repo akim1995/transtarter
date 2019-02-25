@@ -1,15 +1,15 @@
 
 <template>
   <button
-    class="btn btn-orange"
+    class="btn btn-orange btn-reg"
     @click="toggleRegistrationPopup"
   >Зарегистрироваться</button>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { eventBus } from '@/main';
-import { store } from '@/store/index';
+import { Component, Vue } from 'vue-property-decorator'
+import { eventBus } from '@/main'
+import { store } from '@/store/index'
 
 @Component
 export default class RegBtn extends Vue {
@@ -25,7 +25,7 @@ export default class RegBtn extends Vue {
   width: 352px;
 }
 
-@media (max-width: 756px) {
+@media (max-width: 768px) {
   .btn-reg {
     width: 100%;
   }
