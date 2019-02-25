@@ -27,6 +27,10 @@
                 &_body .links {
                     .links-item {
                         padding-bottom: 6px;
+
+                        .cards_group__card_link {
+                            color: #E9E9E9;
+                        }
                     }
                     .mb-20 {
                         margin-bottom: 20px;
