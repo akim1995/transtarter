@@ -11,19 +11,16 @@
           </div>
           <ul class="desktop-header__menu-list">
             <li class="desktop-header__menu-item">
-              <a href="#">Акции и новинки</a>
+              <a href="/special-offers">Акции и новинки</a>
             </li>
             <li class="desktop-header__menu-item">
-              <a href="#">Доставка и оплата</a>
+              <a href="/delivery">Доставка и оплата</a>
             </li>
             <li class="desktop-header__menu-item">
-              <a
-                href="#"
-                class="active"
-              >О компании</a>
+              <a href="/about-company" class="active">О компании</a>
             </li>
             <li class="desktop-header__menu-item">
-              <a href="#">Найти точку ремонта</a>
+              <a href="/auto-workshops">Найти точку ремонта</a>
             </li>
             <li class="desktop-header__menu-item">
               <a href="#">Контакты</a>
