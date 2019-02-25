@@ -21,7 +21,6 @@ export default class RegBtn extends Vue {
 
 <style lang="scss">
 .btn-reg {
-  padding: 20px 0;
   width: 352px;
 }
 
