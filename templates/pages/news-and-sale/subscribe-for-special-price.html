@@ -1,0 +1,101 @@
+<!-- block for copy -->
+<div class="news-and-sales">
+    <div class="bg-image">
+        <div class="overflow-text customized-trapeze-block banner trapeze-block trapeze-block_left g-white g-z-index-1 g-pos-rel js-animation slideInRight"
+            style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+            <div class="landing-block-node-text js-animation fadeInUp g-line-height-1_5 text-left g-mb-40 g-color-white"
+                data-form-style-main-font-weight="1" data-form-style-header-text-font-size="1"
+                data-form-style-label-font-weight="1" data-form-style-label-font-size="1"
+                data-form-style-second-font-color="1" data-selector=".landing-block-node-text@0"
+                style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
+
+                <h3 class="text-center-mobile g-font-exo g-font-700 g-lh-1_2 g-mb-40 main-title">
+                    Участвуйте
+                    в акциях от «Транс Стартер»
+                </h3>
+            </div>
+            <div class="landing-block-node-card-contact-container">
+                <div class="landing-block-node-card-contact">
+                    <div class="media align-items-center mb-4">
+                        <div class="media-body">
+                            <div class="landing-block-node-contact-text mb-0 text-left g-white"
+                                style="font-family: Exo 2;">
+                                <p style="font-size: 32px;">
+                                    и первыми узнавайте о новых поступлениях товара
+                                </p>                                
+                                <div style="line-height: 28px; font-size: 20px; margin: 41px 0 22px;">
+                                    <p>Специальная цена доступна только для оптовых клиентов.</p>
+                                    <p style="font-weight: bold;">Зарегистрируйтесь, чтобы покупать запчасти со скидкой</p>
+                                </div>
+                                
+                                
+                                <button class="btn btn-orange landing-btn-reg">Зарегистрироваться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- block for copy -->
+
+
+<style>
+    .news-and-sales {
+        height: 100vh;
+        width: 100%;
+        min-height: 630px;
+    }
+
+    .news-and-sales .bg-image {
+        width: 100%;
+        height: 100%;
+        background-image: url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png");
+        background-image: -webkit-image-set(url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png") 1x, url("https://cdn.bitrix24.ru/b488493/landing/282/28262c832c887b952db281e81b4f728c/Rectangle_49_2x.png") 2x);
+        background-image: image-set(url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png") 1x, url("https://cdn.bitrix24.ru/b488493/landing/282/28262c832c887b952db281e81b4f728c/Rectangle_49_2x.png") 2x);
+        background-size: cover;
+        min-height: 630px;
+    }
+
+    .news-and-sales .bg-image .overflow-text {
+        height: 100%;
+    }
+
+    .news-and-sales .bg-image .overflow-text .main-title {
+        font-size: 60px;
+        margin-bottom: 36px;
+    }
+
+    .btn {
+        height: 48px;
+        border-radius: 4px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.41;
+        color: #323230;
+        border-width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        font-family: 'Exo 2';
+    }
+
+    .btn-orange {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19), 0 1px 0 0 #e29401;
+        background-image: linear-gradient(to bottom, #ffd600, #ffc600);
+    }
+</style>
+
+<script>
+
+window.onload = function() {
+    document.querySelector('.landing-btn-reg').addEventListener('click', function() {
+        document.querySelector('a.border.register').click();
+    });
+}
+
+
+</script>

@@ -1,0 +1,33 @@
+
+<template>
+  <button
+    class="btn btn-orange"
+    @click="toggleRegistrationPopup"
+  >Зарегистрироваться</button>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import { eventBus } from '@/main';
+import { store } from '@/store/index';
+
+@Component
+export default class RegBtn extends Vue {
+  toggleRegistrationPopup () {
+    store.dispatch('display/toggleRegistration')
+  }
+}
+</script>
+
+<style lang="scss">
+.btn-reg {
+  padding: 20px 0;
+  width: 352px;
+}
+
+@media (max-width: 756px) {
+  .btn-reg {
+    width: 100%;
+  }
+}
+</style>
