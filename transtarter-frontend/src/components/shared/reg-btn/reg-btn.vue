@@ -22,11 +22,13 @@ export default class RegBtn extends Vue {
 <style lang="scss">
 .btn-reg {
   width: 352px;
+  height: 72px;
 }
 
 @media (max-width: 768px) {
   .btn-reg {
     width: 100%;
+    height: 40px;
   }
 }
 </style>

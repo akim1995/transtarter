@@ -1,60 +1,153 @@
 <section class="subscribe-mailer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 order-1 order-md-2 smartphone-bg">
-                <img class="smartphone-pic"
-                    src="https://cdn.bitrix24.ru/b488493/landing/9ee/9ee3467e8dab0e1c366824c91be72597/pic.png"
-                    alt="smartphone pic">
-            </div>
-            <div class="col-md-6 d-flex text-center text-md-left order-1 order-md-2">
-                <div class="align-self-center">
-                    <div class=" g-mb-20">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-1 order-md-2 smartphone-bg">
+        <img
+          class="smartphone-pic desktop-pic"
+          src="https://cdn.bitrix24.ru/b488493/landing/9ee/9ee3467e8dab0e1c366824c91be72597/pic.png"
+          alt="smartphone pic"
+        />
+        <img
+          class="smartphone-pic mobile-pic"
+          src="https://cdn.bitrix24.ru/b488493/landing/420/420cffdb9eb1038a1876236b671acbbb/pic.png"
+          alt="smartphone pic"
+        />
+      </div>
+      <div class="col-md-6 d-flex text-center text-md-left order-1 order-md-2">
+        <div class="align-self-center">
+          <div class=" g-mb-20">
+            <div
+              class="landing-block-node-text g-line-height-1_5 text-left g-mb-40 g-color-white"
+            >
+              <p class="text-center g-font-size-26">
+                <b class="notification-title">
+                  <span class="green-border"
+                    >Подпишитесь <br />
+                    на рассылку</span
+                  >
+                  — и первыми <br />
 
-                        <div class="landing-block-node-text g-line-height-1_5 text-left g-mb-40 g-color-white">
-                            <p class="text-center g-font-size-26"> <b>Подпишитесь <br> на рассылку - и первыми <br>
-                                    получайте уведомления <br>о скидках </b></p>
-                        </div>
-                        <div class="media-body">
-                            <div class="landing-block-node-contact-text ">
-                                <p class="text-center g-font-size-14 g-color-white">Мы будем присылать подробности акций
-                                    на
-                                    email <br> и sms-уведомления, чтобы вы не пропустили скидки</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bitrix24forms landing-block-node-form js-animation fadeInUp g-brd-none g-brd-around--sm g-brd-white-opacity-0_6 g-px-0 g-px-20--sm g-px-45--lg g-py-0 g-py-30--sm g-py-10--lg u-form-alert-v1"
-                        data-b24form="184|r0o0bf" data-form-style-input-border-color="1" data-b24form-use-style="Y"
-                        data-b24form-show-header="N" data-b24form-original-domain="https://tstarter.bitrix24.ru"></div>
-                    <div class="landing-block-node-card-contact">
-                        <div class="media align-items-center mb-4">
-                            <div class="media-body">
-                                <div class="landing-block-node-contact-text ">
-                                    <p class="text-center g-font-size-11 g-color-white">Нажимая на кнопку, вы даете
-                                        согласие
-                                        на обработку своих персональных данных и соглашаетесь с Политикой
-                                        конфиденциальности
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  получайте уведомления <br />о скидках
+                </b>
+              </p>
+            </div>
+            <div class="media-body">
+              <div class="landing-block-node-contact-text ">
+                <p
+                  class="text-center g-font-size-14 g-color-white what-form-about"
+                >
+                  Мы будем присылать подробности акций на email <br />
+                  и sms-уведомления, чтобы вы не пропустили скидки
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bitrix24forms landing-block-node-form js-animation fadeInUp g-brd-none g-brd-around--sm g-px-0 g-px-20--sm g-px-45--lg g-py-0 g-py-30--sm g-py-10--lg u-form-alert-v1"
+            data-b24form="190|wmahas"
+            data-form-style-input-border-color="1"
+            data-b24form-use-style="Y"
+            data-b24form-show-header="N"
+            data-b24form-original-domain="https://tstarter.bitrix24.ru"
+          ></div>
+          <div class="landing-block-node-card-contact">
+            <div class="media align-items-center mb-4">
+              <div class="media-body">
+                <div class="landing-block-node-contact-text ">
+                  <p
+                    class="text-center g-font-size-11 g-color-white policy-text"
+                  >
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных и соглашаетесь с
+                    <a
+                      href="/politika"
+                      class="policy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Политикой конфиденциальности.</a
+                    >
+                  </p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-
-
+  </div>
 </section>
 
 <style>
-    .subscribe-mailer {
+  .subscribe-mailer {
+    background-color: #383838;
+  }
 
-        background-color: #383838;
+  .subscribe-mailer .smartphone-pic {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+  }
+
+  .subscribe-mailer .notification-title {
+    font-family: "Exo 2";
+    font-weight: bold;
+    line-height: 48px;
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .subscribe-mailer .green-border {
+    border-bottom: 4px solid #0cb520;
+  }
+
+  .subscribe-mailer .policy-text {
+    font-family: "PT Sans";
+    font-weight: normal;
+    line-height: 20px;
+    font-size: 14px !important;
+    text-align: center;
+    color: #a3a3a2 !important;
+    padding: 0 30px;
+  }
+
+  .subscribe-mailer a:hover {
+    text-decoration: none !important;
+    color: #a3a3a2 !important;
+  }
+  .subscribe-mailer .policy {
+    color: #a3a3a2 !important;
+    border-bottom: 1px solid #a3a3a2;
+  }
+
+  .subscribe-mailer .what-form-about {
+    font-family: "PT Sans";
+    font-weight: normal;
+    line-height: 28px;
+    font-size: 20px !important;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: -20px;
+  }
+
+  .subscribe-mailer .mobile-pic {
+    display: none;
+  }
+  .subscribe-mailer .desktop-pic {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .subscribe-mailer .mobile-pic {
+      display: block !important;
+    }
+
+    .subscribe-mailer .desktop-pic {
+      display: none !important;
     }
 
     .subscribe-mailer .smartphone-pic {
-        width: 100%;
-    height: auto;
-    padding-top: 80px;
+      padding-top: 50px !important;
     }
+  }
 </style>
