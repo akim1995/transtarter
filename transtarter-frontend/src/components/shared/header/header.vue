@@ -7,7 +7,7 @@
       <div class="desktop-header__menu">
         <div class="desktop-header__left">
           <div class="desktop-header__logo">
-            Транс Стартер
+            <a href="~/">Транс Стартер</a>
           </div>
           <ul class="desktop-header__menu-list">
             <li class="desktop-header__menu-item">
@@ -23,7 +23,7 @@
               <a href="/auto-workshops">Найти точку ремонта</a>
             </li>
             <li class="desktop-header__menu-item">
-              <a href="#">Контакты</a>
+              <a href="/contacts">Контакты</a>
             </li>
             <li class="desktop-header__menu-item">
               <a href="#">Блог</a>
