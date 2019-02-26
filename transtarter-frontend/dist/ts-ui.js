@@ -5815,7 +5815,7 @@ class auth_service_AuthService {
       }),
       authority: AUTH0_DOMAIN,
       client_id: 'kl',
-      redirect_uri: `${MY_HOST}/callback`,
+      redirect_uri: `${MY_HOST}/callback.html`,
       post_logout_redirect_uri: `${MY_HOST}/`,
       response_type: 'id_token token',
       scope: 'openid profile roles',
