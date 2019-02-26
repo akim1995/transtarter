@@ -1,0 +1,83 @@
+<div class="card-cash container">
+  <div class="row">
+    <div class="col-md-6 col-12 mb-50-mobile">
+      <div class="item">
+        <div class="item-pic-cash"></div>
+        <div class="item-text">Наличный<br />расчет</div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12">
+      <div class="item">
+        <div class="item-pic-card"></div>
+        <div class="item-text">Безналичный<br />расчет</div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="mobile-hr" />
+
+<style>
+  .card-cash {
+    margin-bottom: 60px;
+  }
+
+  .card-cash .item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-cash .item-pic-cash {
+    background-image: url("https://cdn.bitrix24.ru/b488493/landing/fff/fffeaf65d639d21d45b2848c487e8dcf/nal_2x.jpg");
+    background-size: contain;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .card-cash .item-pic-card {
+    background-image: url("https://cdn.bitrix24.ru/b488493/landing/990/990d3c4484e12565443ae06ce6e2c4c7/beznal_2x.jpg");
+    background-size: contain;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .card-cash .item-text {
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: bold;
+    line-height: 64px;
+    font-size: 56px;
+    text-align: center;
+
+    color: #0cb520;
+  }
+
+  .mobile-hr {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .card-cash {
+      margin-bottom: 0;
+    }
+
+    .mb-50-mobile {
+      margin-bottom: 50px;
+    }
+
+    .mobile-hr {
+      display: block;
+      margin: 50px 0;
+    }
+
+    .card-cash .item-pic-card,
+    .card-cash .item-pic-cash {
+      height: 150px;
+    }
+
+    .card-cash .item-text {
+      line-height: 32px;
+      font-size: 24px;
+      margin-top: -20px;
+    }
+  }
+</style>
