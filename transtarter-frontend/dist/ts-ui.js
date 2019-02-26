@@ -5808,7 +5808,7 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 class auth_service_AuthService {
   constructor() {
     this.identityServer = "https://identity-test.tstarter.ru";
-    this.identityServerApi = "https://identity-test.tstarter.ru";
+    this.identityServerApi = "https://identity-api-test.tstarter.ru";
     var AUTH0_DOMAIN = this.identityServer;
     var MY_HOST = "https://b24-fpukiw.bitrix24.site";
     var settings = {
