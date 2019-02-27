@@ -750,6 +750,18 @@ module.exports = function (iterator, fn, value, entries) {
 
 /***/ }),
 
+/***/ "1fb7":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_c0fe938c_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("ea81");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_c0fe938c_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_c0fe938c_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_c0fe938c_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_c0fe938c_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_c0fe938c_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
 /***/ "230e":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3562,12 +3574,12 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in/log-in.vue?vue&type=template&id=117e7b93&scoped=true&shadow
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.showBlockYourCity)?_c('div',{staticClass:"log-in modal-wrapper"},[_c('div',{staticClass:"modal-popup"},[_c('div',{staticClass:"modal-content log-in-content "},[_c('div',{staticClass:"close",on:{"click":function($event){_vm.toggleLogInPopup()}}},[_vm._v("✖")]),_c('div',{staticClass:"title bold"},[_vm._v("\n        Вход на сайт\n      ")]),_c('form',{staticClass:"log-in-form",on:{"submit":function($event){$event.preventDefault();return _vm.login($event)}}},[_c('button',{staticClass:"btn btn-orange btn-log-in",attrs:{"type":"submit"}},[_vm._v("\n          Войти через IdentityServer\n        ")])]),_c('div',{staticClass:"want-to-reg"},[_vm._v("\n        Впервые на сайте?\n        "),_c('a',{staticClass:"go-to-reg",on:{"click":function($event){_vm.closeLogInAndOpenRestration()}}},[_vm._v("Зарегистрироваться")])])])])]):_vm._e()}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in/log-in.vue?vue&type=template&id=c0fe938c&scoped=true&shadow
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.modalIsOpened)?_c('div',{staticClass:"log-in modal-wrapper"},[_c('div',{staticClass:"modal-popup"},[_c('div',{staticClass:"modal-content log-in-content "},[_c('div',{staticClass:"close",on:{"click":function($event){_vm.toggleLogInPopup()}}},[_vm._v("✖")]),_c('div',{staticClass:"title bold"},[_vm._v("\n        Вход на сайт\n      ")]),_c('form',{staticClass:"log-in-form",on:{"submit":function($event){$event.preventDefault();return _vm.login($event)}}},[_c('button',{staticClass:"btn btn-orange btn-log-in",attrs:{"type":"submit"}},[_vm._v("\n          Войти через IdentityServer\n        ")])]),_c('div',{staticClass:"want-to-reg"},[_vm._v("\n        Впервые на сайте?\n        "),_c('a',{staticClass:"go-to-reg",on:{"click":function($event){_vm.closeLogInAndOpenRestration()}}},[_vm._v("Зарегистрироваться")])])])])]):_vm._e()}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/authorization/log-in/log-in.vue?vue&type=template&id=117e7b93&scoped=true&shadow
+// CONCATENATED MODULE: ./src/components/authorization/log-in/log-in.vue?vue&type=template&id=c0fe938c&scoped=true&shadow
 
 // CONCATENATED MODULE: ./node_modules/tslib/tslib.es6.js
 /*! *****************************************************************************
@@ -3909,496 +3921,6 @@ var closable_popup_ClosablePopup = class ClosablePopup extends external_Vue_defa
 };
 closable_popup_ClosablePopup = __decorate([vue_class_component_common_default.a], closable_popup_ClosablePopup);
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/values.js
-var values = __webpack_require__("db0c");
-var values_default = /*#__PURE__*/__webpack_require__.n(values);
-
-// CONCATENATED MODULE: ./node_modules/vuex-module-decorators/dist/esm/index.js
-var VuexModule = /** @class */ (function () {
-    function VuexModule(module) {
-        this.actions = module.actions;
-        this.mutations = module.mutations;
-        this.state = module.state;
-        this.getters = module.getters;
-        this.namespaced = module.namespaced;
-        this.modules = module.modules;
-    }
-    return VuexModule;
-}());
-function getModule(moduleClass, store) {
-    if (moduleClass._statics) {
-        return moduleClass._statics;
-    }
-    var genStatic = moduleClass._genStatic;
-    if (!genStatic) {
-        throw new Error("ERR_GET_MODULE_NO_STATICS : Could not get module accessor. \n      Make sure your module has name, we can't make accessors for unnamed modules\n      i.e. @Module({ 'something' })");
-    }
-    return (moduleClass._statics = genStatic(store));
-}
-
-var reservedKeys = ['actions', 'getters', 'mutations', 'modules', 'state', 'namespaced', 'commit'];
-function stateFactory(module) {
-    var state = new module.prototype.constructor({});
-    var s = {};
-    Object.keys(state).forEach(function (key) {
-        if (reservedKeys.indexOf(key) !== -1) {
-            if (typeof state[key] !== 'undefined') {
-                throw new Error("ERR_RESERVED_STATE_KEY_USED: You cannot use the following\n        ['actions', 'getters', 'mutations', 'modules', 'state', 'namespaced', 'commit']\n        as fields in your module. These are reserved as they have special purpose in Vuex");
-            }
-            return;
-        }
-        if (state.hasOwnProperty(key)) {
-            if (typeof state[key] !== 'function') {
-                s[key] = state[key];
-            }
-        }
-    });
-    return s;
-}
-
-/**
- * Takes the properties on object from parameter source and adds them to the object
- * parameter target
- * @param {object} target  Object to have properties copied onto from y
- * @param {object} source  Object with properties to be copied to x
- */
-function addPropertiesToObject(target, source) {
-    var _loop_1 = function (k) {
-        Object.defineProperty(target, k, {
-            get: function () { return source[k]; }
-        });
-    };
-    for (var _i = 0, _a = Object.keys(source || {}); _i < _a.length; _i++) {
-        var k = _a[_i];
-        _loop_1(k);
-    }
-}
-
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-function esm_awaiter(thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-}
-
-function esm_generator(thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-}
-
-function staticStateGenerator(module, modOpt, statics) {
-    Object.keys(module.state).forEach(function (key) {
-        if (module.state.hasOwnProperty(key)) {
-            // If not undefined or function means it is a state value
-            if (['undefined', 'function'].indexOf(typeof module.state[key]) === -1) {
-                Object.defineProperty(statics, key, {
-                    get: function () {
-                        return modOpt.store.state[modOpt.name][key];
-                    }
-                });
-            }
-        }
-    });
-}
-function staticGetterGenerator(module, modOpt, statics) {
-    Object.keys(module.getters).forEach(function (key) {
-        if (module.namespaced) {
-            Object.defineProperty(statics, key, {
-                get: function () {
-                    return modOpt.store.getters[modOpt.name + "/" + key];
-                }
-            });
-        }
-        else {
-            Object.defineProperty(statics, key, {
-                get: function () {
-                    return modOpt.store.getters[key];
-                }
-            });
-        }
-    });
-}
-function staticMutationGenerator(module, modOpt, statics) {
-    Object.keys(module.mutations).forEach(function (key) {
-        if (module.namespaced) {
-            statics[key] = function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                var _a;
-                (_a = modOpt.store).commit.apply(_a, [modOpt.name + "/" + key].concat(args));
-            };
-        }
-        else {
-            statics[key] = function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                var _a;
-                (_a = modOpt.store).commit.apply(_a, [key].concat(args));
-            };
-        }
-    });
-}
-function staticActionGenerators(module, modOpt, statics) {
-    Object.keys(module.actions).forEach(function (key) {
-        if (module.namespaced) {
-            statics[key] = function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return esm_awaiter(this, void 0, void 0, function () {
-                    var _a;
-                    return esm_generator(this, function (_b) {
-                        return [2 /*return*/, (_a = modOpt.store).dispatch.apply(_a, [modOpt.name + "/" + key].concat(args))];
-                    });
-                });
-            };
-        }
-        else {
-            statics[key] = function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return esm_awaiter(this, void 0, void 0, function () {
-                    var _a;
-                    return esm_generator(this, function (_b) {
-                        return [2 /*return*/, (_a = modOpt.store).dispatch.apply(_a, [key].concat(args))];
-                    });
-                });
-            };
-        }
-    });
-}
-
-function moduleDecoratorFactory(moduleOptions) {
-    return function (constructor) {
-        var module = constructor;
-        var stateFactory$$1 = function () { return stateFactory(module); };
-        if (!module.state) {
-            module.state = moduleOptions && moduleOptions.stateFactory ? stateFactory$$1 : stateFactory$$1();
-        }
-        if (!module.getters) {
-            module.getters = {};
-        }
-        module.namespaced = moduleOptions && moduleOptions.namespaced;
-        Object.getOwnPropertyNames(module.prototype).forEach(function (funcName) {
-            var descriptor = Object.getOwnPropertyDescriptor(module.prototype, funcName);
-            if (descriptor.get && module.getters) {
-                module.getters[funcName] = function (state, getters, rootState, rootGetters) {
-                    var thisObj = { context: { state: state, getters: getters, rootState: rootState, rootGetters: rootGetters } };
-                    addPropertiesToObject(thisObj, state);
-                    addPropertiesToObject(thisObj, getters);
-                    var got = descriptor.get.call(thisObj);
-                    return got;
-                };
-            }
-        });
-        var modOpt = moduleOptions;
-        if (modOpt.name) {
-            Object.defineProperty(constructor, '_genStatic', {
-                value: function (store) {
-                    var statics = {};
-                    modOpt.store = modOpt.store || store;
-                    if (!modOpt.store) {
-                        throw new Error("ERR_STORE_NOT_PROVIDED: To use getModule(), either the module\n            should be decorated with store in decorator, i.e. @Module({store: store}) or\n            store should be passed when calling getModule(), i.e. getModule(MyModule, this.$store)");
-                    }
-                    // ===========  For statics ==============
-                    // ------ state -------
-                    staticStateGenerator(module, modOpt, statics);
-                    // ------- getters -------
-                    if (module.getters) {
-                        staticGetterGenerator(module, modOpt, statics);
-                    }
-                    // -------- mutations --------
-                    if (module.mutations) {
-                        staticMutationGenerator(module, modOpt, statics);
-                    }
-                    // -------- actions ---------
-                    if (module.actions) {
-                        staticActionGenerators(module, modOpt, statics);
-                    }
-                    return statics;
-                }
-            });
-        }
-        if (modOpt.dynamic) {
-            if (!modOpt.name) {
-                throw new Error('Name of module not provided in decorator options');
-            }
-            modOpt.store.registerModule(modOpt.name, // TODO: Handle nested modules too in future
-            module);
-        }
-        return constructor;
-    };
-}
-function Module(modOrOpt) {
-    if (typeof modOrOpt === 'function') {
-        /*
-         * @Module decorator called without options (directly on the class definition)
-         */
-        moduleDecoratorFactory({})(modOrOpt);
-    }
-    else {
-        /*
-         * @Module({...}) decorator called with options
-         */
-        return moduleDecoratorFactory(modOrOpt);
-    }
-}
-
-function actionDecoratorFactory(params) {
-    var _a = params || {}, _b = _a.commit, commit = _b === void 0 ? undefined : _b, _c = _a.rawError, rawError = _c === void 0 ? false : _c;
-    return function (target, key, descriptor) {
-        var module = target.constructor;
-        if (!module.actions) {
-            module.actions = {};
-        }
-        var actionFunction = descriptor.value;
-        var action = function (context, payload) {
-            return esm_awaiter(this, void 0, void 0, function () {
-                var actionPayload, moduleAccessor, thisObj, e_1;
-                return esm_generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            _a.trys.push([0, 5, , 6]);
-                            actionPayload = null;
-                            if (!module._genStatic) return [3 /*break*/, 2];
-                            moduleAccessor = getModule(module);
-                            moduleAccessor.context = context;
-                            return [4 /*yield*/, actionFunction.call(moduleAccessor, payload)];
-                        case 1:
-                            actionPayload = _a.sent();
-                            return [3 /*break*/, 4];
-                        case 2:
-                            thisObj = { context: context };
-                            addPropertiesToObject(thisObj, context.state);
-                            addPropertiesToObject(thisObj, context.getters);
-                            return [4 /*yield*/, actionFunction.call(thisObj, payload)];
-                        case 3:
-                            actionPayload = _a.sent();
-                            _a.label = 4;
-                        case 4:
-                            if (commit) {
-                                context.commit(commit, actionPayload);
-                            }
-                            return [2 /*return*/, actionPayload];
-                        case 5:
-                            e_1 = _a.sent();
-                            throw rawError
-                                ? e_1
-                                : new Error('ERR_ACTION_ACCESS_UNDEFINED: Are you trying to access ' +
-                                    'this.someMutation() or this.someGetter inside an @Action? \n' +
-                                    'That works only in dynamic modules. \n' +
-                                    'If not dynamic use this.context.commit("mutationName", payload) ' +
-                                    'and this.context.getters["getterName"]' +
-                                    '\n' +
-                                    new Error("Could not perform action " + key.toString()).stack +
-                                    '\n' +
-                                    e_1.stack);
-                        case 6: return [2 /*return*/];
-                    }
-                });
-            });
-        };
-        module.actions[key] = action;
-    };
-}
-/**
- * The @Action decorator turns an async function into an Vuex action
- *
- * @param targetOrParams the module class
- * @param key name of the action
- * @param descriptor the action function descriptor
- * @constructor
- */
-function Action(targetOrParams, key, descriptor) {
-    if (!key && !descriptor) {
-        /*
-         * This is the case when `targetOrParams` is params.
-         * i.e. when used as -
-         * <pre>
-            @Action({commit: 'incrCount'})
-            async getCountDelta() {
-              return 5
-            }
-         * </pre>
-         */
-        return actionDecoratorFactory(targetOrParams);
-    }
-    else {
-        /*
-         * This is the case when @Action is called on action function
-         * without any params
-         * <pre>
-         *   @Action
-         *   async doSomething() {
-         *    ...
-         *   }
-         * </pre>
-         */
-        actionDecoratorFactory()(targetOrParams, key, descriptor);
-    }
-}
-
-function Mutation(target, key, descriptor) {
-    var module = target.constructor;
-    if (!module.mutations) {
-        module.mutations = {};
-    }
-    var mutationFunction = descriptor.value ? descriptor.value : function () {
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        return ({});
-    };
-    var mutation = function (state, payload) {
-        mutationFunction.call(state, payload);
-    };
-    module.mutations[key] = mutation;
-}
-
-function mutationActionDecoratorFactory(params) {
-    return function (target, key, descriptor) {
-        var module = target.constructor;
-        if (!module.mutations) {
-            module.mutations = {};
-        }
-        if (!module.actions) {
-            module.actions = {};
-        }
-        var mutactFunction = descriptor.value;
-        var action = function (context, payload) {
-            return esm_awaiter(this, void 0, void 0, function () {
-                var actionPayload, e_1;
-                return esm_generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            _a.trys.push([0, 2, , 3]);
-                            return [4 /*yield*/, mutactFunction.call(context, payload)];
-                        case 1:
-                            actionPayload = _a.sent();
-                            context.commit(key, actionPayload);
-                            return [3 /*break*/, 3];
-                        case 2:
-                            e_1 = _a.sent();
-                            if (params.rawError) {
-                                throw e_1;
-                            }
-                            else {
-                                console.error('Could not perform action ' + key.toString());
-                                console.error(e_1);
-                            }
-                            return [3 /*break*/, 3];
-                        case 3: return [2 /*return*/];
-                    }
-                });
-            });
-        };
-        var mutation = function (state, payload) {
-            if (!params.mutate) {
-                params.mutate = Object.keys(payload);
-            }
-            for (var _i = 0, _a = params.mutate; _i < _a.length; _i++) {
-                var stateItem = _a[_i];
-                if (state.hasOwnProperty(stateItem) && payload.hasOwnProperty(stateItem)) {
-                    state[stateItem] = payload[stateItem];
-                }
-                else {
-                    throw new Error("ERR_MUTATE_PARAMS_NOT_IN_PAYLOAD\n          In @MutationAction, mutate: ['a', 'b', ...] array keys must\n          match with return type = {a: {}, b: {}, ...} and must\n          also be in state.");
-                }
-            }
-        };
-        module.actions[key] = action;
-        module.mutations[key] = mutation;
-    };
-}
-/**
- * The @MutationAction decorator turns this into an action that further calls a mutation
- * Both the action and the mutation are generated for you
- *
- * @param paramsOrTarget the params or the target class
- * @param key the name of the function
- * @param descriptor the function body
- * @constructor
- */
-function MutationAction(paramsOrTarget, key, descriptor) {
-    if (!key && !descriptor) {
-        /*
-         * This is the case when `paramsOrTarget` is params.
-         * i.e. when used as -
-         * <pre>
-            @MutationAction({mutate: ['incrCount']})
-            async getCountDelta() {
-              return {incrCount: 5}
-            }
-         * </pre>
-         */
-        return mutationActionDecoratorFactory(paramsOrTarget);
-    }
-    else {
-        /*
-         * This is the case when `paramsOrTarget` is target.
-         * i.e. when used as -
-         * <pre>
-            @MutationAction
-            async getCountDelta() {
-              return {incrCount: 5}
-            }
-         * </pre>
-         */
-        mutationActionDecoratorFactory({})(paramsOrTarget, key, descriptor);
-    }
-}
-
-
-//# sourceMappingURL=index.js.map
-
 // CONCATENATED MODULE: ./node_modules/vuex/dist/vuex.esm.js
 /**
  * vuex v3.1.0
@@ -4490,7 +4012,7 @@ function assert (condition, msg) {
 }
 
 // Base data struct for store's module, package with some attribute and method
-var vuex_esm_Module = function Module (rawModule, runtime) {
+var Module = function Module (rawModule, runtime) {
   this.runtime = runtime;
   // Store some children item
   this._children = Object.create(null);
@@ -4508,19 +4030,19 @@ prototypeAccessors.namespaced.get = function () {
   return !!this._rawModule.namespaced
 };
 
-vuex_esm_Module.prototype.addChild = function addChild (key, module) {
+Module.prototype.addChild = function addChild (key, module) {
   this._children[key] = module;
 };
 
-vuex_esm_Module.prototype.removeChild = function removeChild (key) {
+Module.prototype.removeChild = function removeChild (key) {
   delete this._children[key];
 };
 
-vuex_esm_Module.prototype.getChild = function getChild (key) {
+Module.prototype.getChild = function getChild (key) {
   return this._children[key]
 };
 
-vuex_esm_Module.prototype.update = function update (rawModule) {
+Module.prototype.update = function update (rawModule) {
   this._rawModule.namespaced = rawModule.namespaced;
   if (rawModule.actions) {
     this._rawModule.actions = rawModule.actions;
@@ -4533,29 +4055,29 @@ vuex_esm_Module.prototype.update = function update (rawModule) {
   }
 };
 
-vuex_esm_Module.prototype.forEachChild = function forEachChild (fn) {
+Module.prototype.forEachChild = function forEachChild (fn) {
   forEachValue(this._children, fn);
 };
 
-vuex_esm_Module.prototype.forEachGetter = function forEachGetter (fn) {
+Module.prototype.forEachGetter = function forEachGetter (fn) {
   if (this._rawModule.getters) {
     forEachValue(this._rawModule.getters, fn);
   }
 };
 
-vuex_esm_Module.prototype.forEachAction = function forEachAction (fn) {
+Module.prototype.forEachAction = function forEachAction (fn) {
   if (this._rawModule.actions) {
     forEachValue(this._rawModule.actions, fn);
   }
 };
 
-vuex_esm_Module.prototype.forEachMutation = function forEachMutation (fn) {
+Module.prototype.forEachMutation = function forEachMutation (fn) {
   if (this._rawModule.mutations) {
     forEachValue(this._rawModule.mutations, fn);
   }
 };
 
-Object.defineProperties( vuex_esm_Module.prototype, prototypeAccessors );
+Object.defineProperties( Module.prototype, prototypeAccessors );
 
 var ModuleCollection = function ModuleCollection (rawRootModule) {
   // register root module (Vuex.Store options)
@@ -4586,7 +4108,7 @@ ModuleCollection.prototype.register = function register (path, rawModule, runtim
 
   if (false) {}
 
-  var newModule = new vuex_esm_Module(rawModule, runtime);
+  var newModule = new Module(rawModule, runtime);
   if (path.length === 0) {
     this.root = newModule;
   } else {
@@ -5348,6 +4870,582 @@ external_Vue_default.a.use(vuex_esm); // dynamic modules. You have to import mod
 // be careful with it
 
 var store = new vuex_esm.Store({});
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in/log-in.vue?vue&type=script&lang=ts&shadow
+
+
+
+
+
+var log_invue_type_script_lang_ts_shadow_LogIn = class LogIn extends Object(vue_class_component_common["mixins"])(closable_popup_ClosablePopup) {
+  constructor() {
+    super(...arguments);
+    this.logInForm = {
+      email: '',
+      password: ''
+    };
+    this.foreignPc = false;
+  }
+
+  toggleForeignPc() {
+    this.foreignPc = !this.foreignPc;
+  }
+
+  toggleLogInPopup() {
+    store.dispatch('display/toggleLogIn');
+  }
+
+  closeLogInAndOpenRestration() {
+    store.dispatch('display/closeLogInAndOpenRegistration');
+  }
+
+  closeLogInAndOpenRestorePassword() {
+    store.dispatch('display/closeLogInAndOpenRestore');
+  }
+
+  get modalIsOpened() {
+    return false; // DisplayModule.showPopup.logIn
+  }
+
+  login(e) {
+    // module is injected in header
+    store.dispatch('auth/login');
+    store.dispatch('display/toggleLogIn');
+  }
+
+  listenEscKeyup(e) {
+    if (e.keyCode === 27 && this.modalIsOpened) {
+      store.dispatch('display/toggleLogIn');
+    }
+  }
+
+};
+log_invue_type_script_lang_ts_shadow_LogIn = __decorate([vue_class_component_common_default.a], log_invue_type_script_lang_ts_shadow_LogIn);
+/* harmony default export */ var log_invue_type_script_lang_ts_shadow = (log_invue_type_script_lang_ts_shadow_LogIn);
+// CONCATENATED MODULE: ./src/components/authorization/log-in/log-in.vue?vue&type=script&lang=ts&shadow
+ /* harmony default export */ var log_in_log_invue_type_script_lang_ts_shadow = (log_invue_type_script_lang_ts_shadow); 
+// CONCATENATED MODULE: ./src/components/authorization/log-in/log-in.vue?shadow
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__("1fb7")
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var component = normalizeComponent(
+  log_in_log_invue_type_script_lang_ts_shadow,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "c0fe938c",
+  null
+  ,true
+)
+
+component.options.__file = "log-in.vue"
+/* harmony default export */ var log_inshadow = (component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/password-restore/password-restore.vue?vue&type=template&id=e3406be0&scoped=true&shadow
+var password_restorevue_type_template_id_e3406be0_scoped_true_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.showPasswordRestore)?_c('div',{staticClass:"password-restore modal-wrapper"},[_c('div',{staticClass:" modal-popup"},[_c('div',{staticClass:"modal-content restore-content"},[_c('div',{staticClass:"close",on:{"click":function($event){_vm.toggleRestorePopup()}}},[_vm._v("✖")]),_c('div',{staticClass:"title bold"},[_vm._v("\n        Восстановление пароля\n      ")]),_c('div',{staticClass:"tip"},[_vm._v("\n        Введите email, указанный при регистрации, мы вышлем ссылку для восстановления пароля\n      ")]),_c('div',{staticClass:"reset-block"},[_c('form',{staticClass:"reset-form",on:{"submit":_vm.restorePassword}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.email),expression:"email"}],staticClass:"form-control reset-input",attrs:{"placeholder":"Почта","type":"email","required":""},domProps:{"value":(_vm.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.email=$event.target.value}}}),_c('button',{staticClass:"btn btn-orange reset-btn",attrs:{"type":"submit"}},[_vm._v("\n            Восстановить пароль\n          ")])])])])])]):_vm._e()}
+var password_restorevue_type_template_id_e3406be0_scoped_true_shadow_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/authorization/password-restore/password-restore.vue?vue&type=template&id=e3406be0&scoped=true&shadow
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/values.js
+var values = __webpack_require__("db0c");
+var values_default = /*#__PURE__*/__webpack_require__.n(values);
+
+// CONCATENATED MODULE: ./node_modules/vuex-module-decorators/dist/esm/index.js
+var VuexModule = /** @class */ (function () {
+    function VuexModule(module) {
+        this.actions = module.actions;
+        this.mutations = module.mutations;
+        this.state = module.state;
+        this.getters = module.getters;
+        this.namespaced = module.namespaced;
+        this.modules = module.modules;
+    }
+    return VuexModule;
+}());
+function getModule(moduleClass, store) {
+    if (moduleClass._statics) {
+        return moduleClass._statics;
+    }
+    var genStatic = moduleClass._genStatic;
+    if (!genStatic) {
+        throw new Error("ERR_GET_MODULE_NO_STATICS : Could not get module accessor. \n      Make sure your module has name, we can't make accessors for unnamed modules\n      i.e. @Module({ 'something' })");
+    }
+    return (moduleClass._statics = genStatic(store));
+}
+
+var reservedKeys = ['actions', 'getters', 'mutations', 'modules', 'state', 'namespaced', 'commit'];
+function stateFactory(module) {
+    var state = new module.prototype.constructor({});
+    var s = {};
+    Object.keys(state).forEach(function (key) {
+        if (reservedKeys.indexOf(key) !== -1) {
+            if (typeof state[key] !== 'undefined') {
+                throw new Error("ERR_RESERVED_STATE_KEY_USED: You cannot use the following\n        ['actions', 'getters', 'mutations', 'modules', 'state', 'namespaced', 'commit']\n        as fields in your module. These are reserved as they have special purpose in Vuex");
+            }
+            return;
+        }
+        if (state.hasOwnProperty(key)) {
+            if (typeof state[key] !== 'function') {
+                s[key] = state[key];
+            }
+        }
+    });
+    return s;
+}
+
+/**
+ * Takes the properties on object from parameter source and adds them to the object
+ * parameter target
+ * @param {object} target  Object to have properties copied onto from y
+ * @param {object} source  Object with properties to be copied to x
+ */
+function addPropertiesToObject(target, source) {
+    var _loop_1 = function (k) {
+        Object.defineProperty(target, k, {
+            get: function () { return source[k]; }
+        });
+    };
+    for (var _i = 0, _a = Object.keys(source || {}); _i < _a.length; _i++) {
+        var k = _a[_i];
+        _loop_1(k);
+    }
+}
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+
+function esm_awaiter(thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function esm_generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function staticStateGenerator(module, modOpt, statics) {
+    Object.keys(module.state).forEach(function (key) {
+        if (module.state.hasOwnProperty(key)) {
+            // If not undefined or function means it is a state value
+            if (['undefined', 'function'].indexOf(typeof module.state[key]) === -1) {
+                Object.defineProperty(statics, key, {
+                    get: function () {
+                        return modOpt.store.state[modOpt.name][key];
+                    }
+                });
+            }
+        }
+    });
+}
+function staticGetterGenerator(module, modOpt, statics) {
+    Object.keys(module.getters).forEach(function (key) {
+        if (module.namespaced) {
+            Object.defineProperty(statics, key, {
+                get: function () {
+                    return modOpt.store.getters[modOpt.name + "/" + key];
+                }
+            });
+        }
+        else {
+            Object.defineProperty(statics, key, {
+                get: function () {
+                    return modOpt.store.getters[key];
+                }
+            });
+        }
+    });
+}
+function staticMutationGenerator(module, modOpt, statics) {
+    Object.keys(module.mutations).forEach(function (key) {
+        if (module.namespaced) {
+            statics[key] = function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                var _a;
+                (_a = modOpt.store).commit.apply(_a, [modOpt.name + "/" + key].concat(args));
+            };
+        }
+        else {
+            statics[key] = function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                var _a;
+                (_a = modOpt.store).commit.apply(_a, [key].concat(args));
+            };
+        }
+    });
+}
+function staticActionGenerators(module, modOpt, statics) {
+    Object.keys(module.actions).forEach(function (key) {
+        if (module.namespaced) {
+            statics[key] = function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                return esm_awaiter(this, void 0, void 0, function () {
+                    var _a;
+                    return esm_generator(this, function (_b) {
+                        return [2 /*return*/, (_a = modOpt.store).dispatch.apply(_a, [modOpt.name + "/" + key].concat(args))];
+                    });
+                });
+            };
+        }
+        else {
+            statics[key] = function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                return esm_awaiter(this, void 0, void 0, function () {
+                    var _a;
+                    return esm_generator(this, function (_b) {
+                        return [2 /*return*/, (_a = modOpt.store).dispatch.apply(_a, [key].concat(args))];
+                    });
+                });
+            };
+        }
+    });
+}
+
+function moduleDecoratorFactory(moduleOptions) {
+    return function (constructor) {
+        var module = constructor;
+        var stateFactory$$1 = function () { return stateFactory(module); };
+        if (!module.state) {
+            module.state = moduleOptions && moduleOptions.stateFactory ? stateFactory$$1 : stateFactory$$1();
+        }
+        if (!module.getters) {
+            module.getters = {};
+        }
+        module.namespaced = moduleOptions && moduleOptions.namespaced;
+        Object.getOwnPropertyNames(module.prototype).forEach(function (funcName) {
+            var descriptor = Object.getOwnPropertyDescriptor(module.prototype, funcName);
+            if (descriptor.get && module.getters) {
+                module.getters[funcName] = function (state, getters, rootState, rootGetters) {
+                    var thisObj = { context: { state: state, getters: getters, rootState: rootState, rootGetters: rootGetters } };
+                    addPropertiesToObject(thisObj, state);
+                    addPropertiesToObject(thisObj, getters);
+                    var got = descriptor.get.call(thisObj);
+                    return got;
+                };
+            }
+        });
+        var modOpt = moduleOptions;
+        if (modOpt.name) {
+            Object.defineProperty(constructor, '_genStatic', {
+                value: function (store) {
+                    var statics = {};
+                    modOpt.store = modOpt.store || store;
+                    if (!modOpt.store) {
+                        throw new Error("ERR_STORE_NOT_PROVIDED: To use getModule(), either the module\n            should be decorated with store in decorator, i.e. @Module({store: store}) or\n            store should be passed when calling getModule(), i.e. getModule(MyModule, this.$store)");
+                    }
+                    // ===========  For statics ==============
+                    // ------ state -------
+                    staticStateGenerator(module, modOpt, statics);
+                    // ------- getters -------
+                    if (module.getters) {
+                        staticGetterGenerator(module, modOpt, statics);
+                    }
+                    // -------- mutations --------
+                    if (module.mutations) {
+                        staticMutationGenerator(module, modOpt, statics);
+                    }
+                    // -------- actions ---------
+                    if (module.actions) {
+                        staticActionGenerators(module, modOpt, statics);
+                    }
+                    return statics;
+                }
+            });
+        }
+        if (modOpt.dynamic) {
+            if (!modOpt.name) {
+                throw new Error('Name of module not provided in decorator options');
+            }
+            modOpt.store.registerModule(modOpt.name, // TODO: Handle nested modules too in future
+            module);
+        }
+        return constructor;
+    };
+}
+function esm_Module(modOrOpt) {
+    if (typeof modOrOpt === 'function') {
+        /*
+         * @Module decorator called without options (directly on the class definition)
+         */
+        moduleDecoratorFactory({})(modOrOpt);
+    }
+    else {
+        /*
+         * @Module({...}) decorator called with options
+         */
+        return moduleDecoratorFactory(modOrOpt);
+    }
+}
+
+function actionDecoratorFactory(params) {
+    var _a = params || {}, _b = _a.commit, commit = _b === void 0 ? undefined : _b, _c = _a.rawError, rawError = _c === void 0 ? false : _c;
+    return function (target, key, descriptor) {
+        var module = target.constructor;
+        if (!module.actions) {
+            module.actions = {};
+        }
+        var actionFunction = descriptor.value;
+        var action = function (context, payload) {
+            return esm_awaiter(this, void 0, void 0, function () {
+                var actionPayload, moduleAccessor, thisObj, e_1;
+                return esm_generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            _a.trys.push([0, 5, , 6]);
+                            actionPayload = null;
+                            if (!module._genStatic) return [3 /*break*/, 2];
+                            moduleAccessor = getModule(module);
+                            moduleAccessor.context = context;
+                            return [4 /*yield*/, actionFunction.call(moduleAccessor, payload)];
+                        case 1:
+                            actionPayload = _a.sent();
+                            return [3 /*break*/, 4];
+                        case 2:
+                            thisObj = { context: context };
+                            addPropertiesToObject(thisObj, context.state);
+                            addPropertiesToObject(thisObj, context.getters);
+                            return [4 /*yield*/, actionFunction.call(thisObj, payload)];
+                        case 3:
+                            actionPayload = _a.sent();
+                            _a.label = 4;
+                        case 4:
+                            if (commit) {
+                                context.commit(commit, actionPayload);
+                            }
+                            return [2 /*return*/, actionPayload];
+                        case 5:
+                            e_1 = _a.sent();
+                            throw rawError
+                                ? e_1
+                                : new Error('ERR_ACTION_ACCESS_UNDEFINED: Are you trying to access ' +
+                                    'this.someMutation() or this.someGetter inside an @Action? \n' +
+                                    'That works only in dynamic modules. \n' +
+                                    'If not dynamic use this.context.commit("mutationName", payload) ' +
+                                    'and this.context.getters["getterName"]' +
+                                    '\n' +
+                                    new Error("Could not perform action " + key.toString()).stack +
+                                    '\n' +
+                                    e_1.stack);
+                        case 6: return [2 /*return*/];
+                    }
+                });
+            });
+        };
+        module.actions[key] = action;
+    };
+}
+/**
+ * The @Action decorator turns an async function into an Vuex action
+ *
+ * @param targetOrParams the module class
+ * @param key name of the action
+ * @param descriptor the action function descriptor
+ * @constructor
+ */
+function Action(targetOrParams, key, descriptor) {
+    if (!key && !descriptor) {
+        /*
+         * This is the case when `targetOrParams` is params.
+         * i.e. when used as -
+         * <pre>
+            @Action({commit: 'incrCount'})
+            async getCountDelta() {
+              return 5
+            }
+         * </pre>
+         */
+        return actionDecoratorFactory(targetOrParams);
+    }
+    else {
+        /*
+         * This is the case when @Action is called on action function
+         * without any params
+         * <pre>
+         *   @Action
+         *   async doSomething() {
+         *    ...
+         *   }
+         * </pre>
+         */
+        actionDecoratorFactory()(targetOrParams, key, descriptor);
+    }
+}
+
+function Mutation(target, key, descriptor) {
+    var module = target.constructor;
+    if (!module.mutations) {
+        module.mutations = {};
+    }
+    var mutationFunction = descriptor.value ? descriptor.value : function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        return ({});
+    };
+    var mutation = function (state, payload) {
+        mutationFunction.call(state, payload);
+    };
+    module.mutations[key] = mutation;
+}
+
+function mutationActionDecoratorFactory(params) {
+    return function (target, key, descriptor) {
+        var module = target.constructor;
+        if (!module.mutations) {
+            module.mutations = {};
+        }
+        if (!module.actions) {
+            module.actions = {};
+        }
+        var mutactFunction = descriptor.value;
+        var action = function (context, payload) {
+            return esm_awaiter(this, void 0, void 0, function () {
+                var actionPayload, e_1;
+                return esm_generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            _a.trys.push([0, 2, , 3]);
+                            return [4 /*yield*/, mutactFunction.call(context, payload)];
+                        case 1:
+                            actionPayload = _a.sent();
+                            context.commit(key, actionPayload);
+                            return [3 /*break*/, 3];
+                        case 2:
+                            e_1 = _a.sent();
+                            if (params.rawError) {
+                                throw e_1;
+                            }
+                            else {
+                                console.error('Could not perform action ' + key.toString());
+                                console.error(e_1);
+                            }
+                            return [3 /*break*/, 3];
+                        case 3: return [2 /*return*/];
+                    }
+                });
+            });
+        };
+        var mutation = function (state, payload) {
+            if (!params.mutate) {
+                params.mutate = Object.keys(payload);
+            }
+            for (var _i = 0, _a = params.mutate; _i < _a.length; _i++) {
+                var stateItem = _a[_i];
+                if (state.hasOwnProperty(stateItem) && payload.hasOwnProperty(stateItem)) {
+                    state[stateItem] = payload[stateItem];
+                }
+                else {
+                    throw new Error("ERR_MUTATE_PARAMS_NOT_IN_PAYLOAD\n          In @MutationAction, mutate: ['a', 'b', ...] array keys must\n          match with return type = {a: {}, b: {}, ...} and must\n          also be in state.");
+                }
+            }
+        };
+        module.actions[key] = action;
+        module.mutations[key] = mutation;
+    };
+}
+/**
+ * The @MutationAction decorator turns this into an action that further calls a mutation
+ * Both the action and the mutation are generated for you
+ *
+ * @param paramsOrTarget the params or the target class
+ * @param key the name of the function
+ * @param descriptor the function body
+ * @constructor
+ */
+function MutationAction(paramsOrTarget, key, descriptor) {
+    if (!key && !descriptor) {
+        /*
+         * This is the case when `paramsOrTarget` is params.
+         * i.e. when used as -
+         * <pre>
+            @MutationAction({mutate: ['incrCount']})
+            async getCountDelta() {
+              return {incrCount: 5}
+            }
+         * </pre>
+         */
+        return mutationActionDecoratorFactory(paramsOrTarget);
+    }
+    else {
+        /*
+         * This is the case when `paramsOrTarget` is target.
+         * i.e. when used as -
+         * <pre>
+            @MutationAction
+            async getCountDelta() {
+              return {incrCount: 5}
+            }
+         * </pre>
+         */
+        mutationActionDecoratorFactory({})(paramsOrTarget, key, descriptor);
+    }
+}
+
+
+//# sourceMappingURL=index.js.map
+
 // CONCATENATED MODULE: ./src/store/modules/display.module.ts
 
 
@@ -5360,15 +5458,24 @@ var display_module_Display = class Display extends VuexModule {
     this.popupIsOpenedClassName = 'modal-open';
     this.showPopup = {
       registration: false,
-      logIn: false,
+      // logIn: false,
       restorePassword: false,
       successRestore: false,
       requestCall: false
     };
     this.showBlock = {
       selectCity: false,
-      yourCity: true
-    };
+      yourCity: false
+    }; // @Mutation
+    // CLOSE_REGISTRATION_AND_OPEN_LOG_IN () {
+    //   this.showPopup.registration = false
+    //   // this.showPopup.logIn = true
+    // }
+    // @Action
+    // public closeRegistrationAndOpenLogIn (): void {
+    //   this.context.commit('CLOSE_REGISTRATION_AND_OPEN_LOG_IN')
+    //   this.checkPopupIsOpened()
+    // }
   }
 
   checkPopupIsOpened() {
@@ -5388,16 +5495,16 @@ var display_module_Display = class Display extends VuexModule {
   toggleYourCity() {
     this.context.commit('TOGGLE_YOUR_CITY');
     this.checkPopupIsOpened();
-  }
+  } // @Mutation
+  // TOGGLE_LOG_IN () {
+  //   this.showPopup.logIn = !this.showPopup.logIn
+  // }
+  // @Action
+  // public toggleLogIn (): void {
+  //   this.context.commit('TOGGLE_LOG_IN')
+  //   this.checkPopupIsOpened()
+  // }
 
-  TOGGLE_LOG_IN() {
-    this.showPopup.logIn = !this.showPopup.logIn;
-  }
-
-  toggleLogIn() {
-    this.context.commit('TOGGLE_LOG_IN');
-    this.checkPopupIsOpened();
-  }
 
   TOGGLE_YOUR_CITY_AND_OPEN_SELECT_CITY() {
     this.showBlock.yourCity = false;
@@ -5425,27 +5532,27 @@ var display_module_Display = class Display extends VuexModule {
   toggleRequest() {
     this.context.commit('TOGGLE_REQUEST_CALL');
     this.checkPopupIsOpened();
-  }
+  } // @Mutation
+  // CLOSE_LOG_IN_AND_OPEN_REGISTRATION () {
+  //   this.showPopup.logIn = false
+  //   this.showPopup.registration = true
+  // }
+  // @Action
+  // public closeLogInAndOpenRegistration (): void {
+  //   this.context.commit('CLOSE_LOG_IN_AND_OPEN_REGISTRATION')
+  //   this.checkPopupIsOpened()
+  // }
+  // @Mutation
+  // CLOSE_LOG_IN_AND_OPEN_RESTORE () {
+  //   this.showPopup.logIn = false
+  //   this.showPopup.restorePassword = true
+  // }
+  // @Action
+  // public closeLogInAndOpenRestore (): void {
+  //   this.context.commit('CLOSE_LOG_IN_AND_OPEN_RESTORE')
+  //   this.checkPopupIsOpened()
+  // }
 
-  CLOSE_LOG_IN_AND_OPEN_REGISTRATION() {
-    this.showPopup.logIn = false;
-    this.showPopup.registration = true;
-  }
-
-  closeLogInAndOpenRegistration() {
-    this.context.commit('CLOSE_LOG_IN_AND_OPEN_REGISTRATION');
-    this.checkPopupIsOpened();
-  }
-
-  CLOSE_LOG_IN_AND_OPEN_RESTORE() {
-    this.showPopup.logIn = false;
-    this.showPopup.restorePassword = true;
-  }
-
-  closeLogInAndOpenRestore() {
-    this.context.commit('CLOSE_LOG_IN_AND_OPEN_RESTORE');
-    this.checkPopupIsOpened();
-  }
 
   CLOSE_LOG_IN_AND_OPEN_SUCCESS_REGISTRATION() {
     this.showPopup.restorePassword = false;
@@ -5484,16 +5591,6 @@ var display_module_Display = class Display extends VuexModule {
     this.checkPopupIsOpened();
   }
 
-  CLOSE_REGISTRATION_AND_OPEN_LOG_IN() {
-    this.showPopup.registration = false;
-    this.showPopup.logIn = true;
-  }
-
-  closeRegistrationAndOpenLogIn() {
-    this.context.commit('CLOSE_REGISTRATION_AND_OPEN_LOG_IN');
-    this.checkPopupIsOpened();
-  }
-
 };
 
 __decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "checkPopupIsOpened", null);
@@ -5501,10 +5598,6 @@ __decorate([Action, __metadata("design:type", Function), __metadata("design:para
 __decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "TOGGLE_YOUR_CITY", null);
 
 __decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "toggleYourCity", null);
-
-__decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "TOGGLE_LOG_IN", null);
-
-__decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "toggleLogIn", null);
 
 __decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "TOGGLE_YOUR_CITY_AND_OPEN_SELECT_CITY", null);
 
@@ -5517,14 +5610,6 @@ __decorate([Action, __metadata("design:type", Function), __metadata("design:para
 __decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "TOGGLE_REQUEST_CALL", null);
 
 __decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "toggleRequest", null);
-
-__decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "CLOSE_LOG_IN_AND_OPEN_REGISTRATION", null);
-
-__decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "closeLogInAndOpenRegistration", null);
-
-__decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "CLOSE_LOG_IN_AND_OPEN_RESTORE", null);
-
-__decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "closeLogInAndOpenRestore", null);
 
 __decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "CLOSE_LOG_IN_AND_OPEN_SUCCESS_REGISTRATION", null);
 
@@ -5542,11 +5627,7 @@ __decorate([Mutation, __metadata("design:type", Function), __metadata("design:pa
 
 __decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "toggleRegistration", null);
 
-__decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "CLOSE_REGISTRATION_AND_OPEN_LOG_IN", null);
-
-__decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], display_module_Display.prototype, "closeRegistrationAndOpenLogIn", null);
-
-display_module_Display = __decorate([Module({
+display_module_Display = __decorate([esm_Module({
   dynamic: true,
   store: store,
   name: 'display',
@@ -5554,93 +5635,6 @@ display_module_Display = __decorate([Module({
 })], display_module_Display);
 
 var DisplayModule = getModule(display_module_Display, store);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in/log-in.vue?vue&type=script&lang=ts&shadow
-
-
-
-
-
-
-var log_invue_type_script_lang_ts_shadow_LogIn = class LogIn extends Object(vue_class_component_common["mixins"])(closable_popup_ClosablePopup) {
-  constructor() {
-    super(...arguments);
-    this.logInForm = {
-      email: '',
-      password: ''
-    };
-    this.foreignPc = false;
-  }
-
-  toggleForeignPc() {
-    this.foreignPc = !this.foreignPc;
-  }
-
-  toggleLogInPopup() {
-    store.dispatch('display/toggleLogIn');
-  }
-
-  closeLogInAndOpenRestration() {
-    store.dispatch('display/closeLogInAndOpenRegistration');
-  }
-
-  closeLogInAndOpenRestorePassword() {
-    store.dispatch('display/closeLogInAndOpenRestore');
-  }
-
-  get showBlockYourCity() {
-    return DisplayModule.showPopup.logIn;
-  }
-
-  login(e) {
-    // module is injected in header
-    store.dispatch('auth/login');
-    store.dispatch('display/toggleLogIn');
-  }
-
-  listenEscKeyup(e) {
-    if (e.keyCode === 27 && this.showBlockYourCity) {
-      store.dispatch('display/toggleLogIn');
-    }
-  }
-
-};
-log_invue_type_script_lang_ts_shadow_LogIn = __decorate([vue_class_component_common_default.a], log_invue_type_script_lang_ts_shadow_LogIn);
-/* harmony default export */ var log_invue_type_script_lang_ts_shadow = (log_invue_type_script_lang_ts_shadow_LogIn);
-// CONCATENATED MODULE: ./src/components/authorization/log-in/log-in.vue?vue&type=script&lang=ts&shadow
- /* harmony default export */ var log_in_log_invue_type_script_lang_ts_shadow = (log_invue_type_script_lang_ts_shadow); 
-// CONCATENATED MODULE: ./src/components/authorization/log-in/log-in.vue?shadow
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__("679b")
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = normalizeComponent(
-  log_in_log_invue_type_script_lang_ts_shadow,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "117e7b93",
-  null
-  ,true
-)
-
-component.options.__file = "log-in.vue"
-/* harmony default export */ var log_inshadow = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/password-restore/password-restore.vue?vue&type=template&id=e3406be0&scoped=true&shadow
-var password_restorevue_type_template_id_e3406be0_scoped_true_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.showPasswordRestore)?_c('div',{staticClass:"password-restore modal-wrapper"},[_c('div',{staticClass:" modal-popup"},[_c('div',{staticClass:"modal-content restore-content"},[_c('div',{staticClass:"close",on:{"click":function($event){_vm.toggleRestorePopup()}}},[_vm._v("✖")]),_c('div',{staticClass:"title bold"},[_vm._v("\n        Восстановление пароля\n      ")]),_c('div',{staticClass:"tip"},[_vm._v("\n        Введите email, указанный при регистрации, мы вышлем ссылку для восстановления пароля\n      ")]),_c('div',{staticClass:"reset-block"},[_c('form',{staticClass:"reset-form",on:{"submit":_vm.restorePassword}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.email),expression:"email"}],staticClass:"form-control reset-input",attrs:{"placeholder":"Почта","type":"email","required":""},domProps:{"value":(_vm.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.email=$event.target.value}}}),_c('button',{staticClass:"btn btn-orange reset-btn",attrs:{"type":"submit"}},[_vm._v("\n            Восстановить пароль\n          ")])])])])])]):_vm._e()}
-var password_restorevue_type_template_id_e3406be0_scoped_true_shadow_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/authorization/password-restore/password-restore.vue?vue&type=template&id=e3406be0&scoped=true&shadow
-
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/password-restore/password-restore.vue?vue&type=script&lang=ts&shadow
 
 
@@ -5774,12 +5768,12 @@ var registrationvue_type_template_id_40c5f384_shadow_staticRenderFns = [function
 // EXTERNAL MODULE: ./node_modules/vue-carousel/dist/vue-carousel.min.js
 var vue_carousel_min = __webpack_require__("0a63");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=template&id=16b71717&
-var registration_formvue_type_template_id_16b71717_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"registration-text"},[_vm._v("\n    Регистрация\n  ")]),_c('form',{staticClass:"registration-form",on:{"submit":function($event){$event.preventDefault();return _vm.onSubmit($event)}}},[_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите имя и фамилию контактного лица")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.login),expression:"regForm.login"}],staticClass:"form-control name-input",class:{ 'invalid-input': _vm.errors.DuplicateUserName },attrs:{"placeholder":"Имя и фамилия","type":"text","required":""},domProps:{"value":(_vm.regForm.login)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "login", $event.target.value)}}}),(_vm.errors.DuplicateUserName)?_c('div',{staticClass:"invalid-text"},[_vm._v("\n        Пользователь с таким именем уже существует\n      ")]):_vm._e()]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите телефон")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.phone),expression:"regForm.phone"}],staticClass:"form-control phone-input",attrs:{"placeholder":"Телефон","type":"tel","autocomplete":"new-tel","required":""},domProps:{"value":(_vm.regForm.phone)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "phone", $event.target.value)}}})]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите email")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.email),expression:"regForm.email"}],staticClass:"form-control email-input",attrs:{"placeholder":"Почта","type":"email","autocomplete":"new-email","required":""},domProps:{"value":(_vm.regForm.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "email", $event.target.value)}}})]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите пароль")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.password),expression:"regForm.password"}],staticClass:"form-control password-input",class:{ 'invalid-input': _vm.errors.passwordError },attrs:{"placeholder":"Пароль","type":"password","required":""},domProps:{"value":(_vm.regForm.password)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "password", $event.target.value)}}}),(_vm.errors.passwordError)?_c('div',{staticClass:"invalid-text"},[_vm._v("\n        пароль\n        "),(_vm.errors.PasswordTooShort)?_c('span',[_vm._v("должен быть как минимум 6 символов.")]):_vm._e(),(_vm.errors.PasswordRequiresNonAlphanumeric)?_c('span',[_vm._v(" должен быть один спецсимвол.")]):_vm._e(),(_vm.errors.PasswordRequiresUpper)?_c('span',[_vm._v(" должны встречаться символы в верхнем регистре.")]):_vm._e(),(_vm.errors.PasswordRequiresLower)?_c('span',[_vm._v(" должны встречаться символы в нижнем регистре.")]):_vm._e()]):_vm._e()]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Какую организацию вы представляете?")]),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationVariant),expression:"regForm.organizationVariant"}],staticClass:"form-control org-input",attrs:{"required":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.regForm, "organizationVariant", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":"","value":""}},[_vm._v("Выберите один из вариантов")]),_c('option',[_vm._v("Автосервис")]),_c('option',[_vm._v("Автосервис")]),_c('option',[_vm._v("Автосервис")])])]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите наименование организации")]),_c('div',{staticClass:"two-selectors"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationType),expression:"regForm.organizationType"}],staticClass:"form-control first-selector name-org-input",attrs:{"required":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.regForm, "organizationType", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":"","value":""}},[_vm._v("Выберите один из вариантов")]),_c('option',[_vm._v("ООО")]),_c('option',[_vm._v("ООО")])]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationName),expression:"regForm.organizationName"}],staticClass:"form-control second-selector",attrs:{"placeholder":"Название огранизации","type":"text","required":""},domProps:{"value":(_vm.regForm.organizationName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "organizationName", $event.target.value)}}})])]),_c('button',{staticClass:"btn btn-orange btn-reg",attrs:{"type":"submit"}},[_vm._v("\n      Зарегистрироваться\n    ")]),_vm._m(0)]),_c('div',{staticClass:"already-have-account text-center"},[_c('p',[_vm._v("Уже зарегистрированы?")]),_c('span',{staticClass:"go-log-in",attrs:{"href":"#"},on:{"click":function($event){_vm.closeRegistrationAndOpenLogIn()}}},[_vm._v("Войти")])])])}
-var registration_formvue_type_template_id_16b71717_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"accept-policy"},[_vm._v("\n      Нажимая на кнопку, вы даете согласие\n      на обработку"),_c('br'),_vm._v(" своих персональных данных\n      и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=template&id=ef37beb4&
+var registration_formvue_type_template_id_ef37beb4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"registration-text"},[_vm._v("\n    Регистрация\n  ")]),_c('form',{staticClass:"registration-form",on:{"submit":function($event){$event.preventDefault();return _vm.onSubmit($event)}}},[_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите имя и фамилию контактного лица")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.login),expression:"regForm.login"}],staticClass:"form-control name-input",class:{ 'invalid-input': _vm.errors.DuplicateUserName },attrs:{"placeholder":"Имя и фамилия","type":"text","required":""},domProps:{"value":(_vm.regForm.login)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "login", $event.target.value)}}}),(_vm.errors.DuplicateUserName)?_c('div',{staticClass:"invalid-text"},[_vm._v("\n        Пользователь с таким именем уже существует\n      ")]):_vm._e()]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите телефон")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.phone),expression:"regForm.phone"}],staticClass:"form-control phone-input",attrs:{"placeholder":"Телефон","type":"tel","autocomplete":"new-tel","required":""},domProps:{"value":(_vm.regForm.phone)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "phone", $event.target.value)}}})]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите email")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.email),expression:"regForm.email"}],staticClass:"form-control email-input",attrs:{"placeholder":"Почта","type":"email","autocomplete":"new-email","required":""},domProps:{"value":(_vm.regForm.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "email", $event.target.value)}}})]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите пароль")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.password),expression:"regForm.password"}],staticClass:"form-control password-input",class:{ 'invalid-input': _vm.errors.passwordError },attrs:{"placeholder":"Пароль","type":"password","required":""},domProps:{"value":(_vm.regForm.password)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "password", $event.target.value)}}}),(_vm.errors.passwordError)?_c('div',{staticClass:"invalid-text"},[_vm._v("\n        пароль\n        "),(_vm.errors.PasswordTooShort)?_c('span',[_vm._v("должен быть как минимум 6 символов.")]):_vm._e(),(_vm.errors.PasswordRequiresNonAlphanumeric)?_c('span',[_vm._v(" должен быть один спецсимвол.")]):_vm._e(),(_vm.errors.PasswordRequiresUpper)?_c('span',[_vm._v(" должны встречаться символы в верхнем регистре.")]):_vm._e(),(_vm.errors.PasswordRequiresLower)?_c('span',[_vm._v(" должны встречаться символы в нижнем регистре.")]):_vm._e()]):_vm._e()]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Какую организацию вы представляете?")]),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationVariant),expression:"regForm.organizationVariant"}],staticClass:"form-control org-input",attrs:{"required":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.regForm, "organizationVariant", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":"","value":""}},[_vm._v("Выберите один из вариантов")]),_c('option',[_vm._v("Автосервис")]),_c('option',[_vm._v("Автосервис")]),_c('option',[_vm._v("Автосервис")])])]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите наименование организации")]),_c('div',{staticClass:"two-selectors"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationType),expression:"regForm.organizationType"}],staticClass:"form-control first-selector name-org-input",attrs:{"required":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.regForm, "organizationType", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":"","value":""}},[_vm._v("Выберите один из вариантов")]),_c('option',[_vm._v("ООО")]),_c('option',[_vm._v("ООО")])]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationName),expression:"regForm.organizationName"}],staticClass:"form-control second-selector",attrs:{"placeholder":"Название огранизации","type":"text","required":""},domProps:{"value":(_vm.regForm.organizationName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "organizationName", $event.target.value)}}})])]),_c('button',{staticClass:"btn btn-orange btn-reg",attrs:{"type":"submit"}},[_vm._v("\n      Зарегистрироваться\n    ")]),_vm._m(0)]),_c('div',{staticClass:"already-have-account text-center"},[_c('p',[_vm._v("Уже зарегистрированы?")]),_c('span',{staticClass:"go-log-in",attrs:{"href":"#"},on:{"click":function($event){_vm.logIn()}}},[_vm._v("Войти")])])])}
+var registration_formvue_type_template_id_ef37beb4_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"accept-policy"},[_vm._v("\n      Нажимая на кнопку, вы даете согласие\n      на обработку"),_c('br'),_vm._v(" своих персональных данных\n      и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])}]
 
 
-// CONCATENATED MODULE: ./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=template&id=16b71717&
+// CONCATENATED MODULE: ./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=template&id=ef37beb4&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es7.array.includes.js
 var es7_array_includes = __webpack_require__("6762");
@@ -5880,9 +5874,13 @@ var registration_formvue_type_script_lang_ts_RegistrationForm = class Registrati
     this.auth = new auth_service_AuthService();
   }
 
-  closeRegistrationAndOpenLogIn() {
-    store.dispatch('display/closeRegistrationAndOpenLogIn');
-  }
+  logIn() {
+    store.dispatch('auth/login');
+    store.dispatch('auth/toggleRegistration');
+  } // closeRegistrationAndOpenLogIn () {
+  //   store.dispatch('display/closeRegistrationAndOpenLogIn')
+  // }
+
 
   handleError(errorMessages) {
     if (!errorMessages.length) {
@@ -5960,8 +5958,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var registration_form_component = normalizeComponent(
   registration_form_registration_formvue_type_script_lang_ts_,
-  registration_formvue_type_template_id_16b71717_render,
-  registration_formvue_type_template_id_16b71717_staticRenderFns,
+  registration_formvue_type_template_id_ef37beb4_render,
+  registration_formvue_type_template_id_ef37beb4_staticRenderFns,
   false,
   registration_form_injectStyles,
   null,
@@ -6079,12 +6077,12 @@ var footershadow_component = normalizeComponent(
 
 footershadow_component.options.__file = "footer.vue"
 /* harmony default export */ var footershadow = (footershadow_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/shared/header/header.vue?vue&type=template&id=3229ff88&shadow
-var headervue_type_template_id_3229ff88_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('header',{staticClass:"header"},[_c('div',{staticClass:"desktop-header"},[_c('div',{staticClass:"desktop-header__menu"},[_vm._m(0),_c('div',{staticClass:"desktop-header__right"},[_c('ul',{staticClass:"desktop-header__login"},[_vm._m(1),(!_vm.loggedIn)?_c('li',{staticClass:"desktop-header__login-item",on:{"click":function($event){_vm.toggleLogInPopup()}}},[_c('a',{staticClass:"border"},[_vm._v("Вход")])]):_vm._e(),(!_vm.loggedIn)?_c('li',{staticClass:"desktop-header__login-item",on:{"click":function($event){_vm.toggleRegistrationPopup()}}},[_c('a',{staticClass:"border register"},[_vm._v("Регистрация")])]):_vm._e(),(_vm.loggedIn)?_c('div',{staticClass:"user-info",on:{"click":function($event){_vm.toggleUserMenu()}}},[_c('div',{staticClass:"user-avatar"}),_c('div',{staticClass:"user-name"},[_vm._v(_vm._s(_vm.userName))])]):_vm._e()])])]),(_vm.blocksShow.user && _vm.loggedIn)?_c('div',{staticClass:"menu-popup"},[_c('div',{staticClass:"user-fullname"},[_vm._v("\n        "+_vm._s(_vm.userName)+"\n      ")]),_c('div',{staticClass:"agreement"},[_vm._v("\n        Договор № 123765\n      ")]),_c('div',{staticClass:"price-info"},[_vm._v("\n        Оптовые цены (активны)\n      ")]),_vm._m(2),_c('ul',{staticClass:"menu-popup_list"},[_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Личный кабинет\n        ")]),_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Профиль и настройки\n        ")]),_vm._m(3),_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Заказы и оплаты\n        ")]),_c('li',{staticClass:"menu-popup_list-item",on:{"click":_vm.logout}},[_vm._v("\n          Выйти\n        ")])])]):_vm._e(),_vm._m(4)]),_c('div',{staticClass:"mobile-header"},[_c('div',{staticClass:"mobile-header__menu"},[_c('div',{staticClass:"mobile-header__menu__left"},[_c('div',{staticClass:"burger-wrapper"},[_c('span',{staticClass:"burger-icon",on:{"click":function($event){_vm.toggleMainMenu()}}})]),_vm._m(5)]),_c('div',{staticClass:"mobile-header__menu__right"},[_vm._m(6),_vm._m(7),_c('div',{staticClass:"menu-item"},[(!_vm.loggedIn)?_c('div',{staticClass:"new-user",on:{"click":function($event){_vm.toggleUserMenu()}}}):_vm._e(),(_vm.loggedIn)?_c('div',{staticClass:"user-avatar",on:{"click":function($event){_vm.toggleUserMenu()}}}):_vm._e()])])]),(_vm.blocksShow.menu)?_c('div',{staticClass:"menu-popup"},[_vm._m(8)]):_vm._e(),(_vm.blocksShow.location)?_c('div',{staticClass:"menu-popup"},[_vm._m(9)]):_vm._e(),(_vm.blocksShow.user && !_vm.loggedIn)?_c('div',{staticClass:"menu-popup"},[_c('ul',{staticClass:"menu-popup_list"},[_c('li',{staticClass:"menu-popup_list-item",on:{"click":function($event){_vm.toggleLogInPopup()}}},[_c('a',[_vm._v("Вход")])]),_c('li',{staticClass:"menu-popup_list-item",on:{"click":function($event){_vm.toggleRegistrationPopup()}}},[_c('a',{staticClass:"register"},[_vm._v("Регистрация")])])])]):_vm._e(),(_vm.blocksShow.user && _vm.loggedIn)?_c('div',{staticClass:"menu-popup"},[_c('div',{staticClass:"user-fullname"},[_vm._v("\n        "+_vm._s(_vm.userName)+"\n      ")]),_c('div',{staticClass:"agreement"},[_vm._v("\n        Договор № 123765\n      ")]),_c('div',{staticClass:"price-info"},[_vm._v("\n        Оптовые цены (активны)\n      ")]),_vm._m(10),_c('ul',{staticClass:"menu-popup_list"},[_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Личный кабинет\n        ")]),_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Профиль и настройки\n        ")]),_vm._m(11),_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Заказы и оплаты\n        ")]),_c('li',{staticClass:"menu-popup_list-item",on:{"click":_vm.logout}},[_vm._v("\n          Выйти\n        ")])])]):_vm._e(),_vm._m(12)])])}
-var headervue_type_template_id_3229ff88_shadow_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"desktop-header__left"},[_c('div',{staticClass:"desktop-header__logo"},[_c('a',{attrs:{"href":"~/"}},[_vm._v("Транс Стартер")])]),_c('ul',{staticClass:"desktop-header__menu-list"},[_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/special-offers"}},[_vm._v("Акции и новинки")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/delivery"}},[_vm._v("Доставка и оплата")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/about-company"}},[_vm._v("О компании")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/auto-workshops"}},[_vm._v("Найти точку ремонта")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/contacts"}},[_vm._v("Контакты")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Блог")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',{staticClass:"desktop-header__login-item desktop-header__login-item_icon-cart"},[_c('span',{staticClass:"icon-shopping-cart desktop-header__icon-cart"},[_c('i',[_vm._v("9")])]),_c('div',{staticClass:"shopping-cart"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"wallet"},[_c('div',{staticClass:"wallet-with-icon"},[_c('div',{staticClass:"icon"}),_c('div',{staticClass:"wallet-balance"},[_vm._v("\n            15 000 ₽\n          ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',{staticClass:"menu-popup_list-item menu-popup_list-item-active"},[_vm._v("\n          Корзина\n          "),_c('span',{staticClass:"menu-popup_list-item-notify"},[_vm._v("3")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"desktop-header__search search"},[_c('form',{staticClass:"container search__form"},[_c('span',{staticClass:"search__form__select-numbers"},[_vm._v("\n          123\n        ")]),_c('select',{staticClass:"search__select",attrs:{"name":""}},[_c('option',{attrs:{"disabled":"","value":"","selected":""}},[_vm._v("Номер детали")]),_c('option',{attrs:{"value":"detail_1"}},[_vm._v("Детали 1")]),_c('option',{attrs:{"value":"detail_2"}},[_vm._v("Детали 2")]),_c('option',{attrs:{"value":"detail_3"}},[_vm._v("Детали 3")]),_c('option',{attrs:{"value":"detail_4"}},[_vm._v("Детали 4")]),_c('option',{attrs:{"value":"detail_5"}},[_vm._v("Детали 5")]),_c('option',{attrs:{"value":"detail_6"}},[_vm._v("Детали 6")]),_c('option',{attrs:{"value":"detail_7"}},[_vm._v("Детали 7")])]),_c('div',{staticClass:"search__input search-input"},[_c('div',{staticClass:"search__icon-lins"}),_c('input',{attrs:{"type":"text"}}),_c('div',{staticClass:"search__clear"})]),_c('button',{staticClass:"search__btn-search",attrs:{"type":"submit"}},[_vm._v("Найти")])]),_c('div',{staticClass:"container search__location"},[_c('div',{staticClass:"search__location-left"},[_c('div',{staticClass:"search__city border-white link"},[_vm._v("\n            Москва\n          ")]),_c('ul',{staticClass:"search__street-list"},[_c('li',{staticClass:"search__street"},[_c('div',{staticClass:"search__icon-marker"}),_c('p',[_vm._v("Каширское шоссе, 41")])]),_c('li',{staticClass:"search__street"},[_c('div',{staticClass:"search__icon-marker"}),_c('p',[_vm._v("г. Дзержинский, ул. Энергетиков, 18А")])])])]),_c('div',{staticClass:"search__location-right"},[_c('a',{staticClass:"search__phone border-white",attrs:{"href":"tel:+7-495-748-97-74"}},[_vm._v("\n            +7 (495) 748-97-74\n          ")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"logo"},[_vm._v("\n          Транс"),_c('br'),_vm._v(" Стартер\n        ")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"menu-item"},[_c('div',{staticClass:"map-alt"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"menu-item"},[_c('div',{staticClass:"shopping-cart"}),_c('span',{staticClass:"notify-counter"},[_vm._v("9")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"menu-popup_list"},[_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Акции и новинки")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Доставка и оплата")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{staticClass:"active",attrs:{"href":"#"}},[_vm._v("О компании")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Найти точку ремонта")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Контакты")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Блог")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container search__location"},[_c('div',{staticClass:"search__location-left"},[_c('div',{staticClass:"search__city border-white link"},[_vm._v("\n            Москва\n          ")]),_c('ul',{staticClass:"search__street-list"},[_c('li',{staticClass:"search__street"},[_c('div',{staticClass:"search__icon-marker"}),_c('p',[_vm._v("Каширское шоссе, 41")])]),_c('li',{staticClass:"search__street"},[_c('div',{staticClass:"search__icon-marker"}),_c('p',[_vm._v("г. Дзержинский, ул. Энергетиков, 18А")])])])]),_c('div',{staticClass:"search__location-right"},[_c('a',{staticClass:"search__phone border-white",attrs:{"href":"tel:+7-495-748-97-74"}},[_vm._v("\n            +7 (495) 748-97-74\n          ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"wallet"},[_c('div',{staticClass:"wallet-with-icon"},[_c('span',{staticClass:"icon"}),_c('div',{staticClass:"wallet-balance"},[_vm._v("\n            15 000 ₽\n          ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',{staticClass:"menu-popup_list-item menu-popup_list-item-active"},[_vm._v("\n          Корзина\n          "),_c('span',{staticClass:"menu-popup_list-item-notify"},[_vm._v("3")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mobile-header__search"},[_c('form',{staticClass:"search__form"},[_c('div',{staticClass:"form-row"},[_c('span',{staticClass:"search__select-numbers "},[_vm._v("\n            123\n          ")]),_c('select',{staticClass:"search__select",attrs:{"name":""}},[_c('option',{attrs:{"disabled":"","value":"","selected":""}},[_vm._v("Номер детали")]),_c('option',{attrs:{"value":"detail_1"}},[_vm._v("Детали 1")]),_c('option',{attrs:{"value":"detail_2"}},[_vm._v("Детали 2")]),_c('option',{attrs:{"value":"detail_3"}},[_vm._v("Детали 3")]),_c('option',{attrs:{"value":"detail_4"}},[_vm._v("Детали 4")]),_c('option',{attrs:{"value":"detail_5"}},[_vm._v("Детали 5")]),_c('option',{attrs:{"value":"detail_6"}},[_vm._v("Детали 6")]),_c('option',{attrs:{"value":"detail_7"}},[_vm._v("Детали 7")])])]),_c('div',{staticClass:"form-row"},[_c('div',{staticClass:"search__input-mobile search-input"},[_c('input',{attrs:{"type":"text"}}),_c('div',{staticClass:"search__clear"})]),_c('button',{staticClass:"search__btn-search",attrs:{"type":"submit"}},[_c('div',{staticClass:"search__icon-lins"})])])])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/shared/header/header.vue?vue&type=template&id=583cefaa&shadow
+var headervue_type_template_id_583cefaa_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('header',{staticClass:"header"},[_c('div',{staticClass:"desktop-header"},[_c('div',{staticClass:"desktop-header__menu"},[_vm._m(0),_c('div',{staticClass:"desktop-header__right"},[_c('ul',{staticClass:"desktop-header__login"},[_vm._m(1),(!_vm.loggedIn)?_c('li',{staticClass:"desktop-header__login-item",on:{"click":function($event){_vm.logIn()}}},[_c('a',{staticClass:"border"},[_vm._v("Вход")])]):_vm._e(),(!_vm.loggedIn)?_c('li',{staticClass:"desktop-header__login-item",on:{"click":function($event){_vm.toggleRegistrationPopup()}}},[_c('a',{staticClass:"border register"},[_vm._v("Регистрация")])]):_vm._e(),(_vm.loggedIn)?_c('div',{staticClass:"user-info",on:{"click":function($event){_vm.toggleUserMenu()}}},[_c('div',{staticClass:"user-avatar"}),_c('div',{staticClass:"user-name"},[_vm._v(_vm._s(_vm.userName))])]):_vm._e()])])]),(_vm.blocksShow.user && _vm.loggedIn)?_c('div',{staticClass:"menu-popup"},[_c('div',{staticClass:"user-fullname"},[_vm._v("\n        "+_vm._s(_vm.userName)+"\n      ")]),_c('div',{staticClass:"agreement"},[_vm._v("\n        Договор № 123765\n      ")]),_c('div',{staticClass:"price-info"},[_vm._v("\n        Оптовые цены (активны)\n      ")]),_vm._m(2),_c('ul',{staticClass:"menu-popup_list"},[_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Личный кабинет\n        ")]),_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Профиль и настройки\n        ")]),_vm._m(3),_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Заказы и оплаты\n        ")]),_c('li',{staticClass:"menu-popup_list-item",on:{"click":_vm.logout}},[_vm._v("\n          Выйти\n        ")])])]):_vm._e(),_vm._m(4)]),_c('div',{staticClass:"mobile-header"},[_c('div',{staticClass:"mobile-header__menu"},[_c('div',{staticClass:"mobile-header__menu__left"},[_c('div',{staticClass:"burger-wrapper"},[_c('span',{staticClass:"burger-icon",on:{"click":function($event){_vm.toggleMainMenu()}}})]),_vm._m(5)]),_c('div',{staticClass:"mobile-header__menu__right"},[_vm._m(6),_vm._m(7),_c('div',{staticClass:"menu-item"},[(!_vm.loggedIn)?_c('div',{staticClass:"new-user",on:{"click":function($event){_vm.toggleUserMenu()}}}):_vm._e(),(_vm.loggedIn)?_c('div',{staticClass:"user-avatar",on:{"click":function($event){_vm.toggleUserMenu()}}}):_vm._e()])])]),(_vm.blocksShow.menu)?_c('div',{staticClass:"menu-popup"},[_vm._m(8)]):_vm._e(),(_vm.blocksShow.location)?_c('div',{staticClass:"menu-popup"},[_vm._m(9)]):_vm._e(),(_vm.blocksShow.user && !_vm.loggedIn)?_c('div',{staticClass:"menu-popup"},[_c('ul',{staticClass:"menu-popup_list"},[_c('li',{staticClass:"menu-popup_list-item",on:{"click":function($event){_vm.logIn()}}},[_c('a',[_vm._v("Вход")])]),_c('li',{staticClass:"menu-popup_list-item",on:{"click":function($event){_vm.toggleRegistrationPopup()}}},[_c('a',{staticClass:"register"},[_vm._v("Регистрация")])])])]):_vm._e(),(_vm.blocksShow.user && _vm.loggedIn)?_c('div',{staticClass:"menu-popup"},[_c('div',{staticClass:"user-fullname"},[_vm._v("\n        "+_vm._s(_vm.userName)+"\n      ")]),_c('div',{staticClass:"agreement"},[_vm._v("\n        Договор № 123765\n      ")]),_c('div',{staticClass:"price-info"},[_vm._v("\n        Оптовые цены (активны)\n      ")]),_vm._m(10),_c('ul',{staticClass:"menu-popup_list"},[_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Личный кабинет\n        ")]),_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Профиль и настройки\n        ")]),_vm._m(11),_c('li',{staticClass:"menu-popup_list-item"},[_vm._v("\n          Заказы и оплаты\n        ")]),_c('li',{staticClass:"menu-popup_list-item",on:{"click":_vm.logout}},[_vm._v("\n          Выйти\n        ")])])]):_vm._e(),_vm._m(12)])])}
+var headervue_type_template_id_583cefaa_shadow_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"desktop-header__left"},[_c('div',{staticClass:"desktop-header__logo"},[_c('a',{attrs:{"href":"/"}},[_vm._v("Транс Стартер")])]),_c('ul',{staticClass:"desktop-header__menu-list"},[_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/special-offers"}},[_vm._v("Акции и новинки")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/delivery"}},[_vm._v("Доставка и оплата")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/about-company"}},[_vm._v("О компании")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/auto-workshops"}},[_vm._v("Найти точку ремонта")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"/contacts"}},[_vm._v("Контакты")])]),_c('li',{staticClass:"desktop-header__menu-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Блог")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',{staticClass:"desktop-header__login-item desktop-header__login-item_icon-cart"},[_c('span',{staticClass:"icon-shopping-cart desktop-header__icon-cart"},[_c('i',[_vm._v("9")])]),_c('div',{staticClass:"shopping-cart"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"wallet"},[_c('div',{staticClass:"wallet-with-icon"},[_c('div',{staticClass:"icon"}),_c('div',{staticClass:"wallet-balance"},[_vm._v("\n            15 000 ₽\n          ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',{staticClass:"menu-popup_list-item menu-popup_list-item-active"},[_vm._v("\n          Корзина\n          "),_c('span',{staticClass:"menu-popup_list-item-notify"},[_vm._v("3")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"desktop-header__search search"},[_c('form',{staticClass:"container search__form"},[_c('span',{staticClass:"search__form__select-numbers"},[_vm._v("\n          123\n        ")]),_c('select',{staticClass:"search__select",attrs:{"name":""}},[_c('option',{attrs:{"disabled":"","value":"","selected":""}},[_vm._v("Номер детали")]),_c('option',{attrs:{"value":"detail_1"}},[_vm._v("Детали 1")]),_c('option',{attrs:{"value":"detail_2"}},[_vm._v("Детали 2")]),_c('option',{attrs:{"value":"detail_3"}},[_vm._v("Детали 3")]),_c('option',{attrs:{"value":"detail_4"}},[_vm._v("Детали 4")]),_c('option',{attrs:{"value":"detail_5"}},[_vm._v("Детали 5")]),_c('option',{attrs:{"value":"detail_6"}},[_vm._v("Детали 6")]),_c('option',{attrs:{"value":"detail_7"}},[_vm._v("Детали 7")])]),_c('div',{staticClass:"search__input search-input"},[_c('div',{staticClass:"search__icon-lins"}),_c('input',{attrs:{"type":"text"}}),_c('div',{staticClass:"search__clear"})]),_c('button',{staticClass:"search__btn-search",attrs:{"type":"submit"}},[_vm._v("Найти")])]),_c('div',{staticClass:"container search__location"},[_c('div',{staticClass:"search__location-left"},[_c('div',{staticClass:"search__city border-white link"},[_vm._v("\n            Москва\n          ")]),_c('ul',{staticClass:"search__street-list"},[_c('li',{staticClass:"search__street"},[_c('div',{staticClass:"search__icon-marker"}),_c('p',[_vm._v("Каширское шоссе, 41")])]),_c('li',{staticClass:"search__street"},[_c('div',{staticClass:"search__icon-marker"}),_c('p',[_vm._v("г. Дзержинский, ул. Энергетиков, 18А")])])])]),_c('div',{staticClass:"search__location-right"},[_c('a',{staticClass:"search__phone border-white",attrs:{"href":"tel:+7-495-748-97-74"}},[_vm._v("\n            +7 (495) 748-97-74\n          ")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"logo"},[_vm._v("\n          Транс"),_c('br'),_vm._v(" Стартер\n        ")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"menu-item"},[_c('div',{staticClass:"map-alt"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"menu-item"},[_c('div',{staticClass:"shopping-cart"}),_c('span',{staticClass:"notify-counter"},[_vm._v("9")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"menu-popup_list"},[_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Акции и новинки")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Доставка и оплата")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{staticClass:"active",attrs:{"href":"#"}},[_vm._v("О компании")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Найти точку ремонта")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Контакты")])]),_c('li',{staticClass:"menu-popup_list-item"},[_c('a',{attrs:{"href":"#"}},[_vm._v("Блог")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container search__location"},[_c('div',{staticClass:"search__location-left"},[_c('div',{staticClass:"search__city border-white link"},[_vm._v("\n            Москва\n          ")]),_c('ul',{staticClass:"search__street-list"},[_c('li',{staticClass:"search__street"},[_c('div',{staticClass:"search__icon-marker"}),_c('p',[_vm._v("Каширское шоссе, 41")])]),_c('li',{staticClass:"search__street"},[_c('div',{staticClass:"search__icon-marker"}),_c('p',[_vm._v("г. Дзержинский, ул. Энергетиков, 18А")])])])]),_c('div',{staticClass:"search__location-right"},[_c('a',{staticClass:"search__phone border-white",attrs:{"href":"tel:+7-495-748-97-74"}},[_vm._v("\n            +7 (495) 748-97-74\n          ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"wallet"},[_c('div',{staticClass:"wallet-with-icon"},[_c('span',{staticClass:"icon"}),_c('div',{staticClass:"wallet-balance"},[_vm._v("\n            15 000 ₽\n          ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',{staticClass:"menu-popup_list-item menu-popup_list-item-active"},[_vm._v("\n          Корзина\n          "),_c('span',{staticClass:"menu-popup_list-item-notify"},[_vm._v("3")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mobile-header__search"},[_c('form',{staticClass:"search__form"},[_c('div',{staticClass:"form-row"},[_c('span',{staticClass:"search__select-numbers "},[_vm._v("\n            123\n          ")]),_c('select',{staticClass:"search__select",attrs:{"name":""}},[_c('option',{attrs:{"disabled":"","value":"","selected":""}},[_vm._v("Номер детали")]),_c('option',{attrs:{"value":"detail_1"}},[_vm._v("Детали 1")]),_c('option',{attrs:{"value":"detail_2"}},[_vm._v("Детали 2")]),_c('option',{attrs:{"value":"detail_3"}},[_vm._v("Детали 3")]),_c('option',{attrs:{"value":"detail_4"}},[_vm._v("Детали 4")]),_c('option',{attrs:{"value":"detail_5"}},[_vm._v("Детали 5")]),_c('option',{attrs:{"value":"detail_6"}},[_vm._v("Детали 6")]),_c('option',{attrs:{"value":"detail_7"}},[_vm._v("Детали 7")])])]),_c('div',{staticClass:"form-row"},[_c('div',{staticClass:"search__input-mobile search-input"},[_c('input',{attrs:{"type":"text"}}),_c('div',{staticClass:"search__clear"})]),_c('button',{staticClass:"search__btn-search",attrs:{"type":"submit"}},[_c('div',{staticClass:"search__icon-lins"})])])])])}]
 
 
-// CONCATENATED MODULE: ./src/components/shared/header/header.vue?vue&type=template&id=3229ff88&shadow
+// CONCATENATED MODULE: ./src/components/shared/header/header.vue?vue&type=template&id=583cefaa&shadow
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/promise.js
 var promise = __webpack_require__("795b");
@@ -6276,7 +6274,7 @@ __decorate([Action, __metadata("design:type", Function), __metadata("design:para
 
 __decorate([Action, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], authentication_module_Authentication.prototype, "mockLogout", null);
 
-authentication_module_Authentication = __decorate([Module({
+authentication_module_Authentication = __decorate([esm_Module({
   dynamic: true,
   store: store,
   name: 'auth',
@@ -6303,9 +6301,12 @@ var headervue_type_script_lang_ts_shadow_Header = class Header extends external_
     store.dispatch('display/toggleRegistration');
   }
 
-  toggleLogInPopup() {
-    store.dispatch('display/toggleLogIn');
-  }
+  logIn() {
+    store.dispatch('auth/login');
+  } // toggleLogInPopup () {
+  //   store.dispatch('display/toggleLogIn')
+  // }
+
 
   get loggedIn() {
     return AuthModule.loggedIn;
@@ -6353,8 +6354,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var headershadow_component = normalizeComponent(
   header_headervue_type_script_lang_ts_shadow,
-  headervue_type_template_id_3229ff88_shadow_render,
-  headervue_type_template_id_3229ff88_shadow_staticRenderFns,
+  headervue_type_template_id_583cefaa_shadow_render,
+  headervue_type_template_id_583cefaa_shadow_staticRenderFns,
   false,
   headershadow_injectStyles,
   null,
@@ -7208,12 +7209,12 @@ var user_sidebarshadow_component = normalizeComponent(
 
 user_sidebarshadow_component.options.__file = "user-sidebar.vue"
 /* harmony default export */ var user_sidebarshadow = (user_sidebarshadow_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=template&id=d1e8e44c&shadow
-var registration_formvue_type_template_id_d1e8e44c_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"registration-text"},[_vm._v("\n    Регистрация\n  ")]),_c('form',{staticClass:"registration-form",on:{"submit":function($event){$event.preventDefault();return _vm.onSubmit($event)}}},[_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите имя и фамилию контактного лица")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.login),expression:"regForm.login"}],staticClass:"form-control name-input",class:{ 'invalid-input': _vm.errors.DuplicateUserName },attrs:{"placeholder":"Имя и фамилия","type":"text","required":""},domProps:{"value":(_vm.regForm.login)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "login", $event.target.value)}}}),(_vm.errors.DuplicateUserName)?_c('div',{staticClass:"invalid-text"},[_vm._v("\n        Пользователь с таким именем уже существует\n      ")]):_vm._e()]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите телефон")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.phone),expression:"regForm.phone"}],staticClass:"form-control phone-input",attrs:{"placeholder":"Телефон","type":"tel","autocomplete":"new-tel","required":""},domProps:{"value":(_vm.regForm.phone)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "phone", $event.target.value)}}})]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите email")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.email),expression:"regForm.email"}],staticClass:"form-control email-input",attrs:{"placeholder":"Почта","type":"email","autocomplete":"new-email","required":""},domProps:{"value":(_vm.regForm.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "email", $event.target.value)}}})]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите пароль")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.password),expression:"regForm.password"}],staticClass:"form-control password-input",class:{ 'invalid-input': _vm.errors.passwordError },attrs:{"placeholder":"Пароль","type":"password","required":""},domProps:{"value":(_vm.regForm.password)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "password", $event.target.value)}}}),(_vm.errors.passwordError)?_c('div',{staticClass:"invalid-text"},[_vm._v("\n        пароль\n        "),(_vm.errors.PasswordTooShort)?_c('span',[_vm._v("должен быть как минимум 6 символов.")]):_vm._e(),(_vm.errors.PasswordRequiresNonAlphanumeric)?_c('span',[_vm._v(" должен быть один спецсимвол.")]):_vm._e(),(_vm.errors.PasswordRequiresUpper)?_c('span',[_vm._v(" должны встречаться символы в верхнем регистре.")]):_vm._e(),(_vm.errors.PasswordRequiresLower)?_c('span',[_vm._v(" должны встречаться символы в нижнем регистре.")]):_vm._e()]):_vm._e()]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Какую организацию вы представляете?")]),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationVariant),expression:"regForm.organizationVariant"}],staticClass:"form-control org-input",attrs:{"required":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.regForm, "organizationVariant", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":"","value":""}},[_vm._v("Выберите один из вариантов")]),_c('option',[_vm._v("Автосервис")]),_c('option',[_vm._v("Автосервис")]),_c('option',[_vm._v("Автосервис")])])]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите наименование организации")]),_c('div',{staticClass:"two-selectors"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationType),expression:"regForm.organizationType"}],staticClass:"form-control first-selector name-org-input",attrs:{"required":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.regForm, "organizationType", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":"","value":""}},[_vm._v("Выберите один из вариантов")]),_c('option',[_vm._v("ООО")]),_c('option',[_vm._v("ООО")])]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationName),expression:"regForm.organizationName"}],staticClass:"form-control second-selector",attrs:{"placeholder":"Название огранизации","type":"text","required":""},domProps:{"value":(_vm.regForm.organizationName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "organizationName", $event.target.value)}}})])]),_c('button',{staticClass:"btn btn-orange btn-reg",attrs:{"type":"submit"}},[_vm._v("\n      Зарегистрироваться\n    ")]),_vm._m(0)]),_c('div',{staticClass:"already-have-account text-center"},[_c('p',[_vm._v("Уже зарегистрированы?")]),_c('span',{staticClass:"go-log-in",attrs:{"href":"#"},on:{"click":function($event){_vm.closeRegistrationAndOpenLogIn()}}},[_vm._v("Войти")])])])}
-var registration_formvue_type_template_id_d1e8e44c_shadow_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"accept-policy"},[_vm._v("\n      Нажимая на кнопку, вы даете согласие\n      на обработку"),_c('br'),_vm._v(" своих персональных данных\n      и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=template&id=717d5683&shadow
+var registration_formvue_type_template_id_717d5683_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"registration-text"},[_vm._v("\n    Регистрация\n  ")]),_c('form',{staticClass:"registration-form",on:{"submit":function($event){$event.preventDefault();return _vm.onSubmit($event)}}},[_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите имя и фамилию контактного лица")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.login),expression:"regForm.login"}],staticClass:"form-control name-input",class:{ 'invalid-input': _vm.errors.DuplicateUserName },attrs:{"placeholder":"Имя и фамилия","type":"text","required":""},domProps:{"value":(_vm.regForm.login)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "login", $event.target.value)}}}),(_vm.errors.DuplicateUserName)?_c('div',{staticClass:"invalid-text"},[_vm._v("\n        Пользователь с таким именем уже существует\n      ")]):_vm._e()]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите телефон")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.phone),expression:"regForm.phone"}],staticClass:"form-control phone-input",attrs:{"placeholder":"Телефон","type":"tel","autocomplete":"new-tel","required":""},domProps:{"value":(_vm.regForm.phone)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "phone", $event.target.value)}}})]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите email")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.email),expression:"regForm.email"}],staticClass:"form-control email-input",attrs:{"placeholder":"Почта","type":"email","autocomplete":"new-email","required":""},domProps:{"value":(_vm.regForm.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "email", $event.target.value)}}})]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите пароль")]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.password),expression:"regForm.password"}],staticClass:"form-control password-input",class:{ 'invalid-input': _vm.errors.passwordError },attrs:{"placeholder":"Пароль","type":"password","required":""},domProps:{"value":(_vm.regForm.password)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "password", $event.target.value)}}}),(_vm.errors.passwordError)?_c('div',{staticClass:"invalid-text"},[_vm._v("\n        пароль\n        "),(_vm.errors.PasswordTooShort)?_c('span',[_vm._v("должен быть как минимум 6 символов.")]):_vm._e(),(_vm.errors.PasswordRequiresNonAlphanumeric)?_c('span',[_vm._v(" должен быть один спецсимвол.")]):_vm._e(),(_vm.errors.PasswordRequiresUpper)?_c('span',[_vm._v(" должны встречаться символы в верхнем регистре.")]):_vm._e(),(_vm.errors.PasswordRequiresLower)?_c('span',[_vm._v(" должны встречаться символы в нижнем регистре.")]):_vm._e()]):_vm._e()]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Какую организацию вы представляете?")]),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationVariant),expression:"regForm.organizationVariant"}],staticClass:"form-control org-input",attrs:{"required":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.regForm, "organizationVariant", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":"","value":""}},[_vm._v("Выберите один из вариантов")]),_c('option',[_vm._v("Автосервис")]),_c('option',[_vm._v("Автосервис")]),_c('option',[_vm._v("Автосервис")])])]),_c('div',{staticClass:"form-group"},[_c('label',{staticClass:"label"},[_vm._v("Введите наименование организации")]),_c('div',{staticClass:"two-selectors"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationType),expression:"regForm.organizationType"}],staticClass:"form-control first-selector name-org-input",attrs:{"required":""},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.regForm, "organizationType", $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[_c('option',{attrs:{"disabled":"","value":""}},[_vm._v("Выберите один из вариантов")]),_c('option',[_vm._v("ООО")]),_c('option',[_vm._v("ООО")])]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.regForm.organizationName),expression:"regForm.organizationName"}],staticClass:"form-control second-selector",attrs:{"placeholder":"Название огранизации","type":"text","required":""},domProps:{"value":(_vm.regForm.organizationName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.regForm, "organizationName", $event.target.value)}}})])]),_c('button',{staticClass:"btn btn-orange btn-reg",attrs:{"type":"submit"}},[_vm._v("\n      Зарегистрироваться\n    ")]),_vm._m(0)]),_c('div',{staticClass:"already-have-account text-center"},[_c('p',[_vm._v("Уже зарегистрированы?")]),_c('span',{staticClass:"go-log-in",attrs:{"href":"#"},on:{"click":function($event){_vm.logIn()}}},[_vm._v("Войти")])])])}
+var registration_formvue_type_template_id_717d5683_shadow_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"accept-policy"},[_vm._v("\n      Нажимая на кнопку, вы даете согласие\n      на обработку"),_c('br'),_vm._v(" своих персональных данных\n      и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])}]
 
 
-// CONCATENATED MODULE: ./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=template&id=d1e8e44c&shadow
+// CONCATENATED MODULE: ./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=template&id=717d5683&shadow
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=script&lang=ts&shadow
 
@@ -7238,9 +7239,13 @@ var registration_formvue_type_script_lang_ts_shadow_RegistrationForm = class Reg
     this.auth = new auth_service_AuthService();
   }
 
-  closeRegistrationAndOpenLogIn() {
-    store.dispatch('display/closeRegistrationAndOpenLogIn');
-  }
+  logIn() {
+    store.dispatch('auth/login');
+    store.dispatch('auth/toggleRegistration');
+  } // closeRegistrationAndOpenLogIn () {
+  //   store.dispatch('display/closeRegistrationAndOpenLogIn')
+  // }
+
 
   handleError(errorMessages) {
     if (!errorMessages.length) {
@@ -7318,8 +7323,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var registration_formshadow_component = normalizeComponent(
   registration_form_registration_formvue_type_script_lang_ts_shadow,
-  registration_formvue_type_template_id_d1e8e44c_shadow_render,
-  registration_formvue_type_template_id_d1e8e44c_shadow_staticRenderFns,
+  registration_formvue_type_template_id_717d5683_shadow_render,
+  registration_formvue_type_template_id_717d5683_shadow_staticRenderFns,
   false,
   registration_formshadow_injectStyles,
   null,
@@ -8214,18 +8219,6 @@ __webpack_require__("9c6c")('includes');
 
 /***/ }),
 
-/***/ "679b":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_117e7b93_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("729f");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_117e7b93_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_117e7b93_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_117e7b93_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_117e7b93_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_log_in_vue_vue_type_style_index_0_id_117e7b93_scoped_true_lang_scss_shadow__WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "6821":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8431,23 +8424,6 @@ exports.push([module.i, "/*!\r\n *  1. Normalize.css(v3.0.2) + other css resets 
 
 // exports
 
-
-/***/ }),
-
-/***/ "729f":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("f1a2");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add CSS to Shadow Root
-var add = __webpack_require__("35d6").default
-module.exports.__inject__ = function (shadowRoot) {
-  add("cd4dafa4", content, shadowRoot)
-};
 
 /***/ }),
 
@@ -10599,6 +10575,21 @@ module.exports = __webpack_require__("cee4");
 
 /***/ }),
 
+/***/ "bc8e":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("2350")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/*!\r\n *  1. Normalize.css(v3.0.2) + other css resets [customized by igrik]\r\n *  2. Custom project reset styles\r\n */a[data-v-c0fe938c],abbr[data-v-c0fe938c],acronym[data-v-c0fe938c],address[data-v-c0fe938c],applet[data-v-c0fe938c],article[data-v-c0fe938c],aside[data-v-c0fe938c],audio[data-v-c0fe938c],b[data-v-c0fe938c],big[data-v-c0fe938c],blockquote[data-v-c0fe938c],body[data-v-c0fe938c],canvas[data-v-c0fe938c],caption[data-v-c0fe938c],center[data-v-c0fe938c],cite[data-v-c0fe938c],code[data-v-c0fe938c],dd[data-v-c0fe938c],del[data-v-c0fe938c],details[data-v-c0fe938c],dfn[data-v-c0fe938c],div[data-v-c0fe938c],dl[data-v-c0fe938c],dt[data-v-c0fe938c],em[data-v-c0fe938c],embed[data-v-c0fe938c],fieldset[data-v-c0fe938c],figcaption[data-v-c0fe938c],figure[data-v-c0fe938c],footer[data-v-c0fe938c],form[data-v-c0fe938c],h1[data-v-c0fe938c],h2[data-v-c0fe938c],h3[data-v-c0fe938c],h4[data-v-c0fe938c],h5[data-v-c0fe938c],h6[data-v-c0fe938c],header[data-v-c0fe938c],hgroup[data-v-c0fe938c],html[data-v-c0fe938c],i[data-v-c0fe938c],iframe[data-v-c0fe938c],img[data-v-c0fe938c],ins[data-v-c0fe938c],kbd[data-v-c0fe938c],label[data-v-c0fe938c],legend[data-v-c0fe938c],li[data-v-c0fe938c],mark[data-v-c0fe938c],menu[data-v-c0fe938c],nav[data-v-c0fe938c],object[data-v-c0fe938c],output[data-v-c0fe938c],p[data-v-c0fe938c],pre[data-v-c0fe938c],q[data-v-c0fe938c],ruby[data-v-c0fe938c],s[data-v-c0fe938c],samp[data-v-c0fe938c],section[data-v-c0fe938c],small[data-v-c0fe938c],span[data-v-c0fe938c],strike[data-v-c0fe938c],strong[data-v-c0fe938c],sub[data-v-c0fe938c],summary[data-v-c0fe938c],sup[data-v-c0fe938c],table[data-v-c0fe938c],tbody[data-v-c0fe938c],td[data-v-c0fe938c],tfoot[data-v-c0fe938c],th[data-v-c0fe938c],thead[data-v-c0fe938c],time[data-v-c0fe938c],tr[data-v-c0fe938c],tt[data-v-c0fe938c],u[data-v-c0fe938c],ul[data-v-c0fe938c],var[data-v-c0fe938c],video[data-v-c0fe938c]{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline;background:transparent}html[data-v-c0fe938c]{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}*[data-v-c0fe938c],[data-v-c0fe938c]:after,[data-v-c0fe938c]:before,html[data-v-c0fe938c]{-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}body[data-v-c0fe938c]{line-height:1}ul[data-v-c0fe938c]{list-style:none}blockquote[data-v-c0fe938c],q[data-v-c0fe938c]{quotes:none}blockquote[data-v-c0fe938c]:after,blockquote[data-v-c0fe938c]:before,q[data-v-c0fe938c]:after,q[data-v-c0fe938c]:before{content:\"\";content:none}article[data-v-c0fe938c],aside[data-v-c0fe938c],details[data-v-c0fe938c],figcaption[data-v-c0fe938c],figure[data-v-c0fe938c],footer[data-v-c0fe938c],header[data-v-c0fe938c],hgroup[data-v-c0fe938c],main[data-v-c0fe938c],menu[data-v-c0fe938c],nav[data-v-c0fe938c],section[data-v-c0fe938c],summary[data-v-c0fe938c]{display:block}audio[data-v-c0fe938c],canvas[data-v-c0fe938c],progress[data-v-c0fe938c],video[data-v-c0fe938c]{display:inline-block;vertical-align:baseline}audio[data-v-c0fe938c]:not([controls]){display:none;height:0}[hidden][data-v-c0fe938c],template[data-v-c0fe938c]{display:none}a[data-v-c0fe938c]{font-size:100%;text-decoration:none;vertical-align:baseline;background:transparent;color:inherit;-webkit-transition:.3s;transition:.3s}a[data-v-c0fe938c]:active,a[data-v-c0fe938c]:focus,a[data-v-c0fe938c]:hover{outline:0}abbr[title][data-v-c0fe938c]{border-bottom:1px dotted}b[data-v-c0fe938c],strong[data-v-c0fe938c]{font-weight:700}dfn[data-v-c0fe938c]{font-style:italic}h1[data-v-c0fe938c]{font-size:2em;margin:.67em 0}mark[data-v-c0fe938c]{background:#ff0;color:#000}small[data-v-c0fe938c]{font-size:80%}sub[data-v-c0fe938c],sup[data-v-c0fe938c]{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup[data-v-c0fe938c]{top:-.5em}sub[data-v-c0fe938c]{bottom:-.25em}img[data-v-c0fe938c]{max-width:100%;height:auto;border:0}svg[data-v-c0fe938c]:not(:root){overflow:hidden}figure[data-v-c0fe938c]{margin:1em 40px}hr[data-v-c0fe938c]{height:0}pre[data-v-c0fe938c]{overflow:auto}code[data-v-c0fe938c],kbd[data-v-c0fe938c],pre[data-v-c0fe938c],samp[data-v-c0fe938c]{font-family:monospace,monospace;font-size:1em}button[data-v-c0fe938c],input[data-v-c0fe938c],optgroup[data-v-c0fe938c],select[data-v-c0fe938c],textarea[data-v-c0fe938c]{color:inherit;font:inherit;margin:0}button[data-v-c0fe938c],select[data-v-c0fe938c]{text-transform:none}button[data-v-c0fe938c],html input[type=button][data-v-c0fe938c],input[type=reset][data-v-c0fe938c],input[type=submit][data-v-c0fe938c]{-webkit-appearance:button;cursor:pointer}button[data-v-c0fe938c],input[type=button][data-v-c0fe938c],input[type=reset][data-v-c0fe938c],input[type=submit][data-v-c0fe938c]{border:none;margin:0;padding:0;overflow:visible;font:inherit;line-height:normal;background:none;color:inherit;-webkit-transition:.3s;transition:.3s}button[data-v-c0fe938c]:focus,input[type=button][data-v-c0fe938c]:focus,input[type=reset][data-v-c0fe938c]:focus,input[type=submit][data-v-c0fe938c]:focus{outline:0!important}button[disabled][data-v-c0fe938c],html input[disabled][data-v-c0fe938c]{cursor:default}button[data-v-c0fe938c]::-moz-focus-inner,input[data-v-c0fe938c]::-moz-focus-inner{border:0;margin:0;padding:0}input[data-v-c0fe938c]{line-height:normal}input[type=checkbox][data-v-c0fe938c],input[type=radio][data-v-c0fe938c]{padding:0}input[type=number][data-v-c0fe938c]::-webkit-inner-spin-button,input[type=number][data-v-c0fe938c]::-webkit-outer-spin-button{height:auto}input[type=search][data-v-c0fe938c]{-webkit-appearance:textfield}fieldset[data-v-c0fe938c]{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend[data-v-c0fe938c]{border:0;padding:0}textarea[data-v-c0fe938c]{overflow:auto;resize:none}optgroup[data-v-c0fe938c]{font-weight:700}table[data-v-c0fe938c]{border-collapse:collapse;border-spacing:0}.VueCarousel-pagination[data-v-c0fe938c]{position:absolute;bottom:5px}.VueCarousel-pagination .VueCarousel-dot[data-v-c0fe938c]{width:4px!important;height:4px!important;background-color:rgba(50,50,48,.2)!important}.VueCarousel-pagination .VueCarousel-dot--active[data-v-c0fe938c]{background-color:#323230!important}body[data-v-c0fe938c],html[data-v-c0fe938c]{background-color:#fff;margin:0;font-family:PT Sans;font-style:normal;font-weight:400}*[data-v-c0fe938c]{-webkit-box-sizing:border-box;box-sizing:border-box}.modal-open[data-v-c0fe938c]{overflow:hidden}#app[data-v-c0fe938c]{height:100%}[data-v-c0fe938c]:focus{outline-color:#0cb520}.text-center[data-v-c0fe938c]{text-align:center}.text-right[data-v-c0fe938c]{text-align:right}.bold[data-v-c0fe938c]{font-weight:700}.border[data-v-c0fe938c]{border:0!important;text-decoration:underline;-webkit-text-decoration-style:dashed;text-decoration-style:dashed;-webkit-text-decoration-color:#9b9b9b;text-decoration-color:#9b9b9b}.border-white[data-v-c0fe938c]{text-decoration:underline;-webkit-text-decoration-style:dashed;text-decoration-style:dashed;-webkit-text-decoration-color:hsla(0,0%,100%,.4);text-decoration-color:hsla(0,0%,100%,.4)}.border-green[data-v-c0fe938c]{text-decoration:underline;-webkit-text-decoration-style:dashed;text-decoration-style:dashed;-webkit-text-decoration-color:rgba(12,181,32,.4);text-decoration-color:rgba(12,181,32,.4)}.container[data-v-c0fe938c]{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row[data-v-c0fe938c]{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;-ms-flex-direction:row!important;flex-direction:row!important;-webkit-box-align:center;-ms-flex-align:center;align-items:center}@media (min-width:0px){.container[data-v-c0fe938c]{max-width:540px}.col-0[data-v-c0fe938c]{-ms-flex:0 0 0%;flex:0 0 0%;max-width:0}.col-0[data-v-c0fe938c],.col-2[data-v-c0fe938c]{-webkit-box-flex:0}.col-2[data-v-c0fe938c]{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-4[data-v-c0fe938c]{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-4[data-v-c0fe938c],.col-6[data-v-c0fe938c]{-webkit-box-flex:0}.col-6[data-v-c0fe938c]{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-10[data-v-c0fe938c]{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-10[data-v-c0fe938c],.col-12[data-v-c0fe938c]{-webkit-box-flex:0}.col-12[data-v-c0fe938c]{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}}@media (min-width:576px){.container[data-v-c0fe938c]{max-width:540px}.col-sm-2[data-v-c0fe938c]{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-sm-4[data-v-c0fe938c]{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-sm-6[data-v-c0fe938c]{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-sm-10[data-v-c0fe938c]{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}}@media (min-width:768px){.container[data-v-c0fe938c]{max-width:720px}}@media (min-width:992px){.container[data-v-c0fe938c]{max-width:960px}}@media (min-width:1200px){.container[data-v-c0fe938c]{max-width:1140px}.col-xl-2[data-v-c0fe938c]{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-xl-4[data-v-c0fe938c]{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-xl-6[data-v-c0fe938c]{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-xl-10[data-v-c0fe938c]{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}}@media (max-width:1200px){.btn-group-column[data-v-c0fe938c]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.btn-group-column button[data-v-c0fe938c]{border-radius:5px;margin-bottom:4px;line-height:20px;font-size:14px}.btn-block-mobile[data-v-c0fe938c]{width:100%}}.accept-policy[data-v-c0fe938c]{color:#a3a3a2;line-height:1.43;margin-bottom:16px;font-size:14px}.accept-policy .policy-link[data-v-c0fe938c]{display:inline;border-bottom:1px solid #a3a3a2;color:inherit;cursor:pointer}@media (max-width:1200px){.accept-policy[data-v-c0fe938c]{text-align:center}}.btn[data-v-c0fe938c]{height:48px;border-radius:4px;font-size:17px;font-weight:600;line-height:1.41;color:#323230;border-width:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:0 24px;font-family:Exo\\ 2}.btn-outline[data-v-c0fe938c]{border:1px solid #d2d2d2;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:4px}.btn-orange[data-v-c0fe938c]{-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.19),0 1px 0 0 #e29401;box-shadow:0 2px 4px 0 rgba(0,0,0,.19),0 1px 0 0 #e29401;background-image:-webkit-gradient(linear,left top,left bottom,from(#ffd600),to(#ffc600));background-image:linear-gradient(180deg,#ffd600,#ffc600)}.btn-block[data-v-c0fe938c]{width:100%}.btn-group[data-v-c0fe938c]{font-weight:700;line-height:20px;font-size:16px}.btn-group button[data-v-c0fe938c]{background-color:#fff;border:1px solid #d2d2d2;color:#323230;padding:10px 24px;cursor:pointer;float:left}.btn-group button[data-v-c0fe938c]:not(:last-child){border-right:none}.btn-group button[data-v-c0fe938c]:last-child{border-top-right-radius:5px;border-bottom-right-radius:5px}.btn-group button[data-v-c0fe938c]:first-child{border-top-left-radius:5px;border-bottom-left-radius:5px}.btn-group button[data-v-c0fe938c]:active{background-color:#eee}.btn-group[data-v-c0fe938c]:after{content:\"\";clear:both;display:table}.btn-group .active[data-v-c0fe938c]{background-color:#0cb520;color:#fff}.custom-checkbox[data-v-c0fe938c]{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.custom-checkbox-input[data-v-c0fe938c]{color:#0cb520;margin-bottom:0;min-height:1rem;cursor:pointer}.custom-checkbox-input .fill-control-input[data-v-c0fe938c]{display:none}.custom-checkbox-input .fill-control-input:checked~.fill-control-indicator[data-v-c0fe938c]{background-color:#0cb520;border-color:#0cb520;background-size:60%}.custom-checkbox-input .fill-control-indicator[data-v-c0fe938c]{border-radius:3px;display:inline-block;position:absolute;top:4px;left:0;width:16px;height:16px;-webkit-transition:.3s;transition:.3s;background:#0cb520;background-size:0;background-position:50%;background-repeat:no-repeat;background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E\")}.custom-checkbox-label[data-v-c0fe938c]{padding-top:2px;padding-left:22px;font-size:16px;line-height:1.25}.form-group[data-v-c0fe938c]{color:#323230;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-bottom:16px}.form-group .label[data-v-c0fe938c]{font-size:16px;font-weight:700;line-height:1.5;margin-bottom:8px}.form-group .big-label[data-v-c0fe938c]{font-weight:700;line-height:24px;font-size:16px;color:#323230}.form-group .mobile-top-label[data-v-c0fe938c]{margin-bottom:3px}.form-group .green-link[data-v-c0fe938c]{font-weight:700;line-height:24px;font-size:16px;color:#0cb520;text-decoration:underline;-webkit-text-decoration-style:dashed;text-decoration-style:dashed;-webkit-text-decoration-color:rgba(12,181,32,.4);text-decoration-color:rgba(12,181,32,.4)}.form-group .two-selectors[data-v-c0fe938c]{display:-webkit-box;display:-ms-flexbox;display:flex}.form-group .two-selectors .first-selector[data-v-c0fe938c]{margin-right:8px;width:30%}.form-group .two-selectors .second-selector[data-v-c0fe938c]{width:70%}.form-control[data-v-c0fe938c],.form-control-lg[data-v-c0fe938c]{border-radius:2px;padding:.675rem .75rem;border-width:0;border:1px solid #d2d2d2;background-color:#fff;width:100%;height:auto!important}.form-control-lg[data-v-c0fe938c]:focus,.form-control[data-v-c0fe938c]:focus{border-color:#0cb520}.invalid-text[data-v-c0fe938c]{width:100%;padding-top:5px;font-size:80%;color:#dc3545;padding-left:5px;line-height:15px;margin-bottom:-10px}.invalid-input[data-v-c0fe938c]{border:1.5px solid;border-color:#dc3545}.invalid-input[data-v-c0fe938c]:focus{border-color:#dc3545;outline:none}.form-control-lg[data-v-c0fe938c]{line-height:24px}[data-v-c0fe938c]::-webkit-input-placeholder{opacity:.5}[data-v-c0fe938c]::-ms-input-placeholder{opacity:.5}[data-v-c0fe938c]::placeholder{opacity:.5}.modal-wrapper[data-v-c0fe938c]{width:100vw;background-color:rgba(50,50,48,.8);height:100%;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;overflow-x:hidden;overflow-y:auto}.modal-wrapper .modal-popup[data-v-c0fe938c]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:80%;padding:20px 0;min-height:calc(100% - 3.5rem);margin:0 auto}.modal-wrapper .modal-popup .modal-content[data-v-c0fe938c]{margin:0 auto;position:relative;width:100%;background:#fff}.modal-wrapper .modal-popup .modal-content .close[data-v-c0fe938c]{cursor:pointer;position:absolute;top:12px;right:12px;z-index:1;color:#a3a3a2}@media (max-width:1200px){.modal-wrapper .modal-popup[data-v-c0fe938c]{width:calc(100% - 16px)!important;margin:0 auto}}.radio[data-v-c0fe938c]{position:absolute;z-index:-1;opacity:0;margin:10px 0 0 7px}.radio+label[data-v-c0fe938c]{position:relative;padding:0 0 0 35px;cursor:pointer}.radio+label[data-v-c0fe938c]:before{top:0;left:0;width:20px;height:20px;border-radius:50%;border:1px solid #d2d2d2;-webkit-box-shadow:0 1px 2px rgba(12,181,32,.3);box-shadow:0 1px 2px rgba(12,181,32,.3)}.radio+label[data-v-c0fe938c]:after,.radio+label[data-v-c0fe938c]:before{content:\"\";position:absolute;background:#fff}.radio+label[data-v-c0fe938c]:after{top:5px;left:5px;width:10px;height:10px;border-radius:50%;opacity:0;-webkit-transition:.2s;transition:.2s}.radio:checked+label[data-v-c0fe938c]:after{opacity:1;background-color:#fff}.radio:focus+label[data-v-c0fe938c]:before{border:0;background:#0cb520}.radio-label[data-v-c0fe938c]{font-family:PT Sans;font-style:normal;font-weight:400;line-height:20px;font-size:16px;color:#323230;-webkit-text-decoration-style:none;text-decoration-style:none}.log-in-content[data-v-c0fe938c]{padding:0 24px 0 24px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.log-in-content .title[data-v-c0fe938c]{font-size:24px;margin:40px 0 16px 0;text-align:left}.log-in-content .log-in-form[data-v-c0fe938c]{padding-right:18%}.log-in-content .log-in-form .remember-password[data-v-c0fe938c]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;margin-bottom:16px}.log-in-content .log-in-form .remember-password-text[data-v-c0fe938c]{font-size:16px;color:#0cb520;border-bottom:1px dashed #0cb520}.log-in-content .log-in-form .btn-log-in[data-v-c0fe938c]{margin:24px 0 16px 0;width:400px}.log-in-content .want-to-reg[data-v-c0fe938c]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:24px}.log-in-content .want-to-reg .go-to-reg[data-v-c0fe938c]{margin-left:5px;color:#0cb520;border-bottom:1px dashed #0cb520;cursor:pointer}@media (max-width:768px){.log-in-content .title[data-v-c0fe938c]{font-size:20px;margin:40px auto 16px auto}.log-in-content .log-in-form[data-v-c0fe938c]{padding-right:0}.log-in-content .log-in-form .btn-log-in[data-v-c0fe938c]{width:100%}.log-in-content .want-to-reg[data-v-c0fe938c]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.log-in-content .want-to-reg .go-to-reg[data-v-c0fe938c]{margin-top:5px;margin-left:0}}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "bcaa":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11991,6 +11982,23 @@ exports.push([module.i, "/*!\r\n *  1. Normalize.css(v3.0.2) + other css resets 
 
 /***/ }),
 
+/***/ "ea81":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("bc8e");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to Shadow Root
+var add = __webpack_require__("35d6").default
+module.exports.__inject__ = function (shadowRoot) {
+  add("dbad7ae8", content, shadowRoot)
+};
+
+/***/ }),
+
 /***/ "ebd6":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12055,21 +12063,6 @@ var add = __webpack_require__("35d6").default
 module.exports.__inject__ = function (shadowRoot) {
   add("2ffbc8a4", content, shadowRoot)
 };
-
-/***/ }),
-
-/***/ "f1a2":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("2350")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/*!\r\n *  1. Normalize.css(v3.0.2) + other css resets [customized by igrik]\r\n *  2. Custom project reset styles\r\n */a[data-v-117e7b93],abbr[data-v-117e7b93],acronym[data-v-117e7b93],address[data-v-117e7b93],applet[data-v-117e7b93],article[data-v-117e7b93],aside[data-v-117e7b93],audio[data-v-117e7b93],b[data-v-117e7b93],big[data-v-117e7b93],blockquote[data-v-117e7b93],body[data-v-117e7b93],canvas[data-v-117e7b93],caption[data-v-117e7b93],center[data-v-117e7b93],cite[data-v-117e7b93],code[data-v-117e7b93],dd[data-v-117e7b93],del[data-v-117e7b93],details[data-v-117e7b93],dfn[data-v-117e7b93],div[data-v-117e7b93],dl[data-v-117e7b93],dt[data-v-117e7b93],em[data-v-117e7b93],embed[data-v-117e7b93],fieldset[data-v-117e7b93],figcaption[data-v-117e7b93],figure[data-v-117e7b93],footer[data-v-117e7b93],form[data-v-117e7b93],h1[data-v-117e7b93],h2[data-v-117e7b93],h3[data-v-117e7b93],h4[data-v-117e7b93],h5[data-v-117e7b93],h6[data-v-117e7b93],header[data-v-117e7b93],hgroup[data-v-117e7b93],html[data-v-117e7b93],i[data-v-117e7b93],iframe[data-v-117e7b93],img[data-v-117e7b93],ins[data-v-117e7b93],kbd[data-v-117e7b93],label[data-v-117e7b93],legend[data-v-117e7b93],li[data-v-117e7b93],mark[data-v-117e7b93],menu[data-v-117e7b93],nav[data-v-117e7b93],object[data-v-117e7b93],output[data-v-117e7b93],p[data-v-117e7b93],pre[data-v-117e7b93],q[data-v-117e7b93],ruby[data-v-117e7b93],s[data-v-117e7b93],samp[data-v-117e7b93],section[data-v-117e7b93],small[data-v-117e7b93],span[data-v-117e7b93],strike[data-v-117e7b93],strong[data-v-117e7b93],sub[data-v-117e7b93],summary[data-v-117e7b93],sup[data-v-117e7b93],table[data-v-117e7b93],tbody[data-v-117e7b93],td[data-v-117e7b93],tfoot[data-v-117e7b93],th[data-v-117e7b93],thead[data-v-117e7b93],time[data-v-117e7b93],tr[data-v-117e7b93],tt[data-v-117e7b93],u[data-v-117e7b93],ul[data-v-117e7b93],var[data-v-117e7b93],video[data-v-117e7b93]{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline;background:transparent}html[data-v-117e7b93]{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}*[data-v-117e7b93],[data-v-117e7b93]:after,[data-v-117e7b93]:before,html[data-v-117e7b93]{-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}body[data-v-117e7b93]{line-height:1}ul[data-v-117e7b93]{list-style:none}blockquote[data-v-117e7b93],q[data-v-117e7b93]{quotes:none}blockquote[data-v-117e7b93]:after,blockquote[data-v-117e7b93]:before,q[data-v-117e7b93]:after,q[data-v-117e7b93]:before{content:\"\";content:none}article[data-v-117e7b93],aside[data-v-117e7b93],details[data-v-117e7b93],figcaption[data-v-117e7b93],figure[data-v-117e7b93],footer[data-v-117e7b93],header[data-v-117e7b93],hgroup[data-v-117e7b93],main[data-v-117e7b93],menu[data-v-117e7b93],nav[data-v-117e7b93],section[data-v-117e7b93],summary[data-v-117e7b93]{display:block}audio[data-v-117e7b93],canvas[data-v-117e7b93],progress[data-v-117e7b93],video[data-v-117e7b93]{display:inline-block;vertical-align:baseline}audio[data-v-117e7b93]:not([controls]){display:none;height:0}[hidden][data-v-117e7b93],template[data-v-117e7b93]{display:none}a[data-v-117e7b93]{font-size:100%;text-decoration:none;vertical-align:baseline;background:transparent;color:inherit;-webkit-transition:.3s;transition:.3s}a[data-v-117e7b93]:active,a[data-v-117e7b93]:focus,a[data-v-117e7b93]:hover{outline:0}abbr[title][data-v-117e7b93]{border-bottom:1px dotted}b[data-v-117e7b93],strong[data-v-117e7b93]{font-weight:700}dfn[data-v-117e7b93]{font-style:italic}h1[data-v-117e7b93]{font-size:2em;margin:.67em 0}mark[data-v-117e7b93]{background:#ff0;color:#000}small[data-v-117e7b93]{font-size:80%}sub[data-v-117e7b93],sup[data-v-117e7b93]{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup[data-v-117e7b93]{top:-.5em}sub[data-v-117e7b93]{bottom:-.25em}img[data-v-117e7b93]{max-width:100%;height:auto;border:0}svg[data-v-117e7b93]:not(:root){overflow:hidden}figure[data-v-117e7b93]{margin:1em 40px}hr[data-v-117e7b93]{height:0}pre[data-v-117e7b93]{overflow:auto}code[data-v-117e7b93],kbd[data-v-117e7b93],pre[data-v-117e7b93],samp[data-v-117e7b93]{font-family:monospace,monospace;font-size:1em}button[data-v-117e7b93],input[data-v-117e7b93],optgroup[data-v-117e7b93],select[data-v-117e7b93],textarea[data-v-117e7b93]{color:inherit;font:inherit;margin:0}button[data-v-117e7b93],select[data-v-117e7b93]{text-transform:none}button[data-v-117e7b93],html input[type=button][data-v-117e7b93],input[type=reset][data-v-117e7b93],input[type=submit][data-v-117e7b93]{-webkit-appearance:button;cursor:pointer}button[data-v-117e7b93],input[type=button][data-v-117e7b93],input[type=reset][data-v-117e7b93],input[type=submit][data-v-117e7b93]{border:none;margin:0;padding:0;overflow:visible;font:inherit;line-height:normal;background:none;color:inherit;-webkit-transition:.3s;transition:.3s}button[data-v-117e7b93]:focus,input[type=button][data-v-117e7b93]:focus,input[type=reset][data-v-117e7b93]:focus,input[type=submit][data-v-117e7b93]:focus{outline:0!important}button[disabled][data-v-117e7b93],html input[disabled][data-v-117e7b93]{cursor:default}button[data-v-117e7b93]::-moz-focus-inner,input[data-v-117e7b93]::-moz-focus-inner{border:0;margin:0;padding:0}input[data-v-117e7b93]{line-height:normal}input[type=checkbox][data-v-117e7b93],input[type=radio][data-v-117e7b93]{padding:0}input[type=number][data-v-117e7b93]::-webkit-inner-spin-button,input[type=number][data-v-117e7b93]::-webkit-outer-spin-button{height:auto}input[type=search][data-v-117e7b93]{-webkit-appearance:textfield}fieldset[data-v-117e7b93]{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend[data-v-117e7b93]{border:0;padding:0}textarea[data-v-117e7b93]{overflow:auto;resize:none}optgroup[data-v-117e7b93]{font-weight:700}table[data-v-117e7b93]{border-collapse:collapse;border-spacing:0}.VueCarousel-pagination[data-v-117e7b93]{position:absolute;bottom:5px}.VueCarousel-pagination .VueCarousel-dot[data-v-117e7b93]{width:4px!important;height:4px!important;background-color:rgba(50,50,48,.2)!important}.VueCarousel-pagination .VueCarousel-dot--active[data-v-117e7b93]{background-color:#323230!important}body[data-v-117e7b93],html[data-v-117e7b93]{background-color:#fff;margin:0;font-family:PT Sans;font-style:normal;font-weight:400}*[data-v-117e7b93]{-webkit-box-sizing:border-box;box-sizing:border-box}.modal-open[data-v-117e7b93]{overflow:hidden}#app[data-v-117e7b93]{height:100%}[data-v-117e7b93]:focus{outline-color:#0cb520}.text-center[data-v-117e7b93]{text-align:center}.text-right[data-v-117e7b93]{text-align:right}.bold[data-v-117e7b93]{font-weight:700}.border[data-v-117e7b93]{border:0!important;text-decoration:underline;-webkit-text-decoration-style:dashed;text-decoration-style:dashed;-webkit-text-decoration-color:#9b9b9b;text-decoration-color:#9b9b9b}.border-white[data-v-117e7b93]{text-decoration:underline;-webkit-text-decoration-style:dashed;text-decoration-style:dashed;-webkit-text-decoration-color:hsla(0,0%,100%,.4);text-decoration-color:hsla(0,0%,100%,.4)}.border-green[data-v-117e7b93]{text-decoration:underline;-webkit-text-decoration-style:dashed;text-decoration-style:dashed;-webkit-text-decoration-color:rgba(12,181,32,.4);text-decoration-color:rgba(12,181,32,.4)}.container[data-v-117e7b93]{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row[data-v-117e7b93]{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal!important;-webkit-box-direction:normal!important;-ms-flex-direction:row!important;flex-direction:row!important;-webkit-box-align:center;-ms-flex-align:center;align-items:center}@media (min-width:0px){.container[data-v-117e7b93]{max-width:540px}.col-0[data-v-117e7b93]{-ms-flex:0 0 0%;flex:0 0 0%;max-width:0}.col-0[data-v-117e7b93],.col-2[data-v-117e7b93]{-webkit-box-flex:0}.col-2[data-v-117e7b93]{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-4[data-v-117e7b93]{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-4[data-v-117e7b93],.col-6[data-v-117e7b93]{-webkit-box-flex:0}.col-6[data-v-117e7b93]{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-10[data-v-117e7b93]{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-10[data-v-117e7b93],.col-12[data-v-117e7b93]{-webkit-box-flex:0}.col-12[data-v-117e7b93]{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}}@media (min-width:576px){.container[data-v-117e7b93]{max-width:540px}.col-sm-2[data-v-117e7b93]{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-sm-4[data-v-117e7b93]{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-sm-6[data-v-117e7b93]{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-sm-10[data-v-117e7b93]{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}}@media (min-width:768px){.container[data-v-117e7b93]{max-width:720px}}@media (min-width:992px){.container[data-v-117e7b93]{max-width:960px}}@media (min-width:1200px){.container[data-v-117e7b93]{max-width:1140px}.col-xl-2[data-v-117e7b93]{-webkit-box-flex:0;-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-xl-4[data-v-117e7b93]{-webkit-box-flex:0;-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-xl-6[data-v-117e7b93]{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-xl-10[data-v-117e7b93]{-webkit-box-flex:0;-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}}@media (max-width:1200px){.btn-group-column[data-v-117e7b93]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.btn-group-column button[data-v-117e7b93]{border-radius:5px;margin-bottom:4px;line-height:20px;font-size:14px}.btn-block-mobile[data-v-117e7b93]{width:100%}}.accept-policy[data-v-117e7b93]{color:#a3a3a2;line-height:1.43;margin-bottom:16px;font-size:14px}.accept-policy .policy-link[data-v-117e7b93]{display:inline;border-bottom:1px solid #a3a3a2;color:inherit;cursor:pointer}@media (max-width:1200px){.accept-policy[data-v-117e7b93]{text-align:center}}.btn[data-v-117e7b93]{height:48px;border-radius:4px;font-size:17px;font-weight:600;line-height:1.41;color:#323230;border-width:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:0 24px;font-family:Exo\\ 2}.btn-outline[data-v-117e7b93]{border:1px solid #d2d2d2;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:4px}.btn-orange[data-v-117e7b93]{-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.19),0 1px 0 0 #e29401;box-shadow:0 2px 4px 0 rgba(0,0,0,.19),0 1px 0 0 #e29401;background-image:-webkit-gradient(linear,left top,left bottom,from(#ffd600),to(#ffc600));background-image:linear-gradient(180deg,#ffd600,#ffc600)}.btn-block[data-v-117e7b93]{width:100%}.btn-group[data-v-117e7b93]{font-weight:700;line-height:20px;font-size:16px}.btn-group button[data-v-117e7b93]{background-color:#fff;border:1px solid #d2d2d2;color:#323230;padding:10px 24px;cursor:pointer;float:left}.btn-group button[data-v-117e7b93]:not(:last-child){border-right:none}.btn-group button[data-v-117e7b93]:last-child{border-top-right-radius:5px;border-bottom-right-radius:5px}.btn-group button[data-v-117e7b93]:first-child{border-top-left-radius:5px;border-bottom-left-radius:5px}.btn-group button[data-v-117e7b93]:active{background-color:#eee}.btn-group[data-v-117e7b93]:after{content:\"\";clear:both;display:table}.btn-group .active[data-v-117e7b93]{background-color:#0cb520;color:#fff}.custom-checkbox[data-v-117e7b93]{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.custom-checkbox-input[data-v-117e7b93]{color:#0cb520;margin-bottom:0;min-height:1rem;cursor:pointer}.custom-checkbox-input .fill-control-input[data-v-117e7b93]{display:none}.custom-checkbox-input .fill-control-input:checked~.fill-control-indicator[data-v-117e7b93]{background-color:#0cb520;border-color:#0cb520;background-size:60%}.custom-checkbox-input .fill-control-indicator[data-v-117e7b93]{border-radius:3px;display:inline-block;position:absolute;top:4px;left:0;width:16px;height:16px;-webkit-transition:.3s;transition:.3s;background:#0cb520;background-size:0;background-position:50%;background-repeat:no-repeat;background-image:url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E\")}.custom-checkbox-label[data-v-117e7b93]{padding-top:2px;padding-left:22px;font-size:16px;line-height:1.25}.form-group[data-v-117e7b93]{color:#323230;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-bottom:16px}.form-group .label[data-v-117e7b93]{font-size:16px;font-weight:700;line-height:1.5;margin-bottom:8px}.form-group .big-label[data-v-117e7b93]{font-weight:700;line-height:24px;font-size:16px;color:#323230}.form-group .mobile-top-label[data-v-117e7b93]{margin-bottom:3px}.form-group .green-link[data-v-117e7b93]{font-weight:700;line-height:24px;font-size:16px;color:#0cb520;text-decoration:underline;-webkit-text-decoration-style:dashed;text-decoration-style:dashed;-webkit-text-decoration-color:rgba(12,181,32,.4);text-decoration-color:rgba(12,181,32,.4)}.form-group .two-selectors[data-v-117e7b93]{display:-webkit-box;display:-ms-flexbox;display:flex}.form-group .two-selectors .first-selector[data-v-117e7b93]{margin-right:8px;width:30%}.form-group .two-selectors .second-selector[data-v-117e7b93]{width:70%}.form-control[data-v-117e7b93],.form-control-lg[data-v-117e7b93]{border-radius:2px;padding:.675rem .75rem;border-width:0;border:1px solid #d2d2d2;background-color:#fff;width:100%;height:auto!important}.form-control-lg[data-v-117e7b93]:focus,.form-control[data-v-117e7b93]:focus{border-color:#0cb520}.invalid-text[data-v-117e7b93]{width:100%;padding-top:5px;font-size:80%;color:#dc3545;padding-left:5px;line-height:15px;margin-bottom:-10px}.invalid-input[data-v-117e7b93]{border:1.5px solid;border-color:#dc3545}.invalid-input[data-v-117e7b93]:focus{border-color:#dc3545;outline:none}.form-control-lg[data-v-117e7b93]{line-height:24px}[data-v-117e7b93]::-webkit-input-placeholder{opacity:.5}[data-v-117e7b93]::-ms-input-placeholder{opacity:.5}[data-v-117e7b93]::placeholder{opacity:.5}.modal-wrapper[data-v-117e7b93]{width:100vw;background-color:rgba(50,50,48,.8);height:100%;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;overflow-x:hidden;overflow-y:auto}.modal-wrapper .modal-popup[data-v-117e7b93]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:80%;padding:20px 0;min-height:calc(100% - 3.5rem);margin:0 auto}.modal-wrapper .modal-popup .modal-content[data-v-117e7b93]{margin:0 auto;position:relative;width:100%;background:#fff}.modal-wrapper .modal-popup .modal-content .close[data-v-117e7b93]{cursor:pointer;position:absolute;top:12px;right:12px;z-index:1;color:#a3a3a2}@media (max-width:1200px){.modal-wrapper .modal-popup[data-v-117e7b93]{width:calc(100% - 16px)!important;margin:0 auto}}.radio[data-v-117e7b93]{position:absolute;z-index:-1;opacity:0;margin:10px 0 0 7px}.radio+label[data-v-117e7b93]{position:relative;padding:0 0 0 35px;cursor:pointer}.radio+label[data-v-117e7b93]:before{top:0;left:0;width:20px;height:20px;border-radius:50%;border:1px solid #d2d2d2;-webkit-box-shadow:0 1px 2px rgba(12,181,32,.3);box-shadow:0 1px 2px rgba(12,181,32,.3)}.radio+label[data-v-117e7b93]:after,.radio+label[data-v-117e7b93]:before{content:\"\";position:absolute;background:#fff}.radio+label[data-v-117e7b93]:after{top:5px;left:5px;width:10px;height:10px;border-radius:50%;opacity:0;-webkit-transition:.2s;transition:.2s}.radio:checked+label[data-v-117e7b93]:after{opacity:1;background-color:#fff}.radio:focus+label[data-v-117e7b93]:before{border:0;background:#0cb520}.radio-label[data-v-117e7b93]{font-family:PT Sans;font-style:normal;font-weight:400;line-height:20px;font-size:16px;color:#323230;-webkit-text-decoration-style:none;text-decoration-style:none}.log-in-content[data-v-117e7b93]{padding:0 24px 0 24px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.log-in-content .title[data-v-117e7b93]{font-size:24px;margin:40px 0 16px 0;text-align:left}.log-in-content .log-in-form[data-v-117e7b93]{padding-right:18%}.log-in-content .log-in-form .remember-password[data-v-117e7b93]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;margin-bottom:16px}.log-in-content .log-in-form .remember-password-text[data-v-117e7b93]{font-size:16px;color:#0cb520;border-bottom:1px dashed #0cb520}.log-in-content .log-in-form .btn-log-in[data-v-117e7b93]{margin:24px 0 16px 0;width:400px}.log-in-content .want-to-reg[data-v-117e7b93]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:24px}.log-in-content .want-to-reg .go-to-reg[data-v-117e7b93]{margin-left:5px;color:#0cb520;border-bottom:1px dashed #0cb520;cursor:pointer}@media (max-width:768px){.log-in-content .title[data-v-117e7b93]{font-size:20px;margin:40px auto 16px auto}.log-in-content .log-in-form[data-v-117e7b93]{padding-right:0}.log-in-content .log-in-form .btn-log-in[data-v-117e7b93]{width:100%}.log-in-content .want-to-reg[data-v-117e7b93]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.log-in-content .want-to-reg .go-to-reg[data-v-117e7b93]{margin-top:5px;margin-left:0}}", ""]);
-
-// exports
-
 
 /***/ }),
 
