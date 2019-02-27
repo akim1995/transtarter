@@ -1,7 +1,7 @@
 <template>
   <div
     class="log-in modal-wrapper"
-    v-if="showBlockYourCity"
+    v-if="modalIsOpened"
   >
 
     <!-- desktop and mobile version -->
@@ -126,8 +126,8 @@ export default class LogIn extends mixins(ClosablePopup) {
     store.dispatch('display/closeLogInAndOpenRestore')
   }
 
-  get showBlockYourCity () {
-    return DisplayModule.showPopup.logIn
+  get modalIsOpened () {
+    return false // DisplayModule.showPopup.logIn
   }
 
   login (e: Event) {
@@ -137,7 +137,7 @@ export default class LogIn extends mixins(ClosablePopup) {
   }
 
   listenEscKeyup (e: KeyboardEvent) {
-    if (e.keyCode === 27 && this.showBlockYourCity) {
+    if (e.keyCode === 27 && this.modalIsOpened) {
       store.dispatch('display/toggleLogIn')
     }
   }

@@ -7,7 +7,7 @@
       <div class="desktop-header__menu">
         <div class="desktop-header__left">
           <div class="desktop-header__logo">
-            <a href="~/">Транс Стартер</a>
+            <a href="/">Транс Стартер</a>
           </div>
           <ul class="desktop-header__menu-list">
             <li class="desktop-header__menu-item">
@@ -42,7 +42,7 @@
             <!-- block for guests -->
             <li
               class="desktop-header__login-item"
-              @click="toggleLogInPopup()"
+              @click="logIn()"
               v-if="!loggedIn"
             >
               <a class="border">Вход</a>
@@ -303,7 +303,7 @@
         <ul class="menu-popup_list">
           <li
             class="menu-popup_list-item"
-            @click="toggleLogInPopup()"
+            @click="logIn()"
           >
             <a>Вход</a>
           </li>
@@ -430,9 +430,13 @@ export default class Header extends Vue {
     store.dispatch('display/toggleRegistration')
   }
 
-  toggleLogInPopup () {
-    store.dispatch('display/toggleLogIn')
+  logIn () {
+    store.dispatch('auth/login')
   }
+
+  // toggleLogInPopup () {
+  //   store.dispatch('display/toggleLogIn')
+  // }
 
   get loggedIn () {
     return AuthModule.loggedIn
