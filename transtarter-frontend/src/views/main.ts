@@ -11,7 +11,7 @@ import YourCity from '@/components/shared/your-city/your-city.vue'
 // import ProfileSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
 // popups
 import Registration from '@/components/authorization/registration/registration.vue'
-import LogIn from '@/components/authorization/log-in/log-in.vue'
+// import LogIn from '@/components/authorization/log-in/log-in.vue'
 import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue'
 import PasswordSuccessRestore from '@/components/authorization/password-success-restore/password-success-restore.vue'
 import RequestCall from '@/components/shared/request-call/request-call.vue'
@@ -31,7 +31,7 @@ import { DisplayModule } from '../store/modules/display.module'
     SelectCity,
     // popups
     Registration,
-    LogIn,
+    // LogIn,
     PasswordRestore,
     PasswordSuccessRestore,
     RequestCall

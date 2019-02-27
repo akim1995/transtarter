@@ -4,7 +4,7 @@ import { store } from '../index'
 export interface IDisplayState {
   showPopup: {
     registration: boolean,
-    logIn: boolean,
+    // logIn: boolean,
     restorePassword: boolean,
     successRestore: boolean,
     requestCall: boolean
@@ -23,14 +23,14 @@ export class Display extends VuexModule implements IDisplayState {
 
   showPopup = {
     registration: false,
-    logIn: false,
+    // logIn: false,
     restorePassword: false,
     successRestore: false,
     requestCall: false
   };
   showBlock = {
     selectCity: false,
-    yourCity: true
+    yourCity: false
   };
 
   @Action
@@ -54,16 +54,16 @@ export class Display extends VuexModule implements IDisplayState {
     this.checkPopupIsOpened()
   }
 
-  @Mutation
-  TOGGLE_LOG_IN () {
-    this.showPopup.logIn = !this.showPopup.logIn
-  }
+  // @Mutation
+  // TOGGLE_LOG_IN () {
+  //   this.showPopup.logIn = !this.showPopup.logIn
+  // }
 
-  @Action
-  public toggleLogIn (): void {
-    this.context.commit('TOGGLE_LOG_IN')
-    this.checkPopupIsOpened()
-  }
+  // @Action
+  // public toggleLogIn (): void {
+  //   this.context.commit('TOGGLE_LOG_IN')
+  //   this.checkPopupIsOpened()
+  // }
 
   @Mutation
   TOGGLE_YOUR_CITY_AND_OPEN_SELECT_CITY () {
@@ -100,29 +100,29 @@ export class Display extends VuexModule implements IDisplayState {
     this.checkPopupIsOpened()
   }
 
-  @Mutation
-  CLOSE_LOG_IN_AND_OPEN_REGISTRATION () {
-    this.showPopup.logIn = false
-    this.showPopup.registration = true
-  }
+  // @Mutation
+  // CLOSE_LOG_IN_AND_OPEN_REGISTRATION () {
+  //   this.showPopup.logIn = false
+  //   this.showPopup.registration = true
+  // }
 
-  @Action
-  public closeLogInAndOpenRegistration (): void {
-    this.context.commit('CLOSE_LOG_IN_AND_OPEN_REGISTRATION')
-    this.checkPopupIsOpened()
-  }
+  // @Action
+  // public closeLogInAndOpenRegistration (): void {
+  //   this.context.commit('CLOSE_LOG_IN_AND_OPEN_REGISTRATION')
+  //   this.checkPopupIsOpened()
+  // }
 
-  @Mutation
-  CLOSE_LOG_IN_AND_OPEN_RESTORE () {
-    this.showPopup.logIn = false
-    this.showPopup.restorePassword = true
-  }
+  // @Mutation
+  // CLOSE_LOG_IN_AND_OPEN_RESTORE () {
+  //   this.showPopup.logIn = false
+  //   this.showPopup.restorePassword = true
+  // }
 
-  @Action
-  public closeLogInAndOpenRestore (): void {
-    this.context.commit('CLOSE_LOG_IN_AND_OPEN_RESTORE')
-    this.checkPopupIsOpened()
-  }
+  // @Action
+  // public closeLogInAndOpenRestore (): void {
+  //   this.context.commit('CLOSE_LOG_IN_AND_OPEN_RESTORE')
+  //   this.checkPopupIsOpened()
+  // }
 
   @Mutation
   CLOSE_LOG_IN_AND_OPEN_SUCCESS_REGISTRATION () {
@@ -169,17 +169,17 @@ export class Display extends VuexModule implements IDisplayState {
     this.checkPopupIsOpened()
   }
 
-  @Mutation
-  CLOSE_REGISTRATION_AND_OPEN_LOG_IN () {
-    this.showPopup.registration = false
-    this.showPopup.logIn = true
-  }
+  // @Mutation
+  // CLOSE_REGISTRATION_AND_OPEN_LOG_IN () {
+  //   this.showPopup.registration = false
+  //   // this.showPopup.logIn = true
+  // }
 
-  @Action
-  public closeRegistrationAndOpenLogIn (): void {
-    this.context.commit('CLOSE_REGISTRATION_AND_OPEN_LOG_IN')
-    this.checkPopupIsOpened()
-  }
+  // @Action
+  // public closeRegistrationAndOpenLogIn (): void {
+  //   this.context.commit('CLOSE_REGISTRATION_AND_OPEN_LOG_IN')
+  //   this.checkPopupIsOpened()
+  // }
 }
 
 export const DisplayModule = getModule(Display, store)

@@ -137,7 +137,7 @@
       <span
         href="#"
         class="go-log-in"
-        @click="closeRegistrationAndOpenLogIn()"
+        @click="logIn()"
       >Войти</span>
     </div>
 
@@ -169,9 +169,14 @@ export default class RegistrationForm extends Vue {
 
   auth = new AuthService();
 
-  closeRegistrationAndOpenLogIn () {
-    store.dispatch('display/closeRegistrationAndOpenLogIn')
+  logIn () {
+    store.dispatch('auth/login')
+    store.dispatch('auth/toggleRegistration')
   }
+
+  // closeRegistrationAndOpenLogIn () {
+  //   store.dispatch('display/closeRegistrationAndOpenLogIn')
+  // }
 
   handleError (errorMessages: Array<IErrorMessage>) {
     if (!errorMessages.length) { return }
