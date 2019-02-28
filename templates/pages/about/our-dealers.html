@@ -5,41 +5,89 @@
   <p class="look-at-feedback">
     Посмотрите, как клиенты отзываются о сотрудничестве с нами
   </p>
-  <ul class="row partners">
-    <li class="col-md-4 col-12">
-      <div class="partner partner-one">
-        <div class="overflow slideInRight">
-          <div class="company-name">«СТАРКАР»</div>
-          <div class="customer">
-            <div class="customer-fullname">Лилия Николаева</div>
-            <div class="customer-position">Директор</div>
+  <div class="mobile-container">
+    <ul class="row partners">
+      <li class="col-md-4 col-12">
+        <div class="partner-bordered">
+          <div class="partner partner-one">
+            <div class="desktop-overflow slideInRight">
+              <div class="company-name">«СТАРКАР»</div>
+              <div class="customer">
+                <div class="customer-fullname">Лилия Николаева</div>
+                <div class="customer-position">Директор</div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-company-info">
+            <div class="company-name">«СТАРКАР»</div>
+            <div class="customer">
+              <div class="customer-fullname">Лилия Николаева</div>
+              <div class="customer-position">Директор</div>
+            </div>
+          </div>
+          <div class="annotation">
+            Международная политика ограничивает эмпирический феномен толпы.
+            Общеизвестно, что кризис легитимности однозначно верифицирует
+            эмпирический гуманизм.
           </div>
         </div>
-      </div>
-    </li>
-    <li class="col-md-4 col-12">
-      <div class="partner partner-two">
-        <div class="overflow slideInRight">
-          <div class="company-name">«Авто технологии»</div>
-          <div class="customer">
-            <div class="customer-fullname">Константин Константинопольский</div>
-            <div class="customer-position">Директор по развитию</div>
+      </li>
+      <li class="col-md-4 col-12">
+        <div class="partner-bordered">
+          <div class="partner partner-two">
+            <div class="desktop-overflow slideInRight">
+              <div class="company-name">«Авто технологии»</div>
+              <div class="customer">
+                <div class="customer-fullname">
+                  Константин Константинопольский
+                </div>
+                <div class="customer-position">Директор по развитию</div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-company-info">
+            <div class="company-name">«Авто технологии»</div>
+            <div class="customer">
+              <div class="customer-fullname">
+                Константин Константинопольский
+              </div>
+              <div class="customer-position">Директор по развитию</div>
+            </div>
+          </div>
+          <div class="annotation">
+            Кризис легитимности верифицирует идеологический культ личности.
+            Политическое учение Фомы Аквинского, как правило, иллюстрирует
+            институциональный социализм.
           </div>
         </div>
-      </div>
-    </li>
-    <li class="col-md-4 col-12">
-      <div class="partner partner-three">
-        <div class="overflow slideInRight">
-          <div class="company-name">«Транстехнологии стартеров»</div>
-          <div class="customer">
-            <div class="customer-fullname">Василий Жданов</div>
-            <div class="customer-position">Директор по развитию</div>
+      </li>
+      <li class="col-md-4 col-12">
+        <div class="partner-bordered">
+          <div class="partner partner-three">
+            <div class="desktop-overflow slideInRight">
+              <div class="company-name">«Транстехнологии стартеров»</div>
+              <div class="customer">
+                <div class="customer-fullname">Василий Жданов</div>
+                <div class="customer-position">Директор по развитию</div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-company-info">
+            <div class="company-name">«Транстехнологии стартеров»</div>
+            <div class="customer">
+              <div class="customer-fullname">Василий Жданов</div>
+              <div class="customer-position">Директор по развитию</div>
+            </div>
+          </div>
+          <div class="annotation">
+            Кризис легитимности, однако, теоретически возможен. Понятие
+            политического конфликта вызывает коллапс Советского Союза.
+            Политические учения Гоббса неизбежно.
           </div>
         </div>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
 </section>
 
 <style>
@@ -69,7 +117,7 @@
     list-style: none;
   }
 
-  .our-dealers .partners .partner .overflow {
+  .our-dealers .partners .partner .desktop-overflow {
     position: relative;
     background-color: #0cb520;
     margin-left: 60%;
@@ -78,7 +126,7 @@
     width: 40%;
   }
 
-  .our-dealers .partners .partner .overflow::after {
+  .our-dealers .partners .partner .desktop-overflow::after {
     width: 101px;
     left: -100px;
     background: linear-gradient(to top left, #0cb520 50%, transparent 50%);
@@ -88,10 +136,16 @@
     bottom: 0;
     display: block;
   }
-  .our-dealers .partners .partner .mobile-annotation {
+  .our-dealers .partners .mobile-company-info {
     display: none;
   }
 
+  .our-dealers .partners .partner-bordered {
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
   .our-dealers .partners .partner {
     display: flex;
     flex-direction: column;
@@ -99,16 +153,13 @@
     align-content: flex-start;
     min-height: 20vw;
     background-position: left;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 1px solid grey;
-    border-radius: 10px;
+    border-radius: 4px 4px 0 0;
   }
   .our-dealers .partners .partner-one {
     background-image: url("https://cdn.bitrix24.ru/b488493/landing/92f/92fe0e74bbd8bf9d9d3d2851d07159b7/Rectangle_2x.png");
     background-size: cover;
   }
   .our-dealers .partners .partner-two {
-    margin: 0 30px;
     background-image: url("https://cdn.bitrix24.ru/b488493/landing/82f/82fe4429b8429d4434b44e0598425ebe/Rectangle_1_2x.png");
     background-size: cover;
     background-position: -100px;
@@ -119,29 +170,39 @@
     background-position: -100px;
   }
 
-  .our-dealers .partners .partner .overflow {
+  .our-dealers .partners .partner .desktop-overflow {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-family: "Exo 2";
     color: #ffffff;
     padding-left: 10px;
+    border-radius: 4px;
   }
-  .our-dealers .partners .partner .overflow .company-name {
+  .our-dealers .partners .annotation {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 16px;
+    color: #323230;
+    padding: 19px 16px;
+  }
+  .our-dealers .partners .partner .desktop-overflow .company-name {
     font-weight: bold;
     line-height: 32px;
     font-size: 24px;
     margin-top: 26px;
-  }  
-  .our-dealers .partners .partner .overflow .customer-fullname {
+  }
+  .our-dealers .partners .partner .desktop-overflow .customer-fullname {
     font-weight: bold;
     line-height: 24px;
     font-size: 16px;
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
   }
-  .our-dealers .partners .partner .overflow .customer-position {
+  .our-dealers .partners .partner .desktop-overflow .customer-position {
     font-weight: normal;
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     line-height: 20px;
     font-size: 14px;
     margin-bottom: 21px;
@@ -161,8 +222,48 @@
     .our-dealers .partners .partner .mobile-annotation {
       display: block;
     }
-    .our-dealers .partners .partner .overflow {
+    .our-dealers .partners .partner .desktop-overflow {
       display: none;
+    }
+    .mobile-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .our-dealers .partners .mobile-company-info {
+      display: block;
+      padding: 0px 16px;
+    }
+    .our-dealers .partners .mobile-company-info .company-name {
+      font-family: "Exo 2";
+      font-style: normal;
+      font-weight: bold;
+      line-height: 32px;
+      font-size: 24px;
+      color: #323230;
+      margin: 18px 0 11px;
+    }
+    .our-dealers .partners .mobile-company-info .customer-fullname {
+      font-family: "PT Sans";
+      font-style: normal;
+      font-weight: bold;
+      line-height: 24px;
+      font-size: 16px;
+      color: #323230;
+    }
+    .our-dealers .partners .mobile-company-info .customer-position {
+      font-family: "PT Sans";
+      font-style: normal;
+      font-weight: normal;
+      line-height: 20px;
+      font-size: 14px;
+
+      color: #686868;
+    }
+    .our-dealers .partners .partner-two {
+      background-position: top;
+    }
+    .our-dealers .partners .partner {
+      min-height: 40vw;
     }
   }
 </style>
