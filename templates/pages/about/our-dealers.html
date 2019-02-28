@@ -1,0 +1,168 @@
+<section class="our-dealers">
+  <h4 class="more-than-80-partners">
+    Наша дилерская сеть насчитывает более 80 партнеров
+  </h4>
+  <p class="look-at-feedback">
+    Посмотрите, как клиенты отзываются о сотрудничестве с нами
+  </p>
+  <ul class="row partners">
+    <li class="col-md-4 col-12">
+      <div class="partner partner-one">
+        <div class="overflow slideInRight">
+          <div class="company-name">«СТАРКАР»</div>
+          <div class="customer">
+            <div class="customer-fullname">Лилия Николаева</div>
+            <div class="customer-position">Директор</div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="col-md-4 col-12">
+      <div class="partner partner-two">
+        <div class="overflow slideInRight">
+          <div class="company-name">«Авто технологии»</div>
+          <div class="customer">
+            <div class="customer-fullname">Константин Константинопольский</div>
+            <div class="customer-position">Директор по развитию</div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="col-md-4 col-12">
+      <div class="partner partner-three">
+        <div class="overflow slideInRight">
+          <div class="company-name">«Транстехнологии стартеров»</div>
+          <div class="customer">
+            <div class="customer-fullname">Василий Жданов</div>
+            <div class="customer-position">Директор по развитию</div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<style>
+  .our-dealers .more-than-80-partners {
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: bold;
+    line-height: 48px;
+    font-size: 40px;
+    text-align: center;
+    color: #323230;
+    margin: 80px auto 42px;
+  }
+  .our-dealers .look-at-feedback {
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 28px;
+    font-size: 20px;
+    text-align: center;
+    color: #323230;
+    margin-bottom: 22px;
+  }
+  .our-dealers .partners {
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+  }
+
+  .our-dealers .partners .partner .overflow {
+    position: relative;
+    background-color: #0cb520;
+    margin-left: 60%;
+    opacity: 0.9;
+    min-height: 20vw;
+    width: 40%;
+  }
+
+  .our-dealers .partners .partner .overflow::after {
+    width: 101px;
+    left: -100px;
+    background: linear-gradient(to top left, #0cb520 50%, transparent 50%);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+  }
+  .our-dealers .partners .partner .mobile-annotation {
+    display: none;
+  }
+
+  .our-dealers .partners .partner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    min-height: 20vw;
+    background-position: left;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid grey;
+    border-radius: 10px;
+  }
+  .our-dealers .partners .partner-one {
+    background-image: url("https://cdn.bitrix24.ru/b488493/landing/92f/92fe0e74bbd8bf9d9d3d2851d07159b7/Rectangle_2x.png");
+    background-size: cover;
+  }
+  .our-dealers .partners .partner-two {
+    margin: 0 30px;
+    background-image: url("https://cdn.bitrix24.ru/b488493/landing/82f/82fe4429b8429d4434b44e0598425ebe/Rectangle_1_2x.png");
+    background-size: cover;
+    background-position: -100px;
+  }
+  .our-dealers .partners .partner-three {
+    background-image: url("https://cdn.bitrix24.ru/b488493/landing/d03/d034a8e97159ce424a358800499a946b/Rectangle_2_2x.png");
+    background-size: cover;
+    background-position: -100px;
+  }
+
+  .our-dealers .partners .partner .overflow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Exo 2";
+    color: #ffffff;
+    padding-left: 10px;
+  }
+  .our-dealers .partners .partner .overflow .company-name {
+    font-weight: bold;
+    line-height: 32px;
+    font-size: 24px;
+    margin-top: 26px;
+  }  
+  .our-dealers .partners .partner .overflow .customer-fullname {
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 16px;
+    font-family: 'PT Sans';
+  }
+  .our-dealers .partners .partner .overflow .customer-position {
+    font-weight: normal;
+    font-family: 'PT Sans';
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: 768px) {
+    .our-dealers .more-than-80-partners {
+      line-height: 28px;
+      font-size: 20px;
+      margin: 34px auto 19px;
+    }
+    .our-dealers .look-at-feedback {
+      line-height: 24px;
+      font-size: 16px;
+      margin-bottom: 11px;
+    }
+    .our-dealers .partners .partner .mobile-annotation {
+      display: block;
+    }
+    .our-dealers .partners .partner .overflow {
+      display: none;
+    }
+  }
+</style>
