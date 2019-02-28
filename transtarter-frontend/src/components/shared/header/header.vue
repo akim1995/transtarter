@@ -241,22 +241,22 @@
       >
         <ul class="menu-popup_list">
           <li class="menu-popup_list-item">
-            <a href="#">Акции и новинки</a>
+            <a href="/special-offers">Акции и новинки</a>
           </li>
           <li class="menu-popup_list-item">
-            <a href="#">Доставка и оплата</a>
+            <a href="/delivery">Доставка и оплата</a>
           </li>
           <li class="menu-popup_list-item">
             <a
-              href="#"
+              href="/about-company"
               class="active"
             >О компании</a>
           </li>
           <li class="menu-popup_list-item">
-            <a href="#">Найти точку ремонта</a>
+            <a href="/auto-workshops">Найти точку ремонта</a>
           </li>
           <li class="menu-popup_list-item">
-            <a href="#">Контакты</a>
+            <a href="/contacts">Контакты</a>
           </li>
           <li class="menu-popup_list-item">
             <a href="#">Блог</a>
