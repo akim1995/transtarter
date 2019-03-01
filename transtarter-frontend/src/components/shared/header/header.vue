@@ -198,7 +198,7 @@
             </span>
           </div>
           <div class="logo">
-            Транс<br> Стартер
+            <a href="/">Транс<br> Стартер</a>
           </div>
         </div>
 
