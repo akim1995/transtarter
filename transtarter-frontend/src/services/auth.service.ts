@@ -14,7 +14,9 @@ export class AuthService {
 
   constructor () {
     const AUTH0_DOMAIN: string = this.identityServer
-    const MY_HOST: string = process.env.VUE_APP_HOST
+    const MY_HOST: string = window.location.origin // process.env.VUE_APP_HOST
+
+    debugger
 
     const settings: UserManagerSettings = {
       userStore: new WebStorageStateStore({ store: window.localStorage }),
