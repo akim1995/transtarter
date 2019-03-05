@@ -5531,18 +5531,16 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 class auth_service_AuthService {
   constructor() {
     this.identityServer = "https://identity-test.tstarter.ru";
-    this.identityServerApi = Object({"NODE_ENV":"production","VUE_APP_HOST":"https://b24-fwf0q5.bitrix24.site","VUE_APP_IDENTITY_SERVER":"https://identity-test.tstarter.ru","VUE_APP_WEB_APP":"http://localhost:64658","BASE_URL":"/"}).VUE_APP_IDENTITY_SERVER_API;
+    this.identityServerApi = Object({"NODE_ENV":"production","VUE_APP_IDENTITY_SERVER":"https://identity-test.tstarter.ru","VUE_APP_WEB_APP":"http://localhost:64658","BASE_URL":"/"}).VUE_APP_IDENTITY_SERVER_API;
     var AUTH0_DOMAIN = this.identityServer;
-    var MY_HOST = window.location.origin; // process.env.VUE_APP_HOST
-
-    debugger;
+    var MY_HOST = window.location.origin;
     var settings = {
       userStore: new oidc_client_min["WebStorageStateStore"]({
         store: window.localStorage
       }),
       authority: AUTH0_DOMAIN,
       client_id: 'kl',
-      redirect_uri: `${MY_HOST}/callback`,
+      redirect_uri: `${MY_HOST}/callback.html`,
       post_logout_redirect_uri: `${MY_HOST}/`,
       response_type: 'id_token token',
       scope: 'openid profile roles',
