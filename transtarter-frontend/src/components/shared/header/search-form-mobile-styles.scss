@@ -59,6 +59,9 @@
             &:focus {
                 border: 1px solid $gold-approx;
             }
+            .search__clear {
+                right: 10px;
+            }
         }
         .search__select {
             border: 0;

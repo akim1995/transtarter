@@ -77,17 +77,6 @@
               и доставки, хранить историю заказов
             </div>
           </slide>
-          <slide class="mobile-version-content-header">
-            <div class="reg-in-our-shop bold text-center">
-              Зарегистрируйтесь <br>
-              в нашем магазине, чтобы
-            </div>
-            <div class="rows-and-gear-icon"></div>
-            <div class="order-management text-center">
-              Управлять своими заказами в личном кабинете: следить за статусом оплаты
-              и доставки, хранить историю заказов
-            </div>
-          </slide>
 
         </carousel>
 
