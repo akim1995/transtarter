@@ -6697,7 +6697,7 @@ function () {
   function ProfileService() {
     _classCallCheck(this, ProfileService);
 
-    this.webAppHost = "http://85.10.205.89:8070";
+    this.webAppHost = "https://85.10.205.89:8070";
   }
 
   _createClass(ProfileService, [{
