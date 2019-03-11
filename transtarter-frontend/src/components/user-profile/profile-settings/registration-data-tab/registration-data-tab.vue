@@ -138,6 +138,6 @@ export default class RegistrationDataTab extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "./registration-data-tab-styles.scss";
 </style>

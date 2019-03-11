@@ -148,6 +148,6 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class RequisitesTab extends Vue {}
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "./requisites-tab-styles.scss";
 </style>

@@ -126,6 +126,6 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class ShippingAddressesTab extends Vue {}
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "./shipping-addresses-tab-styles.scss";
 </style>
