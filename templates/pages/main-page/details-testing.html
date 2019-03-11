@@ -14,7 +14,7 @@
     </div>  -->
 
   <div
-    class="customized-trapeze-block banner trapeze-block trapeze-block_left g-white g-z-index-1 g-pos-rel js-animation slideInRight m-mt-0"
+    class="customized-trapeze-block banner trapeze-block trapeze-block_left g-white g-z-index-1 g-pos-rel js-animation slideInRight m-mt-0 small-bottom-padding-block"
   >
     <div
       class="landing-block-node-text js-animation fadeInUp g-line-height-1_5 text-left g-mb-40 g-color-white"
@@ -52,6 +52,9 @@
               <p>
                 К продаже допускаем только агрегаты, соответствующие стандартам.
               </p>
+              <a href="/about-company" class="underlined-link">
+                Узнать больше о компании
+              </a>
             </div>
           </div>
         </div>
@@ -61,11 +64,32 @@
 </section>
 
 <style>
+  .master-block .underlined-link {
+    font-family: "Exo 2";
+    font-weight: bold;
+    line-height: 32px;
+    font-size: 24px;
+    color: #ffffff;
+    padding-top: 38px;
+    display: block;
+    text-decoration: underline;
+  }
   @media (max-width: 768px) {
     .master-block {
       background-size: 100% auto !important;
       padding-bottom: 0 !important;
     }
+    .master-block .small-bottom-padding-block {
+      padding-bottom: 10px !important;
+    }
+
+    .master-block .underlined-link {
+      line-height: 24px;
+      font-size: 17px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
     .customized-trapeze-block {
       margin-left: 0 !important;
       padding: 50px !important;
