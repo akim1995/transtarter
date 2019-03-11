@@ -11,7 +11,7 @@
             <div
               class="cards_group__card_body specialization"
               style="line-height: 24px; padding-right: 40px;"
-            >Продажа стартеров, генераторов и запчастей с 1995г.</div>
+            >Продажа стартеров, генераторов и запчастей с 1995 г.</div>
           </div>
           <div class="cards_group__card">
             <div class="cards_group__card_body">
@@ -102,7 +102,7 @@
               target='_blank'
               rel='noopener noreferrer'
             >
-              Политика конфеденциальности</a></span>
+              Политика конфиденциальности</a></span>
           <!-- <span>
             <span
               class="cards_group__card_link bottom-link"
