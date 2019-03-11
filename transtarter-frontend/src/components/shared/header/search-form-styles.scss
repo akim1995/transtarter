@@ -67,7 +67,10 @@
         &:active {
             background-color: $mercury-approx;
         }
-    }
+        @include firefox-only {
+            text-indent: 25px;
+        }
+    }    
     &__btn-clear {
         color: $alto-approx;
         position: absolute;

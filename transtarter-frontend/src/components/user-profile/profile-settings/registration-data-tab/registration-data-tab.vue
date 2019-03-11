@@ -90,6 +90,7 @@ import { Component, Vue } from 'vue-property-decorator'
 import { ProfileService } from '@/services/profile.service'
 import { Guid } from 'guid-typescript'
 import { IUserProfile } from '@/models/index'
+import { User } from 'oidc-client'
 
 @Component
 export default class RegistrationDataTab extends Vue {
@@ -109,7 +110,23 @@ export default class RegistrationDataTab extends Vue {
   }
 
   mounted () {
-    this.profileService.getProfileInfoByUserId(Guid.parse('243d76be-f9ed-4d30-bbc8-ebe86bf7b1c9'))
+    this.getProfileInfoByUserId()
+  }
+
+  getProfileInfoByUserId () {
+    const userFromLocalStorage = localStorage.getItem('user') || null
+    if (!userFromLocalStorage) {
+      return
+    }
+
+    const userObject = JSON.parse(userFromLocalStorage) as User
+    const login = userObject.profile.name
+
+    if (!login) {
+      return
+    }
+
+    this.profileService.getProfileInfoByUserId(login)
       .then(res => {
         this.userProfile = res.data
       })
