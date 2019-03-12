@@ -62,7 +62,7 @@ export class AuthService {
     localStorage.removeItem(key)
   }
 
-  public updateUserStorage (key:string, value: User): void {
-    this.userManager.settings.userStore.set(key, value)
+  public updateUserStorage (key:string, userObject: User): void {
+    this.userManager.settings.userStore.set(key, JSON.stringify(userObject))
   }
 }

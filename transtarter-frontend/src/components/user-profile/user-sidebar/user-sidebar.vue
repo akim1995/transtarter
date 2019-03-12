@@ -65,7 +65,7 @@ import { AuthModule } from '@/store/modules/authentication.module'
 @Component
 export default class UserSidebar extends Vue {
   get userName () {
-    return AuthModule.name
+    return AuthModule.name.length > 10 ? AuthModule.name.substring(0, 10) + '...' : AuthModule.name
   }
 }
 </script>

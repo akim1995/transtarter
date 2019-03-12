@@ -439,11 +439,11 @@ export default class Header extends Vue {
   // }
 
   get loggedIn () {
-    return AuthModule.loggedIn
+    return AuthModule.logged
   }
 
   get userName () {
-    return AuthModule.name
+    return AuthModule.name.length > 10 ? AuthModule.name.substring(0, 10) + '...' : AuthModule.name
   }
 
   logout () {

@@ -3,7 +3,7 @@ import { store } from '../index'
 
 import { AuthService } from '@/services/auth.service'
 import { User } from 'oidc-client'
-import { IKeyValue } from '@/models/index'
+import { IKeyUserObject } from '@/models/index'
 
 export interface IAuthState {
   name: string;
@@ -40,7 +40,7 @@ export class Authentication extends VuexModule implements IAuthState {
 
   auth = new AuthService()
 
-  get loggedIn () {
+  get logged () {
     return this.status.loggedIn
   }
 
@@ -88,15 +88,16 @@ export class Authentication extends VuexModule implements IAuthState {
   }
 
   @Action
-  public async actualizeUser () {
-    const user = await this.auth.getUser()
-    debugger
-    if (user) {
-      this.auth.saveUserInfo(this.localStorageKey, user)
-      this.context.commit('SUCCESS_LOGIN', user)
-    } else {
-      this.context.commit('ERROR_LOGIN')
-    }
+  public actualizeUser () {
+    this.auth.getUser().then(user => {
+      debugger
+      if (user) {
+        this.auth.saveUserInfo(this.localStorageKey, user)
+        this.context.commit('SUCCESS_LOGIN', user)
+      } else {
+        this.context.commit('ERROR_LOGIN')
+      }
+    })
   }
 
   @Action
@@ -117,9 +118,15 @@ export class Authentication extends VuexModule implements IAuthState {
     this.context.commit('MOCK_LOGOUT')
   }
 
+  @Mutation
+  UPDATE_USER_NAME (newUserName: string) {
+    this.name = newUserName
+  }
+
   @Action
-  updateUser ({ key, value }: IKeyValue) {
-    this.auth.updateUserStorage(key, value)
+  updateUser ({ key, userObject }: IKeyUserObject) {
+    this.auth.updateUserStorage(key, userObject)
+    this.context.commit('UPDATE_USER_NAME', userObject.profile.name)
   }
 }
 
