@@ -110,10 +110,10 @@ export default class RegistrationDataTab extends Vue {
   }
 
   mounted () {
-    this.getProfileInfoByUserId()
+    this.getProfileInfoByUserName()
   }
 
-  getProfileInfoByUserId () {
+  getProfileInfoByUserName () {
     const userFromLocalStorage = localStorage.getItem('user') || null
     if (!userFromLocalStorage) {
       return

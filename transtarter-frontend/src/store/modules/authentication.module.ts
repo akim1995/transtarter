@@ -3,6 +3,7 @@ import { store } from '../index'
 
 import { AuthService } from '@/services/auth.service'
 import { User } from 'oidc-client'
+import { IKeyValue } from '@/models/index'
 
 export interface IAuthState {
   name: string;
@@ -89,6 +90,7 @@ export class Authentication extends VuexModule implements IAuthState {
   @Action
   public async actualizeUser () {
     const user = await this.auth.getUser()
+    debugger
     if (user) {
       this.auth.saveUserInfo(this.localStorageKey, user)
       this.context.commit('SUCCESS_LOGIN', user)
@@ -113,6 +115,11 @@ export class Authentication extends VuexModule implements IAuthState {
   @Action
   mockLogout () {
     this.context.commit('MOCK_LOGOUT')
+  }
+
+  @Action
+  updateUser ({ key, value }: IKeyValue) {
+    this.auth.updateUserStorage(key, value)
   }
 }
 

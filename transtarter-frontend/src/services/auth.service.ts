@@ -61,4 +61,8 @@ export class AuthService {
   public removeFromLocalStorageByKey (key: string): void {
     localStorage.removeItem(key)
   }
+
+  public updateUserStorage (key:string, value: User): void {
+    this.userManager.settings.userStore.set(key, value)
+  }
 }
