@@ -15,6 +15,7 @@ import Registration from '@/components/authorization/registration/registration.v
 import PasswordRestore from '@/components/authorization/password-restore/password-restore.vue'
 import PasswordSuccessRestore from '@/components/authorization/password-success-restore/password-success-restore.vue'
 import RequestCall from '@/components/shared/request-call/request-call.vue'
+import UnsupportedBrowser from '@/components/shared/unsupport-browser/unsupported-browser.vue'
 // store modules
 import { AuthModule } from '../store/modules/authentication.module'
 import { DisplayModule } from '../store/modules/display.module'
@@ -34,7 +35,8 @@ import { DisplayModule } from '../store/modules/display.module'
     // LogIn,
     PasswordRestore,
     PasswordSuccessRestore,
-    RequestCall
+    RequestCall,
+    UnsupportedBrowser
   }
 })
 export default class UserProfile extends Vue {

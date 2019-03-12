@@ -13,7 +13,7 @@ export class AuthService {
   private identityServerApi = process.env.VUE_APP_IDENTITY_SERVER_API;
 
   constructor () {
-    const AUTH0_DOMAIN: string = this.identityServer
+    const AUTH0_DOMAIN = this.identityServer
     const MY_HOST: string = window.location.origin
 
     const settings: UserManagerSettings = {

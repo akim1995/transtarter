@@ -19,56 +19,6 @@
           class="log-in-form"
           @submit.prevent='login'
         >
-          <!--<div class="form-group">
-            <label class="label">Email, указанный при регистрации</label>
-            <input
-              v-model="logInForm.email"
-              placeholder="Почта"
-              class="form-control"
-
-            >
-          </div>
-
-          <div
-            class="form-group"
-            style="margin-bottom: 8px;"
-          >
-            <label class="label">Пароль</label>
-            <input
-              v-model="logInForm.password"
-              placeholder="Телефон"
-              class="form-control"
-              type="password"
-              val='123'
-            >
-          </div>
-
-          <div class="remember-password">
-            <a
-              href="#"
-              class="remember-password-text"
-              @click="closeLogInAndOpenRestorePassword()"
-            >
-              Напомнить пароль?
-            </a>
-          </div>
-
-          <div class="foreign-pc custom-checkbox">
-
-            <span
-              class="custom-checkbox-input fill-checkbox"
-              @click="toggleForeignPc"
-            >
-              <input
-                type="radio"
-                class="fill-control-input"
-                :checked='foreignPc'
-              >
-              <span class="fill-control-indicator"></span>
-            </span>
-            <label class="custom-checkbox-label">Чужой компьютер</label>
-          </div> -->
-
           <button
             type="submit"
             class="btn btn-orange btn-log-in"
