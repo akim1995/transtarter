@@ -18,8 +18,8 @@ export interface IDisplayState {
 
 @Module({ dynamic: true, store, name: 'display', namespaced: true })
 export class Display extends VuexModule implements IDisplayState {
-  windowDocument = document
-  popupIsOpenedClassName = 'modal-open'
+  windowDocument = document;
+  popupIsOpenedClassName = 'modal-open';
 
   showPopup = {
     registration: false,
@@ -38,8 +38,10 @@ export class Display extends VuexModule implements IDisplayState {
     const keys = Object.values(this.showPopup)
     if (keys.some(x => x === true)) {
       this.windowDocument.body.classList.add(this.popupIsOpenedClassName)
+      if (this.windowDocument.documentElement) { this.windowDocument.documentElement.classList.add(this.popupIsOpenedClassName) }
     } else {
       this.windowDocument.body.classList.remove(this.popupIsOpenedClassName)
+      if (this.windowDocument.documentElement) { this.windowDocument.documentElement.classList.remove(this.popupIsOpenedClassName) }
     }
   }
 

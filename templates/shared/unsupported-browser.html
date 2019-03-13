@@ -1,0 +1,193 @@
+<div class="unsupported-browser modal-wrapper" id="unsupported-browser">
+  <div class="modal-popup narrow-popup">
+    <div class="modal-content unsupported-browser-content">
+      <div class="title bold">
+        К сожалению, мы не поддерживаем ваш браузер
+      </div>
+
+      <div class="tip">
+        Установите один из современных браузеров, которые мы поддерживаем
+      </div>
+
+      <ul class="browsers-list">
+        <li>
+          <a
+            target="_blank"
+            href="https://www.google.com/chrome/"
+            rel="noopener noreferrer"
+            class="browser-item"
+          >
+            <div class="browser browser-chrome"></div>
+            <p class="browser-name">Google Chrome</p>
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.mozilla.org/en-US/firefox/new/"
+            rel="noopener noreferrer"
+            class="browser-item"
+          >
+            <div class="browser browser-firefox"></div>
+            <p class="browser-name">Mozilla Firefox</p>
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.opera.com/?utm_medium=roc&utm_source=burocratik&utm_campaign=outdatedbrowser"
+            rel="noopener noreferrer"
+            class="browser-item"
+          >
+            <div class="browser browser-opera"></div>
+            <p class="browser-name">Opera</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var isIE = false || !!document.documentMode;
+  var isEdge = !isIE && !!window.StyleMedia;
+
+  if (isIE || isEdge) {
+    displayUnsupportedPopupModal();
+  }
+
+  function displayUnsupportedPopupModal() {
+    document.getElementById("unsupported-browser").style.display = "block";
+    document.body.classList.add("modal-open");
+    document.documentElement.classList.add("modal-open");
+  }
+</script>
+
+<style>
+  ul,
+  menu,
+  dir {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+  }
+  .modal-open {
+    overflow: hidden;    
+  }
+
+  .unsupported-browser {
+    display: none;
+  }
+  .unsupported-browser-content {
+    padding: 0 24px 0 24px;
+    flex-direction: column;
+  }
+  .unsupported-browser-content .title {
+    font-size: 24px;
+    margin: 40px 0 16px 0;
+    text-align: center;
+    font-family: "PT Sans";
+  }
+  .unsupported-browser-content .tip {
+    font-family: "PT Sans";
+    text-align: center;
+  }
+  .unsupported-browser-content .browsers-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 40px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+  .unsupported-browser-content .browsers-list .browser-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  .unsupported-browser-content .browsers-list .browser-item .browser-name {
+    font-size: 20px;
+    font-family: "Exo 2";
+  }
+  .unsupported-browser-content .browsers-list .browser-item .browser {
+    width: 100px;
+    height: 100px;
+    background-image: url("https://raw.githubusercontent.com/alrra/browser-logos/master/src/main-desktop-browser-logos.png");
+    background-repeat: no-repeat;
+    background-size: auto 100px;
+  }
+  .unsupported-browser-content .browsers-list .browser-item .browser-chrome {
+    background-position: 0;
+  }
+  .unsupported-browser-content .browsers-list .browser-item .browser-firefox {
+    background-position: -200px 0;
+  }
+  .unsupported-browser-content .browsers-list .browser-item .browser-opera {
+    background-position: -300px 0;
+  }
+  @media (max-width: 768px) {
+    .unsupported-browser-content .title {
+      font-size: 20px;
+      margin: 40px auto 16px auto;
+    }
+    .unsupported-browser-content .browsers-list {
+      margin: 30px;
+    }
+    .unsupported-browser-content .browsers-list .browser-item {
+      margin-bottom: 20px;
+    }
+  }
+
+  .modal-wrapper {
+    width: 100vw;
+    background-color: rgba(50, 50, 48, 0.8);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .modal-wrapper .modal-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 20px 0;
+    min-height: calc(100% - (1.75rem * 2));
+    height: calc(100% - (1.75rem * 2));
+    margin: 0 auto;
+  }
+  .modal-wrapper .modal-popup .modal-content {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    background: white;
+  }
+  .modal-wrapper .modal-popup .modal-content .close {
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    color: #a3a3a2;
+  }
+  .modal-wrapper .narrow-popup {
+    width: 60%;
+  }
+  @media (max-width: 1200px) {
+    .modal-wrapper .modal-popup {
+      width: calc(100% - 16px) !important;
+      margin: 0 auto;
+    }
+  }
+</style>
