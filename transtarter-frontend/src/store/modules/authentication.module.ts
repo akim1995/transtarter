@@ -90,7 +90,6 @@ export class Authentication extends VuexModule implements IAuthState {
   @Action
   public actualizeUser () {
     this.auth.getUser().then(user => {
-      debugger
       if (user) {
         this.auth.saveUserInfo(this.localStorageKey, user)
         this.context.commit('SUCCESS_LOGIN', user)
