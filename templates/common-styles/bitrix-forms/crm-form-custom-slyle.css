@@ -78,3 +78,15 @@
 .crm-webform-iframe .crm-webform-fieldset-footer {
     padding-top: 0;
 }
+
+.crm-webform-iframe button.crm-webform-submit-button {
+    width: 100%;
+}
+
+.crm-webform-body {
+    padding: 0 !important;
+}
+
+.crm-webform-iframe label.crm-webform-input-label {
+    width: 100%;
+}

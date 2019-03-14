@@ -1,0 +1,16 @@
+.crm-webform-body {
+    background-color: #383838;
+    
+}
+
+.crm-webform-iframe {
+    background-color: #383838;
+}
+
+.content {
+    background-color: #383838;
+}
+
+.crm-webform-iframe button.crm-webform-submit-button {
+    width: 100%;
+}
