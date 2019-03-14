@@ -3,16 +3,19 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-    }
-    .crm-webform-submit-button {
-        margin-top: 16px !important;
-    }
+    }    
     .crm-webform-fieldset,
     .crm-webform-fieldset-footer {
         width: 98% !important;
     }
     .crm-webform-input {
         max-width: 100% !important;
+    }
+    .crm-webform-wrapper {        
+        padding: 0 !important;        
+    }
+    .crm-webform-fieldset {
+        padding: 0 !important;   
     }
 }
 
