@@ -26,8 +26,7 @@
             .close {
                 cursor: pointer;
                 position: absolute;
-                top: 12px;
-                right: 12px;
+                padding: 10px;
                 z-index: 1;
                 color: $star-dust;
             }
