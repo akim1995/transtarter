@@ -1,0 +1,71 @@
+<div class="container g-font-exo g-flex g-flex-just-sb g-mt-80 every-day-update">
+    <h3 class="title">
+        Каждый день мы пополняем ассортимент <br />
+        или запускаем новую акцию
+    </h3>
+    <div class='all-articles-wrap'>
+        <a href="/special-offers" class="all-articles">
+            Все акции<br class="hide-mobile">
+            и новинки</a>
+    </div>
+</div>
+
+<style>
+    .every-day-update {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: -40px;
+    }
+
+    .every-day-update .title {
+        font-family: 'Exo 2';
+        font-weight: bold;
+        font-size: 40px !important;
+        line-height: 48px;
+        margin-top: -20px;
+    }
+
+    .every-day-update .all-articles-wrap {
+        text-align: right;
+    }
+
+    .every-day-update .all-articles {
+        font-family: 'Exo 2';
+        font-weight: bold;
+        font-size: 24px !important;
+        line-height: 32px;
+        text-align: right;
+        color: #0CB520;
+        text-decoration: underline;
+        text-decoration-color: #0CB520;
+    }
+
+    @media (max-width: 768px) {
+
+        .hide-mobile {
+            display: none;
+        }
+
+        .every-day-update {
+            flex-direction: column;
+        }
+
+        .every-day-update .title {
+            font-size: 20px !important;
+            line-height: 28px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .every-day-update .all-articles-wrap {
+            text-align: center;
+        }
+
+        .every-day-update .all-articles {
+            font-size: 17px !important;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+</style>
