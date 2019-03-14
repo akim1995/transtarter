@@ -792,3 +792,21 @@ button {
         padding-bottom: 0 !important;
     }
 }
+
+.js-prev,
+.js-next {
+    background: #FFFFFF !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.js-prev::before,
+.js-next::before {
+    color: #979797;
+}
+
+.js-prev {
+    left: 30px;
+}
+.js-next {
+    right: 30px;
+}

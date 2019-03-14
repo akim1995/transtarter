@@ -1,24 +1,61 @@
-@media (max-width: 768px) {
-    .crm-webform-form-container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }    
-    .crm-webform-fieldset,
-    .crm-webform-fieldset-footer {
-        width: 98% !important;
-    }
-    .crm-webform-input {
-        max-width: 100% !important;
-    }
-    .crm-webform-wrapper {        
-        padding: 0 !important;        
-    }
-    .crm-webform-fieldset {
-        padding: 0 !important;   
-    }
+.crm-webform-form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.crm-webform-fieldset,
+.crm-webform-fieldset-footer {
+    width: 98% !important;
+}
+
+.crm-webform-input {
+    max-width: 100% !important;
+}
+
+.crm-webform-wrapper {
+    padding: 0 !important;
+    max-width: none !important;
+}
+
+.crm-webform-fieldset {
+    padding: 0 !important;
+}
+
+.crm-webform-main-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.crm-webform-main-container {
+    max-width: none !important;
 }
 
 .crm-webform-body {
     padding: 0;
 }
+
+.flexible-middle-width .content-wrap {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.crm-webform-iframe .crm-webform-wrapper {
+    max-width: none !important;
+}
+
+.crm-webform-iframe label.crm-webform-input-label {
+    width: 100% !important;
+}
+
+/* @media (max-width: 768px) {
+    .crm-webform-form-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }  
+    .crm-webform-iframe label.crm-webform-input-label {
+        margin-bottom: 16px !important; 
+        width: 100% !important;
+    }
+} */
