@@ -240,23 +240,35 @@
         v-if="blocksShow.menu"
       >
         <ul class="menu-popup_list">
-          <li class="menu-popup_list-item">
-            <a href="/special-offers">Акции и новинки</a>
+          <li>
+            <a
+              class="menu-popup_list-item"
+              href="/special-offers"
+            >Акции и новинки</a>
           </li>
-          <li class="menu-popup_list-item">
-            <a href="/delivery">Доставка и оплата</a>
+          <li>
+            <a
+              class="menu-popup_list-item"
+              href="/delivery"
+            >Доставка и оплата</a>
           </li>
-          <li class="menu-popup_list-item">
+          <li>
             <a
               href="/about-company"
-              class="active"
+              class="menu-popup_list-item active"
             >О компании</a>
           </li>
-          <li class="menu-popup_list-item">
-            <a href="/auto-workshops">Найти точку ремонта</a>
+          <li>
+            <a
+              class="menu-popup_list-item"
+              href="/auto-workshops"
+            >Найти точку ремонта</a>
           </li>
-          <li class="menu-popup_list-item">
-            <a href="/contacts">Контакты</a>
+          <li>
+            <a
+              class="menu-popup_list-item"
+              href="/contacts"
+            >Контакты</a>
           </li>
           <li class="menu-popup_list-item">
             <a href="#">Блог</a>
@@ -443,7 +455,9 @@ export default class Header extends Vue {
   }
 
   get userName () {
-    return AuthModule.name.length > 10 ? AuthModule.name.substring(0, 10) + '...' : AuthModule.name
+    return AuthModule.name.length > 10
+      ? AuthModule.name.substring(0, 10) + '...'
+      : AuthModule.name
   }
 
   logout () {
@@ -465,7 +479,6 @@ export default class Header extends Vue {
     store.dispatch('auth/actualizeUser')
   }
 }
-
 </script>
 
 <style lang="scss">
