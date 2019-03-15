@@ -18,24 +18,24 @@
               <ul class="links">
                 <li class="links-item"><a
                     class="cards_group__card_link"
-                    href="#"
+                    href="/special-offers"
                   >Акции и новинки</a></li>
                 <li class="mb-20 links-item"><a
                     class="cards_group__card_link "
-                    href="#"
+                    href="/delivery"
                   >Доставка и оплата</a></li>
 
                 <li class="links-item"><a
                     class="cards_group__card_link"
-                    href="#"
+                    href="/about-company"
                   >О компании</a></li>
                 <li class="links-item"><a
                     class="cards_group__card_link"
-                    href="#"
+                    href="/auto-workshops"
                   >Найти точку ремонта</a></li>
                 <li class="mb-20 links-item"><a
                     class="cards_group__card_link  "
-                    href="#"
+                    href="/contacts"
                   >Контакты</a></li>
                 <li
                   class="link-item"
@@ -98,7 +98,7 @@
         <div class="additional-links">
           <span class="additional-links-left"><a
               class="cards_group__card_link bottom-link"
-              href="#"
+              href="/politika"
               target='_blank'
               rel='noopener noreferrer'
             >

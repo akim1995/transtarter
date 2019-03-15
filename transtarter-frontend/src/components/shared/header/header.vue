@@ -430,8 +430,13 @@ import { Component, Vue } from 'vue-property-decorator'
 import { AuthModule } from '@/store/modules/authentication.module'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
+import vClickOutside from 'v-click-outside'
 
-@Component
+@Component({
+  directives: {
+    clickOutside: vClickOutside.directive
+  }
+})
 export default class Header extends Vue {
   blocksShow = {
     menu: false,
@@ -474,11 +479,15 @@ export default class Header extends Vue {
   }
 
   toggleMainMenu () {
-    this.blocksShow.menu = !this.blocksShow.menu
+    setTimeout(() => {
+      this.blocksShow.menu = !this.blocksShow.menu
+    })
   }
 
   toggleUserMenu () {
-    this.blocksShow.user = !this.blocksShow.user
+    setTimeout(() => {
+      this.blocksShow.user = !this.blocksShow.user
+    })
   }
 
   mounted () {
