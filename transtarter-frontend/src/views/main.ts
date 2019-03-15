@@ -1,5 +1,4 @@
 import { Component, Vue, Watch } from 'vue-property-decorator'
-import { eventBus } from '../main'
 // components
 import Header from '@/components/shared/header/header.vue'
 import Footer from '@/components/shared/footer/footer.vue'

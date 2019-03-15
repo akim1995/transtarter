@@ -8,7 +8,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '@/main'
 import { store } from '@/store/index'
 
 @Component

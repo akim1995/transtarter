@@ -48,7 +48,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import { mixins } from 'vue-class-component'
 import { ClosablePopup } from '@/components/mixins/closable-popup'
 import { DisplayModule } from '@/store/modules/display.module'
-import { eventBus } from '@/main'
 import { store } from '@/store/index'
 
 @Component

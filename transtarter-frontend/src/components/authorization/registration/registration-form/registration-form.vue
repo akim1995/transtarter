@@ -147,7 +147,6 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
-import { eventBus } from '@/main'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
 import { AuthService } from '@/services/auth.service'

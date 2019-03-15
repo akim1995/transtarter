@@ -45,7 +45,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '@/main'
 import { mixins } from 'vue-class-component'
 import { ClosablePopup } from '@/components/mixins/closable-popup'
 import { store } from '@/store/index'

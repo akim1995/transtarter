@@ -427,23 +427,21 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { eventBus } from '@/main'
 import { AuthModule } from '@/store/modules/authentication.module'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
-import vClickOutside from 'v-click-outside'
 
-@Component({
-  directives: {
-    clickOutside: vClickOutside.directive
-  }
-})
+@Component
 export default class Header extends Vue {
   blocksShow = {
     menu: false,
     location: false,
     user: false
   };
+
+  vcoConfig = {
+    events: ['dblclick', 'click', 'touchstart']
+  }
 
   toggleRegistrationPopup () {
     store.dispatch('display/toggleRegistration')
