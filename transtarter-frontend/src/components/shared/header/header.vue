@@ -146,8 +146,8 @@
           <div class="search__input search-input">
 
             <div class="search__icon-lins"></div>
-            <input type="text">
-            <div class="search__clear"></div>
+            <input type="text" ref="searchInputDesktop">
+            <div class="search__clear" @click="clearSearchInput"></div>
           </div>
           <button
             type="submit"
@@ -405,8 +405,8 @@
 
           <div class="form-row">
             <div class="search__input-mobile search-input">
-              <input type="text">
-              <div class="search__clear"></div>
+              <input type="text" ref="searchInputMobile">
+              <div class="search__clear" @click="clearSearchInput"></div>
             </div>
             <button
               type="submit"
@@ -453,9 +453,13 @@ export default class Header extends Vue {
     store.dispatch('auth/login')
   }
 
-  // toggleLogInPopup () {
-  //   store.dispatch('display/toggleLogIn')
-  // }
+  clearSearchInput () {
+    const inputDesktop = this.$refs.searchInputDesktop as HTMLInputElement
+    if (inputDesktop) { inputDesktop.value = '' }
+
+    const inputMobile = this.$refs.searchInputMobile as HTMLInputElement
+    if (inputMobile) { inputMobile.value = '' }
+  }
 
   get loggedIn () {
     return AuthModule.logged
@@ -468,10 +472,7 @@ export default class Header extends Vue {
   }
 
   logout () {
-    // e.preventDefault()
-    // this.auth.logout()
     store.dispatch('auth/logout')
-    // store.dispatch('auth/mockLogout')
   }
 
   toggleMainMenu () {
