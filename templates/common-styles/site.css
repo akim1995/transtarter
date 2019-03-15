@@ -807,8 +807,8 @@ button {
 }
 
 .js-prev {
-    left: 30px;
+    left: -20px;
 }
 .js-next {
-    right: 30px;
+    right: -20px;
 }
