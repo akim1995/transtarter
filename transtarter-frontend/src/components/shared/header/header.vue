@@ -238,6 +238,7 @@
       <div
         class="menu-popup"
         v-if="blocksShow.menu"
+        v-click-outside="toggleMainMenu"
       >
         <ul class="menu-popup_list">
           <li>
@@ -311,6 +312,7 @@
       <div
         class="menu-popup"
         v-if="blocksShow.user && !loggedIn"
+        v-click-outside="toggleUserMenu"
       >
         <ul class="menu-popup_list">
           <li
@@ -429,8 +431,13 @@ import { eventBus } from '@/main'
 import { AuthModule } from '@/store/modules/authentication.module'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
+import vClickOutside from 'v-click-outside'
 
-@Component
+@Component({
+  directives: {
+    clickOutside: vClickOutside.directive
+  }
+})
 export default class Header extends Vue {
   blocksShow = {
     menu: false,

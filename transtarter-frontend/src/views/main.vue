@@ -12,7 +12,7 @@
     <Registration />
     <PasswordRestore />
     <PasswordSuccessRestore />
-    <UnsupportedBrowser />
+    <!-- <UnsupportedBrowser /> -->
     <!-- end popups -->
 
     <!-- blocks  -->
