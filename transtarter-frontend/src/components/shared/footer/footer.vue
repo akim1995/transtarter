@@ -10,7 +10,7 @@
             <div class="cards_group__card_header card_header_logo">ТРАНС СТАРТЕР</div>
             <div
               class="cards_group__card_body specialization"
-              style="line-height: 24px; padding-right: 40px;"
+              style="line-height: 24px;"
             >Продажа стартеров, генераторов<br> и запчастей с 1995 г.</div>
           </div>
           <div class="cards_group__card">
@@ -103,17 +103,6 @@
               rel='noopener noreferrer'
             >
               Политика конфиденциальности</a></span>
-          <!-- <span>
-            <span
-              class="cards_group__card_link bottom-link"
-              style="border: 0;"
-            >Разработано в <a
-                class="bottom-link"
-                target='_blank'
-                rel='noopener noreferrer'
-                href="http://koniglabs.ru"
-              >KonigLabs</a> </span>
-          </span> -->
         </div>
       </div>
 

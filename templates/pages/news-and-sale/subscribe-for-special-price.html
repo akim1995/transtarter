@@ -1,99 +1,160 @@
 <!-- block for copy -->
 <div class="news-and-sales">
-    <div class="bg-image">
-        <div class="overflow-text customized-trapeze-block banner trapeze-block trapeze-block_left g-white g-z-index-1 g-pos-rel js-animation slideInRight"
-            style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
-            <div class="landing-block-node-text js-animation fadeInUp g-line-height-1_5 text-left g-mb-40 g-color-white"
-                data-form-style-main-font-weight="1" data-form-style-header-text-font-size="1"
-                data-form-style-label-font-weight="1" data-form-style-label-font-size="1"
-                data-form-style-second-font-color="1" data-selector=".landing-block-node-text@0"
-                style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;">
-
-                <h3 class="text-center-mobile g-font-exo g-font-700 g-lh-1_2 g-mb-40 main-title">
-                    Участвуйте
-                    в акциях от «Транс Стартер»
-                </h3>
-            </div>
-            <div class="landing-block-node-card-contact-container">
-                <div class="landing-block-node-card-contact">
-                    <div class="media align-items-center mb-4">
-                        <div class="media-body">
-                            <div class="landing-block-node-contact-text mb-0 text-left g-white flex-column-center"
-                                style="font-family: Exo 2;">
-                                <p style="font-size: 32px;">
-                                    и первыми узнавайте о новых<br/>поступлениях товара
-                                </p>
-                                <div style="line-height: 28px; font-size: 20px; margin: 41px 0 22px;">
-                                    <p>Специальная цена доступна только для оптовых клиентов.</p>
-                                    <p style="font-weight: bold;">Зарегистрируйтесь, чтобы покупать запчасти со скидкой
-                                    </p>
-                                </div>
-
-
-                                <ts-ui-reg-btn style="width: 100%;"></ts-ui-reg-btn>
-                            </div>
-                        </div>
-                    </div>
+  <div class="bg-image">
+    <div
+      class="overflow-text customized-trapeze-block banner trapeze-block trapeze-block_left g-white g-z-index-1 g-pos-rel js-animation slideInRight"
+      style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;"
+    >
+      <div
+        class="landing-block-node-text js-animation fadeInUp g-line-height-1_5 text-left g-color-white"
+        style="animation-duration: 1000ms; animation-play-state: running; animation-name: none;"
+      >
+        <h3 class="text-center-mobile main-title">
+          Участвуйте в акциях от «Транс Стартер»
+        </h3>
+      </div>
+      <div class="landing-block-node-card-contact-container">
+        <div class="landing-block-node-card-contact">
+          <div class="media align-items-center mb-4">
+            <div class="media-body">
+              <div
+                class="landing-block-node-contact-text mb-0 text-left g-white flex-column-center "
+              >
+                <p class="operative-notify">
+                  и первыми узнавайте о новых<br />поступлениях товара
+                </p>
+                <div>
+                  <p class="special-price">
+                    Специальная цена доступна только для оптовых клиентов.
+                  </p>
+                  <p class="reg-to-get-sale">
+                    Зарегистрируйтесь, чтобы покупать запчасти со скидкой
+                  </p>
                 </div>
-            </div>
-        </div>
-    </div>
 
+                <ts-ui-reg-btn style="width: 100%;"></ts-ui-reg-btn>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- block for copy -->
 
-
 <style>
+  .news-and-sales {
+    height: 100vh;
+    width: 100%;
+    min-height: 630px;
+  }
+
+  .news-and-sales .bg-image {
+    width: 100%;
+    height: 80vh;
+    background-image: url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png");
+    background-image: -webkit-image-set(
+      url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png")
+        1x,
+      url("https://cdn.bitrix24.ru/b488493/landing/282/28262c832c887b952db281e81b4f728c/Rectangle_49_2x.png")
+        2x
+    );
+    background-image: image-set(
+      url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png")
+        1x,
+      url("https://cdn.bitrix24.ru/b488493/landing/282/28262c832c887b952db281e81b4f728c/Rectangle_49_2x.png")
+        2x
+    );
+    background-size: cover;
+    min-height: 630px;
+  }
+
+  .news-and-sales .bg-image .overflow-text {
+    height: 100%;
+    color: #ffffff;
+    font-family: "Exo 2";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .news-and-sales .bg-image .overflow-text .main-title {
+    font-weight: bold;
+    font-size: 72px !important;
+    line-height: 80px !important;
+  }
+
+  .news-and-sales .bg-image .overflow-text .operative-notify {
+    font-size: 32px !important;
+    line-height: 40px !important;
+    margin: 36px 0 41px;
+  }
+  .news-and-sales .bg-image .overflow-text .special-price,
+  .news-and-sales .bg-image .overflow-text .reg-to-get-sale {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+  .news-and-sales .bg-image .overflow-text .reg-to-get-sale {
+    font-weight: bold;
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: 768px) {
     .news-and-sales {
-        height: 100vh;
-        width: 100%;
-        min-height: 630px;
-    }
-
-    .news-and-sales .bg-image {
-        width: 100%;
-        height: 100%;
-        background-image: url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png");
-        background-image: -webkit-image-set(url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png") 1x, url("https://cdn.bitrix24.ru/b488493/landing/282/28262c832c887b952db281e81b4f728c/Rectangle_49_2x.png") 2x);
-        background-image: image-set(url("https://cdn.bitrix24.ru/b488493/landing/932/932a4ca2dcf9baabbfc51dbb25674aa1/Rectangle_49.png") 1x, url("https://cdn.bitrix24.ru/b488493/landing/282/28262c832c887b952db281e81b4f728c/Rectangle_49_2x.png") 2x);
-        background-size: cover;
-        min-height: 630px;
-    }
-
-    .news-and-sales .bg-image .overflow-text {
-        height: 100%;
+      height: auto;
+      width: 100%;
+      min-height: 540px;
     }
 
     .news-and-sales .bg-image .overflow-text .main-title {
-        font-size: 60px;
-        margin-bottom: 36px;
+      font-weight: bold;
+      font-size: 28px !important;
+      line-height: 32px !important;
     }
 
-    @media (max-width: 768px) {
-        .news-and-sales {
-            height: auto;
-            width: 100%;
-            min-height: 540px;
-        }
-
-        .news-and-sales .bg-image {
-            width: 100%;
-            height: 100%;
-            min-height: auto;
-        }
-
-        .news-and-sales .bg-image .overflow-text{
-            padding: 50px;
-        }
-        .news-and-sales .bg-image .overflow-text * {
-            text-align: center !important;
-        }
-
-        .news-and-sales .flex-column-center {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+    .news-and-sales .bg-image .overflow-text .operative-notify {
+      font-size: 17px !important;
+      line-height: 24px !important;
+      margin: 19px 0 24px;
     }
+    .news-and-sales .bg-image .overflow-text .special-price,
+    .news-and-sales .bg-image .overflow-text .reg-to-get-sale {
+      font-size: 16px !important;
+      line-height: 24px !important;
+    }
+    .news-and-sales .bg-image .overflow-text .reg-to-get-sale {
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .news-and-sales .bg-image {
+      width: 100%;
+      height: 100%;
+      min-height: auto;
+    }
+
+    .news-and-sales .bg-image .overflow-text {
+      padding: 50px;
+    }
+    .news-and-sales .bg-image .overflow-text * {
+      text-align: center !important;
+    }
+
+    .news-and-sales .flex-column-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 </style>
+
+
+<script>
+
+window.onload = function() {
+    document.getElementById('carousel-custom-1').classList.add('container');
+}
+
+</script>
