@@ -36,3 +36,4 @@ npm run test:e2e
 ```
 .\node_modules\.bin\vue-cli-service build --target wc --name ts-ui 'src/components/**/*.vue' --mode production
 ```
+
