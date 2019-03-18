@@ -238,7 +238,7 @@
       <div
         class="menu-popup"
         v-if="blocksShow.menu"
-        v-click-outside="toggleMainMenu"
+        v-click-outside="closeMainMenu"
       >
         <ul class="menu-popup_list">
           <li>
@@ -312,7 +312,7 @@
       <div
         class="menu-popup"
         v-if="blocksShow.user && !loggedIn"
-        v-click-outside="toggleUserMenu"
+        v-click-outside="closeUserMenu"
       >
         <ul class="menu-popup_list">
           <li
@@ -484,12 +484,19 @@ export default class Header extends Vue {
     })
   }
 
+  closeMainMenu () {
+    this.blocksShow.menu = false
+  }
+
   toggleUserMenu () {
     setTimeout(() => {
       this.blocksShow.user = !this.blocksShow.user
     })
   }
 
+  closeUserMenu () {
+    this.blocksShow.user = false
+  }
   mounted () {
     store.dispatch('auth/actualizeUser')
   }
