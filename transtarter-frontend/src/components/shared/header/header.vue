@@ -146,8 +146,14 @@
           <div class="search__input search-input">
 
             <div class="search__icon-lins"></div>
-            <input type="text" ref="searchInputDesktop">
-            <div class="search__clear" @click="clearSearchInput"></div>
+            <input
+              type="text"
+              ref="searchInputDesktop"
+            >
+            <div
+              class="search__clear"
+              @click="clearSearchInput"
+            ></div>
           </div>
           <button
             type="submit"
@@ -405,8 +411,14 @@
 
           <div class="form-row">
             <div class="search__input-mobile search-input">
-              <input type="text" ref="searchInputMobile">
-              <div class="search__clear" @click="clearSearchInput"></div>
+              <input
+                type="text"
+                ref="searchInputMobile"
+              >
+              <div
+                class="search__clear"
+                @click="clearSearchInput"
+              ></div>
             </div>
             <button
               type="submit"
@@ -446,7 +458,7 @@ export default class Header extends Vue {
 
   vcoConfig = {
     events: ['dblclick', 'click', 'touchstart']
-  }
+  };
 
   toggleRegistrationPopup () {
     store.dispatch('display/toggleRegistration')
@@ -458,10 +470,14 @@ export default class Header extends Vue {
 
   clearSearchInput () {
     const inputDesktop = this.$refs.searchInputDesktop as HTMLInputElement
-    if (inputDesktop) { inputDesktop.value = '' }
+    if (inputDesktop) {
+      inputDesktop.value = ''
+    }
 
     const inputMobile = this.$refs.searchInputMobile as HTMLInputElement
-    if (inputMobile) { inputMobile.value = '' }
+    if (inputMobile) {
+      inputMobile.value = ''
+    }
   }
 
   get loggedIn () {
@@ -485,7 +501,9 @@ export default class Header extends Vue {
   }
 
   closeMainMenu () {
-    this.blocksShow.menu = false
+    setTimeout(() => {
+      this.blocksShow.menu = false
+    })
   }
 
   toggleUserMenu () {
@@ -495,7 +513,9 @@ export default class Header extends Vue {
   }
 
   closeUserMenu () {
-    this.blocksShow.user = false
+    setTimeout(() => {
+      this.blocksShow.user = false
+    })
   }
   mounted () {
     store.dispatch('auth/actualizeUser')
