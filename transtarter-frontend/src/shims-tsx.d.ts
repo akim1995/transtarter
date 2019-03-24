@@ -10,4 +10,13 @@ declare global {
       [elem: string]: any
     }
   }
+  interface HTMLElement {
+    __vueClickOutside__?: (e: MouseEvent) => void;
+  }
+}
+
+declare module 'vue/types/vue' {
+  export interface Vue {
+    name: string;
+  }
 }

@@ -245,7 +245,10 @@
         class="menu-popup"
         v-if="blocksShow.menu"
       >
-        <ul class="menu-popup_list" v-click-outside="closeMainMenu">
+        <ul
+          class="menu-popup_list"
+          v-click-outside="closeMainMenu"
+        >
           <li>
             <a
               class="menu-popup_list-item"
@@ -318,7 +321,10 @@
         class="menu-popup"
         v-if="blocksShow.user && !loggedIn"
       >
-        <ul class="menu-popup_list" v-click-outside="closeUserMenu">
+        <ul
+          class="menu-popup_list"
+          v-click-outside="closeUserMenu"
+        >
           <li
             class="menu-popup_list-item"
             @click="logIn()"
@@ -440,11 +446,11 @@ import { Component, Vue } from 'vue-property-decorator'
 import { AuthModule } from '@/store/modules/authentication.module'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
-import vClickOutside from 'v-click-outside'
+import { clickOutside } from '@/directives/v-click-outside/index'
 
 @Component({
   directives: {
-    clickOutside: vClickOutside.directive
+    clickOutside
   }
 })
 export default class Header extends Vue {
@@ -452,10 +458,6 @@ export default class Header extends Vue {
     menu: false,
     location: false,
     user: false
-  };
-
-  vcoConfig = {
-    events: ['dblclick', 'click', 'touchstart']
   };
 
   toggleRegistrationPopup () {
@@ -499,9 +501,7 @@ export default class Header extends Vue {
   }
 
   closeMainMenu () {
-    setTimeout(() => {
-      this.blocksShow.menu = false
-    }, 100)
+    this.blocksShow.menu = false
   }
 
   toggleUserMenu () {
@@ -511,9 +511,7 @@ export default class Header extends Vue {
   }
 
   closeUserMenu () {
-    setTimeout(() => {
-      this.blocksShow.user = false
-    }, 100)
+    this.blocksShow.user = false
   }
   mounted () {
     store.dispatch('auth/actualizeUser')
