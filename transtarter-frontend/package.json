@@ -9,7 +9,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e:nightwatch": "vue-cli-service test:e2e",
     "test:e2e:all": "testcafe all ./tests/testCafe/*.test.js --app \"npm run serve  -- --mode staging\" --app-init-delay 10000",
-    "test:e2e": "testcafe chrome ./tests/testCafe/*.test.js --app \"npm run serve  -- --mode staging\" --app-init-delay 10000"
+    "test:e2e": "testcafe chrome ./tests/testCafe/*.test.js --app \"npm run serve  -- --mode staging\" --app-init-delay 10000",
+    "wc": ".\\node_modules\\.bin\\vue-cli-service build --target wc --name ts-ui .\\src\\components\\**\\*.vue --mode production"
   },
   "dependencies": {
     "axios": "^0.18.0",
