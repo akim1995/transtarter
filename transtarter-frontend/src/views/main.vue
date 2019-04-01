@@ -2,6 +2,7 @@
   <div>
     <!-- main sections -->
     <Header />
+    <findDetail />
     <UserProfileWrapper />
     <Footer />
     <!-- end main sections -->

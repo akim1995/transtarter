@@ -18,6 +18,9 @@ import RequestCall from '@/components/shared/request-call/request-call.vue'
 import { AuthModule } from '../store/modules/authentication.module'
 import { DisplayModule } from '../store/modules/display.module'
 
+// akim's component
+import findDetail from '@/components/find-detail/find-detail.vue'
+
 @Component({
   components: {
     Header,
@@ -33,7 +36,8 @@ import { DisplayModule } from '../store/modules/display.module'
     // LogIn,
     PasswordRestore,
     PasswordSuccessRestore,
-    RequestCall
+    RequestCall,
+    findDetail
   }
 })
 export default class UserProfile extends Vue {
