@@ -11,5 +11,3 @@
     ]
  }
 
-// const CustomElement = wrap(Vue, FindDetail);
-// window.customElements.define('find-detail', CustomElement);
