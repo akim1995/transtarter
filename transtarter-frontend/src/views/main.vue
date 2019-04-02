@@ -2,7 +2,13 @@
   <div>
     <!-- main sections -->
     <Header />
-    <findDetail />
+
+    <div style="background-color: #0CB520; color: white; text-align: center
+    margin-bottom: 10px;
+    ">
+      <div style="padding: 10px; font-size: 24px;">Найдите запчасть или агрегат</div>
+      <findDetail />
+    </div>
     <UserProfileWrapper />
     <Footer />
     <!-- end main sections -->

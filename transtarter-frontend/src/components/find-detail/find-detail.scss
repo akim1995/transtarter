@@ -1,0 +1,91 @@
+.find-detail {
+    background: white;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    @media (max-width:768px) {
+        display: none;
+    }
+    &__top {
+        padding: 16px 0;
+    }
+    &__filter {
+        max-width: 490px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__filter-icon {
+        width: 32px;
+        height: 32px;
+        border: 2px solid $star-dust;
+        border-radius: 50%;
+        float: left;
+        margin-right: 8px;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $star-dust;
+        flex-shrink: 0;
+    }
+    &__icon-description {
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        color: $star-dust;
+    }
+    &__filter-item {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        &:not(:last-child) {
+            margin-right: 32px;
+        }
+        &.active {
+            .find-detail__filter-icon {
+                color: white;
+                border-color: $malachite;
+                background-color: $malachite;
+            }
+            path {
+                fill: white;
+            }
+            .find-detail__icon-description {
+                color: $black;
+            }
+        }
+    }
+    &__search {
+        border-top: 1px solid $mercury-approx;
+        display: flex;
+    }
+    &__input {
+        height: 56px;
+        padding: 16px;
+        border: 0;
+        width:100%;
+        color: $black;
+        font-size: 24px;
+        font-family: 'Exo 2';
+        &:focus {
+            outline-color: transparent;
+        }
+    }
+    &__button {
+        cursor: pointer;
+        color: $SilverChalice;
+        background: $mercury-approx;
+        width: 85px;
+        height: 56px;
+        text-align: center;
+        line-height: 56px;
+        &:hover {
+            color: $black;
+        }
+    }
+
+
+}
