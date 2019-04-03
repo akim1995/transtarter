@@ -1,9 +1,11 @@
 <template>
 <div >
+  <div class="page-container">
 
     <div class="title">
       Корзина
     </div>
+  </div>
 </div>
 </template>
 

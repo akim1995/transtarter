@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="page-container">
     <div class="title">
       Профиль и настройки
     </div>
@@ -17,7 +18,7 @@
     <ts-ui-registration-data-tab v-if="regDataIsActive"></ts-ui-registration-data-tab>
     <ts-ui-shipping-addresses-tab v-if="shippingAddressesIsActive"></ts-ui-shipping-addresses-tab>
     <ts-ui-requisites-tab v-if="requisitesIsActive"></ts-ui-requisites-tab>
-
+  </div>
   </div>
 </template>
 

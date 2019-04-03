@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="page-container">
     <div class="title">
       Личный кабинет
     </div>
@@ -86,7 +87,7 @@
           >Политикой конфиденциальности</a></div>
       </div>
     </form>
-
+  </div>
   </div>
 </template>
 
@@ -97,7 +98,6 @@ import { Component, Vue, Emit } from 'vue-property-decorator'
   components: {}
 })
 export default class fillOutAddress extends Vue {
-  data: string = 'test data';
   @Emit('fill-out-status')
   submitData () {
     return true
