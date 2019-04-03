@@ -3,12 +3,12 @@
     <!-- main sections -->
     <Header />
 
-    <div style="background-color: #0CB520; color: white; text-align: center
+    <!-- <div style="background-color: #0CB520; color: white; text-align: center
     margin-bottom: 10px; font-family: 'Exo 2'; font-size: 24px;
     ">
       <div style="padding: 10px; font-size: 24px;">Найдите запчасть или агрегат</div>
-      <findDetail />
-    </div>
+<ts-ui-find-detail></ts-ui-find-detail>
+    </div> -->
     <UserProfileWrapper />
     <Footer />
     <!-- end main sections -->

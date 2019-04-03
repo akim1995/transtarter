@@ -5089,12 +5089,12 @@ var clickOutside = {
     el.__vueClickOutside__ = handler; // add Event Listeners
 
     document.addEventListener('click', handler);
-    document.addEventListener('touchend', handler);
+    document.addEventListener('touchmove', handler);
   },
   unbind: function unbind(el, binding) {
     // Remove Event Listeners
     if (el.__vueClickOutside__) {
-      document.removeEventListener('touchend', el.__vueClickOutside__);
+      document.removeEventListener('touchmove', el.__vueClickOutside__);
       document.removeEventListener('click', el.__vueClickOutside__);
     }
 
