@@ -10,13 +10,29 @@
         color: $black;
         margin-bottom: 24px;
     }
+    .title-info-text {
+        margin-bottom: 46px;
+        font-family: 'PT Sans';
+        font-size: 17px;
+        color: $black;
+    }
+    .form-title {
+        font-family: 'Exo 2';
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0.8em;
+    }
     .btn-group-column {
         margin-bottom: 48px;
+
     }
     .row-with-big-space {
         margin-top: 37px;
     }
     
+    li.address {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 1200px) {
