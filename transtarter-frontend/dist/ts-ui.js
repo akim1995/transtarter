@@ -3838,25 +3838,31 @@ var log_inshadow_component = normalizeComponent(
 
 log_inshadow_component.options.__file = "log-in.vue"
 /* harmony default export */ var log_inshadow = (log_inshadow_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=aa6e2df0&shadow
-var log_in_redirectvue_type_template_id_aa6e2df0_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n    Происходит редирект на Transtarter Identity Server\n")])}
-var log_in_redirectvue_type_template_id_aa6e2df0_shadow_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"35161824-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=5509a270&shadow
+var log_in_redirectvue_type_template_id_5509a270_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n    Происходит редирект на Transtarter Identity Server\n")])}
+var log_in_redirectvue_type_template_id_5509a270_shadow_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=aa6e2df0&shadow
+// CONCATENATED MODULE: ./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=5509a270&shadow
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js
+var stringify = __webpack_require__("f499");
+var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=script&lang=ts&shadow
 
 
 
-var log_in_redirectvue_type_script_lang_ts_shadow_LogIn = class LogIn extends external_Vue_default.a {
+
+var log_in_redirectvue_type_script_lang_ts_shadow_LogInRedirect = class LogInRedirect extends external_Vue_default.a {
   mounted() {
+    localStorage.setItem('shop-redirect', stringify_default()(true));
     store.dispatch('auth/login');
   }
 
 };
-log_in_redirectvue_type_script_lang_ts_shadow_LogIn = __decorate([vue_class_component_common_default.a], log_in_redirectvue_type_script_lang_ts_shadow_LogIn);
-/* harmony default export */ var log_in_redirectvue_type_script_lang_ts_shadow = (log_in_redirectvue_type_script_lang_ts_shadow_LogIn);
+log_in_redirectvue_type_script_lang_ts_shadow_LogInRedirect = __decorate([vue_class_component_common_default.a], log_in_redirectvue_type_script_lang_ts_shadow_LogInRedirect);
+/* harmony default export */ var log_in_redirectvue_type_script_lang_ts_shadow = (log_in_redirectvue_type_script_lang_ts_shadow_LogInRedirect);
 // CONCATENATED MODULE: ./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=script&lang=ts&shadow
  /* harmony default export */ var log_in_redirect_log_in_redirectvue_type_script_lang_ts_shadow = (log_in_redirectvue_type_script_lang_ts_shadow); 
 // CONCATENATED MODULE: ./src/components/authorization/log-in-redirect/log-in-redirect.vue?shadow
@@ -3869,8 +3875,8 @@ log_in_redirectvue_type_script_lang_ts_shadow_LogIn = __decorate([vue_class_comp
 
 var log_in_redirectshadow_component = normalizeComponent(
   log_in_redirect_log_in_redirectvue_type_script_lang_ts_shadow,
-  log_in_redirectvue_type_template_id_aa6e2df0_shadow_render,
-  log_in_redirectvue_type_template_id_aa6e2df0_shadow_staticRenderFns,
+  log_in_redirectvue_type_template_id_5509a270_shadow_render,
+  log_in_redirectvue_type_template_id_5509a270_shadow_staticRenderFns,
   false,
   null,
   null,
@@ -4682,10 +4688,6 @@ var es7_array_includes = __webpack_require__("6762");
 // EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js
 var get_iterator = __webpack_require__("5d73");
 var get_iterator_default = /*#__PURE__*/__webpack_require__.n(get_iterator);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js
-var stringify = __webpack_require__("f499");
-var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
 
 // EXTERNAL MODULE: ./node_modules/oidc-client/lib/oidc-client.min.js
 var oidc_client_min = __webpack_require__("dd17");
