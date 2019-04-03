@@ -3,13 +3,15 @@
     <div class="title">
       Личный кабинет
     </div>
-    <p>
-      Здравствуйте! Спасибо за регистрацию. Сейчас вам доступны розничные цены на ассортимент.
+    <p class="title-info-text">
+  Здравствуйте! Спасибо за регистрацию. В ближайшее время менеджер свяжется с вами и откроет оптовые цены на весь ассортимент.
     </p>
-    <h2>Заполните данные для доставки, они понадобятся при оформлении заказа.</h2>
+    <h2 class="form-title">Заполните данные для доставки, они понадобятся при оформлении заказа.</h2>
 
     <form>
-      <div class="form-group row"><label class="col-xl-4 big-label mobile-top-label">Способ доставки</label>
+      <div class="form-group row"  style="aling-items: flex-start;">
+
+        <label class="col-xl-4 big-label mobile-top-label">Способ доставки</label>
         <div class="col-xl-6 col-12">
           <select
             class="form-control"
@@ -22,28 +24,49 @@
           </select>
         </div>
       </div>
-      <div class="form-group row "><label class="col-xl-4 big-label mobile-top-label">Контактное лицо</label>
-        <div class="col-xl-6 col-12"><input
-            type="text"
-            placeholder="Егор Воронов"
-            class="form-control-lg"
-          ></div>
+
+      <div
+        class="form-group row row-with-big-space"
+        style="align-items: flex-start;"
+      ><label class="col-xl-4 col-12 big-label">Точка выдачи</label>
+        <div class="col-xl-6 col-12  text-left">
+          <div class="city green-link">
+            Москва
+          </div>
+          <ul class="addresses">
+            <li class="address"><input
+                type="radio"
+                id="radio1"
+                name="deliver-address"
+                class="radio"
+              ><label
+                for="radio1"
+                class="radio-label"
+              >г. Дзержинский, ул. Энергетиков 18А </label></li>
+            <li class="address"><input
+                type="radio"
+                id="radio2"
+                name="deliver-address"
+                class="radio"
+              ><label
+                for="radio2"
+                class="radio-label"
+              >г. Москва, Каширское шоссе, 41</label></li>
+          </ul>
+        </div>
       </div>
-      <div class="form-group row row-with-big-space"><label class="col-xl-4 big-label mobile-top-label">Телефон</label>
-        <div class="col-xl-6 col-12"><input
+
+      <div class="form-group row row-with-big-space" style="align-items: flex-start;"><label class="col-xl-4 big-label mobile-top-label">Адрес доставки</label>
+        <div class="col-xl-6 col-12">
+          <textarea
             type="text"
-            placeholder="+7 (900) 111-11-11"
+            placeholder="г. Москва, ул. Ткаченко, 23-5"
+            rows="8"
             class="form-control-lg"
-          ></div>
+          ></textarea>
+        </div>
       </div>
-      <div class="form-group row"><label class="col-xl-4 big-label mobile-top-label">Email</label>
-        <div class="col-xl-6 col-12"><input
-            type="text"
-            placeholder="voronov@gmail.com"
-            class="form-control-lg"
-          ></div>
-      </div>
-      <div class="form-group row row-with-big-space"><label class="col-xl-4 col-6 big-label">Пароль</label><label class="col-xl-6 col-6 green-link text-left text-right-mobile">Сменить пароль</label></div>
+
       <div class="form-group row"><label class="col-xl-4 col-0"></label>
         <div class="col-xl-6 col-12"><button
             type="submit"
@@ -68,7 +91,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator'
 
 @Component({
   components: {}
