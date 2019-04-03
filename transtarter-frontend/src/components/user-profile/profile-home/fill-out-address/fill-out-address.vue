@@ -99,8 +99,8 @@ import { Component, Vue, Emit } from 'vue-property-decorator'
 })
 export default class fillOutAddress extends Vue {
   @Emit('fill-out-status')
-  submitData () {
-    return true
+  submitData ():string {
+    return 'mainProfileHome'
   }
 }
 </script>

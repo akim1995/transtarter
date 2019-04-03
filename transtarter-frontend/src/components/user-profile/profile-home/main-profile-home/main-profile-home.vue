@@ -8,7 +8,9 @@
   </div>
 
 <div class="page-container">
-  <div class="title">Личный кабинет</div>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+  In facilis minus recusandae laborum tenetur repellendus atque?
+  Deleniti molestias dolor similique! Dignissimos quaerat nostrum fugiat.
 </div>
 </div>
 
