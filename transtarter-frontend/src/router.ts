@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import UserSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
-import ProfileOrders from '@/components/user-profile/profile-orders/profile-orders.vue'
+import ProfileOrders from '@/components/user-profile/profile-home/profile-home.vue'
 import ProfileCart from '@/components/user-profile/profile-cart/profile-cart.vue'
 
 Vue.use(Router)

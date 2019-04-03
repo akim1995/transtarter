@@ -68,8 +68,8 @@
       </div>
 
       <div class="form-group row"><label class="col-xl-4 col-0"></label>
-        <div class="col-xl-6 col-12"><button
-            type="submit"
+        <div class="col-xl-6 col-12"><button @click="submitData"
+            type="button"
             class="btn btn-orange btn-block-mobile"
           >
             Сохранить данные
@@ -91,14 +91,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
+import { Component, Vue, Emit } from 'vue-property-decorator'
 
 @Component({
   components: {}
 })
-export default class ProfileOrders extends Vue {
+export default class fillOutAddress extends Vue {
   data: string = 'test data';
+  @Emit('fill-out-status')
+  submitData () {
+    return true
+  }
 }
 </script>
-
-<style src="./profile-orders.scss" scoped lang="scss"></style>

@@ -18,7 +18,6 @@ import RequestCall from '@/components/shared/request-call/request-call.vue'
 import { AuthModule } from '../store/modules/authentication.module'
 import { DisplayModule } from '../store/modules/display.module'
 
-// akim's component
 import findDetail from '@/components/find-detail/find-detail.vue'
 
 @Component({
