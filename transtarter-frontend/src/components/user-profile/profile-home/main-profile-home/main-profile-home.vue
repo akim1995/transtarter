@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 <div>
 <div class="page-container">
   <div class="title">Личный кабинет</div>
@@ -23,3 +24,7 @@
     background-color: #F9F9F9;
   }
 </style>
+=======
+  <div>after filling out address form page</div>
+</template>
+>>>>>>> master
