@@ -21,19 +21,28 @@ npm run build
 npm run lint
 ```
 
-### Run your unit tests
+### Run your unit tests (jest)
 ```
 npm run test:unit
 ```
 
-### Run your end-to-end tests
+### Run your end-to-end tests for Chrome Browser
 ```
 npm run test:e2e
 ```
 
+### Run your end-to-end tests for All Browsers
+```
+npm run test:e2e:all
+```
 
-### Build Web Multiply Components
+
+### Build Web Multiply Components on Window Machine
 ```
 npm run wc
 ```
 
+### Build Web Multiply Components on Unix Machine
+```
+npm run wc-unix 
+```
