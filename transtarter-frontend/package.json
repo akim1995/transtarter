@@ -6,11 +6,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit || exit 0",
-    "test:e2e:nightwatch": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit || exit 0",    
     "test:e2e:all": "testcafe all ./tests/testCafe/*.test.js --app \"npm run serve  -- --mode staging\" --app-init-delay 10000",
     "test:e2e": "testcafe chrome ./tests/testCafe/*.test.js --app \"npm run serve  -- --mode staging\" --app-init-delay 10000",
-    "wc": "vue-cli-service build --target wc --name ts-ui .\\src\\components\\**\\*.vue --mode production",
+    "wc": "vue-cli-service build --target wc --name ts-ui ./src/components/**/*.vue --mode production",
     "wc-unix": "vue-cli-service build --target wc --name ts-ui './src/components/**/*.vue' --mode production"
   },
   "dependencies": {
