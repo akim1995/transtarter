@@ -1,0 +1,68 @@
+/**
+**
+** resource that will help you with variables naming -->> http://chir.ag/projects/name-that-color
+**
+**/
+html,
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+}
+
+:focus {
+  outline-color: #0cb520;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border {
+  border: 0 !important;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+  -webkit-text-decoration-color: #9b9b9b;
+          text-decoration-color: #9b9b9b;
+}
+
+.border-white {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.4);
+          text-decoration-color: rgba(255, 255, 255, 0.4);
+}
+
+.border-green {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+  -webkit-text-decoration-color: rgba(12, 181, 32, 0.4);
+          text-decoration-color: rgba(12, 181, 32, 0.4);
+}
+/*# sourceMappingURL=index.css.map */
