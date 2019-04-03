@@ -31,8 +31,8 @@ export class Authentication extends VuexModule implements IAuthState {
   public roles = [];
   public status =
     {
-      loggingIn: true,
-      loggedIn: true// this.user !== null && !(this.user || false).expired // we should get user info and expired have to be false
+      loggingIn: false,
+      loggedIn: this.user !== null && !(this.user || false).expired // we should get user info and expired have to be false
     };
   public avatar = '';
 
@@ -60,16 +60,16 @@ export class Authentication extends VuexModule implements IAuthState {
     this.name = user.profile.name
     this.token = user.id_token
     this.accessTokenExpired = user.expired
-    this.status.loggedIn = true // user !== null && !user.expired
+    this.status.loggedIn = user !== null && !user.expired
     this.status.loggingIn = false
   }
 
   @Mutation
   ERROR_LOGIN (user: User) {
     this.name = ''
-    // this.accessTokenExpired = false
-    // this.status.loggedIn = false
-    // this.status.loggingIn = false
+    this.accessTokenExpired = false
+    this.status.loggedIn = false
+    this.status.loggingIn = false
   }
 
   @Mutation

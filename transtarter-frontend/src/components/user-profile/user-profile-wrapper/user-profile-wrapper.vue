@@ -44,7 +44,7 @@ import ProfileSettings from '@/components/user-profile/profile-settings/profile-
 })
 export default class ContentSlot extends Vue {
   get loggedIn () {
-    return true // AuthModule.status.loggedIn
+    return AuthModule.status.loggedIn
   }
 }
 </script>
