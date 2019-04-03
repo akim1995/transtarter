@@ -12,7 +12,9 @@
       </aside>
 
       <section class="main-content">
-        <ts-ui-profile-settings></ts-ui-profile-settings>
+        <transition name="opacity">
+          <router-view class="profile-page"></router-view>
+        </transition>
       </section>
     </div>
     <div
@@ -42,7 +44,7 @@ import ProfileSettings from '@/components/user-profile/profile-settings/profile-
 })
 export default class ContentSlot extends Vue {
   get loggedIn () {
-    return AuthModule.status.loggedIn
+    return true // AuthModule.status.loggedIn
   }
 }
 </script>

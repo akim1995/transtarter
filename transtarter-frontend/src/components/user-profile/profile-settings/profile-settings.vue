@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-settings">
+  <div>
     <div class="title">
       Профиль и настройки
     </div>
