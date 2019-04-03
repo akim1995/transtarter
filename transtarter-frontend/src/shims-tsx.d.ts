@@ -11,7 +11,7 @@ declare global {
     }
   }
   interface HTMLElement {
-    __vueClickOutside__?: (e: MouseEvent) => void;
+    __vueClickOutside__?: (e: Event) => void;
   }
 }
 

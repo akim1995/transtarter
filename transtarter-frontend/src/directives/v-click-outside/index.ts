@@ -21,11 +21,15 @@ export const clickOutside: DirectiveOptions = {
 
     // add Event Listeners
     document.addEventListener('click', handler)
+    document.addEventListener('touchmove', handler)
   },
 
   unbind: function (el, binding) {
     // Remove Event Listeners
-    if (el.__vueClickOutside__) { document.removeEventListener('click', el.__vueClickOutside__) }
+    if (el.__vueClickOutside__) {
+      document.removeEventListener('touchmove', el.__vueClickOutside__)
+      document.removeEventListener('click', el.__vueClickOutside__)
+    }
     el.__vueClickOutside__ = undefined
   }
 

@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Waiting...</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script src="https://rawcdn.githack.com/SerovMihail/transtarter/89c6ca50df1f2f099d63d5d7ceae08e741172a79/transtarter-frontend/dist/js/oidc-client.min.js"></script>
 
     <script>
-        var mgr = new Oidc.UserManager({ userStore: new Oidc.WebStorageStateStore() });       
+      var mgr = new Oidc.UserManager({
+        userStore: new Oidc.WebStorageStateStore()
+      });
 
-        mgr.signinRedirectCallback().then(function (user) {
-            window.location.href = '../';
-        }).catch(function (err) {
-            console.log(err);
+      mgr
+        .signinRedirectCallback()
+        .then(function(user) {
+          var name = user.profile.name;
+
+          var xhr = new XMLHttpRequest();
+
+          xhr.open(
+            "GET",
+            `http://localhost:58662/api/account/ts-user/${name}`,
+            true
+          );
+
+          xhr.send();
+
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState != 4) return;
+
+            localStorage.setItem("ts-user", xhr.response);
+          };
+
+          window.location.href = "../";
+        })
+        .catch(function(err) {
+          console.log(err);
         });
     </script>
-</body>
-
+  </body>
 </html>
