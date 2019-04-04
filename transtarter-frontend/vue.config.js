@@ -4,13 +4,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 // When we use simple vue app we don't have encapsulated dom elements therefore we can include one big scss file
 // for wc we include all css in one webcomponents
 // TODO divide big main.scss to small chunks
-const buildVueApp = Array.from(process.argv).includes('./dist/app')
+const buildVueApp = process.argv.includes('./dist/app') || process.argv.includes('serve')
+console.log('buildVueApp:', buildVueApp)
 let scssConfig = {}
 if (buildVueApp) {
-  scssConfig = `
-    @import "@/assets/scss/base/_colors.scss";
-    @import "@/assets/scss/mixins/_firefox-only.scss";
-  `
+  scssConfig = `@import "@/assets/scss/precompile.scss";`
 } else {
   scssConfig = `@import "@/assets/scss/main.scss";`
 }
