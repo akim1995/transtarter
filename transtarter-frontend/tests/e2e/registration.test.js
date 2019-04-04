@@ -4,7 +4,7 @@ import faker from 'faker'
 
 const logger = RequestLogger(
   {
-    url: `${config.testConfig.identityServer}/api/account/register`,
+    url: `${config.stagingConfig.identityServer}/api/account/register`,
     method: 'post'
   },
   {

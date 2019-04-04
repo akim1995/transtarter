@@ -26,6 +26,13 @@ npm run lint
 npm run test:unit
 ```
 
+### Run your unit tests with node debugger (jest)
+```
+npm run test:unit:debug
+open in browser 'chrome://inspect/' and click on 'inspect'
+node debugger will be stopped on your 'debugger' commands
+```
+
 ### Run your end-to-end tests for Chrome Browser
 ```
 npm run test:e2e
