@@ -77,5 +77,3 @@ export default class ProfileOrders extends Vue {
   data: string = 'test data';
 }
 </script>
-
-<style src="./profile-orders.scss" scoped lang="scss"></style>
