@@ -4,7 +4,7 @@ export default {
     'identityServer': 'https://identity-test.tstarter.ru'
   },
   'stagingConfig': {
-    'vueHost': 'http://localhost:8080',
+    'vueHost': 'https://new1.tstarter.ru',
     'identityServer': 'http://localhost:5000'
   }
 }
