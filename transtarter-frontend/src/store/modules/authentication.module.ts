@@ -31,11 +31,7 @@ export class Authentication extends VuexModule implements IAuthState {
   public roles = [];
   public status =
     {
-<<<<<<< HEAD
       loggingIn: false,
-=======
-      loggingIn: true,
->>>>>>> master
       loggedIn: this.user !== null && !(this.user || false).expired // we should get user info and expired have to be false
     };
   public avatar = '';
