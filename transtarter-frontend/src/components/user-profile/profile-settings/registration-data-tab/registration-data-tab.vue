@@ -88,7 +88,6 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { ProfileService } from '@/services/profile.service'
-import { Guid } from 'guid-typescript'
 import { IUserProfile } from '@/models/index'
 import { User } from 'oidc-client'
 
