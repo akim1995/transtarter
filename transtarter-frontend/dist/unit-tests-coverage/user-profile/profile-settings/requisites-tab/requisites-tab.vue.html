@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for user-profile/profile-settings/requisites-tab/requisites-tab.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">user-profile/profile-settings/requisites-tab</a> requisites-tab.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/2</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;div class="requisites-tab"&gt;
+    &lt;div class="organization-name"&gt;ИП Воронов Е.В.&lt;/div&gt;
+    &lt;form&gt;
+      &lt;div class="form-group row"&gt;
+        &lt;label class="col-xl-4 big-label mobile-top-label"&gt;ИНН&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;input
+            type="text"
+            class="form-control-lg"
+            placeholder="ИП Воронов И.Е"
+          &gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group row "&gt;
+        &lt;label class="col-xl-4 big-label mobile-top-label"&gt;ОГРН&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;input
+            type="text"
+            class="form-control-lg"
+            placeholder="Егор Воронов"
+          &gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group row row-with-big-space " style="    align-items: flex-start;"&gt;
+        &lt;label class="col-xl-4 big-label mobile-top-label"&gt;Фактический адрес&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;textarea
+            type="text"
+            class="form-control-lg"
+            placeholder="+7 (900) 111-11-11"
+            rows="8"
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group row"&gt;
+        &lt;label class="col-xl-4 col-0"&gt;&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;button
+            type="submit"
+            class="btn btn-orange btn-block-mobile"
+          &gt;
+            Сохранить данные
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+&nbsp;
+      &lt;div class="row"&gt;
+        &lt;div class="col-xl-4 col-0"&gt;&lt;/div&gt;
+        &lt;div class="col-xl-6 accept-policy col-12"&gt;
+          Нажимая на кнопку, вы даете согласие
+          на обработку&lt;br&gt; своих персональных данных
+          и соглашаетесь&lt;br&gt; с &lt;a
+            href="/politika"
+            class="policy-link"
+          &gt;Политикой конфиденциальности&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+&nbsp;
+    &lt;/form&gt;
+&nbsp;
+    &lt;div class="additional-organization-names"&gt;Дополнительные юр.лица&lt;/div&gt;
+    &lt;ul class="exist-organizations"&gt;
+      &lt;li class="exist-organization"&gt;
+        &lt;div class="text"&gt;
+          ООО «Сервопривод-Макс», ИНН 6449013711, ОГРН 1026402000657, г. Москва, ул. Тверская, д.18, ...
+        &lt;/div&gt;
+        &lt;div class="edit-block"&gt;
+          &lt;span class="icon edit"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;button class="btn btn-outline btn-block-mobile"&gt;Добавить юр. лицо&lt;/button&gt;
+    &lt;form class="add-new-organization"&gt;
+      &lt;div class="form-group row"&gt;
+        &lt;label class="col-xl-4 big-label mobile-top-label"&gt;Название компании&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;input
+            type="text"
+            class="form-control-lg"
+            placeholder="ИП «Компания»"
+          &gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group row"&gt;
+        &lt;label class="col-xl-4 big-label mobile-top-label"&gt;ИНН&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;input
+            type="text"
+            class="form-control-lg"
+            placeholder=""
+          &gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group row "&gt;
+        &lt;label class="col-xl-4 big-label mobile-top-label"&gt;ОГРН&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;input
+            type="text"
+            class="form-control-lg"
+            placeholder=""
+          &gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group row row-with-big-space " style="    align-items: flex-start;"&gt;
+        &lt;label class="col-xl-4 big-label mobile-top-label"&gt;Фактический адрес&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;textarea
+            type="text"
+            class="form-control-lg"
+            placeholder="г. Москва, ул. Ткаченко, 23-5"
+            rows="8"
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group row"&gt;
+        &lt;label class="col-xl-4 col-0"&gt;&lt;/label&gt;
+        &lt;div class="col-xl-6 col-12"&gt;
+          &lt;button
+            type="submit"
+            class="btn btn-orange btn-block-mobile"
+          &gt;
+            Добавить
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+&nbsp;
+      &lt;div class="row"&gt;
+        &lt;div class="col-xl-4 col-0"&gt;&lt;/div&gt;
+        &lt;div class="col-xl-6 accept-policy col-12"&gt;
+          Нажимая на кнопку, вы даете согласие
+          на обработку&lt;br&gt; своих персональных данных
+          и соглашаетесь&lt;br&gt; с &lt;a
+            href="/politika"
+            class="policy-link"
+          &gt;Политикой конфиденциальности&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+&nbsp;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script lang="ts"&gt;
+<span class="cstat-no" title="statement not covered" >import { Component, Vue } from 'vue-property-decorator'</span>
+&nbsp;
+@Component
+<span class="cstat-no" title="statement not covered" >export default class RequisitesTab extends Vue {}</span>
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="scss"&gt;
+@import "./requisites-tab-styles.scss";
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 04 2019 16:28:36 GMT+0200 (Eastern European Standard Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>
