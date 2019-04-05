@@ -12,7 +12,7 @@ export default new Router({
   base: '/catalog/account',
   routes: [
     {
-      path: '/',
+      path: '/index',
       name: 'home',
       component: ProfileOrders
     },
