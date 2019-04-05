@@ -4,31 +4,38 @@ import UserSettings from '@/components/user-profile/profile-settings/profile-set
 import ProfileOrders from '@/components/user-profile/profile-home/profile-home.vue'
 import ProfileCart from '@/components/user-profile/profile-cart/profile-cart.vue'
 import styleGuide from '@/components/shared/styleguide.vue'
+import { envArgs } from '@/env'
 
 Vue.use(Router)
+
+const vueRoutes = [
+  {
+    path: '/index',
+    name: 'home',
+    component: ProfileOrders
+  },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: UserSettings
+  },
+  {
+    path: '/cart',
+    name: 'cart',
+    component: ProfileCart
+  }
+]
+
+if (envArgs.isServeBuild) {
+  vueRoutes.push({
+    path: '/styleguide',
+    name: 'styleguide',
+    component: styleGuide
+  })
+}
 
 export default new Router({
   mode: 'history',
   base: '/catalog/account',
-  routes: [
-    {
-      path: '/index',
-      name: 'home',
-      component: ProfileOrders
-    },
-    {
-      path: '/settings',
-      name: 'settings',
-      component: UserSettings
-    },
-    {
-      path: '/cart',
-      name: 'cart',
-      component: ProfileCart
-    },
-    {
-      path: '/styleguide',
-      component: styleGuide
-    }
-  ]
+  routes: vueRoutes
 })
