@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import UserSettings from '@/components/user-profile/profile-settings/profile-settings.vue'
 import ProfileOrders from '@/components/user-profile/profile-home/profile-home.vue'
 import ProfileCart from '@/components/user-profile/profile-cart/profile-cart.vue'
-import styleGuide from '@/components/shared/styleguide.vue'
-import { envArgs } from '@/env'
+import StyleGuide from '@/components/shared/styleguide.vue'
+const envArgs = require('@/env')
 
 Vue.use(Router)
 
@@ -30,7 +30,7 @@ if (envArgs.isServeBuild) {
   vueRoutes.push({
     path: '/styleguide',
     name: 'styleguide',
-    component: styleGuide
+    component: StyleGuide
   })
 }
 

@@ -1,15 +1,14 @@
-import { envArgs } from './src/env'
+const envArgs = require('./src/env.js')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-// we have two build types: simple vue app, web components
-// When we use simple vue app we don't have encapsulated dom elements therefore we can include one big scss file
-// for wc we include all css in one webcomponents
-// TODO divide big main.scss to small chunks
 const buildLightConfig = envArgs.isServeBuild || envArgs.isBasicBuild
 let scssConfig = {}
 if (buildLightConfig) {
   scssConfig = `@import "@/assets/scss/precompile.scss";`
 } else {
+  /**
+   * // Divide big main.scss to small chunks
+   */
   scssConfig = `@import "@/assets/scss/main.scss";`
 }
 
