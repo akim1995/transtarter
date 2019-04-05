@@ -1,4 +1,4 @@
-import { Component, Vue, Watch } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 // components
 import Header from '@/components/shared/header/header.vue'
 import Footer from '@/components/shared/footer/footer.vue'
@@ -18,7 +18,7 @@ import RequestCall from '@/components/shared/request-call/request-call.vue'
 import { AuthModule } from '../store/modules/authentication.module'
 import { DisplayModule } from '../store/modules/display.module'
 
-import findDetail from '@/components/find-detail/find-detail.vue'
+import FindDetail from '@/components/find-detail/find-detail.vue'
 
 @Component({
   components: {
@@ -36,7 +36,7 @@ import findDetail from '@/components/find-detail/find-detail.vue'
     PasswordRestore,
     PasswordSuccessRestore,
     RequestCall,
-    findDetail
+    FindDetail
   }
 })
 export default class UserProfile extends Vue {
