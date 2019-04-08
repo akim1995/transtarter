@@ -43,7 +43,7 @@
             class="form-control-lg"
           ></div>
       </div>
-      <div class="form-group row row-with-big-space"><label class="col-xl-4 col-6 big-label">Пароль</label><label class="col-xl-6 col-6 green-link text-left text-right-mobile">Сменить пароль</label></div>
+      <div class="form-group row row-with-big-space"><label class="col-xl-4 col-6 big-label">Пароль</label><label class="col-xl-6 col-6 green-link border-green text-left text-right-mobile">Сменить пароль</label></div>
       <div class="form-group row"><label class="col-xl-4 col-0"></label>
         <div class="col-xl-6 col-12"><button
             type="submit"
@@ -59,7 +59,7 @@
           на обработку<br> своих персональных данных
           и соглашаетесь<br> с <a
             href="/politika"
-            class="policy-link"
+            class="policy-link solid-border-grey"
           >Политикой конфиденциальности</a></div>
       </div>
     </form>
@@ -77,5 +77,3 @@ export default class ProfileOrders extends Vue {
   data: string = 'test data';
 }
 </script>
-
-<style src="./profile-orders.scss" scoped lang="scss"></style>

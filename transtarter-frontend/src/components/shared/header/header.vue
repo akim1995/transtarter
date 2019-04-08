@@ -62,7 +62,7 @@
               @click="toggleUserMenu()"
             >
               <div class="user-avatar"></div>
-              <div class="user-name">{{userName}}</div>
+              <div class="user-name border-white">{{userName}}</div>
             </div>
             <!-- end block for users -->
           </ul>

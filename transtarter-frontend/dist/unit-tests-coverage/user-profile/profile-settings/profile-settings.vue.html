@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for user-profile/profile-settings/profile-settings.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">user-profile/profile-settings</a> profile-settings.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class="page-container"&gt;
+    &lt;div class="title"&gt;
+      Профиль и настройки
+    &lt;/div&gt;
+&nbsp;
+    &lt;div
+      class="btn-group btn-group-column"
+      role="group"
+      aria-label="Basic example"
+    &gt;
+      &lt;button type="button" @click="activateTab(tabs.regData)" :class="{ active: regDataIsActive }"&gt;Регистрационные данные&lt;/button&gt;
+      &lt;button type="button" @click="activateTab(tabs.shippingAddresses)" :class="{ active: shippingAddressesIsActive }"&gt;Адреса доставки&lt;/button&gt;
+      &lt;button type="button" @click="activateTab(tabs.requisites)" :class="{ active: requisitesIsActive }"&gt;Реквизиты и юр. лица&lt;/button&gt;
+    &lt;/div&gt;
+&nbsp;
+    &lt;ts-ui-registration-data-tab v-if="regDataIsActive"&gt;&lt;/ts-ui-registration-data-tab&gt;
+    &lt;ts-ui-shipping-addresses-tab v-if="shippingAddressesIsActive"&gt;&lt;/ts-ui-shipping-addresses-tab&gt;
+    &lt;ts-ui-requisites-tab v-if="requisitesIsActive"&gt;&lt;/ts-ui-requisites-tab&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script lang="ts"&gt;
+<span class="cstat-no" title="statement not covered" >import { Component, Vue } from 'vue-property-decorator'</span>
+<span class="cstat-no" title="statement not covered" >import RegistrationDataTab from './registration-data-tab/registration-data-tab.vue'</span>
+<span class="cstat-no" title="statement not covered" >import ShippingAddressesTab from './shipping-addresses-tab/shipping-addresses-tab.vue'</span>
+<span class="cstat-no" title="statement not covered" >import RequisitesTab from './requisites-tab/requisites-tab.vue'</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >@Component({</span>
+  components: {
+    'ts-ui-registration-data-tab': RegistrationDataTab,
+    'ts-ui-shipping-addresses-tab': ShippingAddressesTab,
+    'ts-ui-requisites-tab': RequisitesTab
+  }
+})
+<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >export default class ProfileSettings extends Vue {</span></span>
+<span class="cstat-no" title="statement not covered" >  tabs = {</span>
+    regData: 'regData',
+    shippingAddresses: 'shippingAddresses',
+    requisites: 'requisites'
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  currentActiveTab = this.tabs.regData</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >  activateTab (newActiveTab: string) {</span>
+<span class="cstat-no" title="statement not covered" >    this.currentActiveTab = newActiveTab</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  get regDataIsActive (): boolean {</span>
+<span class="cstat-no" title="statement not covered" >    return this.currentActiveTab === this.tabs.regData</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  get shippingAddressesIsActive (): boolean {</span>
+<span class="cstat-no" title="statement not covered" >    return this.currentActiveTab === this.tabs.shippingAddresses</span>
+  }
+<span class="fstat-no" title="function not covered" >  get requisitesIsActive (): boolean {</span>
+<span class="cstat-no" title="statement not covered" >    return this.currentActiveTab === this.tabs.requisites</span>
+  }
+}
+&lt;/script&gt;
+&nbsp;
+&lt;style scoped lang="scss"&gt;
+@import "./profile-settings-styles.scss";
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 04 2019 16:28:36 GMT+0200 (Eastern European Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

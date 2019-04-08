@@ -12,20 +12,24 @@
 
 
 .border {
-    border: 0 !important;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-decoration-color: $dusty-gray;
+    display: inline-block;
+    border-bottom: 1px dashed;
+    border-color: $dusty-gray;
 }
 
 .border-white {
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-decoration-color: rgba(255, 255, 255, .4);
+    display: inline-block;
+    border-bottom: 1px dashed;
+    border-color: rgba(255, 255, 255, .4);
 }
 
 .border-green {
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-decoration-color: rgba(12, 181, 32, .4);
+    display: inline-block;
+    border-bottom: 1px dashed;
+    border-color: rgba(12, 181, 32, .4);
+}
+
+.solid-border-grey {
+    display: inline-block;
+    border-bottom: 1px solid $star-dust;
 }

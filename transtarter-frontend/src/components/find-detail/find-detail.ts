@@ -1,5 +1,4 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
-import { wrap } from '@vue/web-component-wrapper'
 
  @Component
 export default class FindDetail extends Vue {

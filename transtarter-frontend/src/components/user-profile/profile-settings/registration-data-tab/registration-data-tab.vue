@@ -2,7 +2,7 @@
   <div class="registration-data-tab">
     <div class="change-avatar">
       <div class="user-picture"></div>
-      <div class="change-user-picture">
+      <div class="change-user-picture border-green">
         Изменить
       </div>
     </div>
@@ -54,7 +54,9 @@
       </div>
       <div class="form-group row row-with-big-space">
         <label class="col-xl-4 col-6 big-label">Пароль</label>
-        <label class="col-xl-6 col-6 green-link text-left text-right-mobile">Сменить пароль</label>
+        <div class="col-xl-6 col-6">
+          <div class="green-link border-green text-left text-right-mobile">Сменить пароль</div>
+        </div>
       </div>
       <div class="form-group row">
         <label class="col-xl-4 col-0"></label>
@@ -75,7 +77,7 @@
           на обработку<br> своих персональных данных
           и соглашаетесь<br> с <a
             href="/politika"
-            class="policy-link"
+            class="policy-link solid-border-grey"
           >Политикой конфиденциальности</a>
         </div>
       </div>
@@ -93,18 +95,19 @@ import { User } from 'oidc-client'
 
 @Component
 export default class RegistrationDataTab extends Vue {
-  profileService = new ProfileService()
-  userProfile = {} as IUserProfile
+  profileService = new ProfileService();
+  userProfile = {} as IUserProfile;
 
   updateProfileInfo () {
-    this.profileService.updateProfileInfo(this.userProfile)
+    this.profileService
+      .updateProfileInfo(this.userProfile)
       .then(res => {
         // eslint-disable-next-line
-        console.log(res)
+        console.log(res);
       })
       .catch(error => {
         // eslint-disable-next-line
-        console.error(error)
+        console.error(error);
       })
   }
 
@@ -125,13 +128,14 @@ export default class RegistrationDataTab extends Vue {
       return
     }
 
-    this.profileService.getProfileInfoByUserId(login)
+    this.profileService
+      .getProfileInfoByUserId(login)
       .then(res => {
         this.userProfile = res.data
       })
       .catch(error => {
         // eslint-disable-next-line
-        console.error(error)
+        console.error(error);
       })
   }
 }
