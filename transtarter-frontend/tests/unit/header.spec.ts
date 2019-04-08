@@ -2,13 +2,14 @@ import { shallowMount, Wrapper, createLocalVue } from '@vue/test-utils'
 import LayoutHeader from '@/components/shared/header/header.vue'
 import Vuex, { Store } from 'vuex'
 import { VueConstructor } from 'vue'
+import { IRootState } from '@/store'
 
 describe('Header component behavior', () => {
   let wrapper: Wrapper<LayoutHeader>
   let inputSelectors: string[] = []
   let searchResultsSelectors: string[] = []
   let options: {
-    store: Store<{}>,
+    store: Store<IRootState>,
     localVue: VueConstructor<LayoutHeader>
   }
   const stockMock = Object.freeze({
@@ -17,8 +18,7 @@ describe('Header component behavior', () => {
         namespaced: true,
         name: 'auth',
         actions: {
-          actualizeUser: jest.fn().mockName('actualizeUser'),
-          logout: jest.fn().mockName('logout')
+          actualizeUser: jest.fn().mockName('actualizeUser')
         }
       }
     }
@@ -31,7 +31,7 @@ describe('Header component behavior', () => {
   beforeEach(() => {
     // testing Vuex
     jest.clearAllMocks()
-    const store = new Vuex.Store<IAuthState>(stockMock)
+    const store = new Vuex.Store<IRootState>(stockMock)
     options = { store, localVue }
 
     // base section
@@ -80,9 +80,9 @@ describe('Header component behavior', () => {
 
   /**
    * TODO: How to mock dynamic modules
-   */
-  // it(`When component is mounted we call store.dispatch('auth/actualizeUser')`, () => {
-  //   shallowMount(LayoutHeader, options)
-  //   expect(stockMock.modules.auth.actions.actualizeUser).toHaveBeenCalled()
-  // })
+  */
+  it(`When component is mounted we call store.dispatch('auth/actualizeUser')`, () => {
+    shallowMount(LayoutHeader, options)
+    expect(stockMock.modules.auth.actions.actualizeUser).toHaveBeenCalled()
+  })
 })

@@ -458,6 +458,7 @@ import { store } from '@/store/index'
 import { clickOutside } from '@/directives/v-click-outside/index'
 import SearchResults from '@/components/shared/header/search-results/search-results.vue'
 import { ISearchResult } from '@/models/index'
+import { envArgs } from '@/env'
 
 @Component({
   components: {
@@ -553,7 +554,10 @@ export default class Header extends Vue {
   }
 
   mounted () {
-    store.dispatch('auth/actualizeUser')
+    if (envArgs.isWebComponentBuild) {
+      this.$store = store
+    }
+    this.$store.dispatch('auth/actualizeUser')
   }
 
   @Watch('searchText')
