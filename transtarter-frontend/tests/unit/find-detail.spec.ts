@@ -5,10 +5,7 @@ describe('Find detail component behavior', () => {
   const wrapper = mount(FindDetail)
   const buttons = wrapper.findAll('.find-detail__filter-item')
 
-  debugger
-
   it('Has an input tag', () => {
-    debugger
     expect(wrapper.contains('input')).toBe(true)
   })
 

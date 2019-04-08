@@ -153,6 +153,7 @@
             <search-results
               :found-items='foundItems'
               v-if="foundItems.length"
+              class="desktop-search-result"
             ></search-results>
           </div>
           <button
@@ -436,6 +437,7 @@
             <search-results
               :found-items='foundItems'
               v-if="foundItems.length"
+              class="mobile-search-result"
             ></search-results>
           </div>
 
