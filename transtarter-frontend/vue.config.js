@@ -1,4 +1,4 @@
-const envArgs = require('./src/env')
+const envArgs = require('./env')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const buildLightConfig = envArgs.isServeBuild || envArgs.isBasicBuild

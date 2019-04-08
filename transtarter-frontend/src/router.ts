@@ -5,7 +5,7 @@ import ProfileOrders from '@/components/user-profile/profile-home/profile-home.v
 import ProfileCart from '@/components/user-profile/profile-cart/profile-cart.vue'
 import StyleGuide from '@/components/shared/styleguide.vue'
 // we use require because 'import * from' doesn't allow to use 'any'. Look env file to find out "why?"
-// import * as envArgs from './env'
+import { envArgs } from './env'
 
 Vue.use(Router)
 
@@ -27,13 +27,13 @@ const vueRoutes = [
   }
 ]
 
-// if (envArgs.isServeBuild) {
-//   vueRoutes.push({
-//     path: '/styleguide',
-//     name: 'styleguide',
-//     component: StyleGuide
-//   })
-// }
+if (envArgs.isServeBuild) {
+  vueRoutes.push({
+    path: '/styleguide',
+    name: 'styleguide',
+    component: StyleGuide
+  })
+}
 
 export default new Router({
   mode: 'history',
