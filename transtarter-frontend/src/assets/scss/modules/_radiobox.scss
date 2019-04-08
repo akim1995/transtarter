@@ -43,7 +43,7 @@
    
 }
 
-.radio:focus+label:before {
+.radio:checked+label:before {
     border: 0;
     background: $malachite;
 }

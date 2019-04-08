@@ -1,10 +1,22 @@
+const envArgs = require('./src/env.js')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+const buildLightConfig = envArgs.isServeBuild || envArgs.isBasicBuild
+let scssConfig = {}
+if (buildLightConfig) {
+  scssConfig = `@import "@/assets/scss/precompile.scss";`
+} else {
+  /**
+   * // Divide big main.scss to small chunks
+   */
+  scssConfig = `@import "@/assets/scss/main.scss";`
+}
 
 module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        data: `@import "@/assets/scss/main.scss";`
+        data: scssConfig
       }
     }
   },
@@ -25,10 +37,13 @@ module.exports = {
   chainWebpack: config => {
     if (config.plugins.has('extract-css')) {
       const extractCSSPlugin = config.plugin('extract-css')
-      extractCSSPlugin && extractCSSPlugin.tap(() => [{
-        filename: 'css/[name].css',
-        chunkFilename: 'css/[name].css'
-      }])
+      extractCSSPlugin &&
+        extractCSSPlugin.tap(() => [
+          {
+            filename: 'css/[name].css',
+            chunkFilename: 'css/[name].css'
+          }
+        ])
     }
   }
   // end this section will remove hash from file names
