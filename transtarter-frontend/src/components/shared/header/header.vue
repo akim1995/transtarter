@@ -144,7 +144,6 @@
           </select>
 
           <div class="search__input search-input">
-
             <div class="search__icon-lins"></div>
             <input
               type="text"
@@ -154,6 +153,7 @@
               class="search__clear"
               @click="clearSearchInput"
             ></div>
+            <search-results></search-results>
           </div>
           <button
             type="submit"
@@ -423,6 +423,7 @@
                 class="search__clear"
                 @click="clearSearchInput"
               ></div>
+              <search-results></search-results>
             </div>
             <button
               type="submit"
@@ -447,8 +448,12 @@ import { AuthModule } from '@/store/modules/authentication.module'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
 import { clickOutside } from '@/directives/v-click-outside/index'
+import SearchResults from '@/components/shared/header/search-results/search-results.vue'
 
 @Component({
+  components: {
+    SearchResults
+  },
   directives: {
     clickOutside
   }

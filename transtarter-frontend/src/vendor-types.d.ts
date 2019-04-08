@@ -5,6 +5,3 @@ declare module NodeJS {
     argv: string[];
   }
 }
-declare module '*/env' {
-  export { isServeBuild }
-}

@@ -4,7 +4,6 @@ import UserSettings from '@/components/user-profile/profile-settings/profile-set
 import ProfileOrders from '@/components/user-profile/profile-home/profile-home.vue'
 import ProfileCart from '@/components/user-profile/profile-cart/profile-cart.vue'
 import StyleGuide from '@/components/shared/styleguide.vue'
-// we use require because 'import * from' doesn't allow to use 'any'. Look env file to find out "why?"
 import { envArgs } from './env'
 
 Vue.use(Router)
