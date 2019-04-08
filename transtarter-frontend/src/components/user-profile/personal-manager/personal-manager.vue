@@ -20,7 +20,7 @@
         + 7 (900) 111-11-11
       </a>
       <a
-        class="manager-email"
+        class="manager-email border-green"
         href="mailto:i.petrov@tstarter.ru"
       >
         i.petrov@tstarter.ru

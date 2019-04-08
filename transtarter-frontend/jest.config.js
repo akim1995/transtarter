@@ -26,5 +26,9 @@ module.exports = {
     'ts-jest': {
       babelConfig: true
     }
-  }
+  },
+  'collectCoverage': true,
+  'collectCoverageFrom': ['src/components/**/*.{vue}'],
+  'coverageReporters': ['html', 'text-summary'],
+  'coverageDirectory': './dist/unit-tests-coverage'
 }
