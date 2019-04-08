@@ -142,6 +142,7 @@
             <div class="search__icon-lins"></div>
             <input
               type="text"
+              class="search-input-desktop"
               ref="searchInputDesktop"
               v-model="searchText"
             >
@@ -416,6 +417,7 @@
             <div class="search__input-mobile search-input">
               <input
                 type="text"
+                class="search-input-mobile"
                 ref="searchInputMobile"
                 v-model="searchText"
               >
