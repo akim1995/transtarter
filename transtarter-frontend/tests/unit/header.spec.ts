@@ -43,4 +43,10 @@ describe('Header component behavior', () => {
       }
     })
   })
+
+  it('Mobile and Desktop search results will be hidden after reducing numbers of symbols in input', () => {
+    wrapper.setData({ searchText: 't'.repeat(4) })
+    wrapper.setData({ searchText: 't'.repeat(2) })
+    expect(wrapper.vm.$data.foundItems.length).toBe(0)
+  })
 })
