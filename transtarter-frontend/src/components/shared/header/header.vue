@@ -135,12 +135,7 @@
               selected
             >Номер детали</option>
             <option value="detail_1">Детали 1</option>
-            <option value="detail_2">Детали 2</option>
-            <option value="detail_3">Детали 3</option>
-            <option value="detail_4">Детали 4</option>
-            <option value="detail_5">Детали 5</option>
-            <option value="detail_6">Детали 6</option>
-            <option value="detail_7">Детали 7</option>
+
           </select>
 
           <div class="search__input search-input">
@@ -148,12 +143,16 @@
             <input
               type="text"
               ref="searchInputDesktop"
+              v-model="searchText"
             >
             <div
               class="search__clear"
               @click="clearSearchInput"
             ></div>
-            <search-results></search-results>
+            <search-results
+              :found-items='foundItems'
+              v-if="foundItems.length"
+            ></search-results>
           </div>
           <button
             type="submit"
@@ -418,6 +417,7 @@
               <input
                 type="text"
                 ref="searchInputMobile"
+                v-model="searchText"
               >
               <div
                 class="search__clear"
@@ -443,12 +443,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue, Watch } from 'vue-property-decorator'
 import { AuthModule } from '@/store/modules/authentication.module'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
 import { clickOutside } from '@/directives/v-click-outside/index'
 import SearchResults from '@/components/shared/header/search-results/search-results.vue'
+import { ISearchResult } from '@/models/index'
 
 @Component({
   components: {
@@ -465,6 +466,37 @@ export default class Header extends Vue {
     user: false
   };
 
+  searchText = ''
+
+  foundItems: ISearchResult[] = [];
+
+  potentialFoundItems: ISearchResult[] = [
+    {
+      desc: 'Стартер',
+      number: '45888701',
+      manufacturer: 'CITROEN',
+      alreadyInBucket: 0
+    },
+    {
+      desc: 'Генератор',
+      number: '95493099',
+      manufacturer: 'CITROEN',
+      alreadyInBucket: 2
+    },
+    {
+      desc: 'Бендикс',
+      number: 'WA54-9309',
+      manufacturer: 'WAI',
+      alreadyInBucket: 0
+    },
+    {
+      desc: 'Бендикс',
+      number: 'WA54-9309-1',
+      manufacturer: 'WAI',
+      alreadyInBucket: 0
+    }
+  ];
+
   toggleRegistrationPopup () {
     store.dispatch('display/toggleRegistration')
   }
@@ -474,15 +506,8 @@ export default class Header extends Vue {
   }
 
   clearSearchInput () {
-    const inputDesktop = this.$refs.searchInputDesktop as HTMLInputElement
-    if (inputDesktop) {
-      inputDesktop.value = ''
-    }
-
-    const inputMobile = this.$refs.searchInputMobile as HTMLInputElement
-    if (inputMobile) {
-      inputMobile.value = ''
-    }
+    this.searchText = ''
+    this.foundItems = []
   }
 
   get loggedIn () {
@@ -520,6 +545,15 @@ export default class Header extends Vue {
   }
   mounted () {
     store.dispatch('auth/actualizeUser')
+  }
+
+  @Watch('searchText')
+  onChildChanged (val: string, oldVal: string) {
+    if (val.length >= 3) {
+      this.foundItems = this.potentialFoundItems
+    } else if (val.length <= 3 && oldVal.length >= 3) {
+      this.foundItems = []
+    }
   }
 }
 </script>
