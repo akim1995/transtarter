@@ -2,7 +2,7 @@
   <div class="registration-data-tab">
     <div class="change-avatar">
       <div class="user-picture"></div>
-      <div class="change-user-picture">
+      <div class="change-user-picture border-green">
         Изменить
       </div>
     </div>
@@ -54,7 +54,7 @@
       </div>
       <div class="form-group row row-with-big-space">
         <label class="col-xl-4 col-6 big-label">Пароль</label>
-        <label class="col-xl-6 col-6 green-link text-left text-right-mobile">Сменить пароль</label>
+        <label class="col-xl-6 col-6 green-link border-green text-left text-right-mobile">Сменить пароль</label>
       </div>
       <div class="form-group row">
         <label class="col-xl-4 col-0"></label>

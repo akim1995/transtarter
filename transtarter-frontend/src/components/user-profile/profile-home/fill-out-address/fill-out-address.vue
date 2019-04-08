@@ -31,7 +31,7 @@
         style="align-items: flex-start;"
       ><label class="col-xl-4 col-12 big-label">Точка выдачи</label>
         <div class="col-xl-6 col-12  text-left">
-          <div class="city green-link">
+          <div class="city green-link border-green">
             Москва
           </div>
           <ul class="addresses">
