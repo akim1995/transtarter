@@ -11,10 +11,15 @@ describe('Header component behavior', () => {
     store: Store<{}>,
     localVue: VueConstructor<LayoutHeader>
   }
-  let stockMock = Object.freeze({
+  const stockMock = Object.freeze({
     modules: {
       auth: {
-        actions: { actualizeUser: jest.fn().mockName('actualizeUser') }
+        namespaced: true,
+        name: 'auth',
+        actions: {
+          actualizeUser: jest.fn().mockName('actualizeUser'),
+          logout: jest.fn().mockName('logout')
+        }
       }
     }
   })
@@ -26,7 +31,7 @@ describe('Header component behavior', () => {
   beforeEach(() => {
     // testing Vuex
     jest.clearAllMocks()
-    const store = new Vuex.Store(stockMock)
+    const store = new Vuex.Store<IAuthState>(stockMock)
     options = { store, localVue }
 
     // base section
@@ -41,6 +46,11 @@ describe('Header component behavior', () => {
 
   it('Component is mounted', () => {
     expect(wrapper.element).toBeTruthy()
+  })
+
+  it(`When component is mounted we call store.dispatch('auth/actualizeUser')`, () => {
+    shallowMount(LayoutHeader, options)
+    expect(stockMock.modules.auth.actions.actualizeUser).toHaveBeenCalled()
   })
 
   it('Component has mobile and desktop input', () => {
@@ -72,11 +82,4 @@ describe('Header component behavior', () => {
     wrapper.setData({ searchText: 't'.repeat(2) })
     expect(wrapper.vm.$data.foundItems.length).toBe(0)
   })
-
-  // it(`When component is mounted we call store.dispatch('auth/actualizeUser')`, () => {
-  //   debugger
-  //   wrapper = shallowMount(LayoutHeader, options)
-  //   wrapper.vm.$mount()
-  //   expect(wrapper).toBeCalled()
-  // })
 })
