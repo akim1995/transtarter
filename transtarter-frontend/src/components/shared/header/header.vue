@@ -551,6 +551,7 @@ export default class Header extends Vue {
   closeUserMenu () {
     this.blocksShow.user = false
   }
+
   mounted () {
     store.dispatch('auth/actualizeUser')
   }

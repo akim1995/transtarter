@@ -1,13 +1,36 @@
-import { shallowMount, Wrapper } from '@vue/test-utils'
+import { shallowMount, Wrapper, createLocalVue } from '@vue/test-utils'
 import LayoutHeader from '@/components/shared/header/header.vue'
+import Vuex, { Store } from 'vuex'
+import { VueConstructor } from 'vue'
 
 describe('Header component behavior', () => {
   let wrapper: Wrapper<LayoutHeader>
   let inputSelectors: string[] = []
   let searchResultsSelectors: string[] = []
+  let options: {
+    store: Store<{}>,
+    localVue: VueConstructor<LayoutHeader>
+  }
+  let stockMock = Object.freeze({
+    modules: {
+      auth: {
+        actions: { actualizeUser: jest.fn().mockName('actualizeUser') }
+      }
+    }
+  })
+
+  const localVue = createLocalVue()
+
+  localVue.use(Vuex)
 
   beforeEach(() => {
-    wrapper = shallowMount(LayoutHeader)
+    // testing Vuex
+    jest.clearAllMocks()
+    const store = new Vuex.Store(stockMock)
+    options = { store, localVue }
+
+    // base section
+    wrapper = shallowMount(LayoutHeader, options)
 
     inputSelectors.push('.search-input-desktop')
     inputSelectors.push('.search-input-mobile')
@@ -49,4 +72,11 @@ describe('Header component behavior', () => {
     wrapper.setData({ searchText: 't'.repeat(2) })
     expect(wrapper.vm.$data.foundItems.length).toBe(0)
   })
+
+  // it(`When component is mounted we call store.dispatch('auth/actualizeUser')`, () => {
+  //   debugger
+  //   wrapper = shallowMount(LayoutHeader, options)
+  //   wrapper.vm.$mount()
+  //   expect(wrapper).toBeCalled()
+  // })
 })
