@@ -412,7 +412,7 @@
             </select>
           </div>
 
-          <div class="form-row">
+          <div class="form-row" style="position: relative;">
             <div class="search__input-mobile search-input">
               <input
                 type="text"
@@ -423,7 +423,7 @@
                 class="search__clear"
                 @click="clearSearchInput"
               ></div>
-              <search-results></search-results>
+
             </div>
             <button
               type="submit"
@@ -431,6 +431,10 @@
             >
               <div class="search__icon-lins"></div>
             </button>
+            <search-results
+              :found-items='foundItems'
+              v-if="foundItems.length"
+            ></search-results>
           </div>
 
         </form>
@@ -466,7 +470,7 @@ export default class Header extends Vue {
     user: false
   };
 
-  searchText = ''
+  searchText = '';
 
   foundItems: ISearchResult[] = [];
 

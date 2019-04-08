@@ -11,10 +11,12 @@
     flex-direction: row;
     justify-content: flex-start;
     position: relative;
+    flex-wrap: wrap;
+    box-shadow: inset 0px -1px 0px #efefef;
     &-item {
-      width: 100%;
-      box-shadow: inset 0px -1px 0px #efefef;
+      width: calc(100% / 3);
       padding: 8px 0;
+      flex-grow: 1;
       &:first-child {
         padding-left: 24px;
       }
@@ -69,5 +71,35 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
+  .search-results {
+    top: 40px;
+    width: 100%;
+    position: absolute;
+    &__header,
+    &__body-row {
+      &-item {
+        &:first-child {
+          padding-left: 8px;
+        }
+      }
+    }
+    &__header {
+      font-size: 8px;
+      line-height: 12px;
+      letter-spacing: 1.77778px;
+    }
+    &__body {
+      font-size: 14px;
+      line-height: 16px;
+      &-row {        
+        &-item-optional {
+          position: relative;
+          left: 8px;
+          right: 0;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
 }
