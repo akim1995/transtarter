@@ -11,11 +11,11 @@ describe('Renders correct html', () => {
     expect(wrapper.element).toBeTruthy()
   })
 
-  it('Component has mobile input', () => {
-    expect(wrapper.contains('.search-input-mobile')).toBe(true)
-  })
+  // it('Component has mobile input', () => {
+  //   expect(desktopInput.isVisible).toBe(true)
+  // })
 
-  it('Component has desktop input', () => {
-    expect(wrapper.contains('.search-input-desktop')).toBe(true)
-  })
+  // it('Component has desktop input', () => {
+  //   expect(mobileInput.isVisible).toBe(true)
+  // })
 })
