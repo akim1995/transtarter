@@ -59,7 +59,7 @@
           на обработку<br> своих персональных данных
           и соглашаетесь<br> с <a
             href="/politika"
-            class="policy-link"
+            class="policy-link solid-border-grey"
           >Политикой конфиденциальности</a></div>
       </div>
     </form>

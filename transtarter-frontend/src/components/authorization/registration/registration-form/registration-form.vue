@@ -127,7 +127,7 @@
         на обработку<br> своих персональных данных
         и соглашаетесь<br> с <a
           href="/politika"
-          class="policy-link"
+          class="policy-link solid-border-grey"
         >Политикой конфиденциальности</a>
       </div>
     </form>
@@ -136,7 +136,7 @@
       <p>Уже зарегистрированы?</p>
       <span
         href="#"
-        class="go-log-in"
+        class="go-log-in border-green"
         @click="logIn()"
       >Войти</span>
     </div>

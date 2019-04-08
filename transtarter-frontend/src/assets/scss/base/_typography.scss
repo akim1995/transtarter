@@ -18,9 +18,18 @@
 }
 
 .border-white {
+    display: inline-block;
+    border-bottom: 1px dashed;
     border-color: rgba(255, 255, 255, .4);
 }
 
 .border-green {
+    display: inline-block;
+    border-bottom: 1px dashed;
     border-color: rgba(12, 181, 32, .4);
+}
+
+.solid-border-grey {
+    display: inline-block;
+    border-bottom: 1px solid $star-dust;
 }
