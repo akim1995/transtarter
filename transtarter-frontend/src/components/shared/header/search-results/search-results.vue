@@ -9,7 +9,7 @@
     <div class="search-results__body">
       <ul
         class="search-results__body-row"
-        v-for="(item, $index) in foundItems"
+        v-for="(item, $index) in foundItems.slice(0, 5)"
         :key='$index'
       >
         <li class='search-results__body-row-item'>
