@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import FindDetail from '@/components/find-detail/find-detail.vue'
 
-describe('Renders correct html', () => {
+describe('Find detail component behavior', () => {
   const wrapper = mount(FindDetail)
   const buttons = wrapper.findAll('.find-detail__filter-item')
 
