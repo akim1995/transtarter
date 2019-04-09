@@ -22,9 +22,30 @@
     </div>
     <div class="user-sidebar-bottom">
       <ul class="lk-links">
-        <router-link class="lk-link" active-class="lk-link-active" exact="" tag="li" :to="{name: 'home'}">Личный кабинет</router-link>
-        <router-link class="lk-link" active-class="lk-link-active" exact="" tag="li" :to="{name: 'settings'}">Профиль и настройки</router-link>
-        <router-link class="lk-link" active-class="lk-link-active" exact="" tag="li" :to="{name: 'cart'}">Корзина</router-link>
+        <router-link
+          class="lk-link"
+          active-class="lk-link-active"
+          exact=""
+          tag="li"
+          :to="{name: 'home'}"
+        >Личный кабинет</router-link>
+        <router-link
+          class="lk-link"
+          active-class="lk-link-active"
+          exact=""
+          tag="li"
+          :to="{name: 'settings'}"
+        >Профиль и настройки</router-link>
+        <router-link
+          class="lk-link"
+          active-class="lk-link-active"
+          exact=""
+          tag="li"
+          :to="{name: 'cart'}"
+        >
+          Корзина
+          <span class="lk-link-notify">3</span>
+        </router-link>
         <li class="lk-link">
           Заказы и оплаты
         </li>
@@ -33,9 +54,7 @@
         </li>
       </ul>
       <div class="lk-links-alternative">
-        <select
-          class="form-control form-control-border-radius"
-        >
+        <select class="form-control form-control-border-radius">
           <option
             disabled
             value=""
@@ -58,7 +77,9 @@ import { AuthModule } from '@/store/modules/authentication.module'
 @Component
 export default class UserSidebar extends Vue {
   get userName () {
-    return AuthModule.name.length > 10 ? AuthModule.name.substring(0, 10) + '...' : AuthModule.name
+    return AuthModule.name.length > 10
+      ? AuthModule.name.substring(0, 10) + '...'
+      : AuthModule.name
   }
 }
 </script>

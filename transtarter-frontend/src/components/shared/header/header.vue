@@ -486,24 +486,28 @@ export default class Header extends Vue {
    */
   potentialFoundItems: ISearchResult[] = [
     {
+      id: 1,
       desc: 'Стартер',
       number: '45888701',
       manufacturer: 'CITROEN',
       alreadyInBucket: 0
     },
     {
+      id: 2,
       desc: 'Генератор',
       number: '95493099',
       manufacturer: 'CITROEN',
       alreadyInBucket: 2
     },
     {
+      id: 3,
       desc: 'Бендикс',
       number: 'WA54-9309',
       manufacturer: 'WAI',
       alreadyInBucket: 0
     },
     {
+      id: 4,
       desc: 'Бендикс',
       number: 'WA54-9309-1',
       manufacturer: 'WAI',
