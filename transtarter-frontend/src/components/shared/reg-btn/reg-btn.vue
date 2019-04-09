@@ -1,7 +1,7 @@
 
 <template>
   <button
-    class="btn btn-orange btn-reg"
+    class="btn btn-yellow btn-reg"
     @click="toggleRegistrationPopup"
   >Зарегистрироваться</button>
 </template>

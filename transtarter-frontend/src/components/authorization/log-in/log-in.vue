@@ -21,7 +21,7 @@
         >
           <button
             type="submit"
-            class="btn btn-orange btn-log-in"
+            class="btn btn-yellow btn-log-in"
           >
             <!-- Войти -->
             Войти через IdentityServer

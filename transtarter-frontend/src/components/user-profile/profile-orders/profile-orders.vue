@@ -47,7 +47,7 @@
       <div class="form-group row"><label class="col-xl-4 col-0"></label>
         <div class="col-xl-6 col-12"><button
             type="submit"
-            class="btn btn-orange btn-block-mobile"
+            class="btn btn-yellow btn-block-mobile"
           >
             Сохранить данные
           </button></div>

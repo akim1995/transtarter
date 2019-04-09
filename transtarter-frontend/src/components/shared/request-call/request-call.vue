@@ -66,7 +66,7 @@
             <div class="col-12">
               <button
                 type="submit"
-                class="btn btn-orange btn-block"
+                class="btn btn-yellow btn-block"
               >
                 Заказать звонок
               </button>

@@ -35,13 +35,6 @@ test
       .typeText(Selector('.two-selectors').find('.form-control.second-selector'), faker.company.companyName())
       .click(Selector('.registration-form').find('button').withText('Зарегистрироваться'))
 
-    // const logRecord = logger.requests[0]
-
-    // console.log(logRecord.userAgent)
-    // console.log(logRecord.request.url)
-    // console.log(logRecord.request.method)
-    // console.log(logRecord.response.statusCode)
-
     await t.expect(
       logger.contains(record => record.response.statusCode === 200 ||
         record.response.statusCode === 222))
