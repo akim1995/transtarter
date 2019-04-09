@@ -14,6 +14,12 @@ export interface IDisplayState {
     selectCity: boolean,
     yourCity: boolean
   }
+
+  blocksShow : {
+    menu: boolean,
+    location: boolean,
+    user: boolean
+  };
 }
 
 @Module({ dynamic: true, store, name: 'display', namespaced: true })
@@ -31,6 +37,12 @@ export class Display extends VuexModule implements IDisplayState {
   showBlock = {
     selectCity: false,
     yourCity: false
+  };
+
+  blocksShow = {
+    menu: false,
+    location: false,
+    user: false
   };
 
   @Action
@@ -134,6 +146,46 @@ export class Display extends VuexModule implements IDisplayState {
   public toggleRegistration (): void {
     this.context.commit('TOGGLE_REGISTRATION')
     this.checkPopupIsOpened()
+  }
+
+  @Mutation
+  TOGGLE_BLOCK_SHOW_MENU () {
+    this.blocksShow.menu = !this.blocksShow.menu
+  }
+
+  @Action
+  public toggleBlockShowMenu (): void {
+    this.context.commit('TOGGLE_BLOCK_SHOW_MENU')
+  }
+
+  @Mutation
+  TOGGLE_BLOCK_SHOW_USER () {
+    this.blocksShow.user = !this.blocksShow.user
+  }
+
+  @Action
+  public toggleBlockShowUser (): void {
+    this.context.commit('TOGGLE_BLOCK_SHOW_USER')
+  }
+
+  @Mutation
+  HIDE_BLOCK_SHOW_MENU () {
+    this.blocksShow.menu = false
+  }
+
+  @Action
+  public hideBlockShowMenu (): void {
+    this.context.commit('HIDE_BLOCK_SHOW_MENU')
+  }
+
+  @Mutation
+  HIDE_BLOCK_SHOW_USER () {
+    this.blocksShow.user = false
+  }
+
+  @Action
+  public hideBlockShowUser (): void {
+    this.context.commit('HIDE_BLOCK_SHOW_USER')
   }
 }
 

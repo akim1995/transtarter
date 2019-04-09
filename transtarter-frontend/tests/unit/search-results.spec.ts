@@ -10,6 +10,7 @@ describe('SearchResults Component behavior', () => {
     const mockData: ISearchResult[] = []
     for (let i = 0; i < 10; i++) {
       mockData.push({
+        id: i + 1,
         alreadyInBucket: i,
         desc: 'desc',
         manufacturer: 'manufacturer',
