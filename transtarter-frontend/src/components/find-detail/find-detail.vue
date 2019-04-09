@@ -66,6 +66,18 @@
   </div>
 </template>
 
-<script lang="ts" src="./find-detail.ts"></script>
+<script lang="ts">
+import { Vue, Component, Prop } from 'vue-property-decorator'
+
+ @Component
+export default class FindDetail extends Vue {
+    activeTab:number = 0;
+    placeholderText:string[] = [
+      'По номеру детали, например 456765',
+      'По номеру VIN, например 1HGEG644387712345',
+      'По Марке, например Audi'
+    ]
+}
+</script>
 
 <style lang="scss" src="./find-detail.scss" scoped></style>

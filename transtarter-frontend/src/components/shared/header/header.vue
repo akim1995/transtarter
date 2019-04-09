@@ -135,25 +135,27 @@
               selected
             >Номер детали</option>
             <option value="detail_1">Детали 1</option>
-            <option value="detail_2">Детали 2</option>
-            <option value="detail_3">Детали 3</option>
-            <option value="detail_4">Детали 4</option>
-            <option value="detail_5">Детали 5</option>
-            <option value="detail_6">Детали 6</option>
-            <option value="detail_7">Детали 7</option>
+
           </select>
 
           <div class="search__input search-input">
-
             <div class="search__icon-lins"></div>
             <input
               type="text"
+              class="search-input-desktop"
               ref="searchInputDesktop"
+              v-model="searchText"
             >
             <div
               class="search__clear"
               @click="clearSearchInput"
             ></div>
+            <search-results
+              :found-items='foundItems'
+              v-if="foundItems.length"
+              class="desktop-search-result"
+              v-click-outside="closeSearchResult"
+            ></search-results>
           </div>
           <button
             type="submit"
@@ -413,16 +415,19 @@
             </select>
           </div>
 
-          <div class="form-row">
+          <div class="form-row" style="position: relative;">
             <div class="search__input-mobile search-input">
               <input
                 type="text"
+                class="search-input-mobile"
                 ref="searchInputMobile"
+                v-model="searchText"
               >
               <div
                 class="search__clear"
                 @click="clearSearchInput"
               ></div>
+
             </div>
             <button
               type="submit"
@@ -430,6 +435,12 @@
             >
               <div class="search__icon-lins"></div>
             </button>
+            <search-results
+              :found-items='foundItems'
+              v-if="foundItems.length"
+              class="mobile-search-result"
+              v-click-outside="closeSearchResult"
+            ></search-results>
           </div>
 
         </form>
@@ -442,13 +453,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue, Watch } from 'vue-property-decorator'
 import { AuthModule } from '@/store/modules/authentication.module'
 import { DisplayModule } from '@/store/modules/display.module'
 import { store } from '@/store/index'
 import { clickOutside } from '@/directives/v-click-outside/index'
+import SearchResults from '@/components/shared/header/search-results/search-results.vue'
+import { ISearchResult } from '@/models/index'
+import { envArgs } from '@/env'
 
 @Component({
+  components: {
+    SearchResults
+  },
   directives: {
     clickOutside
   }
@@ -460,6 +477,40 @@ export default class Header extends Vue {
     user: false
   };
 
+  searchText = '';
+
+  foundItems: ISearchResult[] = [];
+
+  /**
+   * Mock Data
+   */
+  potentialFoundItems: ISearchResult[] = [
+    {
+      desc: 'Стартер',
+      number: '45888701',
+      manufacturer: 'CITROEN',
+      alreadyInBucket: 0
+    },
+    {
+      desc: 'Генератор',
+      number: '95493099',
+      manufacturer: 'CITROEN',
+      alreadyInBucket: 2
+    },
+    {
+      desc: 'Бендикс',
+      number: 'WA54-9309',
+      manufacturer: 'WAI',
+      alreadyInBucket: 0
+    },
+    {
+      desc: 'Бендикс',
+      number: 'WA54-9309-1',
+      manufacturer: 'WAI',
+      alreadyInBucket: 0
+    }
+  ];
+
   toggleRegistrationPopup () {
     store.dispatch('display/toggleRegistration')
   }
@@ -468,16 +519,13 @@ export default class Header extends Vue {
     store.dispatch('auth/login')
   }
 
-  clearSearchInput () {
-    const inputDesktop = this.$refs.searchInputDesktop as HTMLInputElement
-    if (inputDesktop) {
-      inputDesktop.value = ''
-    }
+  closeSearchResult () {
+    this.foundItems = []
+  }
 
-    const inputMobile = this.$refs.searchInputMobile as HTMLInputElement
-    if (inputMobile) {
-      inputMobile.value = ''
-    }
+  clearSearchInput () {
+    this.searchText = ''
+    this.foundItems = []
   }
 
   get loggedIn () {
@@ -513,8 +561,18 @@ export default class Header extends Vue {
   closeUserMenu () {
     this.blocksShow.user = false
   }
+
   mounted () {
     store.dispatch('auth/actualizeUser')
+  }
+
+  @Watch('searchText')
+  onChildChanged (val: string, oldVal: string) {
+    if (val.length >= 3) {
+      this.foundItems = this.potentialFoundItems
+    } else if (val.length <= 3 && oldVal.length >= 3) {
+      this.foundItems = []
+    }
   }
 }
 </script>
