@@ -154,6 +154,7 @@
               :found-items='foundItems'
               v-if="foundItems.length"
               class="desktop-search-result"
+              v-click-outside="closeSearchResult"
             ></search-results>
           </div>
           <button
@@ -438,6 +439,7 @@
               :found-items='foundItems'
               v-if="foundItems.length"
               class="mobile-search-result"
+              v-click-outside="closeSearchResult"
             ></search-results>
           </div>
 
@@ -514,6 +516,10 @@ export default class Header extends Vue {
     store.dispatch('auth/login')
   }
 
+  closeSearchResult () {
+    this.foundItems = []
+  }
+
   clearSearchInput () {
     this.searchText = ''
     this.foundItems = []
@@ -554,10 +560,12 @@ export default class Header extends Vue {
   }
 
   mounted () {
+    console.log('this', this)
     if (envArgs.isWebComponentBuild) {
       this.$store = store
     }
-    this.$store.dispatch('auth/actualizeUser')
+
+    store.dispatch('auth/actualizeUser')
   }
 
   @Watch('searchText')
