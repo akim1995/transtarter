@@ -481,6 +481,9 @@ export default class Header extends Vue {
 
   foundItems: ISearchResult[] = [];
 
+  /**
+   * Mock Data
+   */
   potentialFoundItems: ISearchResult[] = [
     {
       desc: 'Стартер',
@@ -560,11 +563,6 @@ export default class Header extends Vue {
   }
 
   mounted () {
-    console.log('this', this)
-    if (envArgs.isWebComponentBuild) {
-      this.$store = store
-    }
-
     store.dispatch('auth/actualizeUser')
   }
 
