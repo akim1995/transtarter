@@ -8,23 +8,23 @@
         <div class="search-results__header-item">Производитель</div>
       </div>
       <div class="search-results__body">
-        <router-link
+        <a
           class="search-results__body-row"
-          tag='ul'
           v-for="(item, $index) in foundItems.slice(0, 5)"
           :key='$index'
+          :href='"/search-matches/" + item.id'
           :to="{name: 'search-matches', id: item.id}"
         >
-          <li class='search-results__body-row-item'>
+          <div class='search-results__body-row-item'>
             {{ item.desc }}
-          </li>
-          <li class='search-results__body-row-item'>
+          </div>
+          <div class='search-results__body-row-item'>
             {{ item.number }}
-          </li>
-          <li class='search-results__body-row-item'>
+          </div>
+          <div class='search-results__body-row-item'>
             {{ item.manufacturer }}
-          </li>
-          <li
+          </div>
+          <div
             class='search-results__body-row-item-optional'
             v-if="item.alreadyInBucket"
           >
@@ -32,8 +32,8 @@
               <div class="shopping-bucket-icon"></div>
               <div class="items-in-bucket">{{ item.alreadyInBucket }} шт.</div>
             </div>
-          </li>
-        </router-link>
+          </div>
+        </a>
       </div>
     </div>
   </transition>
