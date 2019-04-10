@@ -117,7 +117,7 @@
 
       <button
         type="submit"
-        class="btn btn-orange btn-reg"
+        class="btn btn-yellow btn-reg"
       >
         Зарегистрироваться
       </button>

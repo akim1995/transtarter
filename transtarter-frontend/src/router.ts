@@ -4,6 +4,7 @@ import UserSettings from '@/components/user-profile/profile-settings/profile-set
 import ProfileOrders from '@/components/user-profile/profile-home/profile-home.vue'
 import ProfileCart from '@/components/user-profile/profile-cart/profile-cart.vue'
 import StyleGuide from '@/components/shared/styleguide.vue'
+import SearchMatches from '@/components/search/search-mathes/search-mathes.vue'
 import { envArgs } from './env'
 
 Vue.use(Router)
@@ -23,13 +24,18 @@ const vueRoutes = [
     path: '/cart',
     name: 'cart',
     component: ProfileCart
+  },
+  {
+    path: '/search-matches',
+    name: 'search-matches',
+    component: ProfileCart
   }
 ]
 
 if (envArgs.isServeBuild) {
   vueRoutes.push({
-    path: '/styleguide',
-    name: 'styleguide',
+    path: '/style-guide',
+    name: 'style-guide',
     component: StyleGuide
   })
 }

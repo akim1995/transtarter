@@ -8,10 +8,12 @@
         <div class="search-results__header-item">Производитель</div>
       </div>
       <div class="search-results__body">
-        <ul
+        <router-link
           class="search-results__body-row"
+          tag='ul'
           v-for="(item, $index) in foundItems.slice(0, 5)"
           :key='$index'
+          :to="{name: 'search-matches', id: item.id}"
         >
           <li class='search-results__body-row-item'>
             {{ item.desc }}
@@ -31,7 +33,7 @@
               <div class="items-in-bucket">{{ item.alreadyInBucket }} шт.</div>
             </div>
           </li>
-        </ul>
+        </router-link>
       </div>
     </div>
   </transition>
@@ -42,7 +44,11 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 import { clickOutside } from '@/directives/v-click-outside/index'
 import { ISearchResult } from '@/models/index'
 
-@Component
+@Component({
+  directives: {
+    clickOutside
+  }
+})
 export default class SearchResults extends Vue {
   @Prop({ default: () => [] }) readonly foundItems!: ISearchResult[];
 }

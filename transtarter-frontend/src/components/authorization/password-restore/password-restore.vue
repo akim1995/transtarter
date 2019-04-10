@@ -29,7 +29,7 @@
             >
             <button
               type="submit"
-              class="btn btn-orange reset-btn"
+              class="btn btn-yellow reset-btn"
             >
               Восстановить пароль
             </button>

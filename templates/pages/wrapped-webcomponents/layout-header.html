@@ -1,0 +1,79 @@
+<header class="header">
+
+  <ts-ui-actualize-user></ts-ui-actualize-user>
+
+  <!-- desktop markup -->
+  <div class="desktop-header">
+    <div class="desktop-header__menu">
+      <div class="desktop-header__left">
+        <div class="desktop-header__logo">
+          <a href="/">Транс Стартер</a>
+        </div>
+        <ul class="desktop-header__menu-list">
+          <li class="desktop-header__menu-item">
+            <a href="/special-offers">Акции и новинки</a>
+          </li>
+          <li class="desktop-header__menu-item">
+            <a href="/delivery">Доставка и оплата</a>
+          </li>
+          <li class="desktop-header__menu-item">
+            <a href="/about-company">О компании</a>
+          </li>
+          <li class="desktop-header__menu-item">
+            <a href="/auto-workshops">Найти точку ремонта</a>
+          </li>
+          <li class="desktop-header__menu-item">
+            <a href="/contacts">Контакты</a>
+          </li>
+          <li class="desktop-header__menu-item">
+            <a href="#">Блог</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="desktop-header__right">
+        <ts-ui-user-account-desktop></ts-ui-user-account-desktop>
+      </div>
+
+    </div>
+
+    <ts-ui-account-info></ts-ui-account-info>
+
+    <div class="desktop-header__search search">
+      <ts-ui-search-form-desktop></ts-ui-search-form-desktop>
+
+      <ts-ui-search-location-desktop></ts-ui-search-location-desktop>
+    </div>
+  </div>
+  <!-- end desktop markup -->
+
+  <!-- mobile makrup -->
+  <div class="mobile-header">
+    <div class="mobile-header__menu">
+      <div class="mobile-header__menu__left">
+        <div class="burger-wrapper">
+          <ts-ui-burger-icon></ts-ui-burger-icon>
+        </div>
+        <div class="logo">
+          <a href="/">Транс<br> Стартер</a>
+        </div>
+      </div>
+
+      <ts-ui-user-account-mobile></ts-ui-user-account-mobile>
+    </div>
+
+    <ts-ui-mobile-links></ts-ui-mobile-links>
+
+    <ts-ui-search-location-mobile></ts-ui-search-location-mobile>
+
+    <ts-ui-auth-mobile></ts-ui-auth-mobile>
+
+    <ts-ui-account-info></ts-ui-account-info>
+
+    <div class="mobile-header__search">
+      <ts-ui-search-form-mobile></ts-ui-search-form-mobile>
+    </div>
+  </div>
+  <!-- end mobile makrup -->
+
+</header>
