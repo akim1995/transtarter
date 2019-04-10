@@ -86,11 +86,7 @@
               href="tel:+7-495-748-97-74"
             >+7 (495) 748-97-74</a>
             <div class="cards_group__card_body">
-              <button
-                class="cards_group__card_link"
-                style="font-weight: bold;"
-                @click="toggleRequestCallPopup()"
-              >Заказать звонок</button>
+              <ts-ui-toggle-register-call-popup></ts-ui-toggle-register-call-popup>
             </div>
           </div>
         </div>
@@ -113,8 +109,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { store } from '@/store/index'
+import ToggleRequestCallPopup from '@/components/shared/footer/toggle-register-call-popup.vue'
 
-@Component
+@Component({
+  components: {
+    'ts-ui-toggle-register-call-popup': ToggleRequestCallPopup
+  }
+})
 export default class Footer extends Vue {
   toggleRequestCallPopup () {
     store.dispatch('display/toggleRequest')

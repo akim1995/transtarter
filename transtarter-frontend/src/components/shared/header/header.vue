@@ -39,11 +39,14 @@
 
       </div>
 
+      <!-- popup for logged user -->
       <ts-ui-account-info></ts-ui-account-info>
 
       <div class="desktop-header__search search">
+        <!-- top -->
         <ts-ui-search-form-desktop></ts-ui-search-form-desktop>
 
+        <!-- bottom   -->
         <ts-ui-search-location-desktop></ts-ui-search-location-desktop>
       </div>
     </div>
@@ -52,18 +55,14 @@
     <!-- mobile makrup -->
     <div class="mobile-header">
       <div class="mobile-header__menu">
-        <div class="mobile-header__menu__left">
-          <div class="burger-wrapper">
-            <ts-ui-burger-icon></ts-ui-burger-icon>
-          </div>
-          <div class="logo">
-            <a href="/">Транс<br> Стартер</a>
-          </div>
-        </div>
+        <!-- left -->
+        <ts-ui-mobile-menu></ts-ui-mobile-menu>
 
+        <!-- right -->
         <ts-ui-user-account-mobile></ts-ui-user-account-mobile>
       </div>
 
+      <!-- popups -->
       <ts-ui-mobile-links></ts-ui-mobile-links>
 
       <ts-ui-search-location-mobile></ts-ui-search-location-mobile>
@@ -82,14 +81,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from 'vue-property-decorator'
-import { AuthModule } from '@/store/modules/authentication.module'
-import { DisplayModule } from '@/store/modules/display.module'
+import { Component, Vue } from 'vue-property-decorator'
 
 import ActualizeUser from '@/components/shared/header/actualize-user.vue'
 import SearchResults from '@/components/shared/header/search-results/search-results.vue'
 import AccountInfo from '@/components/shared/header/menu-popups/account-info.vue'
-import BurgerIcon from '@/components/shared/header/burger-icon.vue'
+import MobileMenu from '@/components/shared/header/mobile-menu.vue'
 
 import UserAccountDesktop from '@/components/shared/header/user-account/user-account-desktop.vue'
 import SearchLocationDesktop from '@/components/shared/header/menu-popups/search-location-desktop.vue'
@@ -107,7 +104,7 @@ import SearchFormMobile from '@/components/shared/header/search-form/search-form
     'ts-ui-user-account-mobile': UserAccountMobile,
     'ts-ui-account-info': AccountInfo,
     'ts-ui-auth-mobile': AuthMobile,
-    'ts-ui-burger-icon': BurgerIcon,
+    'ts-ui-mobile-menu': MobileMenu,
     'ts-ui-search-location-mobile': SearchLocationMobile,
     'ts-ui-search-location-desktop': SearchLocationDesktop,
     'ts-ui-mobile-links': MobileLinks,
@@ -116,8 +113,7 @@ import SearchFormMobile from '@/components/shared/header/search-form/search-form
     'ts-ui-actualize-user': ActualizeUser
   }
 })
-export default class Header extends Vue {
-}
+export default class Header extends Vue {}
 </script>
 
 <style lang="scss">

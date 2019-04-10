@@ -1,34 +1,35 @@
 <template>
-    <div class="mobile-header__menu__right">
-          <div class="menu-item">
-            <div class="map-alt"></div>
-          </div>
 
-          <div class="menu-item">
-            <div class="shopping-cart"></div>
-            <span class="notify-counter">9</span>
-          </div>
+  <div class="mobile-header__menu__right">
+    <div class="menu-item">
+      <div class="map-alt"></div>
+    </div>
 
-          <div class="menu-item">
-            <!-- block for guests -->
+    <div class="menu-item">
+      <div class="shopping-cart"></div>
+      <span class="notify-counter">9</span>
+    </div>
 
-            <div
-              class="new-user"
-              @click="toggleUserMenu()"
-              v-if="!loggedIn"
-            ></div>
+    <div class="menu-item">
+      <!-- block for guests -->
 
-            <!-- end for guests -->
-            <!-- block for users -->
-            <div
-              class="user-avatar"
-              v-if="loggedIn"
-              @click="toggleUserMenu()"
-            >
-            </div>
-          </div>
+      <div
+        class="new-user"
+        @click="toggleUserMenu()"
+        v-if="!loggedIn"
+      ></div>
 
-        </div>
+      <!-- end for guests -->
+      <!-- block for users -->
+      <div
+        class="user-avatar"
+        v-if="loggedIn"
+        @click="toggleUserMenu()"
+      >
+      </div>
+    </div>
+  </div>
+
 </template>
 
 <script lang="ts">

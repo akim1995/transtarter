@@ -1,6 +1,6 @@
 
 <template>
-  <span style="display:non;">
+  <span style="display:none;">
   </span>
 </template>
 

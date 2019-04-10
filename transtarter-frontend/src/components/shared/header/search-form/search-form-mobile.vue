@@ -62,10 +62,14 @@ import { Component, Vue } from 'vue-property-decorator'
 import { HeaderSearchText } from '@/components/mixins/header-search-text'
 import { mixins } from 'vue-class-component'
 import SearchResults from '@/components/shared/header/search-results/search-results.vue'
+import { clickOutside } from '@/directives/v-click-outside'
 
 @Component({
   components: {
     'ts-ui-search-results': SearchResults
+  },
+  directives: {
+    clickOutside
   }
 })
 export default class SearchFormMobile extends mixins(HeaderSearchText) {}
