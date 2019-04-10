@@ -2,6 +2,8 @@
 <template>
   <header class="header">
 
+    <ts-ui-actualize-user></ts-ui-actualize-user>
+
     <!-- desktop markup -->
     <div class="desktop-header">
       <div class="desktop-header__menu">
@@ -40,75 +42,9 @@
       <ts-ui-account-info></ts-ui-account-info>
 
       <div class="desktop-header__search search">
-        <form class="container search__form">
-          <span class="search__form__select-numbers">
-            123
-          </span>
-          <select
-            class="search__select"
-            name=""
-          >
-            <option
-              disabled
-              value=""
-              selected
-            >Номер детали</option>
-            <option value="detail_1">Детали 1</option>
+        <ts-ui-search-form-desktop></ts-ui-search-form-desktop>
 
-          </select>
-
-          <div class="search__input search-input">
-            <div class="search__icon-lins"></div>
-            <input
-              type="text"
-              class="search-input-desktop"
-              ref="searchInputDesktop"
-              v-model="searchText"
-            >
-            <div
-              class="search__clear"
-              @click="clearSearchInput"
-            ></div>
-            <ts-ui-search-results
-              :found-items='foundItems'
-              v-if="foundItems.length"
-              class="desktop-search-result"
-              v-click-outside="closeSearchResult"
-            ></ts-ui-search-results>
-          </div>
-          <button
-            type="submit"
-            class="search__btn-search"
-          >Найти</button>
-        </form>
-        <div class="container search__location">
-          <div class="search__location-left">
-            <div class="search__city border-white link">
-              Москва
-            </div>
-
-            <ul class="search__street-list">
-              <li class="search__street">
-                <div class="search__icon-marker"></div>
-                <p>Каширское шоссе, 41</p>
-              </li>
-              <li class="search__street">
-                <div class="search__icon-marker"></div>
-                <p>г. Дзержинский, ул. Энергетиков, 18А</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="search__location-right">
-            <a
-              class="search__phone border-white"
-              href="tel:+7-495-748-97-74"
-            >
-              +7 (495) 748-97-74
-            </a>
-          </div>
-
-        </div>
+        <ts-ui-search-location-desktop></ts-ui-search-location-desktop>
       </div>
     </div>
     <!-- end desktop markup -->
@@ -125,150 +61,19 @@
           </div>
         </div>
 
-        <!-- user account mobile  -->
         <ts-ui-user-account-mobile></ts-ui-user-account-mobile>
-
       </div>
 
-      <div
-        class="menu-popup"
-        v-if="showBlocksShowMenu"
-      >
-        <ul
-          class="menu-popup_list"
-          v-click-outside="closeMainMenu"
-        >
-          <li>
-            <a
-              class="menu-popup_list-item"
-              href="/special-offers"
-            >Акции и новинки</a>
-          </li>
-          <li>
-            <a
-              class="menu-popup_list-item"
-              href="/delivery"
-            >Доставка и оплата</a>
-          </li>
-          <li>
-            <a
-              href="/about-company"
-              class="menu-popup_list-item active"
-            >О компании</a>
-          </li>
-          <li>
-            <a
-              class="menu-popup_list-item"
-              href="/auto-workshops"
-            >Найти точку ремонта</a>
-          </li>
-          <li>
-            <a
-              class="menu-popup_list-item"
-              href="/contacts"
-            >Контакты</a>
-          </li>
-          <li class="menu-popup_list-item">
-            <a href="#">Блог</a>
-          </li>
-        </ul>
-      </div>
-      <div
-        class="menu-popup"
-        v-if="showBlocksShowLocation"
-      >
-        <div class="container search__location">
-          <div class="search__location-left">
-            <div class="search__city border-white link">
-              Москва
-            </div>
+      <ts-ui-mobile-links></ts-ui-mobile-links>
 
-            <ul class="search__street-list">
-              <li class="search__street">
-                <div class="search__icon-marker"></div>
-                <p>Каширское шоссе, 41</p>
-              </li>
-              <li class="search__street">
-                <div class="search__icon-marker"></div>
-                <p>г. Дзержинский, ул. Энергетиков, 18А</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="search__location-right">
-            <a
-              class="search__phone border-white"
-              href="tel:+7-495-748-97-74"
-            >
-              +7 (495) 748-97-74
-            </a>
-          </div>
-
-        </div>
-      </div>
+      <ts-ui-search-location-mobile></ts-ui-search-location-mobile>
 
       <ts-ui-auth-mobile></ts-ui-auth-mobile>
 
       <ts-ui-account-info></ts-ui-account-info>
 
       <div class="mobile-header__search">
-        <form class="search__form">
-          <div class="form-row">
-            <span class="search__select-numbers ">
-              123
-            </span>
-            <select
-              class="search__select"
-              name=""
-            >
-              <option
-                disabled
-                value=""
-                selected
-              >Номер детали</option>
-              <option value="detail_1">Детали 1</option>
-              <option value="detail_2">Детали 2</option>
-              <option value="detail_3">Детали 3</option>
-              <option value="detail_4">Детали 4</option>
-              <option value="detail_5">Детали 5</option>
-              <option value="detail_6">Детали 6</option>
-              <option value="detail_7">Детали 7</option>
-            </select>
-          </div>
-
-          <div
-            class="form-row"
-            style="position: relative;"
-          >
-            <div class="search__input-mobile search-input">
-              <input
-                type="text"
-                class="search-input-mobile"
-                ref="searchInputMobile"
-                v-model="searchText"
-              >
-              <div
-                class="search__clear"
-                @click="clearSearchInput"
-              ></div>
-
-            </div>
-            <button
-              type="submit"
-              class="search__btn-search"
-            >
-              <div class="search__icon-lins"></div>
-            </button>
-            <ts-ui-search-results
-              :found-items='foundItems'
-              v-if="foundItems.length"
-              class="mobile-search-result"
-              v-click-outside="closeSearchResult"
-            ></ts-ui-search-results>
-          </div>
-
-        </form>
-
+        <ts-ui-search-form-mobile></ts-ui-search-form-mobile>
       </div>
     </div>
     <!-- end mobile makrup -->
@@ -280,103 +85,38 @@
 import { Component, Vue, Watch } from 'vue-property-decorator'
 import { AuthModule } from '@/store/modules/authentication.module'
 import { DisplayModule } from '@/store/modules/display.module'
-import { store } from '@/store/index'
-import { clickOutside } from '@/directives/v-click-outside/index'
-import { ISearchResult } from '@/models/index'
-import { envArgs } from '@/env'
 
+import ActualizeUser from '@/components/shared/header/actualize-user.vue'
 import SearchResults from '@/components/shared/header/search-results/search-results.vue'
-import UserAccountDesktop from '@/components/shared/header/user-account/user-account-desktop.vue'
-import UserAccountMobile from '@/components/shared/header/user-account/user-account-mobile.vue'
 import AccountInfo from '@/components/shared/header/menu-popups/account-info.vue'
-import AuthMobile from '@/components/shared/header/menu-popups/auth-mobile.vue'
 import BurgerIcon from '@/components/shared/header/burger-icon.vue'
+
+import UserAccountDesktop from '@/components/shared/header/user-account/user-account-desktop.vue'
+import SearchLocationDesktop from '@/components/shared/header/menu-popups/search-location-desktop.vue'
+import SearchFormDesktop from '@/components/shared/header/search-form/search-form-desktop.vue'
+
+import SearchLocationMobile from '@/components/shared/header/menu-popups/search-location-mobile.vue'
+import UserAccountMobile from '@/components/shared/header/user-account/user-account-mobile.vue'
+import AuthMobile from '@/components/shared/header/menu-popups/auth-mobile.vue'
+import MobileLinks from '@/components/shared/header/menu-popups/mobile-links.vue'
+import SearchFormMobile from '@/components/shared/header/search-form/search-form-mobile.vue'
 
 @Component({
   components: {
-    'ts-ui-search-results': SearchResults,
     'ts-ui-user-account-desktop': UserAccountDesktop,
     'ts-ui-user-account-mobile': UserAccountMobile,
     'ts-ui-account-info': AccountInfo,
     'ts-ui-auth-mobile': AuthMobile,
-    'ts-ui-burger-icon': BurgerIcon
-  },
-  directives: {
-    clickOutside
+    'ts-ui-burger-icon': BurgerIcon,
+    'ts-ui-search-location-mobile': SearchLocationMobile,
+    'ts-ui-search-location-desktop': SearchLocationDesktop,
+    'ts-ui-mobile-links': MobileLinks,
+    'ts-ui-search-form-mobile': SearchFormMobile,
+    'ts-ui-search-form-desktop': SearchFormDesktop,
+    'ts-ui-actualize-user': ActualizeUser
   }
 })
 export default class Header extends Vue {
-  searchText = '';
-
-  foundItems: ISearchResult[] = [];
-
-  /**
-   * Mock Data
-   */
-  potentialFoundItems: ISearchResult[] = [
-    {
-      id: 1,
-      desc: 'Стартер',
-      number: '45888701',
-      manufacturer: 'CITROEN',
-      alreadyInBucket: 0
-    },
-    {
-      id: 2,
-      desc: 'Генератор',
-      number: '95493099',
-      manufacturer: 'CITROEN',
-      alreadyInBucket: 2
-    },
-    {
-      id: 3,
-      desc: 'Бендикс',
-      number: 'WA54-9309',
-      manufacturer: 'WAI',
-      alreadyInBucket: 0
-    },
-    {
-      id: 4,
-      desc: 'Бендикс',
-      number: 'WA54-9309-1',
-      manufacturer: 'WAI',
-      alreadyInBucket: 0
-    }
-  ];
-
-  closeSearchResult () {
-    this.foundItems = []
-  }
-
-  clearSearchInput () {
-    this.searchText = ''
-    this.foundItems = []
-  }
-
-  get showBlocksShowMenu () {
-    return DisplayModule.blocksShow.menu
-  }
-
-  get showBlocksShowLocation () {
-    return DisplayModule.blocksShow.location
-  }
-
-  closeMainMenu () {
-    store.dispatch('display/hideBlockShowMenu')
-  }
-
-  mounted () {
-    store.dispatch('auth/actualizeUser')
-  }
-
-  @Watch('searchText')
-  onChildChanged (val: string, oldVal: string) {
-    if (val.length >= 3) {
-      this.foundItems = this.potentialFoundItems
-    } else if (val.length <= 3 && oldVal.length >= 3) {
-      this.foundItems = []
-    }
-  }
 }
 </script>
 
