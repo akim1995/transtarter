@@ -51,3 +51,7 @@ export default class UserAccountMobile extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>
