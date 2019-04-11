@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head><link href="/css/app.css" rel="preload" as="style"><link href="/js/app.js" rel="preload" as="script"><link href="/js/chunk-vendors.js" rel="preload" as="script"><link href="/css/app.css" rel="stylesheet"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>transtarter-frontend</title><link href="https://fonts.googleapis.com/css?family=Exo+2:500,600,700,900|PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet"><style type="text/css">
+.VueCarousel-navigation-button[data-v-453ad8cd] {
+  position: absolute;
+  top: 50%;
+  box-sizing: border-box;
+  color: #000;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+.VueCarousel-navigation-button[data-v-453ad8cd]:focus {
+  outline: 1px solid lightblue;
+}
+.VueCarousel-navigation-next[data-v-453ad8cd] {
+  right: 0;
+  transform: translateY(-50%) translateX(100%);
+  font-family: "system";
+}
+.VueCarousel-navigation-prev[data-v-453ad8cd] {
+  left: 0;
+  transform: translateY(-50%) translateX(-100%);
+  font-family: "system";
+}
+.VueCarousel-navigation--disabled[data-v-453ad8cd] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+    local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Symbol"),
+    local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+</style><style type="text/css">
+.VueCarousel-pagination[data-v-438fd353] {
+  width: 100%;
+  text-align: center;
+}
+.VueCarousel-pagination--top-overlay[data-v-438fd353] {
+  position: absolute;
+  top: 0;
+}
+.VueCarousel-pagination--bottom-overlay[data-v-438fd353] {
+  position: absolute;
+  bottom: 0;
+}
+.VueCarousel-dot-container[data-v-438fd353] {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+}
+.VueCarousel-dot[data-v-438fd353] {
+  display: inline-block;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background-clip: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  border-radius: 100%;
+  outline: none;
+}
+.VueCarousel-dot[data-v-438fd353]:focus {
+  outline: 1px solid lightblue;
+}
+</style><style type="text/css">
+.VueCarousel-slide {
+  flex-basis: inherit;
+  flex-grow: 0;
+  flex-shrink: 0;
+  user-select: none;
+  backface-visibility: hidden;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+.VueCarousel-slide-adjustableHeight {
+  display: table;
+  flex-basis: auto;
+  width: 100%;
+}
+</style><style type="text/css">
+.VueCarousel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.VueCarousel--reverse {
+  flex-direction: column-reverse;
+}
+.VueCarousel-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.VueCarousel-inner {
+  display: flex;
+  flex-direction: row;
+  backface-visibility: hidden;
+}
+.VueCarousel-inner--center {
+  justify-content: center;
+}
+</style></head><body><noscript><strong>We're sorry but transtarter-frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div data-v-4823c396=""><header data-v-4823c396="" class="header"><span style="display: none;"></span><div class="desktop-header"><div class="desktop-header__menu"><div class="desktop-header__left"><div class="desktop-header__logo"><a href="/">Транс Стартер</a></div><ul class="desktop-header__menu-list"><li class="desktop-header__menu-item"><a href="/special-offers">Акции и новинки</a></li><li class="desktop-header__menu-item"><a href="/delivery">Доставка и оплата</a></li><li class="desktop-header__menu-item"><a href="/about-company">О компании</a></li><li class="desktop-header__menu-item"><a href="/auto-workshops">Найти точку ремонта</a></li><li class="desktop-header__menu-item"><a href="/contacts">Контакты</a></li><li class="desktop-header__menu-item"><a href="#">Блог</a></li></ul></div><div class="desktop-header__right"><ul class="desktop-header__login"><li class="desktop-header__login-item desktop-header__login-item_icon-cart"><span class="icon-shopping-cart desktop-header__icon-cart"><i>9</i></span><div class="shopping-cart"></div></li><li class="desktop-header__login-item"><a class="border">Вход</a></li><li class="desktop-header__login-item"><a class="border register">Регистрация</a></li><!----></ul></div></div><!----><div class="desktop-header__search search"><form class="container search__form"><span class="search__form__select-numbers">
+        123
+      </span><select name="" class="search__select"><option disabled="disabled" value="" selected="selected">Номер детали</option><option value="detail_1">Детали 1</option></select><div class="search__input search-input"><div class="search__icon-lins"></div><input type="text" class="search-input-desktop"><div class="search__clear"></div><!----></div><button type="submit" class="search__btn-search">Найти</button></form><div class="container search__location"><div class="search__location-left"><div class="search__city border-white link">
+      Москва
+    </div><ul class="search__street-list"><li class="search__street"><div class="search__icon-marker"></div><p>Каширское шоссе, 41</p></li><li class="search__street"><div class="search__icon-marker"></div><p>г. Дзержинский, ул. Энергетиков, 18А</p></li></ul></div><div class="search__location-right"><a href="tel:+7-495-748-97-74" class="search__phone border-white">
+      +7 (495) 748-97-74
+    </a></div></div></div></div><div class="mobile-header"><div class="mobile-header__menu"><div class="mobile-header__menu__left"><div class="burger-wrapper"><span class="burger-icon"></span></div><div class="logo"><a href="/">Транс<br> Стартер</a></div></div><div class="mobile-header__menu__right"><div class="menu-item"><div class="map-alt"></div></div><div class="menu-item"><div class="shopping-cart"></div><span class="notify-counter">9</span></div><div class="menu-item"><div class="new-user"></div><!----></div></div></div><!----><!----><!----><!----><div class="mobile-header__search"><form class="search__form"><div class="form-row"><span class="search__select-numbers ">
+      123
+    </span><select name="" class="search__select"><option disabled="disabled" value="" selected="selected">Номер детали</option><option value="detail_1">Детали 1</option><option value="detail_2">Детали 2</option><option value="detail_3">Детали 3</option><option value="detail_4">Детали 4</option><option value="detail_5">Детали 5</option><option value="detail_6">Детали 6</option><option value="detail_7">Детали 7</option></select></div><div class="form-row" style="position: relative;"><div class="search__input-mobile search-input"><input type="text" class="search-input-mobile"><div class="search__clear"></div></div><button type="submit" class="search__btn-search"><div class="search__icon-lins"></div></button><!----></div></form></div></div></header><main data-v-1f367416="" data-v-4823c396="" class="content"><div data-v-1f367416="" class="content-wrapper container"><aside data-v-1f367416="" class="aside-content"><div data-v-56a18cf3="" data-v-1f367416="" class="user-sidebar"><div data-v-56a18cf3="" class="user-sidebar-top"><div data-v-56a18cf3="" class="user-picture"></div><div data-v-56a18cf3="" class="user-fullname">
+      
+    </div><div data-v-56a18cf3="" class="agreement">
+      Договор № 123765
+    </div><div data-v-56a18cf3="" class="price-info">
+      Оптовые цены (активны)
+    </div><div data-v-56a18cf3="" class="wallet"><div data-v-56a18cf3="" class="wallet-with-icon"><span data-v-56a18cf3="" class="icon"></span><div data-v-56a18cf3="" class="wallet-balance">
+          15 000 ₽
+        </div></div></div></div><div data-v-56a18cf3="" class="user-sidebar-bottom"><ul data-v-56a18cf3="" class="lk-links"><li data-v-56a18cf3="" class="lk-link">Личный кабинет</li><li data-v-56a18cf3="" class="lk-link router-link-exact-active lk-link-active">Профиль и настройки</li><li data-v-56a18cf3="" class="lk-link">
+        Корзина
+        <span data-v-56a18cf3="" class="lk-link-notify">3</span></li><li data-v-56a18cf3="" class="lk-link">
+        Заказы и оплаты
+      </li><li data-v-56a18cf3="" class="lk-link">
+        Выйти
+      </li></ul><div data-v-56a18cf3="" class="lk-links-alternative"><select data-v-56a18cf3="" class="form-control form-control-border-radius"><option data-v-56a18cf3="" disabled="disabled" value="">Выберите один из вариантов</option><option data-v-56a18cf3="">Личный кабинет</option><option data-v-56a18cf3="">Профиль и настройки</option><option data-v-56a18cf3="">Корзина</option><option data-v-56a18cf3="">Заказы и оплаты</option><option data-v-56a18cf3="">Выйти</option></select></div></div></div><div data-v-1bd8a53b="" data-v-1f367416="" class="personal-manager"><div data-v-1bd8a53b="" class="personal-manager-top"><div data-v-1bd8a53b="" class="question-sign"></div><div data-v-1bd8a53b="" class="have-questions">
+      По любым вопросам обращайтесь к вашему личному менеджеру
+    </div></div><div data-v-1bd8a53b="" class="personal-manager-bottom"><div data-v-1bd8a53b="" class="manager-picture"></div><div data-v-1bd8a53b="" class="manager-fullname">
+      Иван Петров
+    </div><a data-v-1bd8a53b="" href="tel:7-900-111-11-11" class="manager-phone">
+      + 7 (900) 111-11-11
+    </a><a data-v-1bd8a53b="" href="mailto:i.petrov@tstarter.ru" class="manager-email border-green">
+      i.petrov@tstarter.ru
+    </a><button data-v-1bd8a53b="" class="ask-question">
+      Задать вопрос
+    </button></div></div></aside><section data-v-1f367416="" class="main-content"><div data-v-6348f1c0="" data-v-1f367416="" class="profile-page"><div data-v-6348f1c0="" class="page-container"><div data-v-6348f1c0="" class="title">
+    Профиль и настройки
+  </div><div data-v-6348f1c0="" role="group" aria-label="Basic example" class="btn-group btn-group-column"><button data-v-6348f1c0="" type="button" class="active">Регистрационные данные</button><button data-v-6348f1c0="" type="button" class="">Адреса доставки</button><button data-v-6348f1c0="" type="button" class="">Реквизиты и юр. лица</button></div><div data-v-6348f1c0="" class="registration-data-tab"><div class="change-avatar"><div class="user-picture"></div><div class="change-user-picture border-green">
+      Изменить
+    </div></div><form><div class="form-group row"><label class="col-xl-4 big-label mobile-top-label">Название компании</label><div class="col-xl-6 col-12"><input type="text" placeholder="ИП Воронов И.Е" class="form-control-lg"></div></div><div class="form-group row "><label class="col-xl-4 big-label mobile-top-label">Контактное лицо</label><div class="col-xl-6 col-12"><input type="text" placeholder="Егор Воронов" class="form-control-lg"></div></div><div class="form-group row row-with-big-space"><label class="col-xl-4 big-label mobile-top-label">Телефон</label><div class="col-xl-6 col-12"><input type="text" placeholder="+7 (900) 111-11-11" class="form-control-lg"></div></div><div class="form-group row"><label class="col-xl-4 big-label mobile-top-label">Email</label><div class="col-xl-6 col-12"><input type="text" placeholder="voronov@gmail.com" class="form-control-lg"></div></div><div class="form-group row row-with-big-space"><label class="col-xl-4 col-6 big-label">Пароль</label><div class="col-xl-6 col-6"><div class="green-link border-green text-left text-right-mobile">Сменить пароль</div></div></div><div class="form-group row"><label class="col-xl-4 col-0"></label><div class="col-xl-6 col-12"><button type="submit" class="btn btn-yellow btn-block-mobile">
+          Сохранить данные
+        </button></div></div><div class="row"><div class="col-xl-4 col-0"></div><div class="col-xl-6 accept-policy col-12">
+        Нажимая на кнопку, вы даете согласие
+        на обработку<br> своих персональных данных
+        и соглашаетесь<br> с <a href="/politika" class="policy-link solid-border-grey">Политикой конфиденциальности</a></div></div></form></div><!----><!----></div></div></section></div><!----></main><footer data-v-33d23158="" data-v-4823c396="" class="footer"><div data-v-33d23158="" class="footer__content"><div data-v-33d23158="" class="container"><div data-v-33d23158="" class="cards_group"><div data-v-33d23158="" class="cards_group__card"><div data-v-33d23158="" class="cards_group__card_header card_header_logo">ТРАНС СТАРТЕР</div><div data-v-33d23158="" class="cards_group__card_body specialization" style="line-height: 24px;">Продажа стартеров, генераторов<br data-v-33d23158=""> и запчастей с 1995 г.</div></div><div data-v-33d23158="" class="cards_group__card"><div data-v-33d23158="" class="cards_group__card_body"><ul data-v-33d23158="" class="links"><li data-v-33d23158="" class="links-item"><a data-v-33d23158="" href="/special-offers" class="cards_group__card_link">Акции и новинки</a></li><li data-v-33d23158="" class="mb-20 links-item"><a data-v-33d23158="" href="/delivery" class="cards_group__card_link ">Доставка и оплата</a></li><li data-v-33d23158="" class="links-item"><a data-v-33d23158="" href="/about-company" class="cards_group__card_link">О компании</a></li><li data-v-33d23158="" class="links-item"><a data-v-33d23158="" href="/auto-workshops" class="cards_group__card_link">Найти точку ремонта</a></li><li data-v-33d23158="" class="mb-20 links-item"><a data-v-33d23158="" href="/contacts" class="cards_group__card_link  ">Контакты</a></li><li data-v-33d23158="" class="link-item" style="padding-bottom: 0px;"><a data-v-33d23158="" href="#" class="cards_group__card_link ">Блог</a></li></ul></div></div><div data-v-33d23158="" class="cards_group__card"><div data-v-33d23158="" class="cards_group__card_body cards_group__card_soc" style="line-height: 24px;">
+            Задавайте свои вопросы прямо сейчас
+
+            <ul data-v-33d23158="" class="cards_group__card_soc-list"><li data-v-33d23158=""><a data-v-33d23158="" href="#!" class="social-link"><span data-v-33d23158="" class="social-link-icon social-link-viber-icon"></span></a></li><li data-v-33d23158=""><a data-v-33d23158="" href="#!" class="social-link "><span data-v-33d23158="" class="social-link-icon social-link-telegram-icon"></span></a></li><li data-v-33d23158=""><a data-v-33d23158="" href="#!" class="social-link"><span data-v-33d23158="" class="social-link-icon social-link-vk-icon"></span></a></li><li data-v-33d23158=""><a data-v-33d23158="" href="#!" class="social-link"><span data-v-33d23158="" class="social-link-icon social-link-whats-up-icon"></span></a></li></ul></div></div><div data-v-33d23158="" class="cards_group__card call-card"><a data-v-33d23158="" href="tel:+7-495-748-97-74" class="cards_group__card_header" style="margin-bottom: 8px;">+7 (495) 748-97-74</a><div data-v-33d23158="" class="cards_group__card_body"><button data-v-33d23158="" class="cards_group__card_link" style="font-weight: bold;">Заказать звонок</button></div></div></div><div data-v-33d23158="" class="additional-links"><span data-v-33d23158="" class="additional-links-left"><a data-v-33d23158="" href="/politika" target="_blank" rel="noopener noreferrer" class="cards_group__card_link bottom-link">
+            Политика конфиденциальности</a></span></div></div></div></footer><!----><!----><!----><!----><!----><!----></div></div><script src="/js/chunk-vendors.js"></script><script src="/js/app.js"></script></body></html>
