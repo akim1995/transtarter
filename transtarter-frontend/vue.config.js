@@ -1,5 +1,7 @@
 const envArgs = require('./env')
+const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 const buildLightConfig = envArgs.isServeBuild || envArgs.isBasicBuild
 let scssConfig = {}
@@ -23,8 +25,15 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new CopyWebpackPlugin([
-        { from: 'node_modules/oidc-client/dist/oidc-client.min.js', to: 'js' }
-      ])
+        { from: 'node_modules/oidc-client/dist/oidc-client.min.js', to: 'js' },
+        { from: 'public' }
+      ]),
+      new PrerenderSpaPlugin({
+        staticDir: path.join(__dirname, 'dist/app'),
+        outputDir: path.join(__dirname, 'dist/app'),
+        indexPath: path.join(__dirname, 'dist/app', 'index.html'),
+        routes: [ '/index', '/settings' ]
+      })
     ],
     // this section will remove hash from file names
     output: {
