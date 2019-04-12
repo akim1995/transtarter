@@ -20,7 +20,7 @@ export class AuthService {
       userStore: new WebStorageStateStore({ store: window.localStorage }),
       authority: AUTH0_DOMAIN,
       client_id: 'kl',
-      redirect_uri: `${MY_HOST}/callback.html`,
+      redirect_uri: `${MY_HOST}/new/callback.html`,
       post_logout_redirect_uri: `${MY_HOST}/`,
       response_type: 'id_token token',
       scope: 'openid profile roles',
