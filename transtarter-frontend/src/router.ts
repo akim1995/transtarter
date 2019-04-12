@@ -4,14 +4,13 @@ import UserSettings from '@/components/user-profile/profile-settings/profile-set
 import ProfileOrders from '@/components/user-profile/profile-home/profile-home.vue'
 import ProfileCart from '@/components/user-profile/profile-cart/profile-cart.vue'
 import StyleGuide from '@/components/shared/styleguide.vue'
-import SearchMatches from '@/components/search/search-mathes/search-mathes.vue'
 import { envArgs } from './env'
 
 Vue.use(Router)
 
 const vueRoutes = [
   {
-    path: '/index',
+    path: '/',
     name: 'home',
     component: ProfileOrders
   },
@@ -42,6 +41,6 @@ if (envArgs.isServeBuild) {
 
 export default new Router({
   mode: 'history',
-  base: '/catalog/account',
+  base: '/new',
   routes: vueRoutes
 })
