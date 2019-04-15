@@ -41,6 +41,6 @@ if (envArgs.isServeBuild) {
 
 export default new Router({
   mode: 'history',
-  base: '/new',
+  base: '/new/account',
   routes: vueRoutes
 })
