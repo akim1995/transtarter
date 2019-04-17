@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <!-- <router-view /> -->
-    <Main />
+    <Main/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Main from '@/views/main.vue'
+import { Component, Vue } from "vue-property-decorator";
+import Main from "@/views/main.vue";
 
 @Component({
   components: {
