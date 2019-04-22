@@ -898,6 +898,22 @@ module.exports = __webpack_require__("9e1e") ? Object.defineProperties : functio
 
 /***/ }),
 
+/***/ "1582":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var cookie_storage_1 = __webpack_require__("c130");
+exports.CookieStorage = cookie_storage_1.CookieStorage;
+var format_cookie_1 = __webpack_require__("e027");
+exports.formatCookie = format_cookie_1.formatCookie;
+var parse_cookies_1 = __webpack_require__("2db4");
+exports.parseCookies = parse_cookies_1.parseCookies;
+
+/***/ }),
+
 /***/ "1654":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2050,6 +2066,35 @@ module.exports = function (it) {
   return toString.call(it).slice(8, -1);
 };
 
+
+/***/ }),
+
+/***/ "2db4":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var parseCookies = function parseCookies(s) {
+    if (s.length === 0) return {};
+    var parsed = {};
+    var pattern = new RegExp('\\s*;\\s*');
+    s.split(pattern).forEach(function (i) {
+        var _i$split = i.split('='),
+            _i$split2 = _slicedToArray(_i$split, 2),
+            encodedKey = _i$split2[0],
+            encodedValue = _i$split2[1];
+
+        var key = decodeURIComponent(encodedKey);
+        var value = decodeURIComponent(encodedValue);
+        parsed[key] = value;
+    });
+    return parsed;
+};
+exports.parseCookies = parseCookies;
 
 /***/ }),
 
@@ -5809,25 +5854,34 @@ var log_inshadow_component = normalizeComponent(
 
 log_inshadow_component.options.__file = "log-in.vue"
 /* harmony default export */ var log_inshadow = (log_inshadow_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=5509a270&shadow
-var log_in_redirectvue_type_template_id_5509a270_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n    Происходит редирект на Transtarter Identity Server\n")])}
-var log_in_redirectvue_type_template_id_5509a270_shadow_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=670797d0&shadow
+var log_in_redirectvue_type_template_id_670797d0_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n    Происходит редирект на Transtarter Identity Server\n")])}
+var log_in_redirectvue_type_template_id_670797d0_shadow_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=5509a270&shadow
+// CONCATENATED MODULE: ./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=670797d0&shadow
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js
 var stringify = __webpack_require__("f499");
 var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
+
+// EXTERNAL MODULE: ./node_modules/cookie-storage/lib/index.js
+var lib = __webpack_require__("1582");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=script&lang=ts&shadow
 
 
 
 
+
 var log_in_redirectvue_type_script_lang_ts_shadow_LogInRedirect = class LogInRedirect extends external_Vue_default.a {
+  constructor() {
+    super(...arguments);
+    this.cookieStorage = new lib["CookieStorage"]();
+  }
+
   mounted() {
-    localStorage.setItem('shop-redirect', stringify_default()(true));
+    this.cookieStorage.setItem('shop-redirect', stringify_default()(true));
     store.dispatch('auth/login');
   }
 
@@ -5846,8 +5900,8 @@ log_in_redirectvue_type_script_lang_ts_shadow_LogInRedirect = __decorate([vue_cl
 
 var log_in_redirectshadow_component = normalizeComponent(
   log_in_redirect_log_in_redirectvue_type_script_lang_ts_shadow,
-  log_in_redirectvue_type_template_id_5509a270_shadow_render,
-  log_in_redirectvue_type_template_id_5509a270_shadow_staticRenderFns,
+  log_in_redirectvue_type_template_id_670797d0_shadow_render,
+  log_in_redirectvue_type_template_id_670797d0_shadow_staticRenderFns,
   false,
   null,
   null,
@@ -6773,26 +6827,22 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 
 
 
-
-var auth_service_AuthService =
-/*#__PURE__*/
-function () {
-  function AuthService() {
-    _classCallCheck(this, AuthService);
-
+class auth_service_AuthService {
+  constructor() {
     this.identityServer = "https://identity-test.tstarter.ru";
     this.identityServerApi = "https://identity-api-test.tstarter.ru";
     this.webAddress = "https://new1.tstarter.ru/new";
+    this.cookieStorage = new lib["CookieStorage"]();
     var AUTH0_DOMAIN = this.identityServer;
     var MY_HOST = window.location.origin;
     var settings = {
       userStore: new oidc_client_min["WebStorageStateStore"]({
-        store: window.localStorage
+        store: this.cookieStorage
       }),
       authority: AUTH0_DOMAIN,
       client_id: 'kl',
-      redirect_uri: "".concat(this.webAddress, "/callback.html"),
-      post_logout_redirect_uri: "".concat(MY_HOST, "/"),
+      redirect_uri: `${this.webAddress}/callback.html`,
+      post_logout_redirect_uri: `${MY_HOST}/`,
       response_type: 'id_token token',
       scope: 'openid profile roles',
       filterProtocolClaims: true,
@@ -6808,45 +6858,35 @@ function () {
     this.userManager = new oidc_client_min["UserManager"](settings);
   }
 
-  _createClass(AuthService, [{
-    key: "registration",
-    value: function registration(user) {
-      return axios_default.a.post("".concat(this.identityServerApi, "/api/account/register"), user);
-    }
-  }, {
-    key: "getUser",
-    value: function getUser() {
-      return this.userManager.getUser();
-    }
-  }, {
-    key: "login",
-    value: function login() {
-      return this.userManager.signinRedirect();
-    }
-  }, {
-    key: "logout",
-    value: function logout() {
-      return this.userManager.signoutRedirect();
-    }
-  }, {
-    key: "saveUserInfo",
-    value: function saveUserInfo(key, user) {
-      localStorage.setItem(key, stringify_default()(user));
-    }
-  }, {
-    key: "removeFromLocalStorageByKey",
-    value: function removeFromLocalStorageByKey(key) {
-      localStorage.removeItem(key);
-    }
-  }, {
-    key: "updateUserStorage",
-    value: function updateUserStorage(key, userObject) {
-      this.userManager.settings.userStore.set(key, stringify_default()(userObject));
-    }
-  }]);
+  registration(user) {
+    return axios_default.a.post(`${this.identityServerApi}/api/account/register`, user);
+  }
 
-  return AuthService;
-}();
+  getUser() {
+    return this.userManager.getUser();
+  }
+
+  login() {
+    return this.userManager.signinRedirect();
+  }
+
+  logout() {
+    return this.userManager.signoutRedirect();
+  }
+
+  saveUserInfo(key, user) {
+    this.cookieStorage.setItem(key, stringify_default()(user));
+  }
+
+  removeFromCookieStorageByKey(key) {
+    this.cookieStorage.removeItem(key);
+  }
+
+  updateUserStorage(key, userObject) {
+    this.userManager.settings.userStore.set(key, stringify_default()(userObject));
+  }
+
+}
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=script&lang=ts&
 
 
@@ -7337,12 +7377,6 @@ var models = __webpack_require__("0d59");
 // CONCATENATED MODULE: ./src/store/modules/authentication.module.ts
 
 
-
-
-
-
-
-
 var authentication_module_a, authentication_module_b, _c;
 
 
@@ -7351,136 +7385,105 @@ var authentication_module_a, authentication_module_b, _c;
 
 
 
-var authentication_module_Authentication =
-/*#__PURE__*/
-function (_VuexModule) {
-  _inherits(Authentication, _VuexModule);
-
-  function Authentication() {
-    var _this;
-
-    _classCallCheck(this, Authentication);
-
-    _this = _possibleConstructorReturn(this, getPrototypeOf_getPrototypeOf(Authentication).apply(this, arguments));
-    _this.localStorageKey = 'user';
-    _this.userInfoString = localStorage.getItem(_this.localStorageKey);
-    _this.user = _this.userInfoString ? JSON.parse(_this.userInfoString) : null;
-    _this.name = ((_this.user || '').profile || '').name || '';
-    _this.email = '';
-    _this.password = '';
-    _this.token = (_this.user || '').id_token || '';
-    _this.roles = [];
-    _this.status = {
+var authentication_module_Authentication = class Authentication extends VuexModule {
+  constructor() {
+    super(...arguments);
+    this.cookieStorage = new lib["CookieStorage"]();
+    this.cookieStorageKey = 'user';
+    this.userInfoString = this.cookieStorage.getItem(this.cookieStorageKey);
+    this.user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
+    this.name = ((this.user || '').profile || '').name || '';
+    this.email = '';
+    this.password = '';
+    this.token = (this.user || '').id_token || '';
+    this.roles = [];
+    this.status = {
       loggingIn: false,
-      loggedIn: _this.user !== null && !(_this.user || false).expired // we should get user info and expired have to be false
+      loggedIn: this.user !== null && !(this.user || false).expired // we should get user info and expired have to be false
 
     };
-    _this.avatar = '';
-    _this.auth = new auth_service_AuthService();
-    return _this;
+    this.avatar = '';
+    this.auth = new auth_service_AuthService();
   }
 
-  _createClass(Authentication, [{
-    key: "LOGIN_REQUEST",
-    value: function LOGIN_REQUEST() {
-      this.status.loggingIn = true;
-    }
-  }, {
-    key: "LOGOUT",
-    value: function LOGOUT() {
-      this.status.loggedIn = false;
-      this.status.loggingIn = false;
-    }
-  }, {
-    key: "SUCCESS_LOGIN",
-    value: function SUCCESS_LOGIN(user) {
-      this.name = user.profile.name;
-      this.token = user.id_token;
-      this.accessTokenExpired = user.expired;
-      this.status.loggedIn = user !== null && !user.expired;
-      this.status.loggingIn = false;
-    }
-  }, {
-    key: "ERROR_LOGIN",
-    value: function ERROR_LOGIN(user) {
-      this.name = '';
-      this.accessTokenExpired = false;
-      this.status.loggedIn = false;
-      this.status.loggingIn = false;
-    }
-  }, {
-    key: "MOCK_LOGIN",
-    value: function MOCK_LOGIN() {
-      this.status.loggedIn = true;
-    }
-  }, {
-    key: "MOCK_LOGOUT",
-    value: function MOCK_LOGOUT() {
-      this.status.loggedIn = false;
-    }
-  }, {
-    key: "login",
-    value: function login() {
-      this.auth.login();
-    }
-  }, {
-    key: "actualizeUser",
-    value: function actualizeUser() {
-      var _this2 = this;
+  get logged() {
+    return this.status.loggedIn;
+  }
 
-      this.auth.getUser().then(function (user) {
-        if (user) {
-          _this2.auth.saveUserInfo(_this2.localStorageKey, user);
+  LOGIN_REQUEST() {
+    this.status.loggingIn = true;
+  }
 
-          _this2.context.commit('SUCCESS_LOGIN', user);
-        } else {
-          _this2.context.commit('ERROR_LOGIN');
-        }
-      });
-    }
-  }, {
-    key: "logout",
-    value: function logout() {
-      var _this3 = this;
+  LOGOUT() {
+    this.status.loggedIn = false;
+    this.status.loggingIn = false;
+  }
 
-      this.auth.logout().then(function () {
-        _this3.context.commit('LOGOUT');
+  SUCCESS_LOGIN(user) {
+    this.name = user.profile.name;
+    this.token = user.id_token;
+    this.accessTokenExpired = user.expired;
+    this.status.loggedIn = user !== null && !user.expired;
+    this.status.loggingIn = false;
+  }
 
-        _this3.auth.removeFromLocalStorageByKey(_this3.localStorageKey);
-      });
-    }
-  }, {
-    key: "mockLogin",
-    value: function mockLogin() {
-      this.context.commit('MOCK_LOGIN');
-    }
-  }, {
-    key: "mockLogout",
-    value: function mockLogout() {
-      this.context.commit('MOCK_LOGOUT');
-    }
-  }, {
-    key: "UPDATE_USER_NAME",
-    value: function UPDATE_USER_NAME(newUserName) {
-      this.name = newUserName;
-    }
-  }, {
-    key: "updateUser",
-    value: function updateUser(_ref) {
-      var key = _ref.key,
-          userObject = _ref.userObject;
-      this.auth.updateUserStorage(key, userObject);
-      this.context.commit('UPDATE_USER_NAME', userObject.profile.name);
-    }
-  }, {
-    key: "logged",
-    get: function get() {
-      return this.status.loggedIn;
-    }
-  }]);
+  ERROR_LOGIN(user) {
+    this.name = '';
+    this.accessTokenExpired = false;
+    this.status.loggedIn = false;
+    this.status.loggingIn = false;
+  }
 
-  return Authentication;
-}(VuexModule);
+  MOCK_LOGIN() {
+    this.status.loggedIn = true;
+  }
+
+  MOCK_LOGOUT() {
+    this.status.loggedIn = false;
+  }
+
+  login() {
+    this.auth.login();
+  }
+
+  actualizeUser() {
+    this.auth.getUser().then(user => {
+      if (user) {
+        this.auth.saveUserInfo(this.cookieStorageKey, user);
+        this.context.commit('SUCCESS_LOGIN', user);
+      } else {
+        this.context.commit('ERROR_LOGIN');
+      }
+    });
+  }
+
+  logout() {
+    this.auth.logout().then(() => {
+      this.context.commit('LOGOUT');
+      this.auth.removeFromCookieStorageByKey(this.cookieStorageKey);
+    });
+  }
+
+  mockLogin() {
+    this.context.commit('MOCK_LOGIN');
+  }
+
+  mockLogout() {
+    this.context.commit('MOCK_LOGOUT');
+  }
+
+  UPDATE_USER_NAME(newUserName) {
+    this.name = newUserName;
+  }
+
+  updateUser(_ref) {
+    var key = _ref.key,
+        userObject = _ref.userObject;
+    this.auth.updateUserStorage(key, userObject);
+    this.context.commit('UPDATE_USER_NAME', userObject.profile.name);
+  }
+
+};
 
 __decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], authentication_module_Authentication.prototype, "LOGIN_REQUEST", null);
 
@@ -9163,171 +9166,133 @@ var profile_settingsvue_type_template_id_749fabb1_scoped_true_shadow_staticRende
 
 // CONCATENATED MODULE: ./src/components/user-profile/profile-settings/profile-settings.vue?vue&type=template&id=749fabb1&scoped=true&shadow
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=658fa6f7&
-var registration_data_tabvue_type_template_id_658fa6f7_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"registration-data-tab"},[_vm._m(0),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.updateProfileInfo($event)}}},[_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Название компании")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.companyName),expression:"userProfile.companyName"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"ИП Воронов И.Е"},domProps:{"value":(_vm.userProfile.companyName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "companyName", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row "},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Контактное лицо")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.name),expression:"userProfile.name"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"Егор Воронов"},domProps:{"value":(_vm.userProfile.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "name", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Телефон")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.phoneNumber),expression:"userProfile.phoneNumber"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"+7 (900) 111-11-11"},domProps:{"value":(_vm.userProfile.phoneNumber)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "phoneNumber", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Email")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.email),expression:"userProfile.email"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"voronov@gmail.com"},domProps:{"value":(_vm.userProfile.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "email", $event.target.value)}}})])]),_vm._m(1),_vm._m(2),_vm._m(3)])])}
-var registration_data_tabvue_type_template_id_658fa6f7_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"change-avatar"},[_c('div',{staticClass:"user-picture"}),_c('div',{staticClass:"change-user-picture border-green"},[_vm._v("\n      Изменить\n    ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 col-6 big-label"},[_vm._v("Пароль")]),_c('div',{staticClass:"col-xl-6 col-6"},[_c('div',{staticClass:"green-link border-green text-left text-right-mobile"},[_vm._v("Сменить пароль")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 col-12"},[_c('button',{staticClass:"btn btn-yellow btn-block-mobile",attrs:{"type":"submit"}},[_vm._v("\n          Сохранить данные\n        ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 accept-policy col-12"},[_vm._v("\n        Нажимая на кнопку, вы даете согласие\n        на обработку"),_c('br'),_vm._v(" своих персональных данных\n        и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link solid-border-grey",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=2cb81582&
+var registration_data_tabvue_type_template_id_2cb81582_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"registration-data-tab"},[_vm._m(0),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.updateProfileInfo($event)}}},[_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Название компании")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.companyName),expression:"userProfile.companyName"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"ИП Воронов И.Е"},domProps:{"value":(_vm.userProfile.companyName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "companyName", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row "},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Контактное лицо")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.name),expression:"userProfile.name"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"Егор Воронов"},domProps:{"value":(_vm.userProfile.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "name", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Телефон")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.phoneNumber),expression:"userProfile.phoneNumber"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"+7 (900) 111-11-11"},domProps:{"value":(_vm.userProfile.phoneNumber)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "phoneNumber", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Email")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.email),expression:"userProfile.email"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"voronov@gmail.com"},domProps:{"value":(_vm.userProfile.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "email", $event.target.value)}}})])]),_vm._m(1),_vm._m(2),_vm._m(3)])])}
+var registration_data_tabvue_type_template_id_2cb81582_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"change-avatar"},[_c('div',{staticClass:"user-picture"}),_c('div',{staticClass:"change-user-picture border-green"},[_vm._v("\n      Изменить\n    ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 col-6 big-label"},[_vm._v("Пароль")]),_c('div',{staticClass:"col-xl-6 col-6"},[_c('div',{staticClass:"green-link border-green text-left text-right-mobile"},[_vm._v("Сменить пароль")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 col-12"},[_c('button',{staticClass:"btn btn-yellow btn-block-mobile",attrs:{"type":"submit"}},[_vm._v("\n          Сохранить данные\n        ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 accept-policy col-12"},[_vm._v("\n        Нажимая на кнопку, вы даете согласие\n        на обработку"),_c('br'),_vm._v(" своих персональных данных\n        и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link solid-border-grey",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])])}]
 
 
-// CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=658fa6f7&
+// CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=2cb81582&
 
 // CONCATENATED MODULE: ./src/services/profile.service.ts
 
 
 
 
-
-
-var profile_service_ProfileService =
-/*#__PURE__*/
-function () {
-  function ProfileService() {
-    _classCallCheck(this, ProfileService);
-
+class profile_service_ProfileService {
+  constructor() {
     this.webAppHost = "https://new1.tstarter.ru/new";
     this.identityServerHost = "https://identity-test.tstarter.ru";
+    this.cookieStorage = new lib["CookieStorage"]();
     this.userKey = 'user';
-    this.identityUserKey = "".concat(this.userKey, ":").concat(this.identityServerHost, ":kl");
+    this.identityUserKey = `${this.userKey}:${this.identityServerHost}:kl`;
   }
 
-  _createClass(ProfileService, [{
-    key: "getProfileInfoByUserId",
-    value: function getProfileInfoByUserId(login) {
-      return axios_default.a.get("".concat(this.webAppHost, "/api/profile/").concat(login)).then(function (x) {
-        return x;
-      });
+  getProfileInfoByUserId(login) {
+    return axios_default.a.get(`${this.webAppHost}/api/profile/${login}`).then(x => x);
+  }
+
+  updateProfileInfo(updatedUserProfile) {
+    return axios_default.a.put(`${this.webAppHost}/api/profile`, updatedUserProfile).then(x => {
+      this.updateUserName(updatedUserProfile.name);
+      return x;
+    });
+  }
+
+  updateUserName(newUserName) {
+    var key = this.identityUserKey;
+    var user = this.cookieStorage.getItem(this.userKey);
+
+    if (!user) {
+      return;
     }
-  }, {
-    key: "updateProfileInfo",
-    value: function updateProfileInfo(updatedUserProfile) {
-      var _this = this;
 
-      return axios_default.a.put("".concat(this.webAppHost, "/api/profile"), updatedUserProfile).then(function (x) {
-        _this.updateUserName(updatedUserProfile.name);
+    var userObject = JSON.parse(user);
+    userObject.profile.name = newUserName;
+    userObject.profile.preferred_username = newUserName;
+    this.cookieStorage.setItem(this.userKey, stringify_default()(userObject));
+    store.dispatch('auth/updateUser', {
+      key,
+      userObject
+    });
+  }
 
-        return x;
-      });
-    }
-  }, {
-    key: "updateUserName",
-    value: function updateUserName(newUserName) {
-      var key = this.identityUserKey;
-      var user = localStorage.getItem(this.userKey);
-
-      if (!user) {
-        return;
-      }
-
-      var userObject = JSON.parse(user);
-      userObject.profile.name = newUserName;
-      userObject.profile.preferred_username = newUserName;
-      localStorage.setItem(this.userKey, stringify_default()(userObject));
-      store.dispatch('auth/updateUser', {
-        key: key,
-        userObject: userObject
-      });
-    }
-  }]);
-
-  return ProfileService;
-}();
+}
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=script&lang=ts&
 
 
 
 
-
-
-
-
-
-
-var registration_data_tabvue_type_script_lang_ts_RegistrationDataTab =
-/*#__PURE__*/
-function (_Vue) {
-  _inherits(RegistrationDataTab, _Vue);
-
-  function RegistrationDataTab() {
-    var _this;
-
-    _classCallCheck(this, RegistrationDataTab);
-
-    _this = _possibleConstructorReturn(this, getPrototypeOf_getPrototypeOf(RegistrationDataTab).apply(this, arguments));
-    _this.profileService = new profile_service_ProfileService();
-    _this.userProfile = {};
-    return _this;
+var registration_data_tabvue_type_script_lang_ts_RegistrationDataTab = class RegistrationDataTab extends external_Vue_default.a {
+  constructor() {
+    super(...arguments);
+    this.cookieStorage = new lib["CookieStorage"]();
+    this.profileService = new profile_service_ProfileService();
+    this.userProfile = {};
   }
 
-  _createClass(RegistrationDataTab, [{
-    key: "updateProfileInfo",
-    value: function updateProfileInfo() {
-      this.profileService.updateProfileInfo(this.userProfile).then(function (res) {
-        // eslint-disable-next-line
-        console.log(res);
-      }).catch(function (error) {
-        // eslint-disable-next-line
-        console.error(error);
-      });
+  updateProfileInfo() {
+    this.profileService.updateProfileInfo(this.userProfile).then(res => {
+      // eslint-disable-next-line
+      console.log(res);
+    }).catch(error => {
+      // eslint-disable-next-line
+      console.error(error);
+    });
+  }
+
+  mounted() {
+    this.getProfileInfoByUserName();
+  }
+
+  getProfileInfoByUserName() {
+    var userFromCookieStorage = this.cookieStorage.getItem('user') || null;
+
+    if (!userFromCookieStorage) {
+      return;
     }
-  }, {
-    key: "mounted",
-    value: function mounted() {
-      this.getProfileInfoByUserName();
+
+    var userObject = JSON.parse(userFromCookieStorage);
+    var login = userObject.profile.name;
+
+    if (!login) {
+      return;
     }
-  }, {
-    key: "getProfileInfoByUserName",
-    value: function getProfileInfoByUserName() {
-      var _this2 = this;
 
-      var userFromLocalStorage = localStorage.getItem('user') || null;
+    this.profileService.getProfileInfoByUserId(login).then(res => {
+      this.userProfile = res.data;
+    }).catch(error => {
+      // eslint-disable-next-line
+      console.error(error);
+    });
+  }
 
-      if (!userFromLocalStorage) {
-        return;
-      }
-
-      var userObject = JSON.parse(userFromLocalStorage);
-      var login = userObject.profile.name;
-
-      if (!login) {
-        return;
-      }
-
-      this.profileService.getProfileInfoByUserId(login).then(function (res) {
-        _this2.userProfile = res.data;
-      }).catch(function (error) {
-        // eslint-disable-next-line
-        console.error(error);
-      });
-    }
-  }]);
-
-  return RegistrationDataTab;
-}(external_Vue_default.a);
-
+};
 registration_data_tabvue_type_script_lang_ts_RegistrationDataTab = __decorate([vue_class_component_common_default.a], registration_data_tabvue_type_script_lang_ts_RegistrationDataTab);
 /* harmony default export */ var registration_data_tabvue_type_script_lang_ts_ = (registration_data_tabvue_type_script_lang_ts_RegistrationDataTab);
 // CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=script&lang=ts&
  /* harmony default export */ var registration_data_tab_registration_data_tabvue_type_script_lang_ts_ = (registration_data_tabvue_type_script_lang_ts_); 
-// EXTERNAL MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=style&index=0&lang=scss&
-var registration_data_tabvue_type_style_index_0_lang_scss_ = __webpack_require__("cf55");
-
 // CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue
 
 
 
+function registration_data_tab_injectStyles (context) {
+  
+  var style0 = __webpack_require__("cf55")
+if (style0.__inject__) style0.__inject__(context)
 
-
+}
 
 /* normalize component */
 
 var registration_data_tab_component = normalizeComponent(
   registration_data_tab_registration_data_tabvue_type_script_lang_ts_,
-  registration_data_tabvue_type_template_id_658fa6f7_render,
-  registration_data_tabvue_type_template_id_658fa6f7_staticRenderFns,
+  registration_data_tabvue_type_template_id_2cb81582_render,
+  registration_data_tabvue_type_template_id_2cb81582_staticRenderFns,
   false,
-  null,
+  registration_data_tab_injectStyles,
   null,
   null
-  
+  ,true
 )
 
 registration_data_tab_component.options.__file = "registration-data-tab.vue"
@@ -10642,20 +10607,22 @@ var main_profile_homeshadow_component = normalizeComponent(
 
 main_profile_homeshadow_component.options.__file = "main-profile-home.vue"
 /* harmony default export */ var main_profile_homeshadow = (main_profile_homeshadow_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=18a02792&shadow
-var registration_data_tabvue_type_template_id_18a02792_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"registration-data-tab"},[_vm._m(0),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.updateProfileInfo($event)}}},[_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Название компании")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.companyName),expression:"userProfile.companyName"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"ИП Воронов И.Е"},domProps:{"value":(_vm.userProfile.companyName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "companyName", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row "},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Контактное лицо")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.name),expression:"userProfile.name"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"Егор Воронов"},domProps:{"value":(_vm.userProfile.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "name", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Телефон")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.phoneNumber),expression:"userProfile.phoneNumber"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"+7 (900) 111-11-11"},domProps:{"value":(_vm.userProfile.phoneNumber)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "phoneNumber", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Email")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.email),expression:"userProfile.email"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"voronov@gmail.com"},domProps:{"value":(_vm.userProfile.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "email", $event.target.value)}}})])]),_vm._m(1),_vm._m(2),_vm._m(3)])])}
-var registration_data_tabvue_type_template_id_18a02792_shadow_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"change-avatar"},[_c('div',{staticClass:"user-picture"}),_c('div',{staticClass:"change-user-picture border-green"},[_vm._v("\n      Изменить\n    ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 col-6 big-label"},[_vm._v("Пароль")]),_c('div',{staticClass:"col-xl-6 col-6"},[_c('div',{staticClass:"green-link border-green text-left text-right-mobile"},[_vm._v("Сменить пароль")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 col-12"},[_c('button',{staticClass:"btn btn-yellow btn-block-mobile",attrs:{"type":"submit"}},[_vm._v("\n          Сохранить данные\n        ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 accept-policy col-12"},[_vm._v("\n        Нажимая на кнопку, вы даете согласие\n        на обработку"),_c('br'),_vm._v(" своих персональных данных\n        и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link solid-border-grey",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=07f9f704&shadow
+var registration_data_tabvue_type_template_id_07f9f704_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"registration-data-tab"},[_vm._m(0),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.updateProfileInfo($event)}}},[_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Название компании")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.companyName),expression:"userProfile.companyName"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"ИП Воронов И.Е"},domProps:{"value":(_vm.userProfile.companyName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "companyName", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row "},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Контактное лицо")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.name),expression:"userProfile.name"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"Егор Воронов"},domProps:{"value":(_vm.userProfile.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "name", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Телефон")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.phoneNumber),expression:"userProfile.phoneNumber"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"+7 (900) 111-11-11"},domProps:{"value":(_vm.userProfile.phoneNumber)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "phoneNumber", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Email")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.email),expression:"userProfile.email"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"voronov@gmail.com"},domProps:{"value":(_vm.userProfile.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "email", $event.target.value)}}})])]),_vm._m(1),_vm._m(2),_vm._m(3)])])}
+var registration_data_tabvue_type_template_id_07f9f704_shadow_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"change-avatar"},[_c('div',{staticClass:"user-picture"}),_c('div',{staticClass:"change-user-picture border-green"},[_vm._v("\n      Изменить\n    ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 col-6 big-label"},[_vm._v("Пароль")]),_c('div',{staticClass:"col-xl-6 col-6"},[_c('div',{staticClass:"green-link border-green text-left text-right-mobile"},[_vm._v("Сменить пароль")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 col-12"},[_c('button',{staticClass:"btn btn-yellow btn-block-mobile",attrs:{"type":"submit"}},[_vm._v("\n          Сохранить данные\n        ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 accept-policy col-12"},[_vm._v("\n        Нажимая на кнопку, вы даете согласие\n        на обработку"),_c('br'),_vm._v(" своих персональных данных\n        и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link solid-border-grey",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])])}]
 
 
-// CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=18a02792&shadow
+// CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=07f9f704&shadow
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=script&lang=ts&shadow
+
 
 
 
 var registration_data_tabvue_type_script_lang_ts_shadow_RegistrationDataTab = class RegistrationDataTab extends external_Vue_default.a {
   constructor() {
     super(...arguments);
+    this.cookieStorage = new lib["CookieStorage"]();
     this.profileService = new profile_service_ProfileService();
     this.userProfile = {};
   }
@@ -10675,13 +10642,13 @@ var registration_data_tabvue_type_script_lang_ts_shadow_RegistrationDataTab = cl
   }
 
   getProfileInfoByUserName() {
-    var userFromLocalStorage = localStorage.getItem('user') || null;
+    var userFromCookieStorage = this.cookieStorage.getItem('user') || null;
 
-    if (!userFromLocalStorage) {
+    if (!userFromCookieStorage) {
       return;
     }
 
-    var userObject = JSON.parse(userFromLocalStorage);
+    var userObject = JSON.parse(userFromCookieStorage);
     var login = userObject.profile.name;
 
     if (!login) {
@@ -10716,8 +10683,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var registration_data_tabshadow_component = normalizeComponent(
   registration_data_tab_registration_data_tabvue_type_script_lang_ts_shadow,
-  registration_data_tabvue_type_template_id_18a02792_shadow_render,
-  registration_data_tabvue_type_template_id_18a02792_shadow_staticRenderFns,
+  registration_data_tabvue_type_template_id_07f9f704_shadow_render,
+  registration_data_tabvue_type_template_id_07f9f704_shadow_staticRenderFns,
   false,
   registration_data_tabshadow_injectStyles,
   null,
@@ -14240,6 +14207,160 @@ module.exports.__inject__ = function (shadowRoot) {
 
 /***/ }),
 
+/***/ "c130":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var format_cookie_1 = __webpack_require__("e027");
+var parse_cookies_1 = __webpack_require__("2db4");
+
+var CookieStorage = function () {
+    function CookieStorage(defaultOptions) {
+        _classCallCheck(this, CookieStorage);
+
+        this._defaultOptions = Object.assign({
+            path: null,
+            domain: null,
+            expires: null,
+            secure: false
+        }, defaultOptions);
+        if (typeof Proxy !== 'undefined') {
+            return new Proxy(this, CookieStorageHandler);
+        }
+    }
+
+    _createClass(CookieStorage, [{
+        key: "clear",
+        value: function clear() {
+            var _this = this;
+
+            var parsed = parse_cookies_1.parseCookies(this._getCookie());
+            var keys = Object.keys(parsed);
+            keys.forEach(function (key) {
+                return _this.removeItem(key);
+            });
+        }
+    }, {
+        key: "getItem",
+        value: function getItem(key) {
+            var parsed = parse_cookies_1.parseCookies(this._getCookie());
+            return parsed.hasOwnProperty(key) ? parsed[key] : null;
+        }
+    }, {
+        key: "key",
+        value: function key(index) {
+            var parsed = parse_cookies_1.parseCookies(this._getCookie());
+            var sortedKeys = Object.keys(parsed).sort();
+            return index < sortedKeys.length ? sortedKeys[index] : null;
+        }
+    }, {
+        key: "removeItem",
+        value: function removeItem(key, cookieOptions) {
+            var data = '';
+            var options = Object.assign({}, this._defaultOptions, cookieOptions, {
+                expires: new Date(0)
+            });
+            var formatted = format_cookie_1.formatCookie(key, data, options);
+            this._setCookie(formatted);
+        }
+    }, {
+        key: "setItem",
+        value: function setItem(key, data, options) {
+            var opts = Object.assign({}, this._defaultOptions, options);
+            var formatted = format_cookie_1.formatCookie(key, data, opts);
+            this._setCookie(formatted);
+        }
+    }, {
+        key: "_getCookie",
+        value: function _getCookie() {
+            return typeof document === 'undefined' ? '' : typeof document.cookie === 'undefined' ? '' : document.cookie;
+        }
+    }, {
+        key: "_setCookie",
+        value: function _setCookie(value) {
+            document.cookie = value;
+        }
+    }, {
+        key: "length",
+        get: function get() {
+            var parsed = parse_cookies_1.parseCookies(this._getCookie());
+            var keys = Object.keys(parsed);
+            return keys.length;
+        }
+    }]);
+
+    return CookieStorage;
+}();
+
+exports.CookieStorage = CookieStorage;
+var CookieStorageHandler = {
+    get: function get(target, p) {
+        if (p in target) {
+            return target[p];
+        } else {
+            var result = target.getItem(p.toString());
+            return result ? result : undefined;
+        }
+    },
+    set: function set(target, p, value) {
+        target.setItem(p.toString(), value);
+        return true;
+    },
+    has: function has(target, p) {
+        if (p in target) {
+            return true;
+        } else {
+            return target.getItem(p.toString()) ? true : false;
+        }
+    },
+    deleteProperty: function deleteProperty(target, p) {
+        target.removeItem(p.toString());
+        return true;
+    },
+    defineProperty: function defineProperty(target, p, attributes) {
+        var isExtensible = Object.isExtensible(target);
+        var alreadyExists = target.getItem(p.toString());
+        if (!isExtensible && !alreadyExists) {
+            throw new TypeError("Can't add property " + p.toString() + ", object is not extensible");
+        } else {
+            target.setItem(p.toString(), attributes.value);
+            return true;
+        }
+    },
+    ownKeys: function ownKeys(target) {
+        var keys = [];
+        for (var i = 0; i < target.length; i++) {
+            if (target.key(i) == null) {
+                continue;
+            } else {
+                keys.push(target.key(i));
+            }
+        }
+        return keys;
+    },
+    getOwnPropertyDescriptor: function getOwnPropertyDescriptor(target, p) {
+        if (p in target) {
+            return undefined;
+        } else {
+            return {
+                value: target.getItem(p.toString()),
+                writable: true,
+                enumerable: true,
+                configurable: true
+            };
+        }
+    }
+};
+
+/***/ }),
+
 /***/ "c207":
 /***/ (function(module, exports) {
 
@@ -15067,10 +15188,11 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_data_tab_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("baba");
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_data_tab_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_data_tab_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_data_tab_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_data_tab_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_data_tab_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_lib_loader_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_registration_data_tab_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -15609,6 +15731,36 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("4362")))
+
+/***/ }),
+
+/***/ "e027":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var formatOptions = function formatOptions(o) {
+    var path = o.path,
+        domain = o.domain,
+        expires = o.expires,
+        secure = o.secure;
+
+    var sameSiteValue = getSameSiteValue(o);
+    return [typeof path === 'undefined' || path === null ? '' : ';path=' + path, typeof domain === 'undefined' || domain === null ? '' : ';domain=' + domain, typeof expires === 'undefined' || expires === null ? '' : ';expires=' + expires.toUTCString(), typeof secure === 'undefined' || secure === null || secure === false ? '' : ';secure', sameSiteValue === null ? '' : ';SameSite=' + sameSiteValue].join('');
+};
+var getSameSiteValue = function getSameSiteValue(o) {
+    var sameSite = o.sameSite;
+
+    if (typeof sameSite === 'undefined') return null;
+    if (['lax', 'strict'].indexOf(sameSite.toLowerCase()) >= 0) return sameSite;
+    return null;
+};
+var formatCookie = function formatCookie(k, d, o) {
+    return [encodeURIComponent(k), '=', encodeURIComponent(d), formatOptions(o)].join('');
+};
+exports.formatCookie = formatCookie;
 
 /***/ }),
 

@@ -4,6 +4,7 @@ import { store } from '../index'
 import { AuthService } from '@/services/auth.service'
 import { User } from 'oidc-client'
 import { IKeyUserObject } from '@/models/index'
+import { CookieStorage } from 'cookie-storage';
 
 export interface IAuthState {
   name: string;
@@ -20,8 +21,9 @@ export interface IAuthState {
 
 @Module({ dynamic: true, store, name: 'auth', namespaced: true })
 export class Authentication extends VuexModule implements IAuthState {
-  private localStorageKey = 'user'
-  private userInfoString = localStorage.getItem(this.localStorageKey)
+  private cookieStorage = new CookieStorage()
+  private cookieStorageKey = 'user'
+  private userInfoString = this.cookieStorage.getItem(this.cookieStorageKey)
   private user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
 
   public name = ((this.user || '').profile || '').name || '';
@@ -91,7 +93,7 @@ export class Authentication extends VuexModule implements IAuthState {
   public actualizeUser () {
     this.auth.getUser().then(user => {
       if (user) {
-        this.auth.saveUserInfo(this.localStorageKey, user)
+        this.auth.saveUserInfo(this.cookieStorageKey, user)
         this.context.commit('SUCCESS_LOGIN', user)
       } else {
         this.context.commit('ERROR_LOGIN')
@@ -103,7 +105,7 @@ export class Authentication extends VuexModule implements IAuthState {
   logout () {
     this.auth.logout().then(() => {
       this.context.commit('LOGOUT')
-      this.auth.removeFromLocalStorageByKey(this.localStorageKey)
+      this.auth.removeFromCookieStorageByKey(this.cookieStorageKey)
     })
   }
 
