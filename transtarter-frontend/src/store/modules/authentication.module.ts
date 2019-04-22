@@ -4,7 +4,7 @@ import { store } from '../index'
 import { AuthService } from '@/services/auth.service'
 import { User } from 'oidc-client'
 import { IKeyUserObject } from '@/models/index'
-import { CookieStorage } from 'cookie-storage';
+import cookieStorage from 'cookie-storage-v2';
 
 export interface IAuthState {
   name: string;
@@ -21,9 +21,8 @@ export interface IAuthState {
 
 @Module({ dynamic: true, store, name: 'auth', namespaced: true })
 export class Authentication extends VuexModule implements IAuthState {
-  private cookieStorage = new CookieStorage()
   private cookieStorageKey = 'user'
-  private userInfoString = this.cookieStorage.getItem(this.cookieStorageKey)
+  private userInfoString = cookieStorage.getItem(this.cookieStorageKey)
   private user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
 
   public name = ((this.user || '').profile || '').name || '';

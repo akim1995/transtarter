@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "cookie-storage": "^3.2.0",
+    "cookie-storage-v2": "^1.1.1",
     "faker": "^4.1.0",
-    "oidc-client": "^1.6.1",
+    "oidc-client": "^1.7.1",
     "vue": "^2.5.21",
     "vue-carousel": "^0.17.0",
     "vue-class-component": "^6.0.0",

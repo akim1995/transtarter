@@ -92,11 +92,10 @@ import { Component, Vue } from 'vue-property-decorator'
 import { ProfileService } from '@/services/profile.service'
 import { IUserProfile } from '@/models/index'
 import { User } from 'oidc-client'
-import { CookieStorage } from 'cookie-storage';
+import cookieStorage from 'cookie-storage-v2';
 
 @Component
 export default class RegistrationDataTab extends Vue {
-  private cookieStorage = new CookieStorage()
   profileService = new ProfileService();
   userProfile = {} as IUserProfile;
 
@@ -118,7 +117,7 @@ export default class RegistrationDataTab extends Vue {
   }
 
   getProfileInfoByUserName () {
-    const userFromCookieStorage = this.cookieStorage.getItem('user') || null
+    const userFromCookieStorage = cookieStorage.getItem('user') || null
     if (!userFromCookieStorage) {
       return
     }
