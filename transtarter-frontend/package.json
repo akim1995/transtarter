@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest ./dist/app",
+    "build:staging": "vue-cli-service build --dest ./dist/app --mode staging",
     "lint": "vue-cli-service lint --no-fix",
     "test:unit": "vue-cli-service test:unit || exit 0",
     "test:unit:debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js test:unit --runInBand",
