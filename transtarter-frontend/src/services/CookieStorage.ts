@@ -3,6 +3,12 @@ import extractDomain from 'extract-domain';
  * Custom Cookie Storage to store cookie across subdomains (used for oidc)
  */
 class CookieStorage {
+    private getCurrentCookieDomain() {
+        return (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+            ? 'localhost'
+            : `.${extractDomain(window.location.href)}`; 
+    }
+
     public getItem(key) {
         const safeKey = encodeURIComponent(key);
         const value = document.cookie
@@ -15,14 +21,11 @@ class CookieStorage {
     }
     public setItem(key, value) {
         const safeKey = encodeURIComponent(key);
-        const domain = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-            ? 'localhost'
-            : `.${extractDomain(window.location.href)}`; // to be accessed from all subdomains
-        document.cookie = `${safeKey}=${encodeURIComponent(value)};domain=${domain};path=/`;
+        document.cookie = `${safeKey}=${encodeURIComponent(value)};domain=${this.getCurrentCookieDomain()};path=/`; // to be accessed from all subdomains
     }
     public removeItem(key) {
         const safeKey = encodeURIComponent(key);
-        document.cookie = `${safeKey}=; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+        document.cookie = `${safeKey}=; expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/; domain=${this.getCurrentCookieDomain()}`; // to be deleted from all subdomains
     }
 }
 

@@ -6215,6 +6215,10 @@ var extract_domain_min_default = /*#__PURE__*/__webpack_require__.n(extract_doma
  */
 
 class CookieStorage_CookieStorage {
+  getCurrentCookieDomain() {
+    return location.hostname === "localhost" || location.hostname === "127.0.0.1" ? 'localhost' : `.${extract_domain_min_default()(window.location.href)}`;
+  }
+
   getItem(key) {
     var safeKey = encodeURIComponent(key);
     var value = document.cookie.split(';').map(x => x.trim()).find(item => item.startsWith(`${safeKey}=`));
@@ -6226,14 +6230,12 @@ class CookieStorage_CookieStorage {
 
   setItem(key, value) {
     var safeKey = encodeURIComponent(key);
-    var domain = location.hostname === "localhost" || location.hostname === "127.0.0.1" ? 'localhost' : `.${extract_domain_min_default()(window.location.href)}`; // to be accessed from all subdomains
-
-    document.cookie = `${safeKey}=${encodeURIComponent(value)};domain=${domain};path=/`;
+    document.cookie = `${safeKey}=${encodeURIComponent(value)};domain=${this.getCurrentCookieDomain()};path=/`; // to be accessed from all subdomains
   }
 
   removeItem(key) {
     var safeKey = encodeURIComponent(key);
-    document.cookie = `${safeKey}=; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+    document.cookie = `${safeKey}=; expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/; domain=${this.getCurrentCookieDomain()}`; // to be deleted from all subdomains
   }
 
 }
