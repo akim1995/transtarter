@@ -7,12 +7,12 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { store } from '@/store/index'
-import cookieStorage from 'cookie-storage-v2';
+import CookieStorage from '../../../services/CookieStorage';
 
 @Component
 export default class LogInRedirect extends Vue {
   mounted () {
-    cookieStorage.setItem('shop-redirect', JSON.stringify(true))
+    CookieStorage.setItem('shop-redirect', JSON.stringify(true))
     store.dispatch('auth/login')
   }
 }

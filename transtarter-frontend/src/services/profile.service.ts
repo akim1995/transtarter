@@ -2,7 +2,7 @@ import axios from 'axios'
 import { IUserProfile } from '@/models/IUserProfile'
 import { User } from 'oidc-client'
 import { store } from '@/store/index'
-import cookieStorage from 'cookie-storage-v2';
+import CookieStorage from './CookieStorage';
 
 export class ProfileService {
     private webAppHost = process.env.VUE_APP_WEB_APP;
@@ -25,12 +25,12 @@ export class ProfileService {
 
     private updateUserName (newUserName: string) {
       const key = this.identityUserKey
-      const user = cookieStorage.getItem(this.userKey)
+      const user = CookieStorage.getItem(this.userKey)
       if (!user) { return }
       const userObject = JSON.parse(user) as User
       userObject.profile.name = newUserName
       userObject.profile.preferred_username = newUserName
-      cookieStorage.setItem(this.userKey, JSON.stringify(userObject))
+      CookieStorage.setItem(this.userKey, JSON.stringify(userObject))
       store.dispatch('auth/updateUser', { key, userObject })
     }
 }

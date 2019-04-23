@@ -6189,21 +6189,56 @@ var log_inshadow_component = normalizeComponent(
 
 log_inshadow_component.options.__file = "log-in.vue"
 /* harmony default export */ var log_inshadow = (log_inshadow_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=0463fcb0&shadow
-var log_in_redirectvue_type_template_id_0463fcb0_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n    Происходит редирект на Transtarter Identity Server\n")])}
-var log_in_redirectvue_type_template_id_0463fcb0_shadow_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=1115e7dc&shadow
+var log_in_redirectvue_type_template_id_1115e7dc_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n    Происходит редирект на Transtarter Identity Server\n")])}
+var log_in_redirectvue_type_template_id_1115e7dc_shadow_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=0463fcb0&shadow
+// CONCATENATED MODULE: ./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=template&id=1115e7dc&shadow
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js
 var stringify = __webpack_require__("f499");
 var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
 
-// EXTERNAL MODULE: ./node_modules/cookie-storage-v2/dist/cookie-storage.min.js
-var cookie_storage_min = __webpack_require__("5dfa");
-var cookie_storage_min_default = /*#__PURE__*/__webpack_require__.n(cookie_storage_min);
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
+var es6_regexp_split = __webpack_require__("28a5");
 
+// EXTERNAL MODULE: ./node_modules/extract-domain/dist/extract-domain.min.js
+var extract_domain_min = __webpack_require__("3cf7");
+var extract_domain_min_default = /*#__PURE__*/__webpack_require__.n(extract_domain_min);
+
+// CONCATENATED MODULE: ./src/services/CookieStorage.ts
+
+
+/**
+ * Custom Cookie Storage to store cookie across subdomains (used for oidc)
+ */
+
+class CookieStorage_CookieStorage {
+  getItem(key) {
+    var safeKey = encodeURIComponent(key);
+    var value = document.cookie.split(';').find(item => item.startsWith(`${safeKey}=`));
+
+    if (value) {
+      return decodeURIComponent(value.split(`${safeKey}=`)[1]);
+    }
+  }
+
+  setItem(key, value) {
+    var safeKey = encodeURIComponent(key);
+    var domain = location.hostname === "localhost" || location.hostname === "127.0.0.1" ? 'localhost' : `.${extract_domain_min_default()(window.location.href)}`; // to be accessed from all subdomains
+
+    document.cookie = `${safeKey}=${encodeURIComponent(value)};domain=${domain};path=/`;
+  }
+
+  removeItem(key) {
+    var safeKey = encodeURIComponent(key);
+    document.cookie = `${safeKey}=; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+  }
+
+}
+
+/* harmony default export */ var services_CookieStorage = (new CookieStorage_CookieStorage());
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-in-redirect/log-in-redirect.vue?vue&type=script&lang=ts&shadow
 
 
@@ -6212,7 +6247,7 @@ var cookie_storage_min_default = /*#__PURE__*/__webpack_require__.n(cookie_stora
 
 var log_in_redirectvue_type_script_lang_ts_shadow_LogInRedirect = class LogInRedirect extends external_Vue_default.a {
   mounted() {
-    cookie_storage_min_default.a.setItem('shop-redirect', stringify_default()(true));
+    services_CookieStorage.setItem('shop-redirect', stringify_default()(true));
     store.dispatch('auth/login');
   }
 
@@ -6231,8 +6266,8 @@ log_in_redirectvue_type_script_lang_ts_shadow_LogInRedirect = __decorate([vue_cl
 
 var log_in_redirectshadow_component = normalizeComponent(
   log_in_redirect_log_in_redirectvue_type_script_lang_ts_shadow,
-  log_in_redirectvue_type_template_id_0463fcb0_shadow_render,
-  log_in_redirectvue_type_template_id_0463fcb0_shadow_staticRenderFns,
+  log_in_redirectvue_type_template_id_1115e7dc_shadow_render,
+  log_in_redirectvue_type_template_id_1115e7dc_shadow_staticRenderFns,
   false,
   null,
   null,
@@ -7153,46 +7188,6 @@ var oidc_client_min = __webpack_require__("dd17");
 var axios = __webpack_require__("bc3a");
 var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
-var es6_regexp_split = __webpack_require__("28a5");
-
-// EXTERNAL MODULE: ./node_modules/extract-domain/dist/extract-domain.min.js
-var extract_domain_min = __webpack_require__("3cf7");
-var extract_domain_min_default = /*#__PURE__*/__webpack_require__.n(extract_domain_min);
-
-// CONCATENATED MODULE: ./src/services/CookieStore.ts
-
-
-/**
- * Custom Cookie Storage to store cookie across subdomains (used for oidc)
- */
-
-class CookieStore_CookieStore {
-  getItem(key) {
-    debugger;
-    var safeKey = encodeURIComponent(key);
-    var value = document.cookie.split(';').find(item => item.startsWith(`${safeKey}=`));
-
-    if (value) {
-      return decodeURIComponent(value.split(`${safeKey}=`)[1]);
-    }
-  }
-
-  setItem(key, value) {
-    debugger;
-    var safeKey = encodeURIComponent(key);
-    var domain = location.hostname === "localhost" || location.hostname === "127.0.0.1" ? 'localhost' : `.${extract_domain_min_default()(window.location.href)}`; // to be accessed from all subdomains
-
-    document.cookie = `${safeKey}=${encodeURIComponent(value)};domain=${domain};path=/`;
-  }
-
-  removeItem(key) {
-    var safeKey = encodeURIComponent(key);
-    document.cookie = `${safeKey}=; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
-  }
-
-}
-/* harmony default export */ var services_CookieStore = (new CookieStore_CookieStore());
 // CONCATENATED MODULE: ./src/services/auth.service.ts
 
 
@@ -7207,10 +7202,10 @@ class auth_service_AuthService {
     var MY_HOST = window.location.origin;
     var settings = {
       userStore: new oidc_client_min["WebStorageStateStore"]({
-        store: services_CookieStore
+        store: services_CookieStorage
       }),
       stateStore: new oidc_client_min["WebStorageStateStore"]({
-        store: services_CookieStore
+        store: services_CookieStorage
       }),
       authority: AUTH0_DOMAIN,
       client_id: 'kl',
@@ -7248,11 +7243,11 @@ class auth_service_AuthService {
   }
 
   saveUserInfo(key, user) {
-    services_CookieStore.setItem(key, stringify_default()(user));
+    services_CookieStorage.setItem(key, stringify_default()(user));
   }
 
   removeFromCookieStorageByKey(key) {
-    services_CookieStore.removeItem(key);
+    services_CookieStorage.removeItem(key);
   }
 
   updateUserStorage(key, userObject) {
@@ -7762,7 +7757,7 @@ var authentication_module_Authentication = class Authentication extends VuexModu
   constructor() {
     super(...arguments);
     this.cookieStorageKey = 'user';
-    this.userInfoString = cookie_storage_min_default.a.getItem(this.cookieStorageKey);
+    this.userInfoString = services_CookieStorage.getItem(this.cookieStorageKey);
     this.user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
     this.name = ((this.user || '').profile || '').name || '';
     this.email = '';
@@ -9538,12 +9533,12 @@ var profile_settingsvue_type_template_id_749fabb1_scoped_true_shadow_staticRende
 
 // CONCATENATED MODULE: ./src/components/user-profile/profile-settings/profile-settings.vue?vue&type=template&id=749fabb1&scoped=true&shadow
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=b73cf968&
-var registration_data_tabvue_type_template_id_b73cf968_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"registration-data-tab"},[_vm._m(0),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.updateProfileInfo($event)}}},[_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Название компании")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.companyName),expression:"userProfile.companyName"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"ИП Воронов И.Е"},domProps:{"value":(_vm.userProfile.companyName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "companyName", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row "},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Контактное лицо")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.name),expression:"userProfile.name"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"Егор Воронов"},domProps:{"value":(_vm.userProfile.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "name", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Телефон")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.phoneNumber),expression:"userProfile.phoneNumber"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"+7 (900) 111-11-11"},domProps:{"value":(_vm.userProfile.phoneNumber)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "phoneNumber", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Email")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.email),expression:"userProfile.email"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"voronov@gmail.com"},domProps:{"value":(_vm.userProfile.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "email", $event.target.value)}}})])]),_vm._m(1),_vm._m(2),_vm._m(3)])])}
-var registration_data_tabvue_type_template_id_b73cf968_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"change-avatar"},[_c('div',{staticClass:"user-picture"}),_c('div',{staticClass:"change-user-picture border-green"},[_vm._v("\n      Изменить\n    ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 col-6 big-label"},[_vm._v("Пароль")]),_c('div',{staticClass:"col-xl-6 col-6"},[_c('div',{staticClass:"green-link border-green text-left text-right-mobile"},[_vm._v("Сменить пароль")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 col-12"},[_c('button',{staticClass:"btn btn-yellow btn-block-mobile",attrs:{"type":"submit"}},[_vm._v("\n          Сохранить данные\n        ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 accept-policy col-12"},[_vm._v("\n        Нажимая на кнопку, вы даете согласие\n        на обработку"),_c('br'),_vm._v(" своих персональных данных\n        и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link solid-border-grey",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=0f399da2&
+var registration_data_tabvue_type_template_id_0f399da2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"registration-data-tab"},[_vm._m(0),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.updateProfileInfo($event)}}},[_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Название компании")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.companyName),expression:"userProfile.companyName"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"ИП Воронов И.Е"},domProps:{"value":(_vm.userProfile.companyName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "companyName", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row "},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Контактное лицо")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.name),expression:"userProfile.name"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"Егор Воронов"},domProps:{"value":(_vm.userProfile.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "name", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Телефон")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.phoneNumber),expression:"userProfile.phoneNumber"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"+7 (900) 111-11-11"},domProps:{"value":(_vm.userProfile.phoneNumber)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "phoneNumber", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Email")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.email),expression:"userProfile.email"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"voronov@gmail.com"},domProps:{"value":(_vm.userProfile.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "email", $event.target.value)}}})])]),_vm._m(1),_vm._m(2),_vm._m(3)])])}
+var registration_data_tabvue_type_template_id_0f399da2_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"change-avatar"},[_c('div',{staticClass:"user-picture"}),_c('div',{staticClass:"change-user-picture border-green"},[_vm._v("\n      Изменить\n    ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 col-6 big-label"},[_vm._v("Пароль")]),_c('div',{staticClass:"col-xl-6 col-6"},[_c('div',{staticClass:"green-link border-green text-left text-right-mobile"},[_vm._v("Сменить пароль")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 col-12"},[_c('button',{staticClass:"btn btn-yellow btn-block-mobile",attrs:{"type":"submit"}},[_vm._v("\n          Сохранить данные\n        ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 accept-policy col-12"},[_vm._v("\n        Нажимая на кнопку, вы даете согласие\n        на обработку"),_c('br'),_vm._v(" своих персональных данных\n        и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link solid-border-grey",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])])}]
 
 
-// CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=b73cf968&
+// CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=0f399da2&
 
 // CONCATENATED MODULE: ./src/services/profile.service.ts
 
@@ -9571,7 +9566,7 @@ class profile_service_ProfileService {
 
   updateUserName(newUserName) {
     var key = this.identityUserKey;
-    var user = cookie_storage_min_default.a.getItem(this.userKey);
+    var user = services_CookieStorage.getItem(this.userKey);
 
     if (!user) {
       return;
@@ -9580,7 +9575,7 @@ class profile_service_ProfileService {
     var userObject = JSON.parse(user);
     userObject.profile.name = newUserName;
     userObject.profile.preferred_username = newUserName;
-    cookie_storage_min_default.a.setItem(this.userKey, stringify_default()(userObject));
+    services_CookieStorage.setItem(this.userKey, stringify_default()(userObject));
     store.dispatch('auth/updateUser', {
       key,
       userObject
@@ -9615,7 +9610,7 @@ var registration_data_tabvue_type_script_lang_ts_RegistrationDataTab = class Reg
   }
 
   getProfileInfoByUserName() {
-    var userFromCookieStorage = cookie_storage_min_default.a.getItem('user') || null;
+    var userFromCookieStorage = services_CookieStorage.getItem('user') || null;
 
     if (!userFromCookieStorage) {
       return;
@@ -9656,8 +9651,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var registration_data_tab_component = normalizeComponent(
   registration_data_tab_registration_data_tabvue_type_script_lang_ts_,
-  registration_data_tabvue_type_template_id_b73cf968_render,
-  registration_data_tabvue_type_template_id_b73cf968_staticRenderFns,
+  registration_data_tabvue_type_template_id_0f399da2_render,
+  registration_data_tabvue_type_template_id_0f399da2_staticRenderFns,
   false,
   registration_data_tab_injectStyles,
   null,
@@ -10977,12 +10972,12 @@ var main_profile_homeshadow_component = normalizeComponent(
 
 main_profile_homeshadow_component.options.__file = "main-profile-home.vue"
 /* harmony default export */ var main_profile_homeshadow = (main_profile_homeshadow_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=6a890732&shadow
-var registration_data_tabvue_type_template_id_6a890732_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"registration-data-tab"},[_vm._m(0),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.updateProfileInfo($event)}}},[_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Название компании")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.companyName),expression:"userProfile.companyName"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"ИП Воронов И.Е"},domProps:{"value":(_vm.userProfile.companyName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "companyName", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row "},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Контактное лицо")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.name),expression:"userProfile.name"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"Егор Воронов"},domProps:{"value":(_vm.userProfile.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "name", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Телефон")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.phoneNumber),expression:"userProfile.phoneNumber"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"+7 (900) 111-11-11"},domProps:{"value":(_vm.userProfile.phoneNumber)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "phoneNumber", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Email")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.email),expression:"userProfile.email"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"voronov@gmail.com"},domProps:{"value":(_vm.userProfile.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "email", $event.target.value)}}})])]),_vm._m(1),_vm._m(2),_vm._m(3)])])}
-var registration_data_tabvue_type_template_id_6a890732_shadow_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"change-avatar"},[_c('div',{staticClass:"user-picture"}),_c('div',{staticClass:"change-user-picture border-green"},[_vm._v("\n      Изменить\n    ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 col-6 big-label"},[_vm._v("Пароль")]),_c('div',{staticClass:"col-xl-6 col-6"},[_c('div',{staticClass:"green-link border-green text-left text-right-mobile"},[_vm._v("Сменить пароль")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 col-12"},[_c('button',{staticClass:"btn btn-yellow btn-block-mobile",attrs:{"type":"submit"}},[_vm._v("\n          Сохранить данные\n        ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 accept-policy col-12"},[_vm._v("\n        Нажимая на кнопку, вы даете согласие\n        на обработку"),_c('br'),_vm._v(" своих персональных данных\n        и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link solid-border-grey",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=f056beb2&shadow
+var registration_data_tabvue_type_template_id_f056beb2_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"registration-data-tab"},[_vm._m(0),_c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.updateProfileInfo($event)}}},[_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Название компании")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.companyName),expression:"userProfile.companyName"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"ИП Воронов И.Е"},domProps:{"value":(_vm.userProfile.companyName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "companyName", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row "},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Контактное лицо")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.name),expression:"userProfile.name"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"Егор Воронов"},domProps:{"value":(_vm.userProfile.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "name", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Телефон")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.phoneNumber),expression:"userProfile.phoneNumber"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"+7 (900) 111-11-11"},domProps:{"value":(_vm.userProfile.phoneNumber)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "phoneNumber", $event.target.value)}}})])]),_c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 big-label mobile-top-label"},[_vm._v("Email")]),_c('div',{staticClass:"col-xl-6 col-12"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.userProfile.email),expression:"userProfile.email"}],staticClass:"form-control-lg",attrs:{"type":"text","placeholder":"voronov@gmail.com"},domProps:{"value":(_vm.userProfile.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.userProfile, "email", $event.target.value)}}})])]),_vm._m(1),_vm._m(2),_vm._m(3)])])}
+var registration_data_tabvue_type_template_id_f056beb2_shadow_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"change-avatar"},[_c('div',{staticClass:"user-picture"}),_c('div',{staticClass:"change-user-picture border-green"},[_vm._v("\n      Изменить\n    ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row row-with-big-space"},[_c('label',{staticClass:"col-xl-4 col-6 big-label"},[_vm._v("Пароль")]),_c('div',{staticClass:"col-xl-6 col-6"},[_c('div',{staticClass:"green-link border-green text-left text-right-mobile"},[_vm._v("Сменить пароль")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group row"},[_c('label',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 col-12"},[_c('button',{staticClass:"btn btn-yellow btn-block-mobile",attrs:{"type":"submit"}},[_vm._v("\n          Сохранить данные\n        ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xl-4 col-0"}),_c('div',{staticClass:"col-xl-6 accept-policy col-12"},[_vm._v("\n        Нажимая на кнопку, вы даете согласие\n        на обработку"),_c('br'),_vm._v(" своих персональных данных\n        и соглашаетесь"),_c('br'),_vm._v(" с "),_c('a',{staticClass:"policy-link solid-border-grey",attrs:{"href":"/politika"}},[_vm._v("Политикой конфиденциальности")])])])}]
 
 
-// CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=6a890732&shadow
+// CONCATENATED MODULE: ./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=template&id=f056beb2&shadow
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/user-profile/profile-settings/registration-data-tab/registration-data-tab.vue?vue&type=script&lang=ts&shadow
 
@@ -11011,7 +11006,7 @@ var registration_data_tabvue_type_script_lang_ts_shadow_RegistrationDataTab = cl
   }
 
   getProfileInfoByUserName() {
-    var userFromCookieStorage = cookie_storage_min_default.a.getItem('user') || null;
+    var userFromCookieStorage = services_CookieStorage.getItem('user') || null;
 
     if (!userFromCookieStorage) {
       return;
@@ -11052,8 +11047,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var registration_data_tabshadow_component = normalizeComponent(
   registration_data_tab_registration_data_tabvue_type_script_lang_ts_shadow,
-  registration_data_tabvue_type_template_id_6a890732_shadow_render,
-  registration_data_tabvue_type_template_id_6a890732_shadow_staticRenderFns,
+  registration_data_tabvue_type_template_id_f056beb2_shadow_render,
+  registration_data_tabvue_type_template_id_f056beb2_shadow_staticRenderFns,
   false,
   registration_data_tabshadow_injectStyles,
   null,
@@ -11423,15 +11418,6 @@ module.exports = __webpack_require__("d8d6");
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("469f");
-
-/***/ }),
-
-/***/ "5dfa":
-/***/ (function(module, exports, __webpack_require__) {
-
-/*! cookieStorage@v1.1.0. Jherax 2017. Visit https://github.com/jherax/cookie-storage */
-!function(e,t){ true?module.exports=t():undefined}(this,function(){return function(e){function t(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,t),o.l=!0,o.exports}var n={};return t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=1)}([function(e,t,n){"use strict";function r(e){return"[object Object]"===Object.prototype.toString.call(e)}function o(e){if(null==e||""===e)throw new Error("The key provided can not be empty")}function u(e,t,n){var r={configurable:!1,enumerable:!1,writable:!1};void 0!==n&&(r.value=n),Object.defineProperty(e,t,r)}function i(e){var t=void 0;try{t=JSON.parse(e)}catch(n){t=e}return t}Object.defineProperty(t,"__esModule",{value:!0}),t.isObject=r,t.checkEmpty=o,t.setProperty=u,t.tryParse=i},function(e,t,n){"use strict";function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function o(e,t){return Object.keys(t).forEach(function(n){e[n]=(0,i.tryParse)(t[n])}),e}Object.defineProperty(t,"__esModule",{value:!0});var u=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),i=n(0),a=n(2),s=function(e){return e&&e.__esModule?e:{default:e}}(a),c=/^(?:expires|max-age|path|domain|secure)$/i,CookieStorage=function(){function CookieStorage(){r(this,CookieStorage),o(this,s.default)}return u(CookieStorage,[{key:"setItem",value:function(e,t,n){if((0,i.checkEmpty)(e),c.test(e))throw new Error("The key is a reserved word, therefore not allowed");this[e]=t,"string"!=typeof t&&(t=JSON.stringify(t)),s.default.setItem(e,t,n),null===s.default.getItem(e)&&delete this[e]}},{key:"getItem",value:function(e){(0,i.checkEmpty)(e);var t=s.default.getItem(e);return null==t?(delete this[e],t=null):(t=(0,i.tryParse)(t),this[e]=t),t}},{key:"removeItem",value:function(e,t){(0,i.checkEmpty)(e),delete this[e],s.default.removeItem(e,t)}},{key:"clear",value:function(){var e=this;Object.keys(this).forEach(function(t){delete e[t]},this),s.default.clear()}},{key:"length",get:function(){return Object.keys(this).length}}]),CookieStorage}();t.default=new CookieStorage,e.exports=t.default},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function o(e){var t=this.toString();return 0===e.trim().indexOf(t)}function u(e){for(var t in e)(0,i.setProperty)(e,t);return l.get().split(";").forEach(function(t){var n=t.indexOf("="),r=t.substring(0,n).trim(),o=t.substring(n+1).trim();r&&(e[r]=decodeURIComponent(o))}),e}Object.defineProperty(t,"__esModule",{value:!0});var i=n(0),a=n(3),s=r(a),c=n(4),f=r(c),l={get:function(){return document.cookie},set:function(e){document.cookie=e},data:{}};t.default=function(){var e={setItem:function(e,t,n){n=Object.assign({path:"/"},n),l.data[e]={path:n.path};var r=l.data[e];((0,i.isObject)(n.expires)||n.expires instanceof Date)&&(r.expires=(0,f.default)(n.expires)),n.domain&&"string"==typeof n.domain&&(r.domain=n.domain.trim()),!0===n.secure&&(r.secure=!0);var o=e+"="+encodeURIComponent(t)+(0,s.default)(r);l.set(o)},getItem:function(e){var t=null,n=e+"=",r=l.get().split(";").find(o,n);return r&&(t=r.trim().substring(n.length,r.length),t=decodeURIComponent(t)),null===t&&delete l.data[e],t},removeItem:function(t,n){var r=Object.assign({},l.data[t],n);r.expires={days:-1},e.setItem(t,"",r),delete l.data[t]},clear:function(){var t=void 0,n=void 0;l.get().split(";").forEach(function(r){(n=r.indexOf("="))>-1&&(t=r.substring(0,n),e.removeItem(t.trim()))})}};return u(e)}(),e.exports=t.default},function(e,t,n){"use strict";function r(e,t){return t[e]?";"+e+"="+t[e]:""}function o(e){return""+r("expires",e)+r("domain",e)+r("path",e)+(e.secure?";secure":"")}Object.defineProperty(t,"__esModule",{value:!0}),t.default=o,e.exports=t.default},function(e,t,n){"use strict";function r(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},e),n=t.date instanceof Date?t.date:new Date;return+t.minutes&&n.setMinutes(n.getMinutes()+t.minutes),+t.hours&&n.setHours(n.getHours()+t.hours),+t.days&&n.setDate(n.getDate()+t.days),+t.months&&n.setMonth(n.getMonth()+t.months),+t.years&&n.setFullYear(n.getFullYear()+t.years),n}function o(e){return r(e instanceof Date?{date:e}:e).toUTCString()}Object.defineProperty(t,"__esModule",{value:!0}),t.default=o,e.exports=t.default}])});
-//# sourceMappingURL=cookie-storage.min.map
 
 /***/ }),
 

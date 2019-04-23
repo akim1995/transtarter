@@ -1,6 +1,6 @@
 import { UserManager, WebStorageStateStore, User, UserManagerSettings } from 'oidc-client'
 import axios from 'axios'
-import CookieStore from './CookieStore';
+import CookieStorage from './CookieStorage';
 
 type UserRegistration = {
   login: string;
@@ -18,8 +18,8 @@ export class AuthService {
     const MY_HOST: string = window.location.origin
 
     const settings: UserManagerSettings = {
-      userStore: new WebStorageStateStore({ store: CookieStore }),
-      stateStore: new WebStorageStateStore({ store: CookieStore }),
+      userStore: new WebStorageStateStore({ store: CookieStorage }),
+      stateStore: new WebStorageStateStore({ store: CookieStorage }),
       authority: AUTH0_DOMAIN,
       client_id: 'kl',
       redirect_uri: `${this.webAddress}/callback.html`,
@@ -57,11 +57,11 @@ export class AuthService {
   }
 
   public saveUserInfo (key: string, user: User): void {
-    CookieStore.setItem(key, JSON.stringify(user))
+    CookieStorage.setItem(key, JSON.stringify(user))
   }
 
   public removeFromCookieStorageByKey (key: string): void {
-    CookieStore.removeItem(key)
+    CookieStorage.removeItem(key)
   }
 
   public updateUserStorage (key:string, userObject: User): void {

@@ -2,9 +2,8 @@ import extractDomain from 'extract-domain';
 /**
  * Custom Cookie Storage to store cookie across subdomains (used for oidc)
  */
-export class CookieStore {
+class CookieStorage {
     public getItem(key) {
-        debugger;
         const safeKey = encodeURIComponent(key);
         const value = document.cookie
             .split(';')
@@ -14,7 +13,6 @@ export class CookieStore {
         }
     }
     public setItem(key, value) {
-        debugger;
         const safeKey = encodeURIComponent(key);
         const domain = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
             ? 'localhost'
@@ -27,4 +25,4 @@ export class CookieStore {
     }
 }
 
-export default new CookieStore();
+export default new CookieStorage();
