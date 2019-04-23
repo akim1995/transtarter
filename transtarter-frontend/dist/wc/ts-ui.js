@@ -6217,7 +6217,7 @@ var extract_domain_min_default = /*#__PURE__*/__webpack_require__.n(extract_doma
 class CookieStorage_CookieStorage {
   getItem(key) {
     var safeKey = encodeURIComponent(key);
-    var value = document.cookie.split(';').find(item => item.startsWith(`${safeKey}=`));
+    var value = document.cookie.split(';').map(x => x.trim()).find(item => item.startsWith(`${safeKey}=`));
 
     if (value) {
       return decodeURIComponent(value.split(`${safeKey}=`)[1]);

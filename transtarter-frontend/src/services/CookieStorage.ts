@@ -7,6 +7,7 @@ class CookieStorage {
         const safeKey = encodeURIComponent(key);
         const value = document.cookie
             .split(';')
+            .map(x => x.trim())
             .find((item) => item.startsWith(`${safeKey}=`));
         if (value) {
             return decodeURIComponent(value.split(`${safeKey}=`)[1]);
