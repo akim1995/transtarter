@@ -6678,12 +6678,6 @@ var models = __webpack_require__("0d59");
 // CONCATENATED MODULE: ./src/store/modules/authentication.module.ts
 
 
-
-
-
-
-
-
 var authentication_module_a, authentication_module_b, _c;
 
 
@@ -6692,137 +6686,106 @@ var authentication_module_a, authentication_module_b, _c;
 
 
 
-
-var authentication_module_Authentication =
-/*#__PURE__*/
-function (_VuexModule) {
-  _inherits(Authentication, _VuexModule);
-
-  function Authentication() {
-    var _this;
-
-    _classCallCheck(this, Authentication);
-
-    _this = _possibleConstructorReturn(this, getPrototypeOf_getPrototypeOf(Authentication).apply(this, arguments));
-    _this.cookieStorageKey = 'user';
-    _this.userInfoString = lib_default.a.getItem(_this.cookieStorageKey);
-    _this.user = _this.userInfoString ? JSON.parse(_this.userInfoString) : null;
-    _this.name = ((_this.user || '').profile || '').name || '';
-    _this.email = '';
-    _this.password = '';
-    _this.token = (_this.user || '').id_token || '';
-    _this.roles = [];
-    _this.status = {
+var authentication_module_Authentication = class Authentication extends VuexModule {
+  constructor() {
+    super(...arguments);
+    this.cookieStorageKey = 'user';
+    this.tsCookieStorageKey = 'ts-user';
+    this.userInfoString = lib_default.a.getItem(this.cookieStorageKey);
+    this.user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
+    this.name = ((this.user || '').profile || '').name || '';
+    this.email = '';
+    this.password = '';
+    this.token = (this.user || '').id_token || '';
+    this.roles = [];
+    this.status = {
       loggingIn: false,
-      loggedIn: _this.user !== null && !(_this.user || false).expired // we should get user info and expired have to be false
+      loggedIn: this.user !== null && !(this.user || false).expired // we should get user info and expired have to be false
 
     };
-    _this.avatar = '';
-    _this.auth = new auth_service_AuthService();
-    return _this;
+    this.avatar = '';
+    this.auth = new auth_service_AuthService();
   }
 
-  _createClass(Authentication, [{
-    key: "LOGIN_REQUEST",
-    value: function LOGIN_REQUEST() {
-      this.status.loggingIn = true;
-    }
-  }, {
-    key: "LOGOUT",
-    value: function LOGOUT() {
-      this.status.loggedIn = false;
-      this.status.loggingIn = false;
-    }
-  }, {
-    key: "SUCCESS_LOGIN",
-    value: function SUCCESS_LOGIN(user) {
-      this.name = user.profile.name;
-      this.token = user.id_token;
-      this.accessTokenExpired = user.expired;
-      this.status.loggedIn = user !== null && !user.expired;
-      this.status.loggingIn = false;
-    }
-  }, {
-    key: "ERROR_LOGIN",
-    value: function ERROR_LOGIN(user) {
-      this.name = '';
-      this.accessTokenExpired = false;
-      this.status.loggedIn = false;
-      this.status.loggingIn = false;
-    }
-  }, {
-    key: "MOCK_LOGIN",
-    value: function MOCK_LOGIN() {
-      this.status.loggedIn = true;
-    }
-  }, {
-    key: "MOCK_LOGOUT",
-    value: function MOCK_LOGOUT() {
-      this.status.loggedIn = false;
-    }
-  }, {
-    key: "login",
-    value: function login() {
-      this.auth.login();
-    }
-  }, {
-    key: "actualizeUser",
-    value: function actualizeUser() {
-      var _this2 = this;
+  get logged() {
+    return this.status.loggedIn;
+  }
 
-      this.auth.getUser().then(function (user) {
-        if (user) {
-          _this2.auth.saveUserInfo(_this2.cookieStorageKey, user);
+  LOGIN_REQUEST() {
+    this.status.loggingIn = true;
+  }
 
-          _this2.context.commit('SUCCESS_LOGIN', user);
-        } else {
-          _this2.context.commit('ERROR_LOGIN');
-        }
-      });
-    }
-  }, {
-    key: "logout",
-    value: function logout() {
-      var _this3 = this;
+  LOGOUT() {
+    this.status.loggedIn = false;
+    this.status.loggingIn = false;
+  }
 
-      this.auth.logout().then(function () {
-        _this3.context.commit('LOGOUT');
+  SUCCESS_LOGIN(user) {
+    this.name = user.profile.name;
+    this.token = user.id_token;
+    this.accessTokenExpired = user.expired;
+    this.status.loggedIn = user !== null && !user.expired;
+    this.status.loggingIn = false;
+  }
 
-        _this3.auth.removeFromCookieStorageByKey(_this3.cookieStorageKey);
-      });
-    }
-  }, {
-    key: "mockLogin",
-    value: function mockLogin() {
-      this.context.commit('MOCK_LOGIN');
-    }
-  }, {
-    key: "mockLogout",
-    value: function mockLogout() {
-      this.context.commit('MOCK_LOGOUT');
-    }
-  }, {
-    key: "UPDATE_USER_NAME",
-    value: function UPDATE_USER_NAME(newUserName) {
-      this.name = newUserName;
-    }
-  }, {
-    key: "updateUser",
-    value: function updateUser(_ref) {
-      var key = _ref.key,
-          userObject = _ref.userObject;
-      this.auth.updateUserStorage(key, userObject);
-      this.context.commit('UPDATE_USER_NAME', userObject.profile.name);
-    }
-  }, {
-    key: "logged",
-    get: function get() {
-      return this.status.loggedIn;
-    }
-  }]);
+  ERROR_LOGIN(user) {
+    this.name = '';
+    this.accessTokenExpired = false;
+    this.status.loggedIn = false;
+    this.status.loggingIn = false;
+  }
 
-  return Authentication;
-}(VuexModule);
+  MOCK_LOGIN() {
+    this.status.loggedIn = true;
+  }
+
+  MOCK_LOGOUT() {
+    this.status.loggedIn = false;
+  }
+
+  login() {
+    this.auth.login();
+  }
+
+  actualizeUser() {
+    this.auth.getUser().then(user => {
+      if (user) {
+        this.auth.saveUserInfo(this.cookieStorageKey, user);
+        this.context.commit('SUCCESS_LOGIN', user);
+      } else {
+        this.context.commit('ERROR_LOGIN');
+      }
+    });
+  }
+
+  logout() {
+    this.auth.logout().then(() => {
+      this.context.commit('LOGOUT');
+      this.auth.removeFromCookieStorageByKey(this.cookieStorageKey);
+      this.auth.removeFromCookieStorageByKey(this.tsCookieStorageKey);
+    });
+  }
+
+  mockLogin() {
+    this.context.commit('MOCK_LOGIN');
+  }
+
+  mockLogout() {
+    this.context.commit('MOCK_LOGOUT');
+  }
+
+  UPDATE_USER_NAME(newUserName) {
+    this.name = newUserName;
+  }
+
+  updateUser(_ref) {
+    var key = _ref.key,
+        userObject = _ref.userObject;
+    this.auth.updateUserStorage(key, userObject);
+    this.context.commit('UPDATE_USER_NAME', userObject.profile.name);
+  }
+
+};
 
 __decorate([Mutation, __metadata("design:type", Function), __metadata("design:paramtypes", []), __metadata("design:returntype", void 0)], authentication_module_Authentication.prototype, "LOGIN_REQUEST", null);
 
