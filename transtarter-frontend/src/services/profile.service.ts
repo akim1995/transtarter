@@ -2,7 +2,7 @@ import axios from 'axios'
 import { IUserProfile } from '@/models/IUserProfile'
 import { User } from 'oidc-client'
 import { store } from '@/store/index'
-import CookieStorage from './CookieStorage';
+import CookieStorage from "cookie-storage-domain";
 
 export class ProfileService {
     private webAppHost = process.env.VUE_APP_WEB_APP;

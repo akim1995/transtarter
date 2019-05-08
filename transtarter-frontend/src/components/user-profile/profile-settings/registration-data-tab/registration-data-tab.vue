@@ -92,8 +92,7 @@ import { Component, Vue } from 'vue-property-decorator'
 import { ProfileService } from '@/services/profile.service'
 import { IUserProfile } from '@/models/index'
 import { User } from 'oidc-client'
-import CookieStorage from '../../../../services/CookieStorage';
-
+import CookieStorage from "cookie-storage-domain";
 
 @Component
 export default class RegistrationDataTab extends Vue {

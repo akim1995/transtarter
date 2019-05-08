@@ -1,6 +1,6 @@
 import { UserManager, WebStorageStateStore, User, UserManagerSettings } from 'oidc-client'
 import axios from 'axios'
-import CookieStorage from './CookieStorage';
+import CookieStorage from "cookie-storage-domain";
 
 type UserRegistration = {
   login: string;

@@ -4,7 +4,7 @@ import { store } from '../index'
 import { AuthService } from '@/services/auth.service'
 import { User } from 'oidc-client'
 import { IKeyUserObject } from '@/models/index'
-import CookieStorage from '@/services/CookieStorage';
+import CookieStorage from "cookie-storage-domain";
 
 export interface IAuthState {
   name: string;
