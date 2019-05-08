@@ -86,11 +86,7 @@ export class Authentication extends VuexModule implements IAuthState {
 
   @Action
   public login (): void {
-    this.auth.logoutFromOldCatalog().finally(() => {
-      this.context.commit('LOGOUT')
-    })
-
-    //this.auth.login()
+    this.auth.login()
   }
 
   @Action
@@ -109,9 +105,6 @@ export class Authentication extends VuexModule implements IAuthState {
   logout () {
     this.auth.logout().then(() => {
       this.auth.removeFromCookieStorageByKey(this.cookieStorageKey)
-      return this.auth.logoutFromOldCatalog().finally(() => {
-        this.context.commit('LOGOUT')
-      })
     })
   }
 

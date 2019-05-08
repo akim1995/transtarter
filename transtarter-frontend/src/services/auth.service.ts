@@ -12,8 +12,6 @@ export class AuthService {
   private identityServer = process.env.VUE_APP_IDENTITY_SERVER;
   private identityServerApi = process.env.VUE_APP_IDENTITY_SERVER_API;
   private webAddress = process.env.VUE_APP_WEB_APP;
-  private appHost = process.env.VUE_APP_HOST;
-  private oldCatalogCookieStorageKey = 'ts-user'
 
   constructor() {
     const AUTH0_DOMAIN = this.identityServer
@@ -56,13 +54,6 @@ export class AuthService {
 
   public logout(): Promise<void> {
     return this.userManager.signoutRedirect()
-  }
-
-  public logoutFromOldCatalog(): Promise<void> {
-    return axios.post<boolean>(`${this.appHost}/api/rest/logout.php`, {})
-      .then(() => {
-        return this.removeFromCookieStorageByKey(this.oldCatalogCookieStorageKey)
-      })
   }
 
   public saveUserInfo(key: string, user: User): void {
