@@ -5,6 +5,7 @@ import { AuthService } from '@/services/auth.service'
 import { User } from 'oidc-client'
 import { IKeyUserObject } from '@/models/index'
 import CookieStorage from "cookie-storage-domain";
+import Axios from 'axios';
 
 export interface IAuthState {
   name: string;
@@ -22,7 +23,6 @@ export interface IAuthState {
 @Module({ dynamic: true, store, name: 'auth', namespaced: true })
 export class Authentication extends VuexModule implements IAuthState {
   private cookieStorageKey = 'user'
-  private tsCookieStorageKey = 'ts-user'
   private userInfoString = CookieStorage.getItem(this.cookieStorageKey)
   private user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
 
@@ -86,7 +86,11 @@ export class Authentication extends VuexModule implements IAuthState {
 
   @Action
   public login (): void {
-    this.auth.login()
+    this.auth.logoutFromOldCatalog().finally(() => {
+      this.context.commit('LOGOUT')
+    })
+
+    //this.auth.login()
   }
 
   @Action
@@ -104,9 +108,10 @@ export class Authentication extends VuexModule implements IAuthState {
   @Action
   logout () {
     this.auth.logout().then(() => {
-      this.context.commit('LOGOUT')
       this.auth.removeFromCookieStorageByKey(this.cookieStorageKey)
-      this.auth.removeFromCookieStorageByKey(this.tsCookieStorageKey)
+      return this.auth.logoutFromOldCatalog().finally(() => {
+        this.context.commit('LOGOUT')
+      })
     })
   }
 

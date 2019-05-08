@@ -476,6 +476,34 @@ module.exports = function (it, key) {
 
 /***/ }),
 
+/***/ "097d":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// https://github.com/tc39/proposal-promise-finally
+
+var $export = __webpack_require__("5ca1");
+var core = __webpack_require__("8378");
+var global = __webpack_require__("7726");
+var speciesConstructor = __webpack_require__("ebd6");
+var promiseResolve = __webpack_require__("bcaa");
+
+$export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
+  var C = speciesConstructor(this, core.Promise || global.Promise);
+  var isFunction = typeof onFinally == 'function';
+  return this.then(
+    isFunction ? function (x) {
+      return promiseResolve(C, onFinally()).then(function () { return x; });
+    } : onFinally,
+    isFunction ? function (e) {
+      return promiseResolve(C, onFinally()).then(function () { throw e; });
+    } : onFinally
+  );
+} });
+
+
+/***/ }),
+
 /***/ "0a06":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6110,17 +6138,13 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 
 
 
-
-
-var auth_service_AuthService =
-/*#__PURE__*/
-function () {
-  function AuthService() {
-    _classCallCheck(this, AuthService);
-
+class auth_service_AuthService {
+  constructor() {
     this.identityServer = "https://identity-test.tstarter.ru";
     this.identityServerApi = "https://identity-api-test.tstarter.ru";
     this.webAddress = "https://new1.tstarter.ru/new";
+    this.appHost = "https://new.tstarter.ru";
+    this.oldCatalogCookieStorageKey = 'ts-user';
     var AUTH0_DOMAIN = this.identityServer;
     var MY_HOST = window.location.origin;
     var settings = {
@@ -6132,8 +6156,8 @@ function () {
       }),
       authority: AUTH0_DOMAIN,
       client_id: 'kl',
-      redirect_uri: "".concat(this.webAddress, "/callback.html"),
-      post_logout_redirect_uri: "".concat(MY_HOST, "/"),
+      redirect_uri: `${this.webAddress}/callback.html`,
+      post_logout_redirect_uri: `${MY_HOST}/`,
       response_type: 'id_token token',
       scope: 'openid profile roles',
       filterProtocolClaims: true,
@@ -6149,45 +6173,41 @@ function () {
     this.userManager = new oidc_client_min["UserManager"](settings);
   }
 
-  _createClass(AuthService, [{
-    key: "registration",
-    value: function registration(user) {
-      return axios_default.a.post("".concat(this.identityServerApi, "/api/account/register"), user);
-    }
-  }, {
-    key: "getUser",
-    value: function getUser() {
-      return this.userManager.getUser();
-    }
-  }, {
-    key: "login",
-    value: function login() {
-      return this.userManager.signinRedirect();
-    }
-  }, {
-    key: "logout",
-    value: function logout() {
-      return this.userManager.signoutRedirect();
-    }
-  }, {
-    key: "saveUserInfo",
-    value: function saveUserInfo(key, user) {
-      lib_default.a.setItem(key, stringify_default()(user));
-    }
-  }, {
-    key: "removeFromCookieStorageByKey",
-    value: function removeFromCookieStorageByKey(key) {
-      lib_default.a.removeItem(key);
-    }
-  }, {
-    key: "updateUserStorage",
-    value: function updateUserStorage(key, userObject) {
-      this.userManager.settings.userStore.set(key, stringify_default()(userObject));
-    }
-  }]);
+  registration(user) {
+    return axios_default.a.post(`${this.identityServerApi}/api/account/register`, user);
+  }
 
-  return AuthService;
-}();
+  getUser() {
+    return this.userManager.getUser();
+  }
+
+  login() {
+    return this.userManager.signinRedirect();
+  }
+
+  logout() {
+    return this.userManager.signoutRedirect();
+  }
+
+  logoutFromOldCatalog() {
+    return axios_default.a.post(`${this.appHost}/api/rest/logout.php`, {}).then(() => {
+      return this.removeFromCookieStorageByKey(this.oldCatalogCookieStorageKey);
+    });
+  }
+
+  saveUserInfo(key, user) {
+    lib_default.a.setItem(key, stringify_default()(user));
+  }
+
+  removeFromCookieStorageByKey(key) {
+    lib_default.a.removeItem(key);
+  }
+
+  updateUserStorage(key, userObject) {
+    this.userManager.settings.userStore.set(key, stringify_default()(userObject));
+  }
+
+}
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/registration/registration-form/registration-form.vue?vue&type=script&lang=ts&
 
 
@@ -6672,10 +6692,14 @@ var account_infovue_type_template_id_2955e272_staticRenderFns = [function () {va
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
 var es6_function_name = __webpack_require__("7f7f");
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es7.promise.finally.js
+var es7_promise_finally = __webpack_require__("097d");
+
 // EXTERNAL MODULE: ./src/models/index.ts
 var models = __webpack_require__("0d59");
 
 // CONCATENATED MODULE: ./src/store/modules/authentication.module.ts
+
 
 
 var authentication_module_a, authentication_module_b, _c;
@@ -6690,7 +6714,6 @@ var authentication_module_Authentication = class Authentication extends VuexModu
   constructor() {
     super(...arguments);
     this.cookieStorageKey = 'user';
-    this.tsCookieStorageKey = 'ts-user';
     this.userInfoString = lib_default.a.getItem(this.cookieStorageKey);
     this.user = this.userInfoString ? JSON.parse(this.userInfoString) : null;
     this.name = ((this.user || '').profile || '').name || '';
@@ -6744,7 +6767,9 @@ var authentication_module_Authentication = class Authentication extends VuexModu
   }
 
   login() {
-    this.auth.login();
+    this.auth.logoutFromOldCatalog().finally(() => {
+      this.context.commit('LOGOUT');
+    }); //this.auth.login()
   }
 
   actualizeUser() {
@@ -6760,9 +6785,10 @@ var authentication_module_Authentication = class Authentication extends VuexModu
 
   logout() {
     this.auth.logout().then(() => {
-      this.context.commit('LOGOUT');
       this.auth.removeFromCookieStorageByKey(this.cookieStorageKey);
-      this.auth.removeFromCookieStorageByKey(this.tsCookieStorageKey);
+      return this.auth.logoutFromOldCatalog().finally(() => {
+        this.context.commit('LOGOUT');
+      });
     });
   }
 
@@ -12751,6 +12777,32 @@ exports.RETURN = RETURN;
 
 /***/ }),
 
+/***/ "a5b8":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 25.4.1.5 NewPromiseCapability(C)
+var aFunction = __webpack_require__("d8e8");
+
+function PromiseCapability(C) {
+  var resolve, reject;
+  this.promise = new C(function ($$resolve, $$reject) {
+    if (resolve !== undefined || reject !== undefined) throw TypeError('Bad Promise constructor');
+    resolve = $$resolve;
+    reject = $$reject;
+  });
+  this.resolve = aFunction(resolve);
+  this.reject = aFunction(reject);
+}
+
+module.exports.f = function (C) {
+  return new PromiseCapability(C);
+};
+
+
+/***/ }),
+
 /***/ "aae3":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13218,6 +13270,25 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("cee4");
+
+/***/ }),
+
+/***/ "bcaa":
+/***/ (function(module, exports, __webpack_require__) {
+
+var anObject = __webpack_require__("cb7c");
+var isObject = __webpack_require__("d3f4");
+var newPromiseCapability = __webpack_require__("a5b8");
+
+module.exports = function (C, x) {
+  anObject(C);
+  if (isObject(x) && x.constructor === C) return x;
+  var promiseCapability = newPromiseCapability.f(C);
+  var resolve = promiseCapability.resolve;
+  resolve(x);
+  return promiseCapability.promise;
+};
+
 
 /***/ }),
 
@@ -14759,6 +14830,22 @@ var add = __webpack_require__("35d6").default
 module.exports.__inject__ = function (shadowRoot) {
   add("d5960098", content, shadowRoot)
 };
+
+/***/ }),
+
+/***/ "ebd6":
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.3.20 SpeciesConstructor(O, defaultConstructor)
+var anObject = __webpack_require__("cb7c");
+var aFunction = __webpack_require__("d8e8");
+var SPECIES = __webpack_require__("2b4c")('species');
+module.exports = function (O, D) {
+  var C = anObject(O).constructor;
+  var S;
+  return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? D : aFunction(S);
+};
+
 
 /***/ }),
 

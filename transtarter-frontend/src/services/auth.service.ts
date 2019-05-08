@@ -12,8 +12,10 @@ export class AuthService {
   private identityServer = process.env.VUE_APP_IDENTITY_SERVER;
   private identityServerApi = process.env.VUE_APP_IDENTITY_SERVER_API;
   private webAddress = process.env.VUE_APP_WEB_APP;
+  private appHost = process.env.VUE_APP_HOST;
+  private oldCatalogCookieStorageKey = 'ts-user'
 
-  constructor () {
+  constructor() {
     const AUTH0_DOMAIN = this.identityServer
     const MY_HOST: string = window.location.origin
 
@@ -40,31 +42,38 @@ export class AuthService {
     this.userManager = new UserManager(settings)
   }
 
-  public registration (user: UserRegistration) {
+  public registration(user: UserRegistration) {
     return axios.post<boolean>(`${this.identityServerApi}/api/account/register`, user)
   }
 
-  public getUser (): Promise<User> {
+  public getUser(): Promise<User> {
     return this.userManager.getUser()
   }
 
-  public login (): Promise<void> {
+  public login(): Promise<void> {
     return this.userManager.signinRedirect()
   }
 
-  public logout (): Promise<void> {
+  public logout(): Promise<void> {
     return this.userManager.signoutRedirect()
   }
 
-  public saveUserInfo (key: string, user: User): void {
+  public logoutFromOldCatalog(): Promise<void> {
+    return axios.post<boolean>(`${this.appHost}/api/rest/logout.php`, {})
+      .then(() => {
+        return this.removeFromCookieStorageByKey(this.oldCatalogCookieStorageKey)
+      })
+  }
+
+  public saveUserInfo(key: string, user: User): void {
     CookieStorage.setItem(key, JSON.stringify(user))
   }
 
-  public removeFromCookieStorageByKey (key: string): void {
+  public removeFromCookieStorageByKey(key: string): void {
     CookieStorage.removeItem(key)
   }
 
-  public updateUserStorage (key:string, userObject: User): void {
+  public updateUserStorage(key: string, userObject: User): void {
     this.userManager.settings.userStore.set(key, JSON.stringify(userObject))
   }
 }
