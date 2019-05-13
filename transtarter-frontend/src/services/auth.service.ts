@@ -13,6 +13,8 @@ export class AuthService {
   private identityServerApi = process.env.VUE_APP_IDENTITY_SERVER_API;
   private webAddress = process.env.VUE_APP_WEB_APP;
 
+  private oldCatalogCookieStorageKey = 'ts-user'
+
   constructor() {
     const AUTH0_DOMAIN = this.identityServer
     const MY_HOST: string = window.location.origin
@@ -62,6 +64,7 @@ export class AuthService {
 
   public removeFromCookieStorageByKey(key: string): void {
     CookieStorage.removeItem(key)
+    CookieStorage.removeItem(this.oldCatalogCookieStorageKey)
   }
 
   public updateUserStorage(key: string, userObject: User): void {

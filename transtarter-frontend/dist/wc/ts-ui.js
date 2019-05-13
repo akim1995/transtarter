@@ -6115,6 +6115,7 @@ class auth_service_AuthService {
     this.identityServer = "https://identity-test.tstarter.ru";
     this.identityServerApi = "https://identity-api-test.tstarter.ru";
     this.webAddress = "https://new1.tstarter.ru/new";
+    this.oldCatalogCookieStorageKey = 'ts-user';
     var AUTH0_DOMAIN = this.identityServer;
     var MY_HOST = window.location.origin;
     var settings = {
@@ -6165,6 +6166,7 @@ class auth_service_AuthService {
 
   removeFromCookieStorageByKey(key) {
     lib_default.a.removeItem(key);
+    lib_default.a.removeItem(this.oldCatalogCookieStorageKey);
   }
 
   updateUserStorage(key, userObject) {
