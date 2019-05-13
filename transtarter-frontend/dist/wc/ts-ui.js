@@ -5194,6 +5194,51 @@ var log_in_redirectshadow_component = normalizeComponent(
 
 log_in_redirectshadow_component.options.__file = "log-in-redirect.vue"
 /* harmony default export */ var log_in_redirectshadow = (log_in_redirectshadow_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-out-redirect/log-out-redirect.vue?vue&type=template&id=5f5d6de0&shadow
+var log_out_redirectvue_type_template_id_5f5d6de0_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n    Происходит редирект на Transtarter Identity Server\n")])}
+var log_out_redirectvue_type_template_id_5f5d6de0_shadow_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/authorization/log-out-redirect/log-out-redirect.vue?vue&type=template&id=5f5d6de0&shadow
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--14-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--14-3!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/log-out-redirect/log-out-redirect.vue?vue&type=script&lang=ts&shadow
+
+
+
+
+
+var log_out_redirectvue_type_script_lang_ts_shadow_LogOutRedirect = class LogOutRedirect extends external_Vue_default.a {
+  mounted() {
+    lib_default.a.setItem('shop-redirect', stringify_default()(true));
+    store.dispatch('auth/logout');
+  }
+
+};
+log_out_redirectvue_type_script_lang_ts_shadow_LogOutRedirect = __decorate([vue_class_component_common_default.a], log_out_redirectvue_type_script_lang_ts_shadow_LogOutRedirect);
+/* harmony default export */ var log_out_redirectvue_type_script_lang_ts_shadow = (log_out_redirectvue_type_script_lang_ts_shadow_LogOutRedirect);
+// CONCATENATED MODULE: ./src/components/authorization/log-out-redirect/log-out-redirect.vue?vue&type=script&lang=ts&shadow
+ /* harmony default export */ var log_out_redirect_log_out_redirectvue_type_script_lang_ts_shadow = (log_out_redirectvue_type_script_lang_ts_shadow); 
+// CONCATENATED MODULE: ./src/components/authorization/log-out-redirect/log-out-redirect.vue?shadow
+
+
+
+
+
+/* normalize component */
+
+var log_out_redirectshadow_component = normalizeComponent(
+  log_out_redirect_log_out_redirectvue_type_script_lang_ts_shadow,
+  log_out_redirectvue_type_template_id_5f5d6de0_shadow_render,
+  log_out_redirectvue_type_template_id_5f5d6de0_shadow_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  ,true
+)
+
+log_out_redirectshadow_component.options.__file = "log-out-redirect.vue"
+/* harmony default export */ var log_out_redirectshadow = (log_out_redirectshadow_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"953b9058-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/authorization/password-restore/password-restore.vue?vue&type=template&id=ae454724&scoped=true&shadow
 var password_restorevue_type_template_id_ae454724_scoped_true_shadow_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.showPasswordRestore)?_c('div',{staticClass:"password-restore modal-wrapper"},[_c('div',{staticClass:" modal-popup"},[_c('div',{staticClass:"modal-content restore-content"},[_c('div',{staticClass:"close",on:{"click":function($event){_vm.toggleRestorePopup()}}},[_vm._v("✖")]),_c('div',{staticClass:"title bold"},[_vm._v("\n        Восстановление пароля\n      ")]),_c('div',{staticClass:"tip"},[_vm._v("\n        Введите email, указанный при регистрации, мы вышлем ссылку для восстановления пароля\n      ")]),_c('div',{staticClass:"reset-block"},[_c('form',{staticClass:"reset-form",on:{"submit":_vm.restorePassword}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.email),expression:"email"}],staticClass:"form-control reset-input",attrs:{"placeholder":"Почта","type":"email","required":""},domProps:{"value":(_vm.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.email=$event.target.value}}}),_c('button',{staticClass:"btn btn-yellow reset-btn",attrs:{"type":"submit"}},[_vm._v("\n            Восстановить пароль\n          ")])])])])])]):_vm._e()}
 var password_restorevue_type_template_id_ae454724_scoped_true_shadow_staticRenderFns = []
@@ -6127,8 +6172,8 @@ class auth_service_AuthService {
       }),
       authority: AUTH0_DOMAIN,
       client_id: 'kl',
-      redirect_uri: `${this.webAddress}/callback.html`,
-      post_logout_redirect_uri: `${MY_HOST}/`,
+      redirect_uri: `${this.webAddress}/callback/signin-oidc`,
+      post_logout_redirect_uri: `${this.webAddress}/callback/signout-oidc`,
       response_type: 'id_token token',
       scope: 'openid profile roles',
       filterProtocolClaims: true,
@@ -10091,6 +10136,9 @@ window.customElements.define('ts-ui-log-in', vue_wc_wrapper(external_Vue_default
 
 
 window.customElements.define('ts-ui-log-in-redirect', vue_wc_wrapper(external_Vue_default.a, log_in_redirectshadow))
+
+
+window.customElements.define('ts-ui-log-out-redirect', vue_wc_wrapper(external_Vue_default.a, log_out_redirectshadow))
 
 
 window.customElements.define('ts-ui-password-restore', vue_wc_wrapper(external_Vue_default.a, password_restoreshadow))
