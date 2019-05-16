@@ -48,6 +48,6 @@ export default class PersonalManager extends Vue {
 }
 </script>
 
-<style  lang="scss">
+<style scoped lang="scss">
 @import "./personal-manager-styles.scss";
 </style>

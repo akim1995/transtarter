@@ -16,7 +16,7 @@
 
 </template>
 
-<style  lang="scss">
+<style scoped lang="scss">
   .bg-gray{
     padding: 25px;
     height: 300px;

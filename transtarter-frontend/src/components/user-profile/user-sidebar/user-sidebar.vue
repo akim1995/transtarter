@@ -84,6 +84,6 @@ export default class UserSidebar extends Vue {
 }
 </script>
 
-<style  lang="scss">
+<style scoped lang="scss">
 @import "./user-sidebar-styles.scss";
 </style>
